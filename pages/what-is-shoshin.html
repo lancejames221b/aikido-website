@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Shoshin? The Beginner's Mind in Aikido | Genshinkan Aikido</title>
+    <meta name="description" content="Discover the profound philosophy of Shoshin (初心) - Beginner's Mind - and how it transforms your Aikido practice and daily life. Learn from Suzuki Roshi's wisdom.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fefefe;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        .cta-button {
+            background: #8B4513;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #A0522D;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 60px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: #8B4513;
+            font-weight: 500;
+        }
+
+        .japanese-characters {
+            font-size: 4rem;
+            color: #8B4513;
+            margin: 2rem 0;
+            font-weight: 300;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #8B4513;
+            padding-left: 1rem;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-block {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.02) 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #8B4513;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        .quote-author {
+            text-align: right;
+            margin-top: 1rem;
+            font-weight: 500;
+            color: #8B4513;
+            font-style: normal;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .principle-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #8B4513;
+            transition: transform 0.3s ease;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .principle-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .principle-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .aikido-connection {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
+
+        .aikido-connection h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .practical-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .example-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 3px solid #8B4513;
+        }
+
+        .example-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .meditation-section {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .meditation-instruction {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .call-to-action {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .call-to-action h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .call-to-action p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background: #8B4513;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #A0522D;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .japanese-characters {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .practical-examples {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-section {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index_shoshin.html" class="logo">Genshinkan Aikido</a>
+            <ul class="nav-links">
+                <li><a href="../index_shoshin.html#about">About</a></li>
+                <li><a href="../index_shoshin.html#instructors">Instructors</a></li>
+                <li><a href="../index_shoshin.html#classes">Classes</a></li>
+                <li><a href="#" class="active">Philosophy</a></li>
+                <li><a href="../index_shoshin.html#contact">Contact</a></li>
+            </ul>
+            <a href="../index_shoshin.html#intro-class" class="cta-button">Start Your Journey</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="japanese-characters">初心</div>
+                <h1 class="page-title">What is Shoshin?</h1>
+                <p class="page-subtitle">The Transformative Power of Beginner's Mind</p>
+            </div>
+
+            <!-- Introduction -->
+            <section class="content-section">
+                <div class="quote-block">
+                    "In the beginner's mind there are many possibilities, but in the expert's mind there are few."
+                    <div class="quote-author">— Shunryu Suzuki Roshi</div>
+                </div>
+
+                <p class="content-text">
+                    Shoshin (初心), literally meaning "beginner's mind" in Japanese, is a profound concept from Zen Buddhism that has become fundamental to the practice of Aikido and other martial arts. It refers to an attitude of openness, eagerness, and freedom from preconceptions when approaching any subject—exactly as a beginner would.
+                </p>
+
+                <p class="content-text">
+                    This powerful philosophy was popularized by Shunryu Suzuki Roshi in his influential book "Zen Mind, Beginner's Mind," where he explored how maintaining a beginner's perspective allows for continuous learning and growth, regardless of one's level of experience.
+                </p>
+            </section>
+
+            <!-- Core Principles -->
+            <section class="content-section">
+                <h2 class="section-title">The Core Principles of Shoshin</h2>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <h3 class="principle-title">Openness</h3>
+                        <p class="principle-description">
+                            Approaching each practice session with curiosity rather than assumptions. Being willing to see familiar techniques with fresh eyes and discover new depths.
+                        </p>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-title">Eagerness</h3>
+                        <p class="principle-description">
+                            Maintaining enthusiasm for learning, whether you're attempting your first technique or refining one you've practiced thousands of times.
+                        </p>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-title">Freedom from Preconceptions</h3>
+                        <p class="principle-description">
+                            Releasing rigid ideas about how things "should" be and allowing each moment to unfold naturally, without forcing predetermined outcomes.
+                        </p>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-title">Humility</h3>
+                        <p class="principle-description">
+                            Recognizing that there is always more to learn, and that wisdom can come from any source—including students who are newer to the practice.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aikido Connection -->
+            <section class="content-section">
+                <div class="aikido-connection">
+                    <h3>Shoshin in Aikido Practice</h3>
+                    <p class="content-text">
+                        In Aikido, Shoshin is not just a philosophical concept—it's a practical approach that transforms how we train, learn, and grow. When we step onto the mat with beginner's mind, several profound shifts occur:
+                    </p>
+
+                    <div class="practical-examples">
+                        <div class="example-item">
+                            <div class="example-title">Enhanced Learning</div>
+                            <p>Without the burden of thinking we "know" a technique, we remain open to subtle corrections and improvements that might otherwise go unnoticed.</p>
+                        </div>
+
+                        <div class="example-item">
+                            <div class="example-title">Reduced Ego</div>
+                            <p>When we embrace not-knowing, we become less attached to being "right" and more focused on genuine understanding and improvement.</p>
+                        </div>
+
+                        <div class="example-item">
+                            <div class="example-title">Present Moment Awareness</div>
+                            <p>Beginner's mind naturally brings us into the present, where true learning and authentic technique can emerge spontaneously.</p>
+                        </div>
+
+                        <div class="example-item">
+                            <div class="example-title">Adaptability</div>
+                            <p>Without rigid expectations, we can respond more fluidly to our partner's energy and the unique requirements of each situation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practical Application -->
+            <section class="content-section">
+                <h2 class="section-title">Cultivating Shoshin in Your Practice</h2>
+                
+                <p class="content-text">
+                    Developing beginner's mind is both simple and challenging. It requires conscious effort to release our accumulated assumptions and approach each moment with fresh awareness. Here are practical ways to cultivate Shoshin:
+                </p>
+
+                <div class="meditation-section">
+                    <h3 style="margin-bottom: 1.5rem; color: #2c3e50;">Before Each Practice</h3>
+                    <div class="meditation-instruction">
+                        Take a moment to consciously release what you think you know about the techniques you'll practice today. Set an intention to be surprised, to learn something new, and to approach even familiar movements as if encountering them for the first time. Allow yourself to be taught by the experience itself, rather than trying to impose your previous understanding upon it.
+                    </div>
+                </div>
+
+                <p class="content-text">
+                    This doesn't mean forgetting everything you've learned—rather, it means holding your knowledge lightly, as a foundation rather than a limitation. The expert who has cultivated Shoshin uses their experience as a platform for deeper exploration, not as a ceiling that prevents further growth.
+                </p>
+            </section>
+
+            <!-- Beyond the Dojo -->
+            <section class="content-section">
+                <h2 class="section-title">Shoshin Beyond the Dojo</h2>
+                
+                <p class="content-text">
+                    The beauty of Shoshin lies in its universal applicability. This beginner's mind that we cultivate on the Aikido mat naturally extends into all areas of life. Whether in relationships, career, or personal challenges, approaching situations with openness and curiosity rather than rigid assumptions opens up new possibilities for growth and understanding.
+                </p>
+
+                <div class="quote-block">
+                    "This does not mean a closed mind, but actually an empty mind and a ready mind. If your mind is empty, it is always ready for anything. It is open to everything."
+                    <div class="quote-author">— Shunryu Suzuki Roshi</div>
+                </div>
+
+                <p class="content-text">
+                    Many students discover that the Shoshin they develop through Aikido practice transforms how they approach their professional work, creative endeavors, and personal relationships. The willingness to not-know becomes a strength, opening doors to solutions and insights that would be invisible to a mind convinced it already understands.
+                </p>
+            </section>
+
+            <!-- Call to Action -->
+            <div class="call-to-action">
+                <h3>Experience Shoshin for Yourself</h3>
+                <p>
+                    At Genshinkan Aikido, we welcome students of all levels to explore the transformative power of beginner's mind. Whether you're completely new to martial arts or an experienced practitioner seeking deeper understanding, our community provides the perfect environment to cultivate Shoshin.
+                </p>
+                <a href="../index_shoshin.html#intro-class" class="btn-primary">Try Your Free Introductory Class</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Genshinkan Aikido Manhattan</strong></p>
+                <p>62 E 4th St, Fl 3, New York, NY 10003</p>
+                <p>Phone: <a href="tel:212-555-0123">(212) 555-0123</a> | Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
+                <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
+                    Author: Lance James, Unit 221B<br>
+                    &copy; 2025 Genshinkan Aikido. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

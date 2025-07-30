@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Beginner's Journey - Success Stories | Genshinkan Aikido</title>
+    <meta name="description" content="Discover inspiring stories from Manhattan professionals who started Aikido as complete beginners at Genshinkan. From stress relief to personal transformation.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fefefe;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        .cta-button {
+            background: #8B4513;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #A0522D;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 60px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: #8B4513;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .page-description {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Success Stories */
+        .stories-section {
+            margin-bottom: 4rem;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-header {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .story-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .story-details {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .story-content {
+            padding: 2.5rem;
+        }
+
+        .story-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .timeline-period {
+            font-weight: 600;
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-milestone {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .story-quote {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.02) 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #8B4513;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #444;
+            margin: 1.5rem 0;
+        }
+
+        .story-transformation {
+            margin-top: 2rem;
+        }
+
+        .transformation-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .transformation-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .transformation-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            background: rgba(139, 69, 19, 0.05);
+            border-radius: 8px;
+        }
+
+        .transformation-icon {
+            width: 20px;
+            height: 20px;
+            background: #8B4513;
+            border-radius: 50%;
+            margin-right: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        /* Journey Stages */
+        .journey-stages {
+            background: #f8f9fa;
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-radius: 20px;
+        }
+
+        .stages-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+        }
+
+        .stages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .stage-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stage-number {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 50px;
+            height: 50px;
+            background: #8B4513;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .stage-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .stage-duration {
+            color: #8B4513;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .stage-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Common Concerns */
+        .concerns-section {
+            margin: 4rem 0;
+        }
+
+        .concerns-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+        }
+
+        .concerns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .concern-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .concern-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .concern-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Call to Action */
+        .call-to-action {
+            background: #2c3e50;
+            color: white;
+            padding: 4rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .call-to-action h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .call-to-action p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background: #8B4513;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: #A0522D;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid white;
+            margin: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #2c3e50;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .story-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .transformation-list {
+                grid-template-columns: 1fr;
+            }
+
+            .stages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .concerns-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .story-card {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index_shoshin.html" class="logo">Genshinkan Aikido</a>
+            <ul class="nav-links">
+                <li><a href="../index_shoshin.html#about">About</a></li>
+                <li><a href="../index_shoshin.html#instructors">Instructors</a></li>
+                <li><a href="../index_shoshin.html#classes">Classes</a></li>
+                <li><a href="what-is-shoshin.html">Philosophy</a></li>
+                <li><a href="../index_shoshin.html#contact">Contact</a></li>
+            </ul>
+            <a href="../index_shoshin.html#intro-class" class="cta-button">Start Your Journey</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Adult Beginner's Journey</h1>
+                <p class="page-subtitle">Real Stories from Manhattan Professionals</p>
+                <p class="page-description">
+                    Discover how professionals from finance, tech, law, and creative industries have transformed their lives through Aikido at Genshinkan. These are real stories from students who started as complete beginners and found not just a martial art, but a path to personal growth and community.
+                </p>
+            </div>
+
+            <!-- Success Stories -->
+            <section class="stories-section">
+                <!-- Story 1: Sarah - Marketing Executive -->
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-name">Sarah Chen</div>
+                        <div class="story-details">Marketing Executive, Age 32 | Started training: 2022</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-period">Month 1-3</div>
+                                <div class="timeline-milestone">Learning to fall safely, basic movements</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Month 6</div>
+                                <div class="timeline-milestone">First technique felt natural</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Year 1</div>
+                                <div class="timeline-milestone">Promoted to 6th Kyu</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Year 2</div>
+                                <div class="timeline-milestone">Now helps welcome new students</div>
+                            </div>
+                        </div>
+
+                        <div class="story-quote">
+                            "I was intimidated by the idea of a martial art at first—I'd never done anything like this. But Gary Sensei's approach made it clear that everyone starts somewhere. The community welcomed me immediately, and I found myself looking forward to practice as the highlight of my week."
+                        </div>
+
+                        <div class="story-transformation">
+                            <h4 class="transformation-title">Personal Transformations</h4>
+                            <div class="transformation-list">
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Stress management improved dramatically</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Better work-life balance</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Increased confidence in challenging situations</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Found a supportive community in NYC</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 2: Michael - Software Developer -->
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-name">Michael Rodriguez</div>
+                        <div class="story-details">Software Developer, Age 28 | Started training: 2021</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-period">Month 1-2</div>
+                                <div class="timeline-milestone">Overcoming physical awkwardness</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Month 4</div>
+                                <div class="timeline-milestone">Started understanding the philosophy</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Month 8</div>
+                                <div class="timeline-milestone">First successful randori (multiple attackers)</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Year 3</div>
+                                <div class="timeline-milestone">Now 4th Kyu, considering teaching path</div>
+                            </div>
+                        </div>
+
+                        <div class="story-quote">
+                            "As someone who spends all day at a computer, I thought I'd be terrible at anything physical. But Aikido isn't about being the strongest or fastest—it's about understanding principles and working with energy. The beginner's mind philosophy really resonated with me as a programmer; there's always a more elegant solution if you stay open to it."
+                        </div>
+
+                        <div class="story-transformation">
+                            <h4 class="transformation-title">Professional & Personal Growth</h4>
+                            <div class="transformation-list">
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Improved problem-solving approach at work</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Better posture and physical awareness</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Reduced anxiety in conflict situations</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Deeper appreciation for mindfulness practices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 3: Jennifer - Attorney -->
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-name">Jennifer Thompson</div>
+                        <div class="story-details">Corporate Attorney, Age 35 | Started training: 2020</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-period">Month 1-4</div>
+                                <div class="timeline-milestone">Learning to receive corrections gracefully</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Month 6</div>
+                                <div class="timeline-milestone">First time teaching a newer student</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Year 1</div>
+                                <div class="timeline-milestone">Promoted to 5th Kyu</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-period">Year 4</div>
+                                <div class="timeline-milestone">Now 2nd Kyu, active in dojo community</div>
+                            </div>
+                        </div>
+
+                        <div class="story-quote">
+                            "In my legal career, I'm used to being 'the expert' and having answers. Aikido taught me the power of not-knowing, of being genuinely curious instead of defensive. This shift in perspective has made me a better negotiator and, honestly, a more pleasant person to be around."
+                        </div>
+
+                        <div class="story-transformation">
+                            <h4 class="transformation-title">Life-Changing Insights</h4>
+                            <div class="transformation-list">
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>More collaborative approach to difficult negotiations</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Better emotional regulation under pressure</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Improved listening skills with clients</span>
+                                </div>
+                                <div class="transformation-item">
+                                    <div class="transformation-icon"></div>
+                                    <span>Found balance in a high-stress career</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Journey Stages -->
+            <section class="journey-stages">
+                <div class="container">
+                    <h2 class="stages-title">Your Journey: What to Expect</h2>
+                    <div class="stages-grid">
+                        <div class="stage-card">
+                            <div class="stage-number">1</div>
+                            <h3 class="stage-title">First Steps</h3>
+                            <div class="stage-duration">Months 1-3</div>
+                            <p class="stage-description">
+                                Learn basic movements, safe falling techniques, and dojo etiquette. Focus on feeling comfortable in your body and in the space. Every student progresses at their own pace.
+                            </p>
+                        </div>
+
+                        <div class="stage-card">
+                            <div class="stage-number">2</div>
+                            <h3 class="stage-title">Finding Flow</h3>
+                            <div class="stage-duration">Months 4-8</div>
+                            <p class="stage-description">
+                                Techniques start feeling more natural. You begin to understand the underlying principles. Partner practice becomes collaborative rather than awkward.
+                            </p>
+                        </div>
+
+                        <div class="stage-card">
+                            <div class="stage-number">3</div>
+                            <h3 class="stage-title">Deepening Practice</h3>
+                            <div class="stage-duration">Months 9-18</div>
+                            <p class="stage-description">
+                                Philosophy and technique integrate. You start helping newer students, which deepens your own understanding. First belt promotion often occurs here.
+                            </p>
+                        </div>
+
+                        <div class="stage-card">
+                            <div class="stage-number">4</div>
+                            <h3 class="stage-title">Personal Evolution</h3>
+                            <div class="stage-duration">Year 2+</div>
+                            <p class="stage-description">
+                                Aikido principles become part of daily life. You develop your own expression of the art while honoring traditional foundations. Leadership opportunities emerge.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Common Concerns -->
+            <section class="concerns-section">
+                <h2 class="concerns-title">Common Concerns Addressed</h2>
+                <div class="concerns-grid">
+                    <div class="concern-card">
+                        <h3 class="concern-question">"I'm not athletic or coordinated enough"</h3>
+                        <p class="concern-answer">
+                            Aikido develops coordination through practice, not despite lack of it. Many of our most skilled practitioners started with no athletic background. The art teaches you to work with your natural abilities, not against them.
+                        </p>
+                    </div>
+
+                    <div class="concern-card">
+                        <h3 class="concern-question">"I'm too old to start a martial art"</h3>
+                        <p class="concern-answer">
+                            Our students range from their 20s to their 60s and beyond. Aikido is designed to be practiced throughout life. The emphasis is on technique and timing, not strength or speed.
+                        </p>
+                    </div>
+
+                    <div class="concern-card">
+                        <h3 class="concern-question">"Will I get hurt or have to hurt others?"</h3>
+                        <p class="concern-answer">
+                            Aikido emphasizes safety and control. Techniques are practiced cooperatively, with both partners taking care of each other. The goal is neutralization, not harm.
+                        </p>
+                    </div>
+
+                    <div class="concern-card">
+                        <h3 class="concern-question">"I don't have time with my busy schedule"</h3>
+                        <p class="concern-answer">
+                            Many students find that regular practice actually gives them more energy and better focus for their other commitments. Most train 2-3 times per week, fitting classes around work schedules.
+                        </p>
+                    </div>
+
+                    <div class="concern-card">
+                        <h3 class="concern-question">"What if I don't fit in with the group?"</h3>
+                        <p class="concern-answer">
+                            Our dojo culture emphasizes mutual respect and support. Students actively help each other learn, regardless of rank or experience level. Many lasting friendships form here.
+                        </p>
+                    </div>
+
+                    <div class="concern-card">
+                        <h3 class="concern-question">"How long until I see progress?"</h3>
+                        <p class="concern-answer">
+                            Benefits like improved posture, stress relief, and mental clarity often appear within weeks. Technical progress is individual, but most students feel a sense of accomplishment within their first few months.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <div class="call-to-action">
+                <h3>Ready to Begin Your Journey?</h3>
+                <p>
+                    Join hundreds of Manhattan professionals who have discovered the transformative power of Aikido. Your journey begins with a single step—and at Genshinkan, that first step is always supported by our welcoming community.
+                </p>
+                <a href="../index_shoshin.html#intro-class" class="btn-primary">Schedule Your Free Trial Class</a>
+                <a href="what-is-shoshin.html" class="btn-secondary">Learn About Our Philosophy</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Genshinkan Aikido Manhattan</strong></p>
+                <p>62 E 4th St, Fl 3, New York, NY 10003</p>
+                <p>Phone: <a href="tel:212-555-0123">(212) 555-0123</a> | Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
+                <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
+                    Author: Lance James, Unit 221B<br>
+                    &copy; 2025 Genshinkan Aikido. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Stagger animation for story cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const storyCards = document.querySelectorAll('.story-card');
+            storyCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
