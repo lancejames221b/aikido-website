@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Class Booking - Genshinkan Aikido</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #2c5aa0;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .calendar-section,
+        .booking-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            color: #2c5aa0;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .calendar-header {
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            background: #2c5aa0;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .calendar-day {
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar-day:hover {
+            background: #f0f8ff;
+            border-color: #2c5aa0;
+        }
+
+        .calendar-day.available {
+            background: #e8f5e8;
+            border-color: #4caf50;
+        }
+
+        .calendar-day.selected {
+            background: #2c5aa0;
+            color: white;
+            border-color: #2c5aa0;
+        }
+
+        .calendar-day.unavailable {
+            background: #f5f5f5;
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .time-slot {
+            padding: 12px;
+            text-align: center;
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .time-slot:hover {
+            background: #e3f2fd;
+            border-color: #2c5aa0;
+        }
+
+        .time-slot.selected {
+            background: #2c5aa0;
+            color: white;
+            border-color: #2c5aa0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #2c5aa0;
+            outline: none;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #2c5aa0 0%, #4caf50 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(44, 90, 160, 0.3);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .class-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2c5aa0;
+        }
+
+        .class-info h3 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+
+        .class-info ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .class-info li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .class-info li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .confirmation-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .modal-content i {
+            font-size: 3rem;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .time-slots {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-calendar-alt"></i> Book Your Intro Class</h1>
+            <p>Experience the harmony and discipline of traditional Aikido with Sensei Gary Wagener</p>
+        </div>
+
+        <div class="booking-container">
+            <div class="calendar-section">
+                <h2 class="section-title">
+                    <i class="fas fa-calendar-check"></i>
+                    Select Date & Time
+                </h2>
+
+                <div class="class-info">
+                    <h3>Intro Class Details</h3>
+                    <ul>
+                        <li>Duration: 90 minutes</li>
+                        <li>Cost: Free for first-time students</li>
+                        <li>What to bring: Comfortable workout clothes</li>
+                        <li>Location: 62 E 4th St, Fl 3, New York, NY</li>
+                        <li>All skill levels welcome</li>
+                    </ul>
+                </div>
+
+                <div id="calendar" class="calendar">
+                    <!-- Calendar will be populated by JavaScript -->
+                </div>
+
+                <div id="timeSlots" class="time-slots" style="display: none;">
+                    <!-- Time slots will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="booking-form">
+                <h2 class="section-title">
+                    <i class="fas fa-user-plus"></i>
+                    Your Information
+                </h2>
+
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Previous Martial Arts Experience</label>
+                        <select id="experience" name="experience">
+                            <option value="none">No previous experience</option>
+                            <option value="some">Some experience (other martial arts)</option>
+                            <option value="aikido">Some Aikido experience</option>
+                            <option value="experienced">Experienced in martial arts</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goals">What interests you about Aikido? (Optional)</label>
+                        <textarea id="goals" name="goals" rows="3" placeholder="Self-defense, philosophy, fitness, stress relief, etc."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergency">Emergency Contact Name & Phone</label>
+                        <input type="text" id="emergency" name="emergency" placeholder="Name and phone number">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="waiver" name="waiver" required>
+                        <label for="waiver">I understand that martial arts training involves physical activity and accept responsibility for my participation *</label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Send me updates about classes and Aikido philosophy</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn" disabled>
+                        <i class="fas fa-check-circle"></i>
+                        Confirm Booking
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="confirmation-modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Booking Confirmed!</h2>
+            <p>Thank you! Your intro class has been scheduled.</p>
+            <p><strong>Date:</strong> <span id="confirmedDate"></span></p>
+            <p><strong>Time:</strong> <span id="confirmedTime"></span></p>
+            <p>You'll receive a confirmation email with directions and what to expect.</p>
+            <br>
+            <button onclick="closeModal()" class="submit-btn">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Calendar and booking system JavaScript
+        let selectedDate = null;
+        let selectedTime = null;
+
+        // Available time slots for intro classes
+        const availableSlots = {
+            'monday': ['18:00', '19:30'],
+            'tuesday': ['18:00', '19:30'],
+            'wednesday': ['18:00', '19:30'],
+            'thursday': ['18:00', '19:30'],
+            'friday': ['18:00'],
+            'saturday': ['10:00', '11:30'],
+            'sunday': ['10:00', '11:30']
+        };
+
+        function generateCalendar() {
+            const calendar = document.getElementById('calendar');
+            const today = new Date();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+
+            // Add calendar headers
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            days.forEach(day => {
+                const header = document.createElement('div');
+                header.className = 'calendar-header';
+                header.textContent = day;
+                calendar.appendChild(header);
+            });
+
+            // Get first day of month and number of days
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            // Add empty cells for days before month starts
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDay = document.createElement('div');
+                emptyDay.className = 'calendar-day unavailable';
+                calendar.appendChild(emptyDay);
+            }
+
+            // Add days of the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.textContent = day;
+
+                const currentDate = new Date(currentYear, currentMonth, day);
+                const dayName = currentDate.toLocaleDateString('en-US', { weekday: 'lowercase' });
+
+                // Only allow future dates and days with available slots
+                if (currentDate >= today && availableSlots[dayName]) {
+                    dayElement.classList.add('available');
+                    dayElement.addEventListener('click', () => selectDate(currentDate, dayElement));
+                } else {
+                    dayElement.classList.add('unavailable');
+                }
+
+                calendar.appendChild(dayElement);
+            }
+        }
+
+        function selectDate(date, element) {
+            // Remove previous selection
+            document.querySelectorAll('.calendar-day.selected').forEach(el => {
+                el.classList.remove('selected');
+            });
+
+            // Select new date
+            element.classList.add('selected');
+            selectedDate = date;
+
+            // Show time slots
+            showTimeSlots(date);
+        }
+
+        function showTimeSlots(date) {
+            const timeSlotsContainer = document.getElementById('timeSlots');
+            const dayName = date.toLocaleDateString('en-US', { weekday: 'lowercase' });
+            const slots = availableSlots[dayName] || [];
+
+            timeSlotsContainer.innerHTML = '';
+            
+            slots.forEach(time => {
+                const slot = document.createElement('div');
+                slot.className = 'time-slot';
+                slot.textContent = formatTime(time);
+                slot.addEventListener('click', () => selectTime(time, slot));
+                timeSlotsContainer.appendChild(slot);
+            });
+
+            timeSlotsContainer.style.display = 'grid';
+        }
+
+        function selectTime(time, element) {
+            // Remove previous selection
+            document.querySelectorAll('.time-slot.selected').forEach(el => {
+                el.classList.remove('selected');
+            });
+
+            // Select new time
+            element.classList.add('selected');
+            selectedTime = time;
+
+            // Enable submit button if date and time are selected
+            updateSubmitButton();
+        }
+
+        function formatTime(time) {
+            const [hours, minutes] = time.split(':');
+            const date = new Date();
+            date.setHours(parseInt(hours), parseInt(minutes));
+            return date.toLocaleTimeString('en-US', { 
+                hour: 'numeric', 
+                minute: '2-digit',
+                hour12: true 
+            });
+        }
+
+        function updateSubmitButton() {
+            const submitBtn = document.getElementById('submitBtn');
+            const form = document.getElementById('bookingForm');
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            let allFieldsFilled = true;
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    allFieldsFilled = false;
+                }
+            });
+
+            submitBtn.disabled = !(selectedDate && selectedTime && allFieldsFilled);
+        }
+
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!selectedDate || !selectedTime) {
+                alert('Please select a date and time for your class.');
+                return;
+            }
+
+            // Show confirmation modal
+            document.getElementById('confirmedDate').textContent = 
+                selectedDate.toLocaleDateString('en-US', { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+            document.getElementById('confirmedTime').textContent = formatTime(selectedTime);
+            document.getElementById('confirmationModal').style.display = 'block';
+
+            // Here you would normally send the data to your server
+            console.log('Booking submitted:', {
+                date: selectedDate,
+                time: selectedTime,
+                formData: new FormData(this)
+            });
+        });
+
+        function closeModal() {
+            document.getElementById('confirmationModal').style.display = 'none';
+            // Optionally redirect to a thank you page
+            // window.location.href = 'thank-you.html';
+        }
+
+        // Update submit button when form fields change
+        document.getElementById('bookingForm').addEventListener('input', updateSubmitButton);
+        document.getElementById('bookingForm').addEventListener('change', updateSubmitButton);
+
+        // Initialize calendar when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            generateCalendar();
+        });
+    </script>
+</body>
+</html>
