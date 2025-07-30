@@ -1,0 +1,790 @@
+{
+  "home": {
+    "url": "https://genaikido.com",
+    "title": "Genshinkan Aikido",
+    "content": {
+      "main": "View fullsizeView fullsizeView fullsizeView fullsizeView fullsizeView fullsizeGenshinkan is devoted to transmitting and preserving the martial art of Aikido.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg",
+        "local_path": "./images/DSC_7584.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288047554-19TCTDXAGAUHK61QSTPP/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "local_path": "./images/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG",
+        "local_path": "./images/DSC_2437-Edit.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725154103-91GON58Y5D5L0XRD7THC/DSC_0052.JPG",
+        "local_path": "./images/DSC_0052.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg",
+        "local_path": "./images/DSC_7584.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288047554-19TCTDXAGAUHK61QSTPP/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "local_path": "./images/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG",
+        "local_path": "./images/DSC_2437-Edit.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725154103-91GON58Y5D5L0XRD7THC/DSC_0052.JPG",
+        "local_path": "./images/DSC_0052.JPG",
+        "alt": ""
+      }
+    ]
+  },
+  "": {
+    "url": "https://genaikido.com/",
+    "title": "Genshinkan Aikido",
+    "content": {
+      "main": "View fullsizeView fullsizeView fullsizeView fullsizeView fullsizeView fullsizeGenshinkan is devoted to transmitting and preserving the martial art of Aikido.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg",
+        "local_path": "./images/DSC_7584.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288047554-19TCTDXAGAUHK61QSTPP/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "local_path": "./images/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG",
+        "local_path": "./images/DSC_2437-Edit.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725154103-91GON58Y5D5L0XRD7THC/DSC_0052.JPG",
+        "local_path": "./images/DSC_0052.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg",
+        "local_path": "./images/DSC_7584.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288047554-19TCTDXAGAUHK61QSTPP/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "local_path": "./images/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG",
+        "local_path": "./images/DSC_2437-Edit.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725154103-91GON58Y5D5L0XRD7THC/DSC_0052.JPG",
+        "local_path": "./images/DSC_0052.JPG",
+        "alt": ""
+      }
+    ]
+  },
+  "about": {
+    "url": "https://genaikido.com/new-folder",
+    "title": "Instructors \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "Gary WagenerChief Instructor/Dojo-ChoGary Wagener Sensei is a Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan. The centering and harmonious aspect of daily practice is what originally and continually draws Mr. Wagener to aikido. \"After training for some time students begin to notice their everyday movements change, their breathing changes, and their daily communication changes. This injection of focused harmony and budo spirit begin to manifest itself through the understanding of aikido.\" Mr. Wagener's goal as a practitioner and instructor is to help students understand the foundations and find joy in their training.In addition to his training and instructing at Genshinkan Aikido Dojo, Mr. Wagener has taught aikido programs to underprivileged children in New York Public Schools.Robert HoffInstructorRobert Hoff Sensei is a Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan. Mr. Hoff began his aikido training in Brooklyn, New York, under the instruction of Joseph Jarman Sensei. It was following an intensive period in the practice of Zen Buddhism that he became initially attracted to the art. \u201cI began training shortly after my introduction to Zen. I found in aikido a more physical and ultimately fulfilling means to similar ends \u2013 thinking and acting with compassion, existing more in the moment, being less attached to the ultimately transient nature of being. Aikido necessitates that the practitioner be supremely present, and it\u2019s that reward that sustains my practice.\u201dIn addition to his experience teaching aikido to both young people and adults, Mr. Hoff is a history teacher at a K-12 public school in Manhattan.Ariana KoblitzInstructorAriana Koblitz is a Nidan (second-degree black belt)  Aikikai, recognized by Hombu dojo in Japan.  Mrs. Koblitz joined the dojo when she first moved to New York. Training the heart, mind, and body at Genshinkan quickly became a strong base to build up from amidst the constant shifts and pivots necessary living in NYC.Each class presents a lesson she had not realized she needed that day: a nuance in body movement, posture, a clarity of mind.Ariana celebrates the principles she discovers on the mat. Be present and focus on your partner, move in harmony with them because you are both aiming for a shared outcome of peace, react only to what is presented to you with the techniques you are slowly adding to your toolbox. These provide endless inspiration for her work in experience design.Sarah AntalInstructorDojo- Cho, Genshinkan White PlainsSarah Antal Sensei is a  nidan,( second-degree black belt) Aikikai, recognized by Hombu dojo in Japan. She began her Aikido training at Genshinkan Aikido of Manhattan, where she continues to practice under the tutelage of Gary Wagener Sensei. \"I first started Aikido because I missed being a student. I was never into martial arts, but the movement in Aikido reminded\u00a0me so much of dance that I was\u00a0immediately drawn to it. Just like in my classical dance training, the emphasis Aikido lays on very specific footwork is key. It's an Art that keeps unfolding and revealing itself, so one is a student forever!\"In addition to instructing Aikido, Mrs. Antal also operates a\u00a0successful dance studio\u00a0where she teaches ballet classes.Ian AntalInstructorChief Instructor, Genshinkan White PlainsIan Antal is a nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan. MrHis training began and continues at Genshinkan Aikido of Manhattan, where he served as Gary Wagener Sensei's first Soto Deshi. In 2018, Mr. Antal was bestowed the honor of opening the first satellite Genshinkan dojo in White Plains, NY where he holds the position of Chief Instructor. \"Aikido is known as the 'Art of Peace' and propagates that 'competition is self-defeating'. The paradox behind a martial art combined with a philosophy of harmony will never cease to be a source of puzzlement and fascination.\"Outside the dojo, Mr. Antal is the Executive Director of City Center Dance in White Plains, NY.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288043166-7GC96YNF78O8NEFMYKBP/IMG_7266.jpeg",
+        "local_path": "./images/IMG_7266.jpeg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/74432a92-264d-48e9-ab5c-0bb13735a293/DSC_2851.jpg",
+        "local_path": "./images/DSC_2851.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/7e73a585-3738-494b-b9d8-5a6bc8f2a12a/IMG_9742.jpg",
+        "local_path": "./images/IMG_9742.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/0487929d-0a25-4eeb-8e83-d7cb3c811750/DSC_0256.JPG",
+        "local_path": "./images/DSC_0256.JPG",
+        "alt": ""
+      }
+    ]
+  },
+  "instructors": {
+    "url": "https://genaikido.com/new-about-instructors",
+    "title": "Instructors \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "Gary WagenerChief Instructor/Dojo-ChoGary Wagener Sensei is a Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan. The centering and harmonious aspect of daily practice is what originally and continually draws Mr. Wagener to aikido. \"After training for some time students begin to notice their everyday movements change, their breathing changes, and their daily communication changes. This injection of focused harmony and budo spirit begin to manifest itself through the understanding of aikido.\" Mr. Wagener's goal as a practitioner and instructor is to help students understand the foundations and find joy in their training.In addition to his training and instructing at Genshinkan Aikido Dojo, Mr. Wagener has taught aikido programs to underprivileged children in New York Public Schools.Robert HoffInstructorRobert Hoff Sensei is a Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan. Mr. Hoff began his aikido training in Brooklyn, New York, under the instruction of Joseph Jarman Sensei. It was following an intensive period in the practice of Zen Buddhism that he became initially attracted to the art. \u201cI began training shortly after my introduction to Zen. I found in aikido a more physical and ultimately fulfilling means to similar ends \u2013 thinking and acting with compassion, existing more in the moment, being less attached to the ultimately transient nature of being. Aikido necessitates that the practitioner be supremely present, and it\u2019s that reward that sustains my practice.\u201dIn addition to his experience teaching aikido to both young people and adults, Mr. Hoff is a history teacher at a K-12 public school in Manhattan.Ariana KoblitzInstructorAriana Koblitz is a Nidan (second-degree black belt)  Aikikai, recognized by Hombu dojo in Japan.  Mrs. Koblitz joined the dojo when she first moved to New York. Training the heart, mind, and body at Genshinkan quickly became a strong base to build up from amidst the constant shifts and pivots necessary living in NYC.Each class presents a lesson she had not realized she needed that day: a nuance in body movement, posture, a clarity of mind.Ariana celebrates the principles she discovers on the mat. Be present and focus on your partner, move in harmony with them because you are both aiming for a shared outcome of peace, react only to what is presented to you with the techniques you are slowly adding to your toolbox. These provide endless inspiration for her work in experience design.Sarah AntalInstructorDojo- Cho, Genshinkan White PlainsSarah Antal Sensei is a  nidan,( second-degree black belt) Aikikai, recognized by Hombu dojo in Japan. She began her Aikido training at Genshinkan Aikido of Manhattan, where she continues to practice under the tutelage of Gary Wagener Sensei. \"I first started Aikido because I missed being a student. I was never into martial arts, but the movement in Aikido reminded\u00a0me so much of dance that I was\u00a0immediately drawn to it. Just like in my classical dance training, the emphasis Aikido lays on very specific footwork is key. It's an Art that keeps unfolding and revealing itself, so one is a student forever!\"In addition to instructing Aikido, Mrs. Antal also operates a\u00a0successful dance studio\u00a0where she teaches ballet classes.Ian AntalInstructorChief Instructor, Genshinkan White PlainsIan Antal is a nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan. MrHis training began and continues at Genshinkan Aikido of Manhattan, where he served as Gary Wagener Sensei's first Soto Deshi. In 2018, Mr. Antal was bestowed the honor of opening the first satellite Genshinkan dojo in White Plains, NY where he holds the position of Chief Instructor. \"Aikido is known as the 'Art of Peace' and propagates that 'competition is self-defeating'. The paradox behind a martial art combined with a philosophy of harmony will never cease to be a source of puzzlement and fascination.\"Outside the dojo, Mr. Antal is the Executive Director of City Center Dance in White Plains, NY.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288043166-7GC96YNF78O8NEFMYKBP/IMG_7266.jpeg",
+        "local_path": "./images/IMG_7266.jpeg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/74432a92-264d-48e9-ab5c-0bb13735a293/DSC_2851.jpg",
+        "local_path": "./images/DSC_2851.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/7e73a585-3738-494b-b9d8-5a6bc8f2a12a/IMG_9742.jpg",
+        "local_path": "./images/IMG_9742.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/0487929d-0a25-4eeb-8e83-d7cb3c811750/DSC_0256.JPG",
+        "local_path": "./images/DSC_0256.JPG",
+        "alt": ""
+      }
+    ]
+  },
+  "aikido_world_alliance": {
+    "url": "https://genaikido.com/aikido-world-alliance",
+    "title": "Aikido World Alliance \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "Aikido World AllianceGenshinkan Aikido, NYC is a member of the international organization,Aikido World Alliance, which is headed byAndrew Sato Shihan, and is directly affiliated withAikikai Foundation,  Aikido World Headquarters in Tokyo, Japan.Andrew Sato Shihan, 7th dan, is the founder and chief instructor of the AWA. Sato Shihan and several dedicated dojo and students started the organization in 2005. Under his leadership, the AWA has grown to more than 50 dojo worldwide, and is one of only a few US-based aikido associations directly affiliated with the Aikikai Foundation, Aikido World Headquarters, in Tokyo, Japan.As head instructor of the AWA, Sato Shihan travels the world regularly giving seminars. He also regularly teaches at Kiku Matsu Dojo, Chicago, which he started in 2005. It is now under the direction of Laura DeGraff Sensei, 6th dan.Sato Shihan began his study of aikido with the late Fumio Toyoda Shihan (1947-2001) in his home city of Chicago in 1977.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/34e29f7a-c5ce-4090-8255-cf129baf8499/DSC_8119.jpg",
+        "local_path": "./images/DSC_8119.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288037700-2VLMPAYDZ9AM6WG5NYEM/IMG_4623-768x1024.jpg",
+        "local_path": "./images/IMG_4623-768x1024.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "classes": {
+    "url": "https://genaikido.com/Classes",
+    "title": "Adult Classes \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "Visitors/new students are always welcome, but must make an appointment before visiting.New Adult Student Special:First month $115Sign-Up HereMonday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Tuesday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Wednesday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Thursday18:15-19:30Sunday1st Class:  9:45-10:302nd Class:  10:30 - 11:30AdultFee:$145 per month, unlimited classesNYU Student Fee:$130 per month, unlimited classesFee includes all classes during the month.\u00a0There are no hidden costs, no contracts, and no minimum commitments.\u00a0 All students in our adult program must be 18 yrs of age or older.All students will discover genuine support and encouragement during all classes.62 e. 4th St., Penthouse (Btwn Bowery & 2nd Ave), NYC, NY",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288035569-UAAX4MQ5KIP02N7DDLM7/Screen+Shot+2021-03-24+at+09.36.41.png",
+        "local_path": "./images/Screen+Shot+2021-03-24+at+09.36.41.png",
+        "alt": ""
+      }
+    ]
+  },
+  "adult_classes": {
+    "url": "https://genaikido.com/schedule-and-fees-adults",
+    "title": "Adult Classes \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "Visitors/new students are always welcome, but must make an appointment before visiting.New Adult Student Special:First month $115Sign-Up HereMonday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Tuesday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Wednesday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Thursday18:15-19:30Sunday1st Class:  9:45-10:302nd Class:  10:30 - 11:30AdultFee:$145 per month, unlimited classesNYU Student Fee:$130 per month, unlimited classesFee includes all classes during the month.\u00a0There are no hidden costs, no contracts, and no minimum commitments.\u00a0 All students in our adult program must be 18 yrs of age or older.All students will discover genuine support and encouragement during all classes.62 e. 4th St., Penthouse (Btwn Bowery & 2nd Ave), NYC, NY",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288035569-UAAX4MQ5KIP02N7DDLM7/Screen+Shot+2021-03-24+at+09.36.41.png",
+        "local_path": "./images/Screen+Shot+2021-03-24+at+09.36.41.png",
+        "alt": ""
+      }
+    ]
+  },
+  "kids_classes": {
+    "url": "https://genaikido.com/kids",
+    "title": "Kids Classes \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "New students for the children's program are always welcome, butmust make an appointmentwith their parent before visiting the dojo. Our classes are for ages 6 through 12.Kid\u2019s ScheduleEvery Wednesday:\u00a0 17:00 - 17:55Kid\u2019s Class Fee:$115 per month (no contract/no minimum commitment)Sign-Up HereWhy Aikido for KidsMartial arts is an activity which can develop a child's positive sense of self on a multitude of levels. \u00a0\u00a0This is especially true of aikido because of the non-combative/non-competitive philosophy. \u00a0There are no tournaments/competitions, so each students progress at a pace best suited for themOur Focus:Self Defense, Self Awareness, and Self Empowerment.Self Defense:Increased balance, energy levels, endurance and more, are just a few of the physical benefits kids are exposed to during classes. \u00a0Students will learn conflict resolution through harmoniously redirecting an attacker's energy. \u00a0The physical applications will be studied on a weekly basis in the dojo, but lessons will be taught on how to apply and relate concepts in a non-physical manner.Self Awareness:The basis for our program is clearly self defense. \u00a0However, the benefits of aikido training go much deeper. \u00a0Students will learn invaluable life skills including patience, discipline, and the over all development of who they are in their daily lives. \u00a0This is a class designed to bring an internal and external balance to a students every day life.Self Empowerment:Through physical fitness and aikido life skill lessons, students will discover move focus and determined motivation throughout their lives.62 E. 4th St, Penthouse.  NY, NY",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288045113-6SOFAYESBBPVPZRH2ADT/Screen+Shot+2021-03-24+at+09.36.41.png",
+        "local_path": "./images/Screen+Shot+2021-03-24+at+09.36.41.png",
+        "alt": ""
+      }
+    ]
+  },
+  "questions": {
+    "url": "https://genaikido.com/questions",
+    "title": "Questions \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "Genshinkan Aikido is devoted to the transmission and preservation of the traditional martial art of Aikido.What is Aikido?Aikido is a martial art and spiritual discipline where conflict is resolved harmoniously through the redirection of the attacker's energy.Are There Tournaments?Aikido is non-competitive; there are no tournaments or trophies. The goal is \u201cvictory over one\u2019s self\u201d.What are the benefits?The benefits go well beyond physical fitness and learning a self-defense. The long-term benefits transcend the physical and extend into all aspects of life. Aikido training takes place in the dojo, but as students train they begin to realize the daily applications of the art.How do I start?Sign-up for aTrial Class,or email us atGenAikidoNYC@gmail.com.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/7d028fd0-a0d5-47fd-b896-cf5456034bfb/DSC_7146-2.jpg",
+        "local_path": "./images/DSC_7146-2.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "intro_class": {
+    "url": "https://genaikido.com/try-aikido",
+    "title": "Intro Class \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "TRY A CLASSFor an Intro Class, please submit the below form.  We\u2019ll confirm your appointment by email.Single Intro Class Fee - $20.  If you join, the fee will be applied to your first month's dues3 Class Intro-Class package - $55New Adult Student Special:First month $115We don\u2019t permit observation for adult classes, only participation (parents/guardians are welcome to observe classes for their children).NOTE: CHECK YOUR SPAM FOLDER for our reply.  Many of our replies to Gmail end up in recipients SPAM.Full Name (no initials, please):*First NameLast NameEmail Address*Mobile Phone*We won't call you.  We WILL text you to let you know that we've sent a reply email.  Many of our replies are ending up in SPAM.Country(###)#######Briefly List Your Aikido/Martial Art Experience/Rank (Beginner, Intermediate, Advanced) Indicate any rank in the art you have experience.*Why Do You Want To Try Aikido?*Class Date*MMDDYYYYSelect Class Time*Adult Sunday - 09:45Adult Sunday - 10:30Adult Tues - 18:15Adult Tues - 19:15Kids  Wed - 17:00Adult Wed - 18:15Adult Wed - 19:15Adult Thurs - 18:15How Did You Hear About Us?*Genshinkan Student ReferralGoogle SearchSchool Sidewalk SignInstagramFacebookOtherThank you for your class request.  Someone from the school will be in touch with you soon.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288043156-P2GCR2R7HPZ5K4YHIQST/32695346220_de229825a8_o.jpg",
+        "local_path": "./images/32695346220_de229825a8_o.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "folder:about": {
+    "url": "https://genaikido.com/new-folder",
+    "title": "Instructors \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "Gary WagenerChief Instructor/Dojo-ChoGary Wagener Sensei is a Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan. The centering and harmonious aspect of daily practice is what originally and continually draws Mr. Wagener to aikido. \"After training for some time students begin to notice their everyday movements change, their breathing changes, and their daily communication changes. This injection of focused harmony and budo spirit begin to manifest itself through the understanding of aikido.\" Mr. Wagener's goal as a practitioner and instructor is to help students understand the foundations and find joy in their training.In addition to his training and instructing at Genshinkan Aikido Dojo, Mr. Wagener has taught aikido programs to underprivileged children in New York Public Schools.Robert HoffInstructorRobert Hoff Sensei is a Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan. Mr. Hoff began his aikido training in Brooklyn, New York, under the instruction of Joseph Jarman Sensei. It was following an intensive period in the practice of Zen Buddhism that he became initially attracted to the art. \u201cI began training shortly after my introduction to Zen. I found in aikido a more physical and ultimately fulfilling means to similar ends \u2013 thinking and acting with compassion, existing more in the moment, being less attached to the ultimately transient nature of being. Aikido necessitates that the practitioner be supremely present, and it\u2019s that reward that sustains my practice.\u201dIn addition to his experience teaching aikido to both young people and adults, Mr. Hoff is a history teacher at a K-12 public school in Manhattan.Ariana KoblitzInstructorAriana Koblitz is a Nidan (second-degree black belt)  Aikikai, recognized by Hombu dojo in Japan.  Mrs. Koblitz joined the dojo when she first moved to New York. Training the heart, mind, and body at Genshinkan quickly became a strong base to build up from amidst the constant shifts and pivots necessary living in NYC.Each class presents a lesson she had not realized she needed that day: a nuance in body movement, posture, a clarity of mind.Ariana celebrates the principles she discovers on the mat. Be present and focus on your partner, move in harmony with them because you are both aiming for a shared outcome of peace, react only to what is presented to you with the techniques you are slowly adding to your toolbox. These provide endless inspiration for her work in experience design.Sarah AntalInstructorDojo- Cho, Genshinkan White PlainsSarah Antal Sensei is a  nidan,( second-degree black belt) Aikikai, recognized by Hombu dojo in Japan. She began her Aikido training at Genshinkan Aikido of Manhattan, where she continues to practice under the tutelage of Gary Wagener Sensei. \"I first started Aikido because I missed being a student. I was never into martial arts, but the movement in Aikido reminded\u00a0me so much of dance that I was\u00a0immediately drawn to it. Just like in my classical dance training, the emphasis Aikido lays on very specific footwork is key. It's an Art that keeps unfolding and revealing itself, so one is a student forever!\"In addition to instructing Aikido, Mrs. Antal also operates a\u00a0successful dance studio\u00a0where she teaches ballet classes.Ian AntalInstructorChief Instructor, Genshinkan White PlainsIan Antal is a nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan. MrHis training began and continues at Genshinkan Aikido of Manhattan, where he served as Gary Wagener Sensei's first Soto Deshi. In 2018, Mr. Antal was bestowed the honor of opening the first satellite Genshinkan dojo in White Plains, NY where he holds the position of Chief Instructor. \"Aikido is known as the 'Art of Peace' and propagates that 'competition is self-defeating'. The paradox behind a martial art combined with a philosophy of harmony will never cease to be a source of puzzlement and fascination.\"Outside the dojo, Mr. Antal is the Executive Director of City Center Dance in White Plains, NY.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288043166-7GC96YNF78O8NEFMYKBP/IMG_7266.jpeg",
+        "local_path": "./images/IMG_7266.jpeg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/74432a92-264d-48e9-ab5c-0bb13735a293/DSC_2851.jpg",
+        "local_path": "./images/DSC_2851.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/7e73a585-3738-494b-b9d8-5a6bc8f2a12a/IMG_9742.jpg",
+        "local_path": "./images/IMG_9742.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/0487929d-0a25-4eeb-8e83-d7cb3c811750/DSC_0256.JPG",
+        "local_path": "./images/DSC_0256.JPG",
+        "alt": ""
+      }
+    ]
+  },
+  "back": {
+    "url": "https://genaikido.com/",
+    "title": "Genshinkan Aikido",
+    "content": {
+      "main": "View fullsizeView fullsizeView fullsizeView fullsizeView fullsizeView fullsizeGenshinkan is devoted to transmitting and preserving the martial art of Aikido.",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg",
+        "local_path": "./images/DSC_7584.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288047554-19TCTDXAGAUHK61QSTPP/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "local_path": "./images/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG",
+        "local_path": "./images/DSC_2437-Edit.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725154103-91GON58Y5D5L0XRD7THC/DSC_0052.JPG",
+        "local_path": "./images/DSC_0052.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg",
+        "local_path": "./images/DSC_7584.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "local_path": "./images/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288047554-19TCTDXAGAUHK61QSTPP/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "local_path": "./images/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG",
+        "local_path": "./images/DSC_2437-Edit.JPG",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725154103-91GON58Y5D5L0XRD7THC/DSC_0052.JPG",
+        "local_path": "./images/DSC_0052.JPG",
+        "alt": ""
+      }
+    ]
+  },
+  "folder:classes": {
+    "url": "https://genaikido.com/Classes",
+    "title": "Adult Classes \u2014 Genshinkan Aikido",
+    "content": {
+      "main": "Visitors/new students are always welcome, but must make an appointment before visiting.New Adult Student Special:First month $115Sign-Up HereMonday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Tuesday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Wednesday1st Class: \u00a018:15-19:152nd Class: \u00a019:15-20:15Thursday18:15-19:30Sunday1st Class:  9:45-10:302nd Class:  10:30 - 11:30AdultFee:$145 per month, unlimited classesNYU Student Fee:$130 per month, unlimited classesFee includes all classes during the month.\u00a0There are no hidden costs, no contracts, and no minimum commitments.\u00a0 All students in our adult program must be 18 yrs of age or older.All students will discover genuine support and encouragement during all classes.62 e. 4th St., Penthouse (Btwn Bowery & 2nd Ave), NYC, NY",
+      "navigation": [
+        "About",
+        "Instructors",
+        "Aikido World Alliance",
+        "Classes",
+        "Adult Classes",
+        "Kids Classes",
+        "Student Resources",
+        "Questions",
+        "Intro Class"
+      ]
+    },
+    "assets": [
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg?format=1500w",
+        "local_path": "./images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+        "alt": "Genshinkan Aikido"
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg",
+        "local_path": "./images/DSC_7942.jpg",
+        "alt": ""
+      },
+      {
+        "type": "image",
+        "original_url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288035569-UAAX4MQ5KIP02N7DDLM7/Screen+Shot+2021-03-24+at+09.36.41.png",
+        "local_path": "./images/Screen+Shot+2021-03-24+at+09.36.41.png",
+        "alt": ""
+      }
+    ]
+  }
+}
