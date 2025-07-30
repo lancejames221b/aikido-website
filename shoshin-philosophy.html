@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoshin Philosophy - Genshinkan Aikido</title>
+    <style>
+        /* Inherit main styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 20px;
+            padding: 60px 0;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+            margin-bottom: 60px;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .hero-section .japanese {
+            font-size: 4rem;
+            color: #8B4513;
+            margin: 20px 0;
+            font-weight: 300;
+        }
+
+        .hero-section .pronunciation {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .philosophy-quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            margin: 60px 0;
+        }
+
+        .content-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #8B4513;
+            text-align: center;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .content-box {
+            background: #f8f8f8;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .content-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #8B4513;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .principle-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #8B4513;
+        }
+
+        .principle-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .application-section {
+            background: #8B4513;
+            color: white;
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+
+        .application-section h2 {
+            color: white;
+        }
+
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .application-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .application-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            background: #A0522D;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .japanese {
+                font-size: 2.5rem;
+            }
+            
+            .philosophy-quote {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img src="assets/images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg" alt="Genshinkan Aikido" class="logo">
+            <ul class="nav-links">
+                <li><a href="prototype-index.html">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="#" class="active">Shoshin</a></li>
+                <li><a href="pages/classes.html">Classes</a></li>
+                <li><a href="pages/instructors.html">Instructors</a></li>
+                <li><a href="pages/intro_class.html">Try Aikido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>The Philosophy of Shoshin</h1>
+                <div class="japanese">初心</div>
+                <div class="pronunciation">/sho-shin/ - "Beginner's Mind"</div>
+                <div class="philosophy-quote">
+                    "In the beginner's mind there are many possibilities, 
+                    but in the expert's mind there are few."
+                    <br><br><em>- Shunryū Suzuki, Zen Mind, Beginner's Mind</em>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Understanding Shoshin</h2>
+                <div class="two-column">
+                    <div>
+                        <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                            Shoshin is a concept from Zen Buddhism that refers to having an attitude of 
+                            openness, eagerness, and lack of preconceptions when studying a subject, 
+                            even when studying at an advanced level.
+                        </p>
+                        <p>
+                            In martial arts, and particularly in Aikido, Shoshin represents the ideal 
+                            mental state for learning and growth. It's about approaching each practice 
+                            session, each technique, and each interaction with the fresh perspective 
+                            of a beginner - curious, humble, and open to new insights.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="assets/images/DSC_8119.jpg" alt="Aikido Practice" 
+                             style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Core Principles of Shoshin</h2>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <h4>🧠 Openness to Learning</h4>
+                        <p>
+                            Approach each lesson without predetermined ideas about what you should learn. 
+                            Be receptive to unexpected insights and new ways of understanding familiar concepts.
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h4>🙏 Humility in Practice</h4>
+                        <p>
+                            Recognize that there's always more to learn, regardless of your current level. 
+                            This humility prevents ego from blocking genuine learning and growth.
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h4>🎯 Present Moment Awareness</h4>
+                        <p>
+                            Focus completely on the current moment and task at hand. This presence 
+                            allows for deeper learning and more authentic responses.
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h4>❓ Questioning Everything</h4>
+                        <p>
+                            Maintain curiosity about even the most basic techniques. Ask "why" and "how" 
+                            regularly, and be willing to see familiar things in new ways.
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h4>🔄 Embracing Mistakes</h4>
+                        <p>
+                            View mistakes as valuable learning opportunities rather than failures. 
+                            Each error provides insight into areas for improvement and growth.
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h4>🎭 Letting Go of Identity</h4>
+                        <p>
+                            Don't let your sense of expertise or accomplishment prevent you from 
+                            learning something new or approaching problems from a fresh angle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="application-section">
+            <div class="container">
+                <h2>Applying Shoshin in Modern Life</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">
+                    The principles of beginner's mind extend far beyond the dojo, offering valuable 
+                    insights for professional and personal development.
+                </p>
+                <div class="application-grid">
+                    <div class="application-card">
+                        <h4>In Leadership</h4>
+                        <p>
+                            Approach management challenges with curiosity rather than assumptions. 
+                            Listen to all team members, regardless of their experience level.
+                        </p>
+                    </div>
+                    <div class="application-card">
+                        <h4>In Problem-Solving</h4>
+                        <p>
+                            Question existing solutions and remain open to unconventional approaches. 
+                            The best innovations often come from beginner's mind thinking.
+                        </p>
+                    </div>
+                    <div class="application-card">
+                        <h4>In Relationships</h4>
+                        <p>
+                            Listen to others without preconceptions. Approach conversations with 
+                            genuine curiosity about the other person's perspective.
+                        </p>
+                    </div>
+                    <div class="application-card">
+                        <h4>In Learning</h4>
+                        <p>
+                            Whether learning new skills or deepening existing ones, maintain the 
+                            enthusiasm and openness that makes learning joyful and effective.
+                        </p>
+                    </div>
+                    <div class="application-card">
+                        <h4>In Stress Management</h4>
+                        <p>
+                            Approach stressful situations with presence and openness rather than 
+                            reactive patterns. This creates space for creative responses.
+                        </p>
+                    </div>
+                    <div class="application-card">
+                        <h4>In Innovation</h4>
+                        <p>
+                            Maintain beginner's mind when tackling familiar challenges. The most 
+                            breakthrough solutions often come from questioning basic assumptions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Shoshin in Aikido Practice</h2>
+                <div class="content-box">
+                    <h3>Why Shoshin Matters for Adult Beginners</h3>
+                    <p>
+                        Many adult students come to martial arts with concerns about starting "too late" 
+                        or feeling awkward as beginners. The Shoshin philosophy directly addresses these 
+                        concerns by reframing the beginner state as the ideal mindset for learning.
+                    </p>
+                    <ul style="margin: 20px 0; padding-left: 20px;">
+                        <li>Reduces performance anxiety by emphasizing learning over achievement</li>
+                        <li>Creates a supportive environment where questions are valued</li>
+                        <li>Encourages experimentation and exploration</li>
+                        <li>Builds resilience by reframing mistakes as learning opportunities</li>
+                        <li>Fosters genuine community through shared learning experiences</li>
+                    </ul>
+                </div>
+
+                <div class="two-column" style="margin-top: 40px;">
+                    <div class="content-box">
+                        <h3>For Complete Beginners</h3>
+                        <p>
+                            Your beginner status is actually an advantage. You bring fresh perspective, 
+                            natural curiosity, and openness that can inspire even advanced practitioners. 
+                            Embrace your questions and uncertainties - they're signs of active learning.
+                        </p>
+                    </div>
+                    <div class="content-box">
+                        <h3>For Returning Practitioners</h3>
+                        <p>
+                            If you have previous martial arts experience, Shoshin invites you to approach 
+                            Aikido with fresh eyes. Let go of what you think you know and discover the 
+                            unique principles and perspectives that Aikido offers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Experience Shoshin for Yourself</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                    Ready to discover the transformative power of beginner's mind? 
+                    Join us for an intro class and experience authentic Aikido training 
+                    in a supportive, learning-focused environment.
+                </p>
+                <a href="pages/intro_class.html" class="cta-button">Schedule Your Intro Class</a>
+                <a href="prototype-index.html" class="cta-button" style="background: transparent; color: #8B4513; border: 2px solid #8B4513;">
+                    Return to Home
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: #333; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 Genshinkan Aikido. All rights reserved. | Author: Lance James, Unit 221B</p>
+        </div>
+    </footer>
+</body>
+</html>

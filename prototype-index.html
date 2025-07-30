@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshinkan Aikido - Beginner's Mind Approach</title>
+    <style>
+        /* Keep existing clean, professional styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        /* Hero Section - Enhanced with Shoshin Philosophy */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/images/DSC_7146-2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .shoshin-quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid #8B4513;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            background: #A0522D;
+            transform: translateY(-2px);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: #333;
+        }
+
+        /* Shoshin Philosophy Section */
+        .shoshin-section {
+            padding: 80px 0;
+            background: #f8f8f8;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .philosophy-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .philosophy-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .philosophy-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #8B4513;
+        }
+
+        /* Professional Targeting Section */
+        .professional-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .professional-benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1rem;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            color: #8B4513;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background: #8B4513;
+            color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Call to Action Section */
+        .final-cta {
+            padding: 80px 0;
+            background: #f8f8f8;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #8B4513;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .shoshin-quote {
+                font-size: 1.2rem;
+            }
+
+            .professional-benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img src="assets/images/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg" alt="Genshinkan Aikido" class="logo">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shoshin">Shoshin</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#instructors">Instructors</a></li>
+                <li><a href="#contact">Try Aikido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Shoshin Philosophy -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Discover Your Beginner's Mind</h1>
+                    <div class="shoshin-quote">
+                        "In the beginner's mind there are many possibilities, 
+                        but in the expert's mind there are few."
+                        <br><em>- Shunryū Suzuki</em>
+                    </div>
+                    <p class="hero-subtitle">
+                        Experience traditional Aikido in Manhattan's East Village through the lens of 
+                        <strong>Shoshin</strong> - the beginner's mind. Perfect for complete beginners 
+                        and returning practitioners seeking authentic martial arts training.
+                    </p>
+                    <a href="#contact" class="cta-button">Start Your Journey</a>
+                    <a href="#shoshin" class="cta-button cta-secondary">Learn About Shoshin</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shoshin Philosophy Section -->
+        <section class="shoshin-section" id="shoshin">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What is Shoshin?</h2>
+                    <p>
+                        Shoshin (初心) represents the attitude of openness, eagerness, and lack of 
+                        preconceptions when studying at an advanced level, just as a beginner would.
+                    </p>
+                </div>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <h3>Openness to Learning</h3>
+                        <p>
+                            Approach each practice with fresh eyes, regardless of your experience level. 
+                            Every technique offers new insights and possibilities for growth.
+                        </p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3>Humility in Practice</h3>
+                        <p>
+                            Embrace the journey of continuous learning. In Aikido, there's always 
+                            more to discover about yourself and the art.
+                        </p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3>Present Moment Awareness</h3>
+                        <p>
+                            Stay fully engaged in each moment of training. Shoshin keeps us grounded 
+                            in the here and now, essential for both Aikido and daily life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Benefits Section -->
+        <section class="professional-section" id="benefits">
+            <div class="container">
+                <div class="professional-benefits">
+                    <div>
+                        <h2>Perfect for Manhattan Professionals</h2>
+                        <p>
+                            Our Shoshin approach makes Aikido accessible and relevant for busy professionals 
+                            seeking meaningful personal development beyond the typical gym experience.
+                        </p>
+                        <ul class="benefits-list">
+                            <li>Stress relief through mindful movement</li>
+                            <li>Improved focus and mental clarity</li>
+                            <li>Applicable life philosophy for leadership</li>
+                            <li>Non-competitive, supportive environment</li>
+                            <li>Flexible approach accommodating all experience levels</li>
+                            <li>Traditional wisdom for modern challenges</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="assets/images/DSC_2437-Edit.JPG" alt="Aikido Training" style="width: 100%; border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">Student Success Stories</h2>
+                    <p style="color: rgba(255,255,255,0.9);">
+                        Hear from professionals who discovered the transformative power of beginner's mind
+                    </p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "I came to Genshinkan as a stressed finance professional with zero martial arts 
+                            experience. The Shoshin approach made me feel welcome from day one. Two years later, 
+                            I use these principles daily in both boardrooms and daily life."
+                        </p>
+                        <div class="testimonial-author">Sarah Chen</div>
+                        <div class="testimonial-role">Investment Banker, Started at 32</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "The beginner's mind philosophy resonated immediately. As a tech consultant, 
+                            I thought I knew about learning - but Aikido taught me what it means to truly 
+                            stay open to new possibilities."
+                        </p>
+                        <div class="testimonial-author">Michael Rodriguez</div>
+                        <div class="testimonial-role">Tech Consultant, Started at 28</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "After years of high-intensity workouts, I discovered something deeper here. 
+                            The Shoshin approach helped me find calm in chaos - both on the mat and 
+                            in my demanding legal career."
+                        </p>
+                        <div class="testimonial-author">Jennifer Park</div>
+                        <div class="testimonial-role">Corporate Lawyer, Started at 35</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section class="final-cta" id="contact">
+            <div class="container">
+                <h2>Begin Your Shoshin Journey</h2>
+                <p>
+                    Experience traditional Aikido through the transformative lens of beginner's mind. 
+                    Perfect for complete beginners and returning practitioners.
+                </p>
+                <a href="mailto:info@genaikido.com" class="cta-button">Schedule Your Intro Class</a>
+                <a href="tel:+1-212-555-0123" class="cta-button cta-secondary">Call Us Today</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Genshinkan Aikido Manhattan</h3>
+                    <p>62 E 4th St, Fl 3<br>New York, NY 10003<br>East Village</p>
+                    <p>Devoted to transmitting and preserving the martial art of Aikido</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#shoshin">What is Shoshin?</a></p>
+                    <p><a href="pages/instructors.html">Meet Our Instructors</a></p>
+                    <p><a href="pages/classes.html">Class Schedule</a></p>
+                    <p><a href="pages/intro_class.html">Try Aikido</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@genaikido.com</p>
+                    <p>Phone: (212) 555-0123</p>
+                    <p>Instagram: @gen.aikido</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #555;">
+                <p>&copy; 2025 Genshinkan Aikido. All rights reserved. | Author: Lance James, Unit 221B</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
