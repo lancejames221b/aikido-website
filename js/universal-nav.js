@@ -86,7 +86,7 @@ class UniversalNavigation {
                             </div>
                         </div>
                         <div class="nav-item">
-                            <a href="${this.basePath}index.html#signup-form">Questions</a>
+                            <a href="${this.basePath}index.html#questions">Questions</a>
                         </div>
                         <div class="nav-item">
                             <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
@@ -135,7 +135,7 @@ class UniversalNavigation {
                         </div>
                     </div>
                     <div class="mobile-nav-item">
-                        <a href="${this.basePath}index.html#signup-form">Questions</a>
+                        <a href="${this.basePath}index.html#questions">Questions</a>
                     </div>
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
