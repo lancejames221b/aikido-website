@@ -273,6 +273,9 @@ class UniversalNavigation {
             background: white;
             border-top: 1px solid #eee;
             padding: 20px 0;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .mobile-nav.open {
@@ -288,25 +291,63 @@ class UniversalNavigation {
             color: #333;
             text-decoration: none;
             font-weight: 500;
-            padding: 12px 0;
+            padding: 12px 20px;
             border-bottom: 1px solid #f5f5f5;
+            position: relative;
+        }
+        
+        .mobile-dropdown > a::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #8B4513;
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-dropdown > a.active::after {
+            transform: translateY(-50%) rotate(45deg);
         }
 
         .mobile-dropdown-menu {
             display: none;
-            padding-left: 20px;
+            background: #f8f8f8;
+            border-left: 3px solid #8B4513;
+            margin: 0;
+            padding: 10px 0;
         }
 
         .mobile-dropdown-menu.open {
             display: block;
+            animation: slideDown 0.3s ease;
         }
 
         .mobile-dropdown-menu a {
             display: block;
             color: #666;
             text-decoration: none;
-            padding: 8px 0;
+            padding: 10px 20px 10px 40px;
             font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-dropdown-menu a:hover {
+            background: #efefef;
+            color: #8B4513;
+            padding-left: 45px;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Body padding for fixed header */
@@ -379,19 +420,29 @@ class UniversalNavigation {
             document.querySelectorAll('.mobile-dropdown > a').forEach(link => {
                 link.addEventListener('click', (e) => {
                     const href = link.getAttribute('href');
-                    // Only prevent default if it's a dropdown toggle (href is # or doesn't exist)
-                    if (!href || href === '#') {
-                        e.preventDefault();
-                        const dropdown = link.nextElementSibling;
-                        if (dropdown) {
-                            dropdown.classList.toggle('open');
-                        }
-                    } else {
-                        // For links with actual targets, close mobile menu after click
-                        setTimeout(() => {
-                            mobileNav.classList.remove('open');
-                            mobileToggle.classList.remove('open');
-                        }, 300);
+                    const dropdown = link.nextElementSibling;
+                    
+                    // Always prevent default and toggle dropdown for mobile
+                    e.preventDefault();
+                    if (dropdown) {
+                        // Close other dropdowns first
+                        document.querySelectorAll('.mobile-dropdown-menu.open').forEach(openDropdown => {
+                            if (openDropdown !== dropdown) {
+                                openDropdown.classList.remove('open');
+                                openDropdown.previousElementSibling.classList.remove('active');
+                            }
+                        });
+                        dropdown.classList.toggle('open');
+                        link.classList.toggle('active');
+                    }
+                    
+                    // If link has an actual target and dropdown is already open, navigate
+                    if (href && href !== '#' && dropdown && dropdown.classList.contains('open')) {
+                        // Allow navigation on second click
+                        link.addEventListener('click', function handleSecondClick(e) {
+                            link.removeEventListener('click', handleSecondClick);
+                            window.location.href = href;
+                        }, { once: true });
                     }
                 });
             });
