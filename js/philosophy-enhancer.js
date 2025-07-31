@@ -121,7 +121,8 @@ class PhilosophyEnhancer {
             }
 
             .philosophy-subnav a:hover,
-            .philosophy-subnav a[style*="color: #8B4513"] {
+            .philosophy-subnav a[style*="color: #8B4513"],
+            .philosophy-subnav a[style*="color: rgb(139, 69, 19)"] {
                 color: var(--warm-brown) !important;
                 background: rgba(139, 69, 19, 0.1) !important;
                 font-weight: 600 !important;
