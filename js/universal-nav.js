@@ -15,11 +15,11 @@ class UniversalNavigation {
         const currentPage = window.location.pathname.split('/').pop();
         
         const philosophyPages = [
-            { file: 'what-is-shoshin.html', name: 'Shoshin', label: 'Shoshin' },
-            { file: 'adult-beginners-journey.html', name: 'Beginners', label: 'Beginners' },
-            { file: 'honor-values.html', name: 'Values', label: 'Values' },
+            { file: 'what-is-shoshin.html', name: 'Shoshin', label: 'What is Shoshin' },
+            { file: 'adult-beginners-journey.html', name: 'Beginners', label: 'Student Stories' },
+            { file: 'honor-values.html', name: 'Values', label: 'Honor & Values' },
             { file: 'traditional-values.html', name: 'Traditions', label: 'Traditions' },
-            { file: 'the-art-of-peace.html', name: 'The Art of Peace', label: 'Art of Peace' },
+            { file: 'the-art-of-peace.html', name: 'The Art of Peace', label: 'The Art of Peace' },
             { file: 'health-and-safety.html', name: 'Health & Safety', label: 'Health & Safety' }
         ];
 
