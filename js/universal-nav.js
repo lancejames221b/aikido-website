@@ -34,7 +34,6 @@ class UniversalNavigation {
         <nav class="philosophy-subnav" style="background-color: #f8f8f8 !important; border-bottom: 1px solid #e0e0e0; padding: 1rem 0; position: relative; z-index: 100;">
             <div class="container">
                 <div style="text-align: center;">
-                    <span style="color: #8B4513; font-size: 14px; font-weight: 500; margin-right: 2rem;">Philosophy Topics:</span>
                     ${subnavItems}
                 </div>
             </div>
@@ -63,6 +62,8 @@ class UniversalNavigation {
                             <div class="dropdown-menu">
                                 <a href="${this.basePath}index.html#instructors">Instructors</a>
                                 <a href="${this.basePath}index.html#aikido-world-alliance">Aikido World Alliance</a>
+                                <a href="${this.basePath}index.html#training-commitment">The Path</a>
+                                <a href="${this.basePath}index.html#who-thrives">Who Thrives Here</a>
                             </div>
                         </div>
                         <div class="nav-item nav-dropdown">
@@ -110,6 +111,8 @@ class UniversalNavigation {
                         <div class="mobile-dropdown-menu">
                             <a href="${this.basePath}index.html#instructors">Instructors</a>
                             <a href="${this.basePath}index.html#aikido-world-alliance">Aikido World Alliance</a>
+                            <a href="${this.basePath}index.html#training-commitment">The Path</a>
+                            <a href="${this.basePath}index.html#who-thrives">Who Thrives Here</a>
                         </div>
                     </div>
                     <div class="mobile-nav-item mobile-dropdown">
