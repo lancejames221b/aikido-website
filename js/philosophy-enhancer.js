@@ -110,22 +110,33 @@ class PhilosophyEnhancer {
             }
 
             .philosophy-subnav a {
-                color: var(--zen-gray) !important;
+                color: var(--sumi-black) !important;
                 text-decoration: none !important;
                 font-size: 14px !important;
                 font-weight: 500 !important;
                 padding: 8px 16px !important;
                 border-radius: 20px !important;
                 transition: all 0.3s ease !important;
-                background: rgba(255, 255, 255, 0.6);
+                background: rgba(255, 255, 255, 0.9) !important;
+                border: 2px solid transparent !important;
             }
 
-            .philosophy-subnav a:hover,
-            .philosophy-subnav a[style*="color: #8B4513"],
-            .philosophy-subnav a[style*="color: rgb(139, 69, 19)"] {
-                color: var(--warm-brown) !important;
-                background: rgba(139, 69, 19, 0.1) !important;
+            .philosophy-subnav a:hover {
+                color: var(--sumi-black) !important;
+                background: rgba(139, 69, 19, 0.2) !important;
                 font-weight: 600 !important;
+                border: 2px solid rgba(139, 69, 19, 0.4) !important;
+                box-shadow: 0 2px 6px rgba(139, 69, 19, 0.2) !important;
+            }
+
+            .philosophy-subnav a[style*="color: white"],
+            .philosophy-subnav a[style*="background: #8B4513"] {
+                color: white !important;
+                background: #8B4513 !important;
+                font-weight: 700 !important;
+                border: 2px solid #8B4513 !important;
+                text-shadow: none !important;
+                box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3) !important;
             }
 
             /* Enhanced Quote Blocks */
@@ -371,23 +382,9 @@ class PhilosophyEnhancer {
     }
 
     updatePhilosophySubNav() {
-        const currentPageFile = `${this.currentPage}.html`;
-        const subnavLinks = document.querySelectorAll('.philosophy-subnav a');
-        
-        subnavLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === currentPageFile || href.endsWith(`/${currentPageFile}`)) {
-                // Mark as active by updating the style
-                link.style.color = '#8B4513';
-                link.style.fontWeight = '600';
-                link.style.background = 'rgba(139, 69, 19, 0.1)';
-            } else {
-                // Reset to inactive state
-                link.style.color = '#666';
-                link.style.fontWeight = '500';
-                link.style.background = 'rgba(255, 255, 255, 0.6)';
-            }
-        });
+        // Don't override the universal navigation system's styling
+        // The universal-nav.js already handles active state properly
+        // This method is kept for potential future enhancements
     }
 
     init() {

@@ -15,18 +15,20 @@ class UniversalNavigation {
         const currentPage = window.location.pathname.split('/').pop();
         
         const philosophyPages = [
-            { file: 'what-is-shoshin.html', name: 'Shoshin', label: 'What is Shoshin' },
-            { file: 'adult-beginners-journey.html', name: 'Beginners', label: 'Student Stories' },
-            { file: 'honor-values.html', name: 'Values', label: 'Honor & Values' },
-            { file: 'traditional-values.html', name: 'Traditions', label: 'Traditions' },
+            { file: 'what-is-shoshin.html', name: 'What is Shoshin', label: 'What is Shoshin' },
             { file: 'the-art-of-peace.html', name: 'The Art of Peace', label: 'The Art of Peace' },
-            { file: 'health-and-safety.html', name: 'Health & Safety', label: 'Health & Safety' }
+            { file: 'honor-values.html', name: 'Honor & Values', label: 'Honor & Values' },
+            { file: 'traditional-values.html', name: 'Traditions', label: 'Traditions' },
+            { file: 'health-and-safety.html', name: 'Health & Safety', label: 'Health & Safety' },
+            { file: 'adult-beginners-journey.html', name: 'Student Stories', label: 'Student Stories' }
         ];
 
         const subnavItems = philosophyPages.map(page => {
             const isActive = currentPage === page.file;
-            const activeStyle = isActive ? 'color: #8B4513; font-weight: 600;' : 'color: #666;';
-            return `<a href="${page.file}" style="margin: 0 1rem; ${activeStyle} text-decoration: none; font-size: 14px;">${page.label}</a>`;
+            const activeStyle = isActive ? 
+                'color: white; font-weight: 700; background: #8B4513; padding: 8px 16px; border-radius: 20px; border: 2px solid #8B4513; box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);' : 
+                'color: #333; padding: 8px 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.8); border: 2px solid transparent;';
+            return `<a href="${page.file}" style="margin: 0 1rem; ${activeStyle} text-decoration: none; font-size: 14px; transition: all 0.3s ease;">${page.label}</a>`;
         }).join('');
 
         return `
