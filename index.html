@@ -2885,7 +2885,7 @@
 
 
     <!-- Intro Class Section with Hero Image -->
-    <section class="intro-class-section" id="intro-class" style="position: relative; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg?format=1500w') center/cover; color: white; min-height: 60vh; display: flex; align-items: center;">
+    <section class="intro-class-section" id="intro-class" style="position: relative; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('images/intro-class-training.jpg') center/cover; color: white; min-height: 60vh; display: flex; align-items: center;">
         <div class="sqs-layout">
             <div class="intro-class-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
                 <h2 class="intro-class-title" style="color: white; font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Begin Your Aikido Path</h2>
@@ -2911,27 +2911,55 @@
                 <div class="intro-class-form">
                     <h3>Sign Up for Introductory Training</h3>
                     <form class="contact-form" action="/submit-intro-class" method="POST" id="intro-class-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <input type="text" name="fname" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="lname" placeholder="Last Name" required>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number">
+                            <input type="tel" name="phone" placeholder="Mobile Phone" required>
+                            <small style="color: #666; font-size: 12px; display: block; margin-top: 5px;">We won't call you. We WILL text you to let you know that we've sent a reply email. Many of our replies are ending up in SPAM.</small>
                         </div>
                         <div class="form-group">
-                            <select name="experience" required>
-                                <option value="">Previous Martial Arts Experience?</option>
-                                <option value="none">No experience</option>
-                                <option value="some">Some experience</option>
-                                <option value="experienced">Experienced</option>
+                            <textarea name="experience" placeholder="Briefly List Your Aikido/Martial Art Experience/Rank (Beginner, Intermediate, Advanced)" required rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="why" placeholder="Why Do You Want To Try Aikido?" required rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label style="color: #666; font-size: 14px; margin-bottom: 5px; display: block;">Class Date</label>
+                            <input type="date" name="classDate" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="classTime" required>
+                                <option value="">Select Class Time</option>
+                                <option value="monday-7pm">Monday 7:00 PM</option>
+                                <option value="tuesday-7pm">Tuesday 7:00 PM</option>
+                                <option value="wednesday-6:30pm">Wednesday 6:30 PM</option>
+                                <option value="thursday-7pm">Thursday 7:00 PM</option>
+                                <option value="sunday-11am">Sunday 11:00 AM</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Any questions or special considerations? (optional)" rows="4"></textarea>
+                            <select name="howHeard" required>
+                                <option value="">How Did You Hear About Us?</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="friend">Friend/Referral</option>
+                                <option value="walkby">Walked By</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                        <button type="submit" class="form-submit-btn">Request Training Session</button>
+                        <div class="form-group">
+                            <textarea name="additionalInfo" placeholder="Add anything else here, that you feel is important to make us aware of." rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">Submit Intro Class Request</button>
                     </form>
                 </div>
                 
