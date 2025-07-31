@@ -446,6 +446,23 @@ class UniversalNavigation {
                     }
                 });
             });
+            
+            // Handle clicks on dropdown menu items to close mobile nav
+            document.querySelectorAll('.mobile-dropdown-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    // Close mobile navigation when clicking on any dropdown item
+                    const mobileNav = document.querySelector('.mobile-nav');
+                    const mobileToggle = document.querySelector('.mobile-toggle');
+                    if (mobileNav) mobileNav.classList.remove('open');
+                    if (mobileToggle) mobileToggle.classList.remove('open');
+                    
+                    // Also close all dropdowns
+                    document.querySelectorAll('.mobile-dropdown-menu.open').forEach(dropdown => {
+                        dropdown.classList.remove('open');
+                        dropdown.previousElementSibling.classList.remove('active');
+                    });
+                });
+            });
         }
     }
 
