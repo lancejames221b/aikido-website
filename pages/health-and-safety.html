@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Health & Safety First | Genshinkan Aikido</title>
+    <meta name="description" content="At Genshinkan Aikido, student health and safety always comes first. Discover our proactive approach to student care and community-first decision making.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .sqs-layout {
+            max-width: 1626px;
+            margin: 0 auto;
+            padding: 0 2vw;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 16px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 13px;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .cta-button {
+            background: #8B4513;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #A0522D;
+        }
+
+        /* Main Content */
+        .main {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        /* Japanese Characters */
+        .japanese-characters {
+            font-size: 4rem;
+            color: #8B4513;
+            margin: 2rem 0;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Manrope', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Protective Philosophy Section */
+        .protective-philosophy {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Manrope', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+        }
+
+        .philosophy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .philosophy-text {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .philosophy-quote {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #8B4513;
+        }
+
+        .quote-text {
+            font-family: 'Manrope', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            color: #8B4513;
+            font-weight: 500;
+        }
+
+        /* Care Examples Section */
+        .care-examples {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .example-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .example-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .example-icon {
+            width: 60px;
+            height: 60px;
+            background: #8B4513;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .example-title {
+            font-family: 'Manrope', serif;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .example-description {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Community First Section */
+        .community-first {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .community-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .community-highlight {
+            font-size: 1.3rem;
+            color: #8B4513;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .community-description {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .values-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .value-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-text {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Manrope', serif;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background: #8B4513;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #8B4513;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #A0522D;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .philosophy-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .quote-text {
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="philosophy-page">
+    <!-- Universal Navigation -->
+    <div id="universal-navigation"></div>
+
+
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="japanese-characters">安全</div>
+                    <div class="hero-subtitle">Traditional Experience</div>
+                    <h1 class="hero-title">Safe Training Through Proper Discipline</h1>
+                    <p class="hero-description">
+                        True safety in budo comes from rigorous training standards, not comfort. We maintain traditional protocols that build strength, awareness, and resilience—teaching you to protect yourself and your training partners through disciplined practice and proper technique.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Principles Section -->
+        <section class="care-examples">
+            <div class="container">
+                <h2 class="section-title">How We Train Safely</h2>
+                <p class="section-intro" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem; color: #666;">
+                    Traditional budo demands both intensity and intelligence. We maintain serious training standards while teaching you to protect yourself and your partners through proper technique and awareness.
+                </p>
+                
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-icon">⚡</div>
+                        <h3 class="example-title">Progressive Intensity</h3>
+                        <p class="example-description">
+                            Traditional martial arts build strength through gradual progression. We challenge you at your edge while ensuring you develop proper foundation, technique, and resilience over time.
+                        </p>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-icon">🧠</div>
+                        <h3 class="example-title">Awareness Training</h3>
+                        <p class="example-description">
+                            Develop zanshin (残心) - continuing awareness of yourself, your partner, and the training environment. This mental discipline protects you both on and off the mat.
+                        </p>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-icon">🥋</div>
+                        <h3 class="example-title">Proper Technique Focus</h3>
+                        <p class="example-description">
+                            Safety comes from understanding and applying correct technique. We emphasize precision over power, teaching you to generate effective martial arts technique without relying on force or creating unnecessary risk.
+                        </p>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-icon">⚖️</div>
+                        <h3 class="example-title">Training Partner Responsibility</h3>
+                        <p class="example-description">
+                            Learn to take responsibility for both your own development and your partner's safety. This mutual accountability builds the trust essential for advanced martial arts training.
+                        </p>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-icon">🏛️</div>
+                        <h3 class="example-title">Traditional Conditioning</h3>
+                        <p class="example-description">
+                            Build physical and mental resilience through time-tested methods. Traditional martial arts conditioning strengthens your body while developing the discipline that prevents injury.
+                        </p>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-icon">📚</div>
+                        <h3 class="example-title">Continuous Learning</h3>
+                        <p class="example-description">
+                            Understanding the principles behind each technique keeps you training safely and effectively. We teach the "why" behind movements, not just the physical execution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Train Safely, Train Seriously</h2>
+                    <p class="cta-text">
+                        Join a dojo where serious training meets intelligent instruction. Experience how proper technique and awareness create both safety and effectiveness in traditional martial arts.
+                    </p>
+                    <a href="../index.html#signup-form" class="btn-primary">Begin Safe, Serious Training</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Genshinkan Aikido Manhattan</strong></p>
+                <p>62 E 4th St, Fl 3, New York, NY 10003</p>
+                <p>Phone: <a href="tel:212-555-0123">(212) 555-0123</a> | Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
+                <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
+                <p style="margin-top: 2rem; font-style: italic; color: #8B4513; font-size: 1.1rem;">
+                    In Aiki
+                </p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
+                    
+                    &copy; 2025 Genshinkan Aikido. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+
+    <script src="../js/universal-nav.js"></script>
+    <script src="../js/philosophy-enhancer.js"></script>
+</body>
+</html>

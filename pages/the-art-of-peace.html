@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Peace - Genshinkan Aikido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sumi-black: #2C2C2C;
+            --charcoal-gray: #2c2c2c;
+            --warm-brown: #654321;
+            --muted-gold: #B8860B;
+            --washi-white: #ffffff;
+            --tatami-beige: #e6ddd4;
+            --bamboo-green: #4a5d23;
+            --zen-gray: #8a8a8a;
+            --ink-blue: #1B365D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .sqs-layout {
+            max-width: 1626px;
+            margin: 0 auto;
+            padding: 0 2vw;
+        }
+
+        .sqs-layout {
+            max-width: 1626px;
+            margin: 0 auto;
+            padding: 0 2vw;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles - Following Squarespace header patterns */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Manrope', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 16px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 13px;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .cta-button {
+            background: #8B4513;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #A0522D;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9vw 2vw;
+            min-height: 80px;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Manrope', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--sumi-black);
+            text-decoration: none;
+        }
+        
+        .header-logo::after {
+            content: '合気';
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            font-size: 14px;
+            color: var(--muted-gold);
+            margin-left: 10px;
+            opacity: 0.8;
+            font-weight: 700;
+        }
+        .header-logo-image {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .header-logo-image:hover {
+            transform: scale(1.05);
+        }
+        .header-nav {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+        }
+        
+        .header-nav-item {
+            position: relative;
+        }
+        .header-nav a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .header-nav a:hover {
+            color: var(--warm-brown);
+        }
+        
+        /* Dropdown Menu Styles */
+        .header-nav-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .header-nav-item:hover .header-nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .header-nav-dropdown a {
+            display: block;
+            padding: 12px 16px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 13px;
+        }
+        
+        .header-nav-dropdown a:last-child {
+            border-bottom: none;
+        }
+        .header-cta {
+            background: var(--warm-brown);
+            color: var(--washi-white);
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid var(--warm-brown);
+        }
+        .header-cta:hover {
+            background: var(--muted-gold);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 20px rgba(184,134,11,0.4);
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        .burger-box {
+            width: 24px;
+            height: 18px;
+            position: relative;
+        }
+        .burger-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .burger-inner > div {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--charcoal-gray);
+            transition: all 0.3s ease;
+        }
+        .top-bun { top: 0; }
+        .patty { top: 8px; }
+        .bottom-bun { bottom: 0; }
+        .mobile-menu-toggle.open .burger-inner .top-bun {
+            transform: rotate(45deg);
+            top: 8px;
+        }
+        .mobile-menu-toggle.open .burger-inner .patty {
+            opacity: 0;
+        }
+        .mobile-menu-toggle.open .burger-inner .bottom-bun {
+            transform: rotate(-45deg);
+            bottom: 8px;
+        }
+        .mobile-nav {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        .mobile-nav.open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 20px 0;
+        }
+        .mobile-nav-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .mobile-nav-item:last-child {
+            border-bottom: none;
+        }
+        .mobile-nav-item > a {
+            display: block;
+            padding: 16px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .mobile-nav-item > a:hover {
+            background: rgba(107,68,35,0.05);
+            color: var(--warm-brown);
+        }
+        .mobile-nav-dropdown {
+            display: none;
+            background: rgba(0, 0, 0, 0.02);
+        }
+        .mobile-nav-dropdown.open {
+            display: block;
+        }
+        .mobile-nav-dropdown a {
+            padding: 12px 40px;
+            font-size: 14px;
+            color: var(--zen-gray);
+        }
+        .mobile-nav-dropdown a:hover {
+            color: var(--warm-brown);
+        }
+        .mobile-cta {
+            margin: 20px;
+        }
+        .mobile-cta .header-cta {
+            display: inline-block;
+        }
+
+
+
+        .philosophy-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .philosophy-dropdown-button {
+            background: var(--warm-brown);
+            color: var(--washi-white);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .philosophy-dropdown-button:hover {
+            background: #8B4513;
+            transform: translateY(-1px);
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .philosophy-dropdown.open .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .philosophy-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            background: white;
+            border: 2px solid var(--warm-brown);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0 0 0;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-50%) translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .philosophy-dropdown.open .philosophy-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .philosophy-dropdown-menu li {
+            margin: 0;
+        }
+
+        .philosophy-dropdown-menu a {
+            display: block;
+            color: var(--warm-brown);
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .philosophy-dropdown-menu a:hover {
+            background: var(--warm-brown);
+            color: var(--washi-white);
+        }
+
+        .philosophy-dropdown-menu a.active {
+            background: rgba(139, 69, 19, 0.1);
+            color: var(--warm-brown);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            font-family: 'Manrope', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: var(--sumi-black);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .japanese-subtitle {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            font-size: 1.5rem;
+            color: var(--muted-gold);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .page-intro {
+            font-size: 1.2rem;
+            color: var(--zen-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 4rem;
+            background: var(--washi-white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-family: 'Manrope', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--charcoal-gray);
+        }
+
+        .quote-block {
+            background: rgba(184, 134, 11, 0.08);
+            border-left: 4px solid var(--muted-gold);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--warm-brown);
+        }
+
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .principle-card {
+            background: var(--washi-white);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(139, 69, 19, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .principle-title {
+            font-family: 'Manrope', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+        }
+
+        .principle-description {
+            color: var(--zen-gray);
+            line-height: 1.6;
+        }
+
+        .japanese-accent {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            color: var(--muted-gold);
+            font-size: 0.9em;
+            margin-left: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .header-inner {
+                padding: 0.9vw 4vw;
+            }
+            .philosophy-nav-menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="philosophy-page">
+    <!-- Universal Navigation -->
+    <div id="universal-navigation"></div>
+
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">The Art of Peace</h1>
+                <div class="japanese-subtitle">平和の武道</div>
+                <p class="page-intro">
+                    Aikido, literally meaning "the way of unifying life energy" or "the way of the harmonious spirit," 
+                    is fundamentally known as the Art of Peace. This peaceful warrior's path transforms conflict 
+                    into harmony through understanding, compassion, and skillful action.
+                </p>
+            </div>
+
+            <!-- What is the Art of Peace -->
+            <section class="content-section">
+                <h2 class="section-title">Understanding the Art of Peace <span class="japanese-accent">平和の理解</span></h2>
+                <div class="section-content">
+                    <p>The Art of Peace is not about conquering others, but about conquering discord within ourselves. 
+                    Founded by Morihei Ueshiba (O-Sensei), Aikido emerged from his spiritual awakening that true victory 
+                    comes not from defeating opponents, but from achieving harmony with all existence.</p>
+
+                    <div class="quote-block">
+                        "The real way of the warrior is to prevent slaughter — it is the art of peace, the power of love."
+                        <br><br>— Morihei Ueshiba, The Art of Peace
+                    </div>
+
+                    <p>This philosophy teaches us that conflict resolution begins with inner peace, and that true strength 
+                    lies in our ability to transform aggression into understanding.</p>
+                </div>
+            </section>
+
+            <!-- Core Principles -->
+            <section class="content-section">
+                <h2 class="section-title">Core Principles of Peaceful Practice <span class="japanese-accent">平和な実践</span></h2>
+                <div class="principle-grid">
+                    <div class="principle-card">
+                        <h3 class="principle-title">Harmony Over Force <span class="japanese-accent">調和</span></h3>
+                        <p class="principle-description">
+                            Rather than meeting force with force, we learn to blend with incoming energy, 
+                            redirecting it in a way that neutralizes aggression while preserving the dignity 
+                            of all involved.
+                        </p>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-title">Compassionate Response <span class="japanese-accent">慈悲</span></h3>
+                        <p class="principle-description">
+                            True martial skill comes from a place of compassion. We train not to hurt others, 
+                            but to protect and guide both ourselves and our training partners toward mutual understanding.
+                        </p>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-title">Mindful Presence <span class="japanese-accent">意識</span></h3>
+                        <p class="principle-description">
+                            The Art of Peace requires complete presence in each moment. Through mindful awareness, 
+                            we develop the sensitivity to perceive and respond to situations before they escalate.
+                        </p>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-title">Unity of Spirit <span class="japanese-accent">合気</span></h3>
+                        <p class="principle-description">
+                            Aikido literally means "joining energy" or "harmonizing spirit." We practice connecting 
+                            with others on a deeper level, finding common ground even in apparent opposition.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Application in Daily Life -->
+            <section class="content-section">
+                <h2 class="section-title">Living the Art of Peace <span class="japanese-accent">日常の平和</span></h2>
+                <div class="section-content">
+                    <p>The principles we practice on the mat extend naturally into our daily lives. The Art of Peace 
+                    is not confined to the dojo—it becomes a way of being that influences how we handle challenges, 
+                    communicate with others, and contribute to our communities.</p>
+
+                    <h3 style="color: var(--warm-brown); margin: 2rem 0 1rem 0; font-size: 1.3rem;">In Relationships</h3>
+                    <p>We learn to listen deeply, respond rather than react, and find solutions that honor everyone's 
+                    well-being. Conflicts become opportunities for deeper understanding and stronger connections.</p>
+
+                    <h3 style="color: var(--warm-brown); margin: 2rem 0 1rem 0; font-size: 1.3rem;">In Work and Service</h3>
+                    <p>The principles of harmony and mindful action enhance our effectiveness while reducing stress. 
+                    We approach challenges with calm clarity and collaborative spirit.</p>
+
+                    <h3 style="color: var(--warm-brown); margin: 2rem 0 1rem 0; font-size: 1.3rem;">In Personal Growth</h3>
+                    <p>The Art of Peace teaches us to work with our limitations rather than fighting against them, 
+                    transforming obstacles into opportunities for development and wisdom.</p>
+
+                    <div class="quote-block">
+                        "To injure an opponent is to injure yourself. To control aggression without inflicting injury 
+                        is the Art of Peace. The best way to overcome an enemy is to change his heart."
+                        <br><br>— Morihei Ueshiba, The Art of Peace
+                    </div>
+                </div>
+            </section>
+
+            <!-- Training at Genshinkan -->
+            <section class="content-section">
+                <h2 class="section-title">Practicing Peace at Genshinkan <span class="japanese-accent">現真館の平和</span></h2>
+                <div class="section-content">
+                    <p>At Genshinkan Aikido, we create a training environment where the Art of Peace can flourish naturally. 
+                    Our approach emphasizes:</p>
+
+                    <ul style="margin: 2rem 0; padding-left: 2rem; line-height: 2;">
+                        <li><strong>Respectful Partnership:</strong> Every training interaction is an opportunity to practice 
+                        mutual respect and care for one another's safety and growth.</li>
+                        
+                        <li><strong>Patient Learning:</strong> We honor each student's pace and learning style, 
+                        creating space for gradual, sustainable development.</li>
+                        
+                        <li><strong>Inclusive Community:</strong> Our dojo welcomes practitioners of all backgrounds, 
+                        ages, and abilities, fostering a genuine community built on shared values.</li>
+                        
+                        <li><strong>Mindful Practice:</strong> Each technique is taught not just as physical movement, 
+                        but as an embodiment of peaceful principles that can be applied beyond the mat.</li>
+                    </ul>
+
+                    <p>Through consistent practice, students naturally develop the qualities that make the Art of Peace 
+                    a living reality: patience, wisdom, compassion, and the courage to choose harmony over conflict.</p>
+
+                    <div class="quote-block">
+                        "Now and again, it is necessary to seclude yourself among deep mountains and hidden valleys 
+                        to restore your link to the source of life. Breathe in and let yourself soar to the ends 
+                        of the universe; breathe out and bring the cosmos back inside. Next, breathe up all 
+                        fecundity and vibrancy of the earth. Finally, blend the breath of heaven and the breath 
+                        of earth with your own, becoming the Breath of Life itself."
+                        <br><br>— Morihei Ueshiba, The Art of Peace
+                    </div>
+                </div>
+            </section>
+
+            <!-- In Aiki Philosophy Section -->
+            <section class="content-section">
+                <h2 class="section-title">Living "In Aiki" <span class="japanese-accent">合気の中で</span></h2>
+                
+                <div class="section-content">
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <div style="font-size: 3rem; color: var(--warm-brown); margin-bottom: 0.5rem;">合気</div>
+                        <div style="font-size: 1.2rem; color: var(--zen-gray); font-style: italic;">"In Aiki" - In Harmony</div>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        "In Aiki" represents the state of harmony that defines true Aikido practice. It's not just a traditional closing to our communications—it embodies our daily approach to training, teaching, and community building through the Art of Peace.
+                    </p>
+                    
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                        This philosophy permeates everything we do at Genshinkan, from how we greet each other to how we handle conflicts, from our training intensity to our community celebrations.
+                    </p>
+                    
+                    <div style="background: rgba(139, 69, 19, 0.05); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                        <h3 style="color: var(--warm-brown); margin-bottom: 1.5rem; text-align: center;">Daily Application of "In Aiki"</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                            <div style="padding: 1rem; background: white; border-radius: 8px;">
+                                <strong style="color: var(--warm-brown);">Training Practice:</strong> Blending with partner's energy rather than opposing it
+                            </div>
+                            <div style="padding: 1rem; background: white; border-radius: 8px;">
+                                <strong style="color: var(--warm-brown);">Communication:</strong> Listening with openness and responding with harmony
+                            </div>
+                            <div style="padding: 1rem; background: white; border-radius: 8px;">
+                                <strong style="color: var(--warm-brown);">Conflict Resolution:</strong> Finding peaceful solutions that honor all parties
+                            </div>
+                            <div style="padding: 1rem; background: white; border-radius: 8px;">
+                                <strong style="color: var(--warm-brown);">Community Building:</strong> Creating inclusive environment where everyone can grow
+                            </div>
+                            <div style="padding: 1rem; background: white; border-radius: 8px;">
+                                <strong style="color: var(--warm-brown);">Leadership Style:</strong> Guiding through example and compassionate strength
+                            </div>
+                            <div style="padding: 1rem; background: white; border-radius: 8px;">
+                                <strong style="color: var(--warm-brown);">Personal Development:</strong> Maintaining beginner's mind and continuous growth
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="content-section" style="text-align: center; background: rgba(139, 69, 19, 0.05);">
+                <h2 class="section-title">Begin Your Journey in the Art of Peace</h2>
+                <div class="section-content">
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        The path of peaceful warriorship begins with a single step. Join us at Genshinkan 
+                        to discover how the Art of Peace can transform not only your relationship with conflict, 
+                        but your entire approach to life.
+                    </p>
+                    <a href="../index.html#signup-form" 
+                       style="display: inline-block; background: var(--warm-brown); color: var(--washi-white); 
+                              padding: 15px 30px; border-radius: 25px; text-decoration: none; 
+                              font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;"
+                       onmouseover="this.style.background='var(--muted-gold)'; this.style.transform='translateY(-2px)'"
+                       onmouseout="this.style.background='var(--warm-brown)'; this.style.transform='translateY(0)'">
+                        Start Your Training Journey
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item > a');
+
+            if (mobileMenuToggle && mobileNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuToggle.classList.toggle('open');
+                    mobileNav.classList.toggle('open');
+                });
+
+                // Handle mobile dropdown toggles
+                mobileNavItems.forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        const dropdown = this.nextElementSibling;
+                        if (dropdown && dropdown.classList.contains('mobile-nav-dropdown')) {
+                            e.preventDefault();
+                            dropdown.classList.toggle('open');
+                        }
+                    });
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mobileNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        mobileMenuToggle.classList.remove('open');
+                        mobileNav.classList.remove('open');
+                    }
+                });
+            }
+
+            // Philosophy dropdown functionality
+            const dropdown = document.querySelector('.philosophy-dropdown');
+            const button = document.querySelector('.philosophy-dropdown-button');
+            
+            if (dropdown && button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('open');
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.classList.remove('open');
+                    }
+                });
+
+                // Close dropdown on escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        dropdown.classList.remove('open');
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="../js/universal-nav.js"></script>
+    <script src="../js/philosophy-enhancer.js"></script>
+</body>
+</html>

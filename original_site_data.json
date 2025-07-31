@@ -1,0 +1,155 @@
+{
+  "scraped_date": "2025-01-31",
+  "source_url": "https://www.genaikido.com",
+  "site_metadata": {
+    "title": "Genshinkan Aikido",
+    "description": "A school committed to the art of Aikido, through instruction as passed on by the late F. Toyoda Shihan located in the East Village, NYC.",
+    "canonical_url": "https://www.genaikido.com",
+    "language": "en-US",
+    "timezone": "America/New_York"
+  },
+  "original_site_images": {
+    "main_logo": {
+      "url": "//images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288049810-U5S3UQP5T0RR5XXYG3B7/4EC6E558-482F-4294-9270-A4345A3996EF.jpeg",
+      "description": "Tree logo used throughout the site",
+      "formats": ["?format=1500w", "?format=100w"]
+    },
+    "social_media_image": {
+      "url": "//images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288050477-HMDKHN65JE5U2EFZ2ENI/109D7F2C-D7E3-418D-9C8D-2183C47E62D5.jpeg",
+      "description": "Social media sharing image"
+    },
+    "og_image": {
+      "url": "http://static1.squarespace.com/static/67c9f25770965305d583d469/t/67c9f27270965305d583d91d/1652184813297/109D7F2C-D7E3-418D-9C8D-2183C47E62D5.jpeg",
+      "description": "Open Graph image for social sharing",
+      "format": "?format=1500w"
+    },
+    "favicon": {
+      "url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288051124-0NMH8I2T53NJCLERQVJR/favicon.ico",
+      "description": "Site favicon",
+      "format": "?format=100w"
+    },
+    "gallery_images": [
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg",
+        "alt": "Training session photo",
+        "dimensions": "6048x4024"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg",
+        "alt": "Dojo community photo",
+        "dimensions": "995x782"
+      },
+      {
+        "url": "https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG",
+        "alt": "Aikido technique demonstration",
+        "dimensions": "5391x3566"
+      }
+    ]
+  },
+  "navigation_structure": {
+    "header_navigation": [
+      {
+        "title": "About",
+        "url": "/new-folder",
+        "type": "folder",
+        "children": [
+          {
+            "title": "Instructors",
+            "url": "/new-about-instructors"
+          },
+          {
+            "title": "Aikido World Alliance",
+            "url": "/aikido-world-alliance"
+          }
+        ]
+      },
+      {
+        "title": "Classes",
+        "url": "/Classes",
+        "type": "folder",
+        "children": [
+          {
+            "title": "Adult Classes",
+            "url": "/schedule-and-fees-adults"
+          },
+          {
+            "title": "Kids Classes",
+            "url": "/kids"
+          },
+          {
+            "title": "Student Resources",
+            "url": "/student-section"
+          }
+        ]
+      },
+      {
+        "title": "Questions",
+        "url": "/questions",
+        "type": "page"
+      },
+      {
+        "title": "Intro Class",
+        "url": "/try-aikido",
+        "type": "page"
+      }
+    ]
+  },
+  "site_structure": {
+    "announcement_bar": {
+      "text": "Intro Class Sign-Up",
+      "style": 2,
+      "clickthrough_url": "http://genaikido.com/try-aikido"
+    },
+    "primary_domain": "www.genaikido.com",
+    "locations": [
+      {
+        "name": "Manhattan",
+        "address": "64 E 4th St, 3rd FL, NY, NY"
+      },
+      {
+        "name": "White Plains", 
+        "address": "98 Lake St, White Plains, NY"
+      }
+    ],
+    "social_accounts": [
+      {
+        "service": "instagram",
+        "url": "https://www.instagram.com/gen.aikido/",
+        "handle": "@gen.aikido"
+      }
+    ],
+    "platform": "Squarespace",
+    "template_id": "5c5a519771c10ba3470d8101",
+    "template_version": "7.1"
+  },
+  "content_themes": {
+    "philosophy": "Traditional Aikido instruction as passed down by F. Toyoda Shihan",
+    "location_focus": "East Village, NYC - Manhattan professionals",
+    "approach": "Authentic traditional training with modern accessibility",
+    "community": "Devoted to transmitting and preserving the martial art of Aikido"
+  },
+  "technical_details": {
+    "squarespace_context": {
+      "website_id": "67c9f25770965305d583d469",
+      "collection_id": "67c9f26e70965305d583d8af",
+      "template_tweaks": {
+        "header_logo_height": "140px",
+        "header_mobile_logo_max_height": "90px",
+        "max_page_width": "1626px",
+        "transparent_header": "true"
+      }
+    },
+    "fonts": [
+      "Poppins",
+      "Manrope", 
+      "Lato"
+    ],
+    "recaptcha_enabled": true
+  },
+  "color_scheme": {
+    "header_style": "dynamic with transparent overlay",
+    "announcement_bar": "Style 2 with red background",
+    "tree_logo": "Natural/organic styling",
+    "overall_theme": "Clean, professional with traditional elements"
+  }
+}

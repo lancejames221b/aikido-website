@@ -7,7 +7,8 @@
     <meta name="description" content="Discover inspiring stories from Manhattan professionals who started Aikido as complete beginners at Genshinkan. From stress relief to personal transformation.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -17,10 +18,19 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #fefefe;
+            background-color: #fff;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .sqs-layout {
+            max-width: 1626px;
+            margin: 0 auto;
+            padding: 0 2vw;
         }
 
         .container {
@@ -48,11 +58,19 @@
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #2c3e50;
+            display: inline-block;
             text-decoration: none;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -70,6 +88,42 @@
 
         .nav-links a:hover {
             color: #8B4513;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 16px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 13px;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
         }
 
         .cta-button {
@@ -91,6 +145,15 @@
             padding: 120px 0 60px;
         }
 
+        /* Japanese Characters */
+        .japanese-characters {
+            font-size: 4rem;
+            color: #8B4513;
+            margin: 2rem 0;
+            font-weight: 300;
+            text-align: center;
+        }
+
         .page-header {
             text-align: center;
             margin-bottom: 4rem;
@@ -100,7 +163,7 @@
         }
 
         .page-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Manrope', serif;
             font-size: 3rem;
             color: #2c3e50;
             margin-bottom: 1rem;
@@ -147,7 +210,7 @@
         }
 
         .story-name {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Manrope', serif;
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
         }
@@ -202,7 +265,7 @@
         }
 
         .transformation-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Manrope', serif;
             font-size: 1.3rem;
             color: #2c3e50;
             margin-bottom: 1rem;
@@ -240,7 +303,7 @@
         }
 
         .stages-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Manrope', serif;
             font-size: 2.5rem;
             text-align: center;
             color: #2c3e50;
@@ -280,7 +343,7 @@
         }
 
         .stage-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Manrope', serif;
             font-size: 1.4rem;
             color: #2c3e50;
             margin-bottom: 1rem;
@@ -303,7 +366,7 @@
         }
 
         .concerns-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Manrope', serif;
             font-size: 2.5rem;
             text-align: center;
             color: #2c3e50;
@@ -324,7 +387,7 @@
         }
 
         .concern-question {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Manrope', serif;
             font-size: 1.2rem;
             color: #2c3e50;
             margin-bottom: 1rem;
@@ -333,6 +396,55 @@
         .concern-answer {
             color: #666;
             line-height: 1.6;
+        }
+
+        /* Training Reality Section */
+        .training-reality-section {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-radius: 20px;
+            border: 2px solid rgba(139, 69, 19, 0.2);
+        }
+
+        .reality-title {
+            font-family: 'Manrope', serif;
+            font-size: 2.2rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+
+        .reality-description {
+            font-size: 1.2rem;
+            color: #444;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.7;
+        }
+
+        .reality-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .reality-point {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #8B4513;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .reality-point strong {
+            color: #8B4513;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         /* Call to Action */
@@ -346,7 +458,7 @@
         }
 
         .call-to-action h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Manrope', serif;
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
         }
@@ -469,27 +581,18 @@
         }
     </style>
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <a href="../index_shoshin.html" class="logo">Genshinkan Aikido</a>
-            <ul class="nav-links">
-                <li><a href="../index_shoshin.html#about">About</a></li>
-                <li><a href="../index_shoshin.html#instructors">Instructors</a></li>
-                <li><a href="../index_shoshin.html#classes">Classes</a></li>
-                <li><a href="what-is-shoshin.html">Philosophy</a></li>
-                <li><a href="../index_shoshin.html#contact">Contact</a></li>
-            </ul>
-            <a href="../index_shoshin.html#intro-class" class="cta-button">Start Your Journey</a>
-        </nav>
-    </header>
+<body class="philosophy-page">
+    <!-- Universal Navigation -->
+    <div id="universal-navigation"></div>
+
+
 
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
             <!-- Page Header -->
             <div class="page-header">
+                <div class="japanese-characters">道</div>
                 <h1 class="page-title">Adult Beginner's Journey</h1>
                 <p class="page-subtitle">Real Stories from Manhattan Professionals</p>
                 <p class="page-description">
@@ -499,268 +602,182 @@
 
             <!-- Success Stories -->
             <section class="stories-section">
-                <!-- Story 1: Sarah - Marketing Executive -->
+                <!-- Story 1: Marketing Executive -->
                 <div class="story-card">
                     <div class="story-header">
-                        <div class="story-name">Sarah Chen</div>
-                        <div class="story-details">Marketing Executive, Age 32 | Started training: 2022</div>
+                        <div class="story-name">Marketing Executive</div>
+                        <div class="story-details">Manhattan Professional | Started as Complete Beginner</div>
                     </div>
                     <div class="story-content">
-                        <div class="story-timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-period">Month 1-3</div>
-                                <div class="timeline-milestone">Learning to fall safely, basic movements</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Month 6</div>
-                                <div class="timeline-milestone">First technique felt natural</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Year 1</div>
-                                <div class="timeline-milestone">Promoted to 6th Kyu</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Year 2</div>
-                                <div class="timeline-milestone">Now helps welcome new students</div>
-                            </div>
+                        <div class="story-quote" style="margin-top: 0;">
+                            "Each class revealed something new. Not because the techniques changed, but because I was changing. The journey has its own wisdom—trust it."
                         </div>
 
                         <div class="story-quote">
-                            "I was intimidated by the idea of a martial art at first—I'd never done anything like this. But Gary Sensei's approach made it clear that everyone starts somewhere. The community welcomed me immediately, and I found myself looking forward to practice as the highlight of my week."
+                            "I was intimidated by the idea of a martial art at first—I'd never done anything like this. But the traditional sensei-student relationship provided clear guidance and structure. Through dedicated practice, I earned my place in the community and found myself looking forward to keiko <span class=\"japanese-text\" style=\"color: var(--warm-brown);\">(稽古 - training)</span> as the highlight of my week."
                         </div>
 
-                        <div class="story-transformation">
-                            <h4 class="transformation-title">Personal Transformations</h4>
-                            <div class="transformation-list">
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Stress management improved dramatically</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Better work-life balance</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Increased confidence in challenging situations</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Found a supportive community in NYC</span>
-                                </div>
-                            </div>
+                        <div class="story-quote">
+                            <strong style="color: #8B4513;">What changed?</strong> "Everything and nothing. I'm still the same person, but I move through life differently. The training revealed capabilities I didn't know existed."
                         </div>
                     </div>
                 </div>
 
-                <!-- Story 2: Michael - Software Developer -->
+                <!-- Story 2: Software Developer -->
                 <div class="story-card">
                     <div class="story-header">
-                        <div class="story-name">Michael Rodriguez</div>
-                        <div class="story-details">Software Developer, Age 28 | Started training: 2021</div>
+                        <div class="story-name">Software Developer</div>
+                        <div class="story-details">Tech Professional | Started as Complete Beginner</div>
                     </div>
                     <div class="story-content">
-                        <div class="story-timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-period">Month 1-2</div>
-                                <div class="timeline-milestone">Overcoming physical awkwardness</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Month 4</div>
-                                <div class="timeline-milestone">Started understanding the philosophy</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Month 8</div>
-                                <div class="timeline-milestone">First successful randori (multiple attackers)</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Year 3</div>
-                                <div class="timeline-milestone">Now 4th Kyu, considering teaching path</div>
-                            </div>
+                        <div class="story-quote" style="margin-top: 0;">
+                            "Progress came when I stopped measuring it. The mat teaches patience—some lessons take years to understand, others reveal themselves in an instant."
                         </div>
 
                         <div class="story-quote">
                             "As someone who spends all day at a computer, I thought I'd be terrible at anything physical. But Aikido isn't about being the strongest or fastest—it's about understanding principles and working with energy. The beginner's mind philosophy really resonated with me as a programmer; there's always a more elegant solution if you stay open to it."
                         </div>
 
-                        <div class="story-transformation">
-                            <h4 class="transformation-title">Professional & Personal Growth</h4>
-                            <div class="transformation-list">
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Improved problem-solving approach at work</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Better posture and physical awareness</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Reduced anxiety in conflict situations</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Deeper appreciation for mindfulness practices</span>
-                                </div>
-                            </div>
+                        <div class="story-quote">
+                            <strong style="color: #8B4513;">The unexpected gift:</strong> "I came seeking physical training. I found a mirror that shows me who I am—and who I might become."
                         </div>
                     </div>
                 </div>
 
-                <!-- Story 3: Jennifer - Attorney -->
+                <!-- Story 3: Corporate Attorney -->
                 <div class="story-card">
                     <div class="story-header">
-                        <div class="story-name">Jennifer Thompson</div>
-                        <div class="story-details">Corporate Attorney, Age 35 | Started training: 2020</div>
+                        <div class="story-name">Corporate Attorney</div>
+                        <div class="story-details">Legal Professional | Started as Complete Beginner</div>
                     </div>
                     <div class="story-content">
-                        <div class="story-timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-period">Month 1-4</div>
-                                <div class="timeline-milestone">Learning to receive corrections gracefully</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Month 6</div>
-                                <div class="timeline-milestone">First time teaching a newer student</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Year 1</div>
-                                <div class="timeline-milestone">Promoted to 5th Kyu</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-period">Year 4</div>
-                                <div class="timeline-milestone">Now 2nd Kyu, active in dojo community</div>
-                            </div>
+                        <div class="story-quote" style="margin-top: 0;">
+                            "The dojo stripped away my professional armor. Here, rank means nothing from the outside world—only sincere practice matters."
                         </div>
 
                         <div class="story-quote">
                             "In my legal career, I'm used to being 'the expert' and having answers. Aikido taught me the power of not-knowing, of being genuinely curious instead of defensive. This shift in perspective has made me a better negotiator and, honestly, a more pleasant person to be around."
                         </div>
 
-                        <div class="story-transformation">
-                            <h4 class="transformation-title">Life-Changing Insights</h4>
-                            <div class="transformation-list">
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>More collaborative approach to difficult negotiations</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Better emotional regulation under pressure</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Improved listening skills with clients</span>
-                                </div>
-                                <div class="transformation-item">
-                                    <div class="transformation-icon"></div>
-                                    <span>Found balance in a high-stress career</span>
-                                </div>
-                            </div>
+                        <div class="story-quote">
+                            <strong style="color: #8B4513;">Beyond technique:</strong> "Aikido isn't self-improvement—it's self-discovery. The practice strips away what you think you need to reveal what actually matters."
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Journey Stages -->
+            <!-- The Path Reveals Itself -->
             <section class="journey-stages">
                 <div class="container">
-                    <h2 class="stages-title">Your Journey: What to Expect</h2>
-                    <div class="stages-grid">
-                        <div class="stage-card">
-                            <div class="stage-number">1</div>
-                            <h3 class="stage-title">First Steps</h3>
-                            <div class="stage-duration">Months 1-3</div>
-                            <p class="stage-description">
-                                Learn basic movements, safe falling techniques, and dojo etiquette. Focus on feeling comfortable in your body and in the space. Every student progresses at their own pace.
-                            </p>
+                    <h2 class="stages-title">The Path Reveals Itself</h2>
+                    <div class="japanese-characters" style="text-align: center; font-size: 3rem; margin: 2rem 0;">初心</div>
+                    <p class="reality-description" style="max-width: 800px; margin: 0 auto 3rem;">
+                        In traditional budo, we do not map the journey—we walk it. Each student's path unfolds uniquely through sincere practice. 
+                        The only certainty is that dedication reveals what cannot be explained, and understanding comes through doing, not knowing.
+                    </p>
+                    
+                    <div class="reality-points">
+                        <div class="reality-point">
+                            <strong>Embrace Not-Knowing:</strong> The beginner's mind is your greatest asset. Those who think they know what to expect often miss what actually matters.
                         </div>
-
-                        <div class="stage-card">
-                            <div class="stage-number">2</div>
-                            <h3 class="stage-title">Finding Flow</h3>
-                            <div class="stage-duration">Months 4-8</div>
-                            <p class="stage-description">
-                                Techniques start feeling more natural. You begin to understand the underlying principles. Partner practice becomes collaborative rather than awkward.
-                            </p>
+                        <div class="reality-point">
+                            <strong>Trust the Process:</strong> Traditional training has guided students for generations. Trust in the method, not in predetermined outcomes.
                         </div>
-
-                        <div class="stage-card">
-                            <div class="stage-number">3</div>
-                            <h3 class="stage-title">Deepening Practice</h3>
-                            <div class="stage-duration">Months 9-18</div>
-                            <p class="stage-description">
-                                Philosophy and technique integrate. You start helping newer students, which deepens your own understanding. First belt promotion often occurs here.
-                            </p>
+                        <div class="reality-point">
+                            <strong>Personal Discovery:</strong> What you find in Aikido cannot be promised or predicted—it must be earned through your own sincere effort.
                         </div>
-
-                        <div class="stage-card">
-                            <div class="stage-number">4</div>
-                            <h3 class="stage-title">Personal Evolution</h3>
-                            <div class="stage-duration">Year 2+</div>
-                            <p class="stage-description">
-                                Aikido principles become part of daily life. You develop your own expression of the art while honoring traditional foundations. Leadership opportunities emerge.
-                            </p>
+                        <div class="reality-point">
+                            <strong>The Mystery is the Teaching:</strong> Not knowing what comes next keeps you present, humble, and ready to learn.
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Common Concerns -->
+            <!-- The Mindset Required -->
             <section class="concerns-section">
-                <h2 class="concerns-title">Common Concerns Addressed</h2>
+                <h2 class="concerns-title">The Mindset Required</h2>
+                <div class="container">
+                    <p class="reality-description" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                        Traditional budo asks not what you can do, but who you are willing to become. These qualities matter more than any physical attribute:
+                    </p>
+                </div>
                 <div class="concerns-grid">
                     <div class="concern-card">
-                        <h3 class="concern-question">"I'm not athletic or coordinated enough"</h3>
+                        <h3 class="concern-question">Humility Over Ability</h3>
                         <p class="concern-answer">
-                            Aikido develops coordination through practice, not despite lack of it. Many of our most skilled practitioners started with no athletic background. The art teaches you to work with your natural abilities, not against them.
+                            Your current physical state matters less than your willingness to be taught. The strongest students are often those who embrace their weakness.
                         </p>
                     </div>
 
                     <div class="concern-card">
-                        <h3 class="concern-question">"I'm too old to start a martial art"</h3>
+                        <h3 class="concern-question">Patience Over Progress</h3>
                         <p class="concern-answer">
-                            Our students range from their 20s to their 60s and beyond. Aikido is designed to be practiced throughout life. The emphasis is on technique and timing, not strength or speed.
+                            Budo cannot be rushed. Those who seek quick results miss the deeper teachings. Trust that what you need will come when you're ready.
                         </p>
                     </div>
 
                     <div class="concern-card">
-                        <h3 class="concern-question">"Will I get hurt or have to hurt others?"</h3>
+                        <h3 class="concern-question">Commitment Over Convenience</h3>
                         <p class="concern-answer">
-                            Aikido emphasizes safety and control. Techniques are practiced cooperatively, with both partners taking care of each other. The goal is neutralization, not harm.
+                            The dojo asks for your presence, not your schedule. Regular practice shapes character—sporadic attendance yields sporadic results.
                         </p>
                     </div>
 
                     <div class="concern-card">
-                        <h3 class="concern-question">"I don't have time with my busy schedule"</h3>
+                        <h3 class="concern-question">Respect Over Comfort</h3>
                         <p class="concern-answer">
-                            Many students find that regular practice actually gives them more energy and better focus for their other commitments. Most train 2-3 times per week, fitting classes around work schedules.
+                            Traditional training maintains hierarchy and etiquette. This structure creates the container for transformation, not limitation.
                         </p>
                     </div>
 
                     <div class="concern-card">
-                        <h3 class="concern-question">"What if I don't fit in with the group?"</h3>
+                        <h3 class="concern-question">Sincerity Over Skill</h3>
                         <p class="concern-answer">
-                            Our dojo culture emphasizes mutual respect and support. Students actively help each other learn, regardless of rank or experience level. Many lasting friendships form here.
+                            Your genuine effort matters more than natural talent. The dojo sees through pretense—only sincere practice builds true ability.
                         </p>
                     </div>
 
                     <div class="concern-card">
-                        <h3 class="concern-question">"How long until I see progress?"</h3>
+                        <h3 class="concern-question">Mystery Over Certainty</h3>
                         <p class="concern-answer">
-                            Benefits like improved posture, stress relief, and mental clarity often appear within weeks. Technical progress is individual, but most students feel a sense of accomplishment within their first few months.
+                            Accept that you cannot know what Aikido will teach you. The most profound lessons come to those who remain open to the unknown.
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Training Reality Section -->
+            <section class="training-reality-section">
+                <div class="container">
+                    <h2 class="reality-title">The Training Reality</h2>
+                    <p class="reality-description">
+                        Aikido is a traditional martial art that demands serious commitment. While we provide excellent guidance, success requires consistent effort, physical conditioning, and mental discipline. Not everyone who starts will continue—and that's the reality of genuine budo training.
+                    </p>
+                    
+                    <div class="reality-points">
+                        <div class="reality-point">
+                            <strong>Physical Demands:</strong> You'll build stamina, flexibility, and coordination through regular practice. Expect to be challenged physically.
+                        </div>
+                        <div class="reality-point">
+                            <strong>Mental Challenge:</strong> Learning complex movements while developing situational awareness takes focus and patience.
+                        </div>
+                        <div class="reality-point">
+                            <strong>Time Investment:</strong> Meaningful progress requires consistent attendance over months and years, not weeks.
+                        </div>
+                        <div class="reality-point">
+                            <strong>Traditional Standards:</strong> We maintain proper etiquette, respect for hierarchy, and serious training atmosphere.
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Call to Action -->
             <div class="call-to-action">
-                <h3>Ready to Begin Your Journey?</h3>
+                <h3>Ready for Serious Training?</h3>
                 <p>
-                    Join hundreds of Manhattan professionals who have discovered the transformative power of Aikido. Your journey begins with a single step—and at Genshinkan, that first step is always supported by our welcoming community.
+                    Join hundreds of Manhattan professionals who have discovered the transformative power of traditional Aikido. Your journey begins with commitment—and at Genshinkan, dedicated students earn their place through consistent practice and respect for the Way.
                 </p>
-                <a href="../index_shoshin.html#intro-class" class="btn-primary">Schedule Your Free Trial Class</a>
+                <a href="../index.html#signup-form" class="btn-primary">Schedule Your Free Trial Class</a>
                 <a href="what-is-shoshin.html" class="btn-secondary">Learn About Our Philosophy</a>
             </div>
         </div>
@@ -775,7 +792,6 @@
                 <p>Phone: <a href="tel:212-555-0123">(212) 555-0123</a> | Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
                 <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
                 <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
-                    Author: Lance James, Unit 221B<br>
                     &copy; 2025 Genshinkan Aikido. All rights reserved.
                 </p>
             </div>
@@ -817,5 +833,8 @@
             });
         });
     </script>
+
+    <script src="../js/universal-nav.js"></script>
+    <script src="../js/philosophy-enhancer.js"></script>
 </body>
 </html>

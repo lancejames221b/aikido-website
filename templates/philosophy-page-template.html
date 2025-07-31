@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAGE_TITLE}}</title>
+    <meta name="description" content="{{PAGE_DESCRIPTION}}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --sumi-black: #2C2C2C;
+            --zen-gray: #666;
+            --warm-brown: #8B4513;
+            --washi-white: #fff;
+            --muted-gold: #D4AF37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+            line-height: 1.6;
+            color: var(--sumi-black);
+            background-color: var(--washi-white);
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--sumi-black);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--warm-brown);
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--sumi-black);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--zen-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--warm-brown);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--sumi-black);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            color: var(--warm-brown);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--sumi-black);
+            color: var(--washi-white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background: var(--warm-brown);
+            color: var(--washi-white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #654321;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Philosophy Sub-Navigation */
+        .philosophy-subnav {
+            background: #f8f8f8;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+        }
+
+        .philosophy-subnav a {
+            margin: 0 1rem;
+            color: var(--zen-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .philosophy-subnav a:hover,
+        .philosophy-subnav a.active {
+            color: var(--warm-brown);
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero-section {
+                padding: 50px 0 40px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+                line-height: 1.3;
+                margin-bottom: 0.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .main-content {
+                padding: 40px 0;
+            }
+
+            .content-section {
+                padding: 25px 20px;
+                margin-bottom: 25px;
+                border-radius: 8px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+                line-height: 1.3;
+            }
+
+            .section-content p {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 1.2rem;
+            }
+
+            .quote-box {
+                padding: 20px;
+                margin: 25px 0;
+                border-radius: 6px;
+            }
+
+            .quote-text {
+                font-size: 1.1rem;
+                line-height: 1.5;
+                margin-bottom: 12px;
+            }
+
+            .quote-author {
+                font-size: 0.9rem;
+            }
+
+            .cta-section {
+                padding: 50px 0;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+                line-height: 1.3;
+            }
+
+            .cta-text {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.5;
+            }
+
+            .btn-primary {
+                width: 100%;
+                padding: 18px 32px;
+                font-size: 1rem;
+                border-radius: 25px;
+            }
+
+            .philosophy-subnav {
+                padding: 0.8rem 0;
+                position: sticky;
+                top: 70px;
+            }
+
+            .philosophy-subnav > div {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .philosophy-subnav > div::-webkit-scrollbar {
+                display: none;
+            }
+
+            .philosophy-subnav > div > div {
+                white-space: nowrap;
+                padding: 0 10px;
+                text-align: left;
+            }
+
+            .philosophy-subnav span {
+                display: none;
+            }
+
+            .philosophy-subnav a {
+                display: inline-block;
+                margin: 0 8px;
+                padding: 8px 12px;
+                font-size: 14px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 15px;
+                white-space: nowrap;
+                transition: all 0.3s ease;
+            }
+
+            .philosophy-subnav a:hover,
+            .philosophy-subnav a.active {
+                background: var(--warm-brown);
+                color: white;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .content-section {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+            .quote-box {
+                padding: 15px;
+                margin: 20px 0;
+            }
+
+            .quote-text {
+                font-size: 1rem;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+
+            .philosophy-subnav a {
+                margin: 0 4px;
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .content-section {
+                padding: 15px 12px;
+            }
+
+            .philosophy-subnav a {
+                margin: 0 2px;
+                padding: 5px 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Shared Navigation -->
+    <div id="shared-navigation"></div>
+
+    <!-- Philosophy Sub-Navigation -->
+    <nav class="philosophy-subnav">
+        <div class="container">
+            <div style="text-align: center;">
+                <span style="color: var(--warm-brown); font-size: 14px; font-weight: 500; margin-right: 2rem;">Philosophy Topics:</span>
+                <a href="what-is-shoshin.html" {{SHOSHIN_ACTIVE}}>Shoshin</a>
+                <a href="adult-beginners-journey.html" {{BEGINNERS_ACTIVE}}>Beginners</a>
+                <a href="honor-values.html" {{VALUES_ACTIVE}}>Values</a>
+                <a href="traditional-values.html" {{TRADITIONS_ACTIVE}}>Traditions</a>
+                <a href="the-art-of-peace.html" {{PEACE_ACTIVE}}>Art of Peace</a>
+                <a href="health-and-safety.html" {{SAFETY_ACTIVE}}>Health & Safety</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">{{HERO_TITLE}}</h1>
+                <p class="hero-subtitle">{{HERO_SUBTITLE}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <main class="main-content">
+        <div class="container">
+            {{PAGE_CONTENT}}
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">{{CTA_TITLE}}</h2>
+                <p class="cta-text">
+                    {{CTA_TEXT}}
+                </p>
+                <a href="../index.html#intro-class" class="btn-primary">Begin Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../js/shared-nav.js"></script>
+    <script>
+        // Philosophy page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll behavior
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Header background on scroll
+            const header = document.querySelector('.header');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        header.style.background = 'rgba(255, 255, 255, 0.98)';
+                        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                    } else {
+                        header.style.background = 'rgba(255, 255, 255, 0.95)';
+                        header.style.boxShadow = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

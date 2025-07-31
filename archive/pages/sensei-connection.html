@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Than a Teacher, A Friend | Genshinkan Aikido</title>
+    <meta name="description" content="Meet Gary Sensei - discover the genuine personality, mission-driven approach, and personal connections that make Genshinkan Aikido a place you truly belong.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .sqs-layout {
+            max-width: 1626px;
+            margin: 0 auto;
+            padding: 0 2vw;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        .cta-button {
+            background: #8B4513;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #A0522D;
+        }
+
+        /* Main Content */
+        .main {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+        }
+
+        .mission-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .mission-text {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .mission-quote {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #8B4513;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .quote-context {
+            font-size: 1rem;
+            color: #8B4513;
+            font-weight: 500;
+        }
+
+        /* Personal Connection Section */
+        .connection-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .connection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .connection-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .connection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .connection-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .connection-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .connection-description {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .connection-example {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #8B4513;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Community Stories Section */
+        .stories-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .story-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #8B4513, #A0522D);
+        }
+
+        .story-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .story-marker {
+            width: 60px;
+            height: 60px;
+            background: #8B4513;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-right: 2rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .story-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            flex: 1;
+        }
+
+        .story-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .story-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .story-impact {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Belonging Section */
+        .belonging-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+        }
+
+        .belonging-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .belonging-quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .belonging-description {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .belonging-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Transformation Focus Section */
+        .transformation-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .transformation-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .transformation-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #8B4513;
+        }
+
+        .transformation-type {
+            color: #8B4513;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .transformation-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .transformation-story {
+            color: #666;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .transformation-celebration {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background: #8B4513;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #A0522D;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .mission-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .story-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .story-marker {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .timeline-line {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index_shoshin.html" class="logo">Genshinkan Aikido</a>
+            <ul class="nav-links">
+                <li><a href="../index_shoshin.html">Home</a></li>
+                <li><a href="what-is-shoshin.html">Philosophy</a></li>
+                <li><a href="adult-beginners-journey.html">Beginners</a></li>
+                <li><a href="the-aikido-path.html">The Path</a></li>
+                <li><a href="health-and-safety.html">Health & Safety</a></li>
+                <li><a href="traditional-values.html">Traditional Values</a></li>
+                <li><a href="student-leadership.html">Leadership</a></li>
+                <li><a href="honor-values.html">Honor & Values</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#intro-class" class="cta-button">Start Your Journey</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-subtitle">Personal Connection & Community</div>
+                    <h1 class="hero-title">More Than a Teacher, A Friend</h1>
+                    <p class="hero-description">
+                        Discover what makes Genshinkan Aikido different: a Sensei who knows your name, celebrates your breakthroughs, and creates a community where you truly belong. Experience genuine personal connection in a world of commercial gyms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <h2 class="section-title">A Mission-Driven Approach</h2>
+                
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <p>At Genshinkan, we teach from a place of responsibility and love, not just business. Gary Sensei's approach goes far beyond typical instructor-student relationships—he creates genuine community bonds where every student's journey matters.</p>
+                        
+                        <p>This mission-driven philosophy means celebrating breakthroughs that have nothing to do with martial arts, knowing your personal challenges, and creating a space where transformation happens naturally through connection and genuine care.</p>
+                        
+                        <p>Manhattan professionals discover something rare here: a place where their growth as a whole person is valued, not just their technique improvement or membership fees.</p>
+                    </div>
+                    
+                    <div class="mission-quote">
+                        <div class="quote-text">"Out of responsibility and love"</div>
+                        <div class="quote-context">— Sensei's teaching philosophy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Connection Section -->
+        <section class="connection-section">
+            <div class="container">
+                <h2 class="section-title">The Personal Connection Difference</h2>
+                
+                <div class="connection-grid">
+                    <div class="connection-card">
+                        <div class="connection-icon">👤</div>
+                        <h3 class="connection-title">Knows Your Story</h3>
+                        <p class="connection-description">
+                            Sensei remembers your personal challenges, celebrates your life victories, and understands what brought you to training beyond just fitness goals.
+                        </p>
+                        <div class="connection-example">
+                            "Checking in on students going through career transitions, family changes, or health challenges—because your life affects your training and vice versa."
+                        </div>
+                    </div>
+                    
+                    <div class="connection-card">
+                        <div class="connection-icon">🍽️</div>
+                        <h3 class="connection-title">Community Beyond Training</h3>
+                        <p class="connection-description">
+                            Regular group dinners, social gatherings, and shared experiences that build lasting friendships, not just training partnerships.
+                        </p>
+                        <div class="connection-example">
+                            "Monthly community dinners where conversations flow from Aikido philosophy to life experiences, creating bonds that extend far beyond the dojo."
+                        </div>
+                    </div>
+                    
+                    <div class="connection-card">
+                        <div class="connection-icon">🎯</div>
+                        <h3 class="connection-title">Individual Growth Focus</h3>
+                        <p class="connection-description">
+                            Your progress is tracked personally, not just through belt promotions, but through genuine understanding of your unique development path.
+                        </p>
+                        <div class="connection-example">
+                            "Recognizing when a quiet student starts speaking up, or when someone struggling with confidence begins helping others—progress that matters."
+                        </div>
+                    </div>
+                    
+                    <div class="connection-card">
+                        <div class="connection-icon">💭</div>
+                        <h3 class="connection-title">Genuine Vulnerability</h3>
+                        <p class="connection-description">
+                            A teacher who shares his own learning journey, admits when he doesn't know something, and models the beginner's mind he teaches.
+                        </p>
+                        <div class="connection-example">
+                            "Being open about his own challenges and growth, creating space for students to be equally genuine about their struggles and victories."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Stories Section -->
+        <section class="stories-section">
+            <div class="container">
+                <h2 class="section-title">Learning Together: Real Community Stories</h2>
+                
+                <div class="story-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="story-item">
+                        <div class="story-marker">1</div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Job Interview Breakthrough</h3>
+                            <p class="story-description">
+                                When Maria shared that she was nervous about a big job interview, Sensei didn't just offer generic encouragement. He spent time after class helping her practice grounding techniques from Aikido training.
+                            </p>
+                            <div class="story-impact">
+                                "She got the job and said the breathing techniques we practiced made all the difference. The whole dojo celebrated with her—that's when I realized this wasn't just a martial arts class."
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-item">
+                        <div class="story-marker">2</div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Community Dinner Revelation</h3>
+                            <p class="story-description">
+                                At the monthly community dinner, newer students often share how surprised they are by the genuine friendships they see among senior students—relationships that extend far beyond training.
+                            </p>
+                            <div class="story-impact">
+                                "I've been to networking events in finance that felt less connected than these dinners. Here, people actually care about each other's lives and dreams."
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-item">
+                        <div class="story-marker">3</div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Teaching Moment</h3>
+                            <p class="story-description">
+                                When a senior student struggled with a technique during a challenging week at work, Sensei used it as a teaching moment about how life stress affects our practice—and how practice can support us through difficulty.
+                            </p>
+                            <div class="story-impact">
+                                "Instead of just correcting the technique, he addressed the whole person. That's when I understood why people stay here for decades."
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-item">
+                        <div class="story-marker">4</div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Personal Check-In</h3>
+                            <p class="story-description">
+                                Sensei notices when students are going through difficult times—not because they complain, but because he pays attention to subtle changes in energy and engagement.
+                            </p>
+                            <div class="story-impact">
+                                "He pulled me aside after class to check how I was handling my dad's illness. I hadn't told anyone, but he could sense something was different. That level of attention is rare anywhere."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Belonging Section -->
+        <section class="belonging-section">
+            <div class="container">
+                <div class="belonging-content">
+                    <h2 class="section-title" style="color: #2c3e50;">A Place You Belong</h2>
+                    
+                    <div class="belonging-quote">
+                        "In Manhattan, it's rare to find genuine community. Here, you're not just a member—you're family."
+                    </div>
+                    
+                    <p class="belonging-description">
+                        Unlike commercial gyms where you're a membership number, or competitive dojos where only winning matters, Genshinkan creates genuine belonging through personal connection, shared growth, and mutual support.
+                    </p>
+                    
+                    <div class="belonging-features">
+                        <div class="feature-item">
+                            <div class="feature-title">Known by Name</div>
+                            <div class="feature-description">From your first class, you're recognized as an individual with unique goals and challenges</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-title">Personal Growth Celebrated</div>
+                            <div class="feature-description">Victories in and out of the dojo are acknowledged and supported by the community</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-title">Lasting Friendships</div>
+                            <div class="feature-description">Relationships that extend beyond training into genuine life connections and support</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-title">Inclusive Environment</div>
+                            <div class="feature-description">Welcome regardless of age, experience, or athletic ability—everyone contributes to community growth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transformation Focus Section -->
+        <section class="transformation-section">
+            <div class="container">
+                <h2 class="section-title">Celebrating All Transformations</h2>
+                
+                <div class="transformation-examples">
+                    <div class="transformation-card">
+                        <div class="transformation-type">Career Breakthrough</div>
+                        <h3 class="transformation-title">Finding Confidence to Lead</h3>
+                        <p class="transformation-story">
+                            "I was passed over for promotion twice because I was too quiet in meetings. After six months of training, something shifted. I started speaking up, proposing ideas, leading projects."
+                        </p>
+                        <div class="transformation-celebration">
+                            <strong>Sensei's Response:</strong> "We celebrated this promotion as much as any belt advancement. The Aikido principles of centering and confidence had transformed how she showed up at work."
+                        </div>
+                    </div>
+                    
+                    <div class="transformation-card">
+                        <div class="transformation-type">Personal Healing</div>
+                        <h3 class="transformation-title">Overcoming Anxiety</h3>
+                        <p class="transformation-story">
+                            "My anxiety was so bad I could barely make it through subway rides. The breathing and grounding techniques from Aikido gave me tools I could use anywhere."
+                        </p>
+                        <div class="transformation-celebration">
+                            <strong>Community Impact:</strong> "When he shared this breakthrough, other students opened up about their own anxiety struggles. It became a source of mutual support and understanding."
+                        </div>
+                    </div>
+                    
+                    <div class="transformation-card">
+                        <div class="transformation-type">Relationship Growth</div>
+                        <h3 class="transformation-title">Becoming a Better Partner</h3>
+                        <p class="transformation-story">
+                            "The principles of blending and non-resistance changed how I handled disagreements with my wife. Instead of fighting, I learned to listen and find harmony."
+                        </p>
+                        <div class="transformation-celebration">
+                            <strong>Life Application:</strong> "His marriage improved so much that his wife started training too. Now they practice together and support each other's growth both on and off the mat."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Find Your Place in Our Community</h2>
+                    <p class="cta-text">
+                        Experience the difference of training with a Sensei who knows your name, celebrates your growth, and creates genuine community. Discover what true personal connection feels like in your martial arts journey.
+                    </p>
+                    <a href="#intro-class" class="btn-primary">Meet Sensei & Our Community</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Genshinkan Aikido Manhattan</strong></p>
+                <p>62 E 4th St, Fl 3, New York, NY 10003</p>
+                <p>Phone: <a href="tel:212-555-0123">(212) 555-0123</a> | Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
+                <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
+                <p style="margin-top: 2rem; font-style: italic; color: #8B4513; font-size: 1.1rem;">
+                    In Aiki
+                </p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
+                    Author: Lance James, Unit 221B<br>
+                    &copy; 2025 Genshinkan Aikido. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Stagger animation for story items
+        document.addEventListener('DOMContentLoaded', function() {
+            const storyItems = document.querySelectorAll('.story-item');
+            storyItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,39 +1,3286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genaikido.com Clone - Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Genshinkan Aikido - East Village NYC | Traditional Aikido Training</title>
+    <meta name="description" content="A school committed to the art of Aikido, through instruction as passed on by the late F. Toyoda Shihan located in the East Village, NYC. Honor in training, honor in life.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288051124-0NMH8I2T53NJCLERQVJR/favicon.ico?format=100w" type="image/x-icon">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Genshinkan Aikido - East Village NYC | Traditional Aikido Training">
+    <meta property="og:description" content="A school committed to the art of Aikido, through instruction as passed on by the late F. Toyoda Shihan located in the East Village, NYC. Honor in training, honor in life.">
+    <meta property="og:image" content="https://6856264314dc.ngrok.app/assets/images/DSC_7146-2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://6856264314dc.ngrok.app">
+    <meta property="og:site_name" content="Genshinkan Aikido">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Genshinkan Aikido - East Village NYC">
+    <meta name="twitter:description" content="Traditional Aikido training in the heart of NYC. Honor in training, honor in life.">
+    <meta name="twitter:image" content="https://6856264314dc.ngrok.app/assets/images/DSC_7146-2.jpg">
+    
+    <!-- Fonts - Using original genaikido.com fonts + Japanese Typography -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Genshinkan Aikido",
+        "description": "A school committed to the art of Aikido, through instruction as passed on by the late F. Toyoda Shihan located in the East Village, NYC.",
+        "url": "https://www.genaikido.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "62 E 4th St, Fl 3",
+            "addressLocality": "New York",
+            "addressRegion": "NY",
+            "postalCode": "10003",
+            "addressCountry": "US"
+        },
+        "telephone": "(212) 555-0123",
+        "sameAs": ["https://www.instagram.com/gen.aikido/"],
+        "sport": "Aikido",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.7265",
+            "longitude": "-73.9926"
+        }
+    }
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: 'Genshinkan Aikido - East Village NYC',
+            custom_map: {'dimension1': 'aikido_school'}
+        });
+        
+        // Enhanced ecommerce tracking for form submissions
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            custom_map: {'dimension2': 'form_interaction'}
+        });
+    </script>
+    
+    <!-- Meta Pixel (Facebook) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'FB_PIXEL_ID');
+        fbq('track', 'PageView');
+        
+        // Custom events for aikido school
+        fbq('trackCustom', 'VisitMartialArtsSchool', {
+            school_type: 'aikido',
+            location: 'east_village_nyc'
+        });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=FB_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        .header { border-bottom: 2px solid #333; padding-bottom: 20px; }
-        .page-list { margin-top: 30px; }
-        .page-link { display: block; margin: 10px 0; padding: 10px; background: #f5f5f5; text-decoration: none; color: #333; }
-        .page-link:hover { background: #e5e5e5; }
+        /* Scroll offset fix for fixed header navigation */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 130px; /* Account for announcement bar (40px) + header (80px) + padding (10px) */
+        }
+        
+        /* Traditional Japanese color palette - White Background Focused */
+        :root {
+            --sumi-black: #2C2C2C;        /* Traditional sumi ink black for headers */
+            --charcoal-gray: #2c2c2c;     /* Deep charcoal */
+            --warm-brown: #654321;        /* Deep urushi brown (richer than original) */
+            --muted-gold: #B8860B;        /* Gold leaf highlights */
+            --washi-white: #ffffff;       /* Pure white backgrounds */
+            --tatami-beige: #e6ddd4;      /* Tatami mat color */
+            --bamboo-green: #4a5d23;      /* Dark bamboo green for accents */
+            --zen-gray: #8a8a8a;          /* Muted gray for text */
+            --ink-blue: #1B365D;          /* Traditional ink blue for accents */
+        }
+
+        /* Traditional Japanese Texture Patterns - Subtle on White */
+        .washi-texture {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(101,67,33,0.02) 1.5px, transparent 0),
+                radial-gradient(circle at 8px 8px, rgba(184,134,11,0.015) 1px, transparent 0),
+                linear-gradient(45deg, transparent 40%, rgba(101,67,33,0.01) 50%, transparent 60%),
+                linear-gradient(-45deg, transparent 40%, rgba(184,134,11,0.008) 50%, transparent 60%);
+            background-size: 15px 15px, 25px 25px, 40px 40px, 35px 35px;
+            background-position: 0 0, 10px 10px, 0 0, 5px 5px;
+        }
+
+        .tatami-texture {
+            background-color: #ffffff;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 8px,
+                    rgba(101,67,33,0.02) 8px,
+                    rgba(101,67,33,0.02) 9px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 80px,
+                    rgba(101,67,33,0.025) 80px,
+                    rgba(101,67,33,0.025) 82px
+                ),
+                linear-gradient(45deg, rgba(230,221,212,0.08) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(230,221,212,0.05) 25%, transparent 25%);
+            background-size: 10px 10px, 85px 85px, 20px 20px, 20px 20px;
+        }
+
+        .bamboo-texture {
+            background-color: #ffffff;
+            background-image:
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 12px,
+                    rgba(74,93,35,0.03) 12px,
+                    rgba(74,93,35,0.03) 14px,
+                    transparent 14px,
+                    transparent 26px,
+                    rgba(74,93,35,0.02) 26px,
+                    rgba(74,93,35,0.02) 28px
+                ),
+                linear-gradient(0deg, rgba(184,134,11,0.01) 50%, transparent 50%);
+            background-size: 30px 30px, 60px 8px;
+        }
+
+        .stone-texture {
+            background-color: #ffffff;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(27,54,93,0.015) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(101,67,33,0.012) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(138,138,138,0.01) 0%, transparent 50%),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(44,44,44,0.008) 2px,
+                    rgba(44,44,44,0.008) 3px
+                );
+            background-size: 200px 200px, 150px 150px, 180px 180px, 8px 8px;
+        }
+
+        .zen-garden-texture {
+            background-color: #ffffff;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(138,138,138,0.012) 3px,
+                    rgba(138,138,138,0.012) 4px
+                ),
+                repeating-linear-gradient(
+                    120deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(101,67,33,0.01) 3px,
+                    rgba(101,67,33,0.01) 4px
+                ),
+                repeating-linear-gradient(
+                    240deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(27,54,93,0.008) 3px,
+                    rgba(27,54,93,0.008) 4px
+                );
+            background-size: 12px 12px, 15px 15px, 18px 18px;
+        }
+
+        /* Japanese Typography Classes */
+        .japanese-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+        }
+
+        .japanese-calligraphy {
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            font-weight: 700;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        /* Traditional Japanese Section Dividers & Patterns */
+        
+        /* SVG Pattern Definitions - Hidden Container */
+        .japanese-patterns {
+            position: absolute;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+        
+        /* Enhanced Brush Stroke Dividers with Traditional Elements */
+        .brush-divider {
+            width: 100%;
+            height: 80px;
+            margin: 3rem 0;
+            overflow: visible;
+            filter: drop-shadow(0 3px 12px rgba(107,68,35,0.18));
+        }
+
+        .brush-stroke-path {
+            fill: none;
+            stroke: var(--warm-brown);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            opacity: 0.75;
+            animation: brushStroke 3s ease-in-out;
+        }
+        
+        .brush-stroke-secondary {
+            fill: none;
+            stroke: var(--muted-gold);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            opacity: 0.45;
+            animation: brushStroke 3.5s ease-in-out 0.4s both;
+        }
+        
+        .brush-stroke-accent {
+            fill: none;
+            stroke: var(--ink-blue);
+            stroke-width: 1;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            opacity: 0.3;
+            animation: brushStroke 4s ease-in-out 0.8s both;
+        }
+
+        .brush-accent {
+            fill: var(--muted-gold);
+            opacity: 0.6;
+            animation: fadeIn 2s ease-in-out 1.5s both;
+        }
+        
+        @keyframes brushStroke {
+            0% { 
+                stroke-dasharray: 1000; 
+                stroke-dashoffset: 1000; 
+                opacity: 0;
+            }
+            20% { opacity: 0.2; }
+            100% { 
+                stroke-dasharray: 1000; 
+                stroke-dashoffset: 0; 
+                opacity: inherit;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 0.6; transform: scale(1); }
+        }
+        
+        /* Traditional Japanese Border Elements */
+        .section-border {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 4"><path d="M0,2 Q25,0 50,2 T100,2" stroke="%23654321" stroke-width="0.8" fill="none" opacity="0.4"/></svg>');
+            background-repeat: repeat-x;
+            background-size: 100px 4px;
+        }
+        
+        .section-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 4"><path d="M0,2 Q25,4 50,2 T100,2" stroke="%23654321" stroke-width="0.8" fill="none" opacity="0.4"/></svg>');
+            background-repeat: repeat-x;
+            background-size: 100px 4px;
+        }
+        
+        /* Seigaiha (Wave) Pattern Background - Subtle on White */
+        .seigaiha-pattern {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 0px 0px, transparent 12px, rgba(101,67,33,0.012) 13px),
+                radial-gradient(circle at 25px 0px, transparent 12px, rgba(101,67,33,0.012) 13px),
+                radial-gradient(circle at 50px 0px, transparent 12px, rgba(101,67,33,0.012) 13px);
+            background-size: 50px 25px;
+            background-position: 0px 0px, 0px 0px, 0px 0px;
+            position: relative;
+        }
+        
+        .seigaiha-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 12.5px 0px, transparent 12px, rgba(184,134,11,0.01) 13px),
+                radial-gradient(circle at 37.5px 0px, transparent 12px, rgba(184,134,11,0.01) 13px);
+            background-size: 50px 25px;
+            opacity: 0.4;
+        }
+        
+        /* Asanoha (Hemp Leaf) Pattern for Accent Elements */
+        .asanoha-accent {
+            position: relative;
+        }
+        
+        .asanoha-accent::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%, -50%);
+            background-image: 
+                linear-gradient(60deg, transparent 40%, rgba(101,67,33,0.02) 41%, rgba(101,67,33,0.02) 59%, transparent 60%),
+                linear-gradient(-60deg, transparent 40%, rgba(101,67,33,0.02) 41%, rgba(101,67,33,0.02) 59%, transparent 60%),
+                linear-gradient(0deg, transparent 40%, rgba(101,67,33,0.02) 41%, rgba(101,67,33,0.02) 59%, transparent 60%);
+            background-size: 20px 20px;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        
+        /* Japanese Paper Layering Drop Shadows - Maintaining White Aesthetic */
+        .washi-shadow {
+            box-shadow: 
+                0 1px 3px rgba(107,68,35,0.12),
+                0 4px 6px rgba(107,68,35,0.08),
+                0 8px 12px rgba(107,68,35,0.06),
+                0 16px 24px rgba(107,68,35,0.04);
+        }
+        
+        .washi-shadow-deep {
+            box-shadow: 
+                0 2px 4px rgba(107,68,35,0.15),
+                0 6px 12px rgba(107,68,35,0.12),
+                0 12px 24px rgba(107,68,35,0.10),
+                0 24px 48px rgba(107,68,35,0.08);
+        }
+        
+        /* Traditional Japanese Geometric Border */
+        .kumiko-border {
+            position: relative;
+            border: 2px solid transparent;
+            background: 
+                linear-gradient(#ffffff, #ffffff) padding-box,
+                linear-gradient(45deg, var(--warm-brown), var(--muted-gold), var(--warm-brown)) border-box;
+        }
+        
+        .kumiko-border::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 2px,
+                rgba(101,67,33,0.08) 2px,
+                rgba(101,67,33,0.08) 4px
+            );
+            z-index: -1;
+            border-radius: inherit;
+        }
+
+        /* Reset and Base Styles - Following Squarespace patterns */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: var(--sumi-black);
+            background: var(--washi-white);
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body.washi-texture {
+            background-color: #ffffff; /* Ensure pure white base */
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(101,67,33,0.02) 1.5px, transparent 0),
+                radial-gradient(circle at 8px 8px, rgba(184,134,11,0.015) 1px, transparent 0),
+                linear-gradient(45deg, transparent 40%, rgba(101,67,33,0.01) 50%, transparent 60%),
+                linear-gradient(-45deg, transparent 40%, rgba(184,134,11,0.008) 50%, transparent 60%);
+            background-size: 15px 15px, 25px 25px, 40px 40px, 35px 35px;
+            background-position: 0 0, 10px 10px, 0 0, 5px 5px;
+        }
+
+        /* Container Styles - Matching Squarespace max-width patterns */
+        .sqs-layout {
+            max-width: 1626px;
+            margin: 0 auto;
+            padding: 0 2vw;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Japanese-inspired Announcement Bar */
+        .announcement-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            background: var(--warm-brown);
+            color: var(--washi-white);
+            text-align: center;
+            padding: 8px 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(26,26,26,0.15);
+            position: relative;
+        }
+        
+        .announcement-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(184,134,11,0.1) 20%, 
+                rgba(184,134,11,0.1) 80%, 
+                transparent 100%);
+            pointer-events: none;
+        }
+
+        .announcement-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .announcement-bar-link {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .announcement-bar-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Header Styles - Following Squarespace header patterns */
+        .header {
+            position: fixed;
+            top: 40px; /* Account for announcement bar */
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9vw 2vw;
+            min-height: 80px;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Manrope', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--sumi-black);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+        
+        .header-logo::after {
+            content: '合気';
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            font-size: 14px;
+            color: var(--muted-gold);
+            margin-left: 10px;
+            opacity: 0.8;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .header-logo-image {
+            height: 50px;
+            width: auto;
+            margin-right: 12px;
+            border-radius: 4px;
+        }
+
+        .header-logo-text {
+            display: inline-block;
+        }
+
+        .header-nav {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+        }
+        
+        .header-nav-item {
+            position: relative;
+        }
+
+        .header-nav a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            letter-spacing: 0.02em;
+            display: block;
+            padding: 8px 0;
+        }
+
+        .header-nav a:hover {
+            color: var(--warm-brown);
+        }
+        
+        /* Dropdown Menu Styles */
+        .header-nav-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+        
+        .header-nav-item:hover .header-nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .header-nav-dropdown a {
+            padding: 12px 16px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 13px;
+        }
+        
+        .header-nav-dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .header-cta {
+            background: var(--warm-brown);
+            color: var(--washi-white);
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: 0.02em;
+            box-shadow: 0 3px 12px rgba(107,68,35,0.3);
+        }
+
+        .header-cta:hover {
+            background: var(--muted-gold);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 20px rgba(184,134,11,0.4);
+        }
+
+        /* Remove duplicate - already defined above */
+
+        /* Hero Section - Japanese-inspired styling with Ma principles */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(107,68,35,0.06) 0%, rgba(184,134,11,0.03) 100%);
+            padding: 200px 0 150px; /* Increased padding for more contemplative space */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh; /* Ensure generous vertical space */
+        }
+        
+        .hero-section::before {
+            content: '初心';
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            font-size: 140px;
+            color: rgba(101,67,33,0.08);
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            z-index: 1;
+            line-height: 1;
+            letter-spacing: 0.1em;
+        }
+        
+        .hero-section::after {
+            content: '道';
+            position: absolute;
+            top: 20%;
+            left: 8%;
+            font-size: 80px;
+            color: rgba(27,54,93,0.06);
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            font-weight: 700;
+            z-index: 1;
+            line-height: 1;
+        }
+
+        .hero-calligraphy-accent {
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            font-size: 24px;
+            color: rgba(27,54,93,0.12);
+            font-weight: 500;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 700px; /* Narrower for better focus - Ma principle */
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem; /* Generous spacing between elements */
+            padding: 0 2rem;
+        }
+
+        .hero-subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 0; /* Remove margin, let flex gap handle spacing */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            opacity: 0.9;
+        }
+        
+        .hero-subtitle::after {
+            content: '道';
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            display: inline-block;
+            margin-left: 20px; /* Increased space for breathing room */
+            color: var(--muted-gold);
+            font-size: 18px;
+            opacity: 0.8;
+            font-weight: 700;
+        }
+
+        .hero-title {
+            font-family: 'Manrope', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            color: var(--sumi-black);
+            margin-bottom: 0; /* Remove margin, let flex gap handle spacing */
+            line-height: 1.2; /* Slightly more breathing room */
+            letter-spacing: -1px;
+            text-align: center;
+        }
+
+        .hero-quote {
+            font-family: 'Lato', serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-style: italic;
+            color: var(--zen-gray);
+            margin-bottom: 0; /* Remove margin, let flex gap handle spacing */
+            line-height: 1.5; /* More generous line height */
+            font-weight: 300;
+            position: relative;
+            padding: 0 3rem; /* Increased horizontal padding for better breathing room */
+            text-align: center;
+            max-width: 500px; /* Constrain width for better readability */
+        }
+        
+        .hero-quote::before,
+        .hero-quote::after {
+            content: '';
+            position: absolute;
+            width: 40px; /* Slightly longer lines */
+            height: 2px;
+            background: var(--muted-gold);
+            top: 50%;
+            opacity: 0.6;
+        }
+        
+        .hero-quote::before {
+            left: 0;
+        }
+        
+        .hero-quote::after {
+            right: 0;
+        }
+
+        .hero-quote-author {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: var(--warm-brown);
+            margin-bottom: 0; /* Remove margin, let flex gap handle spacing */
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            opacity: 0.8;
+        }
+
+        .hero-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 0; /* Remove margin, let flex gap handle spacing */
+            line-height: 1.7; /* More generous line height for readability */
+            font-weight: 400;
+            max-width: 550px; /* Constrain width for better focus */
+            text-align: center;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Button Styles - Traditional Japanese Design with Paper Layering */
+        .btn-primary {
+            background: var(--warm-brown);
+            color: var(--washi-white);
+            padding: 16px 32px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--warm-brown);
+            letter-spacing: 0.02em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary,
+        .btn-secondary {
+            /* Traditional Japanese Paper Layering Shadow */
+            box-shadow: 
+                0 1px 3px rgba(107,68,35,0.15),
+                0 4px 6px rgba(107,68,35,0.12),
+                0 8px 12px rgba(107,68,35,0.08),
+                0 16px 24px rgba(107,68,35,0.06);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(255,255,255,0.05) 1px,
+                    rgba(255,255,255,0.05) 2px
+                );
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .btn-primary:hover {
+            background: var(--muted-gold);
+            border-color: var(--muted-gold);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 2px 6px rgba(184,134,11,0.18),
+                0 6px 12px rgba(184,134,11,0.15),
+                0 12px 24px rgba(184,134,11,0.12),
+                0 24px 48px rgba(184,134,11,0.08);
+        }
+
+        .btn-secondary {
+            background: var(--washi-white);
+            color: var(--warm-brown);
+            padding: 16px 32px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--warm-brown);
+            letter-spacing: 0.02em;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(101,67,33,0.02) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(184,134,11,0.02) 0%, transparent 50%);
+            background-size: 60px 60px, 80px 80px;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .btn-secondary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(184,134,11,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-secondary:hover::after {
+            left: 100%;
+        }
+
+        .btn-secondary:hover {
+            background: var(--warm-brown);
+            color: var(--washi-white);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 2px 6px rgba(107,68,35,0.18),
+                0 6px 12px rgba(107,68,35,0.15),
+                0 12px 24px rgba(107,68,35,0.12),
+                0 24px 48px rgba(107,68,35,0.08);
+        }
+
+        /* Section Styles - Enhanced with Japanese Ma (Negative Space) Principles */
+        .section {
+            padding: 120px 0; /* Increased from 80px for more breathing room */
+        }
+        
+        /* Contemplative pause between major sections */
+        .section + .section {
+            margin-top: 80px; /* Creates natural meditation points */
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 6rem; /* Increased from 4rem for better visual hierarchy */
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title {
+            font-family: 'Manrope', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 600;
+            color: var(--sumi-black);
+            margin-bottom: 2.5rem; /* Increased from 1.5rem for more breathing space */
+            letter-spacing: -0.5px;
+            position: relative;
+            line-height: 1.3; /* Better line height for readability */
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--muted-gold), var(--warm-brown));
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: var(--zen-gray);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Values Grid - Enhanced with Ma principles for asymmetrical beauty */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3.5rem; /* Increased gap for better breathing room */
+            margin-top: 5rem; /* More space before content starts */
+            max-width: 1000px; /* Constrain width for better readability */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Asymmetrical spacing - inspired by Japanese garden design */
+        .value-card:nth-child(2n) {
+            margin-top: 2rem; /* Offset every second card for asymmetry */
+        }
+
+        .value-card {
+            background: var(--washi-white);
+            padding: 3.5rem 2.5rem; /* Increased vertical padding */
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(101,67,33,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-card,
+        .feature-item {
+            /* Traditional Japanese paper layering shadows */
+            box-shadow: 
+                0 1px 3px rgba(107,68,35,0.12),
+                0 4px 6px rgba(107,68,35,0.08),
+                0 8px 12px rgba(107,68,35,0.06),
+                0 16px 24px rgba(107,68,35,0.04);
+        }
+        
+        .nav-card,
+        .class-card {
+            /* Lighter shadows for secondary cards */
+            box-shadow: 
+                0 1px 2px rgba(107,68,35,0.08),
+                0 2px 4px rgba(107,68,35,0.06),
+                0 4px 8px rgba(107,68,35,0.04);
+        }
+        
+        .value-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(101,67,33,0.02) 1.5px, transparent 0),
+                radial-gradient(circle at 8px 8px, rgba(184,134,11,0.015) 1px, transparent 0),
+                linear-gradient(45deg, transparent 40%, rgba(101,67,33,0.01) 50%, transparent 60%);
+            background-size: 12px 12px, 20px 20px, 30px 30px;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+        
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--muted-gold), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .value-card:hover::before {
+            left: 100%;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            /* Enhanced Japanese paper layering on hover */
+            box-shadow: 
+                0 2px 6px rgba(107,68,35,0.18),
+                0 6px 12px rgba(107,68,35,0.15),
+                0 12px 24px rgba(107,68,35,0.12),
+                0 24px 48px rgba(107,68,35,0.08);
+            border-color: rgba(184,134,11,0.2);
+        }
+
+        .value-title {
+            font-family: 'Manrope', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+            letter-spacing: -0.3px;
+        }
+
+        .value-description {
+            font-family: 'Poppins', sans-serif;
+            color: var(--zen-gray);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* Philosophy Section - Japanese-inspired background */
+        .philosophy-section {
+            background: linear-gradient(135deg, rgba(101,67,33,0.04) 0%, rgba(184,134,11,0.02) 100%);
+            position: relative;
+        }
+        
+        .philosophy-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(138,138,138,0.03) 3px,
+                    rgba(138,138,138,0.03) 4px
+                ),
+                repeating-linear-gradient(
+                    120deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(101,67,33,0.025) 3px,
+                    rgba(101,67,33,0.025) 4px
+                ),
+                repeating-linear-gradient(
+                    240deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(27,54,93,0.02) 3px,
+                    rgba(27,54,93,0.02) 4px
+                ),
+                radial-gradient(circle at 20% 30%, rgba(184,134,11,0.02) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(101,67,33,0.02) 0%, transparent 50%);
+            background-size: 12px 12px, 15px 15px, 18px 18px, 200px 200px, 150px 150px;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .philosophy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .philosophy-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .philosophy-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .philosophy-visual {
+            text-align: center;
+        }
+
+        .circle-design {
+            width: 300px;
+            height: 300px;
+            border: 3px solid var(--warm-brown);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            background: #ffffff;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(101,67,33,0.15);
+        }
+        
+        .circle-design::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(27,54,93,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(101,67,33,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(138,138,138,0.02) 0%, transparent 50%);
+            background-size: 150px 150px, 120px 120px, 140px 140px;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        
+        .circle-design::before {
+            content: '円';
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 26px;
+            color: var(--muted-gold);
+            opacity: 0.8;
+            background: var(--washi-white);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(107,68,35,0.2);
+            font-weight: 700;
+        }
+
+        .circle-text {
+            font-family: 'Manrope', serif;
+            font-size: 20px;
+            color: var(--sumi-black);
+            text-align: center;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        /* Features Grid - Enhanced with Ma principles for contemplative spacing */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem; /* Increased gap for better breathing room */
+            justify-content: center;
+            max-width: 1100px; /* Constrain width for better focus */
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Asymmetrical staggering inspired by Japanese gardens */
+        .feature-item:nth-child(2),
+        .feature-item:nth-child(5) {
+            transform: translateY(1.5rem); /* Slight vertical offset for asymmetry */
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .feature-item:nth-child(2),
+            .feature-item:nth-child(5) {
+                transform: none; /* Remove offset on mobile */
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem;
+            }
+        }
+
+        .feature-item {
+            background: var(--washi-white);
+            padding: 3rem 2rem; /* Increased vertical padding for more breathing room */
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(44,44,44,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(101,67,33,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 1px 1px, rgba(101,67,33,0.05) 1px, transparent 0),
+                radial-gradient(circle at 6px 6px, rgba(184,134,11,0.03) 0.8px, transparent 0),
+                linear-gradient(45deg, transparent 40%, rgba(101,67,33,0.02) 50%, transparent 60%);
+            background-size: 10px 10px, 18px 18px, 25px 25px;
+            pointer-events: none;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--warm-brown), var(--muted-gold), var(--warm-brown));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-3px);
+            /* Traditional Japanese paper depth on hover */
+            box-shadow: 
+                0 2px 4px rgba(107,68,35,0.15),
+                0 6px 12px rgba(107,68,35,0.12),
+                0 12px 24px rgba(107,68,35,0.10),
+                0 24px 48px rgba(107,68,35,0.08);
+            border-color: rgba(184,134,11,0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--warm-brown), var(--muted-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--washi-white);
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(101,67,33,0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-title {
+            font-family: 'Manrope', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--sumi-black);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-description {
+            font-family: 'Poppins', sans-serif;
+            color: var(--zen-gray);
+            line-height: 1.6;
+            font-size: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Navigation Links for Enhancement Pages - Japanese-inspired */
+        .enhancement-nav {
+            background: var(--tatami-beige);
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .enhancement-nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 8px,
+                    rgba(101,67,33,0.06) 8px,
+                    rgba(101,67,33,0.06) 9px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 80px,
+                    rgba(101,67,33,0.08) 80px,
+                    rgba(101,67,33,0.08) 82px
+                ),
+                linear-gradient(45deg, rgba(230,221,212,0.3) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(230,221,212,0.2) 25%, transparent 25%);
+            background-size: 10px 10px, 85px 85px, 20px 20px, 20px 20px;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        /* Navigation Grid - Fixed for balanced 3x2 layout */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .nav-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .nav-card {
+            background: var(--washi-white);
+            padding: 2rem 2rem 3.5rem 2rem; /* Extra bottom padding for "Click to Learn More" */
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 3px 15px rgba(44,44,44,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(101,67,33,0.15);
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            cursor: pointer;
+            /* Enhanced link appearance */
+            background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+            min-height: 180px; /* Ensure consistent height */
+        }
+        
+        /* Texture background with enhanced link styling */
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(101,67,33,0.05) 1.2px, transparent 0),
+                radial-gradient(circle at 7px 7px, rgba(184,134,11,0.03) 0.8px, transparent 0),
+                linear-gradient(45deg, transparent 40%, rgba(101,67,33,0.015) 50%, transparent 60%);
+            background-size: 12px 12px, 16px 16px, 28px 28px;
+            pointer-events: none;
+            opacity: 0.7;
+            z-index: 1;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            /* Enhanced link hover with stronger elevation */
+            box-shadow: 
+                0 4px 8px rgba(107,68,35,0.15),
+                0 8px 16px rgba(107,68,35,0.12),
+                0 16px 32px rgba(107,68,35,0.08);
+            text-decoration: none;
+            color: inherit;
+            border-color: var(--warm-brown);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+        }
+        
+
+
+        .nav-card-title {
+            font-family: 'Manrope', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+            transition: color 0.3s ease;
+            /* Enhanced link title styling */
+        }
+        
+        .nav-card:hover .nav-card-title {
+            color: var(--ink-blue);
+            text-decoration: underline;
+            text-decoration-color: var(--muted-gold);
+            text-underline-offset: 3px;
+        }
+
+        .nav-card-description {
+            font-family: 'Poppins', sans-serif;
+            color: var(--zen-gray);
+            font-size: 14px;
+            line-height: 1.5;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-card:hover .nav-card-description {
+            color: var(--charcoal-gray);
+        }
+        
+        /* Add "Learn More" indicator that's always visible but subtle */
+        .nav-card::after {
+            content: 'Click to Learn More →';
+            position: absolute;
+            bottom: 1rem;
+            left: 2rem;
+            right: 2rem;
+            color: var(--warm-brown);
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            z-index: 3;
+            text-align: center;
+            border-top: 1px solid rgba(139, 69, 19, 0.1);
+            padding-top: 0.5rem;
+        }
+        
+        .nav-card:hover::after {
+            opacity: 1;
+            color: var(--ink-blue);
+            border-top-color: var(--muted-gold);
+        }
+
+        /* Intro Class Section */
+        .intro-class-section {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.05) 0%, rgba(139, 69, 19, 0.08) 100%);
+            padding: 80px 0;
+        }
+
+        .intro-class-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-class-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .intro-class-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-class-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: 3rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .intro-class-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8B4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            background: #8B4513;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-submit-btn:hover {
+            background: #a0522d;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+        }
+
+        .intro-class-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .info-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .info-item p {
+            font-family: 'Poppins', sans-serif;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer - Enhanced with Ma principles for contemplative closure */
+        .footer {
+            background: var(--sumi-black);
+            color: var(--washi-white);
+            padding: 100px 0 60px; /* Increased padding for more contemplative space */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 120px; /* Large gap before footer creates natural conclusion */
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--warm-brown) 30%, 
+                var(--muted-gold) 50%, 
+                var(--warm-brown) 70%, 
+                transparent 100%);
+        }
+
+        .footer::after {
+            content: '平和';
+            position: absolute;
+            bottom: 15%; /* Adjusted position for better balance */
+            right: 8%;
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            font-size: 60px;
+            color: rgba(184,134,11,0.08);
+            font-weight: 700;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .footer-content {
+            max-width: 500px; /* Narrower for better focus */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem; /* Generous spacing between footer elements */
+            padding: 0 2rem;
+        }
+
+        .footer-logo {
+            font-family: 'Manrope', serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 0; /* Remove margin, let flex gap handle spacing */
+        }
+
+        .footer p {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0; /* Remove margin, let flex gap handle spacing */
+            font-size: 14px;
+            line-height: 1.7; /* More generous line height for readability */
+            opacity: 0.9;
+        }
+
+        .footer a {
+            color: var(--muted-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--warm-brown);
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            margin: 2rem 0;
+        }
+
+        .footer-social a {
+            color: var(--washi-white);
+            font-size: 18px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--muted-gold);
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1002;
+        }
+
+        .burger-box {
+            width: 24px;
+            height: 18px;
+            position: relative;
+        }
+
+        .burger-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .burger-inner .top-bun,
+        .burger-inner .patty,
+        .burger-inner .bottom-bun {
+            background: var(--charcoal-gray);
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .burger-inner .top-bun {
+            top: 0;
+        }
+
+        .burger-inner .patty {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .burger-inner .bottom-bun {
+            bottom: 0;
+        }
+
+        .mobile-menu-toggle.open .burger-inner .top-bun {
+            transform: rotate(45deg);
+            top: 8px;
+        }
+
+        .mobile-menu-toggle.open .burger-inner .patty {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.open .burger-inner .bottom-bun {
+            transform: rotate(-45deg);
+            bottom: 8px;
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 120px; /* Account for announcement bar + header */
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav.open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .mobile-nav-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .mobile-nav-item:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav-item > a {
+            display: block;
+            padding: 16px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-item > a:hover {
+            background: rgba(107,68,35,0.05);
+            color: var(--warm-brown);
+        }
+
+        .mobile-nav-dropdown {
+            display: none;
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .mobile-nav-dropdown.open {
+            display: block;
+        }
+
+        .mobile-nav-dropdown a {
+            padding: 12px 40px;
+            font-size: 14px;
+            color: var(--zen-gray);
+        }
+
+        .mobile-nav-dropdown a:hover {
+            color: var(--warm-brown);
+        }
+
+        .mobile-cta {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .mobile-cta .header-cta {
+            display: inline-block;
+        }
+
+        /* Gallery Responsive Styles */
+        .gallery-responsive {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 25px !important;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-responsive {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .gallery-responsive {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        /* Instructors Section - Enhanced Ma spacing for contemplative presentation */
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(300px, 360px));
+            gap: 2.5rem; /* Balanced gap for 5 instructors */
+            justify-content: center;
+            margin-top: 5rem; /* More generous top spacing */
+            max-width: 1200px; /* Expanded width for 5 instructors */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2rem;
+        }
+        
+        /* Asymmetrical positioning for Japanese aesthetic - adjusted for 5 cards */
+        .instructors-grid .instructor-card:nth-child(2) {
+            margin-top: 1.5rem; /* Slight offset for visual interest */
+        }
+        
+        .instructors-grid .instructor-card:nth-child(4) {
+            margin-top: 1.5rem; /* Slight offset for visual interest */
+        }
+        
+        @media (max-width: 1000px) {
+            .instructors-grid {
+                grid-template-columns: repeat(2, minmax(300px, 400px));
+                max-width: 900px;
+                gap: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .instructors-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 3rem auto 0;
+                gap: 3rem; /* Maintain generous spacing */
+            }
+            
+            .instructors-grid .instructor-card:nth-child(2),
+            .instructors-grid .instructor-card:nth-child(4) {
+                margin-top: 0; /* Remove offset on mobile */
+            }
+        }
+        
+        /* Classes Section - Enhanced Ma spacing for contemplative layout */
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem; /* Increased gap for better breathing room */
+            margin-top: 5rem; /* More generous top spacing */
+            max-width: 1100px; /* Constrain width for better focus */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2rem;
+        }
+        
+        /* Subtle asymmetry for visual interest */
+        .classes-grid .class-card:nth-child(2) {
+            transform: translateY(1rem); /* Slight offset for Japanese aesthetic */
+        }
+        
+        .class-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .classes-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem; /* Maintain generous spacing on mobile */
+            }
+            
+            .classes-grid .class-card:nth-child(2) {
+                transform: none; /* Remove offset on mobile for better flow */
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .classes-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem; /* Adjust spacing for tablet */
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .philosophy-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .circle-design {
+                width: 250px;
+                height: 250px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-inner {
+                padding: 0.9vw 4vw;
+            }
+
+            /* Mobile Japanese Typography Adjustments */
+            .hero-section::before {
+                font-size: 100px;
+                right: 5%;
+            }
+
+            .hero-section::after {
+                font-size: 60px;
+                left: 5%;
+            }
+
+            .hero-calligraphy-accent {
+                display: none; /* Hide vertical text on mobile for better readability */
+            }
+
+            .japanese-calligraphy {
+                font-size: 16px !important;
+            }
+
+            .vertical-text {
+                writing-mode: horizontal-tb; /* Switch to horizontal on mobile */
+                text-orientation: mixed;
+            }
+
+            .brush-divider {
+                height: 60px; /* Adjusted for new enhanced dividers */
+                margin: 2rem 0; /* Reduced margin on mobile */
+            }
+            
+            /* Simplify Japanese patterns on mobile for performance */
+            .seigaiha-pattern::before,
+            .asanoha-accent::after {
+                opacity: 0.3; /* Reduce pattern intensity on mobile */
+            }
+            
+            /* Adjust traditional shadows for mobile */
+            .value-card,
+            .feature-item {
+                box-shadow: 
+                    0 1px 2px rgba(107,68,35,0.1),
+                    0 2px 4px rgba(107,68,35,0.06),
+                    0 4px 8px rgba(107,68,35,0.04);
+            }
+
+            .footer::after {
+                font-size: 40px;
+                bottom: 15%;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content > * {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-title { animation-delay: 0.2s; }
+        .hero-quote { animation-delay: 0.4s; }
+        .hero-description { animation-delay: 0.6s; }
+        .hero-buttons { animation-delay: 0.8s; }
     </style>
 </head>
-<body>
-    <div class="header">
-        <h1>Genaikido.com Clone</h1>
-        <p>Author: Lance James, Unit 221B</p>
-        <p>Scraped on: 2025-07-30 07:57:04</p>
+
+<body class="washi-texture">
+    <!-- Traditional Japanese SVG Pattern Definitions -->
+    <svg class="japanese-patterns" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <!-- Seigaiha (Wave) Pattern -->
+            <pattern id="seigaiha" x="0" y="0" width="50" height="25" patternUnits="userSpaceOnUse">
+                <circle cx="0" cy="0" r="12" fill="none" stroke="var(--warm-brown)" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="25" cy="0" r="12" fill="none" stroke="var(--warm-brown)" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="50" cy="0" r="12" fill="none" stroke="var(--warm-brown)" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="12.5" cy="0" r="8" fill="none" stroke="var(--muted-gold)" stroke-width="0.3" opacity="0.2"/>
+                <circle cx="37.5" cy="0" r="8" fill="none" stroke="var(--muted-gold)" stroke-width="0.3" opacity="0.2"/>
+            </pattern>
+            
+            <!-- Asanoha (Hemp Leaf) Pattern -->
+            <pattern id="asanoha" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M10,0 L20,10 L10,20 L0,10 Z" fill="none" stroke="var(--warm-brown)" stroke-width="0.3" opacity="0.2"/>
+                <path d="M10,0 L10,20" stroke="var(--ink-blue)" stroke-width="0.2" opacity="0.15"/>
+                <path d="M0,10 L20,10" stroke="var(--ink-blue)" stroke-width="0.2" opacity="0.15"/>
+            </pattern>
+            
+            <!-- Kumiko Geometric Pattern -->
+            <pattern id="kumiko" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="30" height="30" fill="none"/>
+                <path d="M0,0 L30,30 M0,30 L30,0" stroke="var(--warm-brown)" stroke-width="0.4" opacity="0.15"/>
+                <circle cx="15" cy="15" r="6" fill="none" stroke="var(--muted-gold)" stroke-width="0.3" opacity="0.2"/>
+                <rect x="12" y="12" width="6" height="6" fill="none" stroke="var(--ink-blue)" stroke-width="0.2" opacity="0.1"/>
+            </pattern>
+        </defs>
+    </svg>
+
+
+    <!-- Universal Navigation -->
+    <div id="universal-navigation"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="sqs-layout">
+            <div class="hero-content">
+                <div class="hero-subtitle">Traditional Aikido in the East Village</div>
+                <h1 class="hero-title">Embrace Shoshin<br><span class="japanese-calligraphy" style="color: var(--muted-gold); font-size: 0.7em;">初心</span> The Beginner's Mind</h1>
+                
+                <blockquote class="hero-quote">
+                    "In the beginner's mind there are many possibilities,<br>
+                    but in the expert's mind there are few."
+                </blockquote>
+                <div class="hero-quote-author">— Shunryu Suzuki Roshi</div>
+                
+                <p class="hero-description">
+                    A serious dojo committed to the Way of Aikido <span class="japanese-text" style="color: var(--warm-brown);">(合気道)</span>, through traditional instruction as passed down by the late F. Toyoda Shihan. We welcome dedicated students ready to embrace the discipline of traditional martial arts training—where honor <span class="japanese-text" style="color: var(--warm-brown);">(名誉 - meiyo)</span>, respect, and genuine community are forged through commitment <span class="japanese-text" style="color: var(--warm-brown);">(義理 - giri)</span> in Manhattan's East Village.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#signup-form" class="btn-primary">Schedule Your Free Training Session</a>
+                    <a href="#philosophy" class="btn-secondary">Learn About Shoshin</a>
+                </div>
+            </div>
+            
+            <!-- Vertical Japanese Text Accent -->
+            <div class="hero-calligraphy-accent">
+                <div class="japanese-calligraphy">武道の心</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Japanese Brush Stroke Divider -->
+    <div style="display: flex; justify-content: center; margin: 3rem 0;">
+        <svg class="brush-divider" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Main brush stroke with organic variations -->
+            <path class="brush-stroke-path" d="M20,40 Q60,15 120,45 Q180,25 240,40 Q300,20 380,35" stroke-width="4"/>
+            <!-- Secondary flowing stroke -->
+            <path class="brush-stroke-secondary" d="M25,45 Q65,20 125,50 Q185,30 245,45 Q305,25 375,40" stroke-width="2"/>
+            <!-- Accent elements -->
+            <circle class="brush-accent" cx="120" cy="42" r="2.5"/>
+            <circle class="brush-accent" cx="240" cy="38" r="2"/>
+            <circle class="brush-accent" cx="300" cy="22" r="1.5"/>
+            <!-- Traditional pattern overlay -->
+            <rect x="0" y="0" width="400" height="80" fill="url(#seigaiha)" opacity="0.1"/>
+        </svg>
     </div>
+
+    <!-- Sensei Values Section -->
+    <section class="section" id="about">
+        <div class="sqs-layout">
+            <div class="section-header">
+                <h2 class="section-title">Our Sensei's Approach</h2>
+                <p class="section-subtitle">"Out of responsibility and love, we maintain traditional honor standards. How we train defines who we become."</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3 class="value-title">"Traditional Teacher-Student Relationship"</h3>
+                    <p class="value-description">
+                        At Genshinkan, we honor the traditional sensei-student relationship that has preserved martial arts for centuries. Our instructors provide demanding yet supportive guidance, maintaining proper rei <span class="japanese-text" style="color: var(--warm-brown);">(礼 - respect)</span> while fostering genuine growth through disciplined training.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <h3 class="value-title">"Honor in Training, Honor in Life"</h3>
+                    <p class="value-description">
+                        The principles we practice on the mat extend far beyond the dojo walls. We cultivate respect, integrity, and awareness (気づき - kidzuki) that transforms how you approach every aspect of life.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <h3 class="value-title">"We Recognize Genuine Progress"</h3>
+                    <p class="value-description">
+                        True advancement in Aikido comes through consistent effort, not casual participation. We hold honor standards—some may falter, but those who persevere develop both technical skill and character through the demands of traditional budo training.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Japanese Philosophy Divider -->
+    <div style="display: flex; justify-content: center; margin: 3rem 0;">
+        <svg class="brush-divider" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Flowing brush stroke -->
+            <path class="brush-stroke-path" d="M15,40 Q75,20 150,45 Q225,25 285,35" stroke-width="3"/>
+            <!-- Ink accent stroke -->
+            <path class="brush-stroke-accent" d="M20,35 Q80,15 155,40 Q230,20 280,30" stroke-width="1"/>
+            <!-- Traditional elements -->
+            <circle class="brush-accent" cx="150" cy="42" r="3"/>
+            <path class="brush-accent" d="M145,47 L155,47 M150,42 L150,52" stroke-width="0.8" opacity="0.4"/>
+            <!-- Asanoha pattern overlay -->
+            <rect x="50" y="10" width="200" height="60" fill="url(#asanoha)" opacity="0.08"/>
+        </svg>
+    </div>
+
+    <!-- Philosophy Section -->
+    <section class="section philosophy-section section-border seigaiha-pattern" id="philosophy">
+        <div class="sqs-layout">
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">What is Shoshin?</h2>
+                    <div style="color: #8B4513; font-weight: 500; margin-bottom: 1rem; font-size: 22px;" class="japanese-calligraphy">初心 (Shoshin) - "Beginner's Mind"</div>
+                    
+                    <p>
+                        Shoshin is a Zen concept that refers to having an attitude of openness, eagerness, and lack of preconceptions when approaching any subject—just as a beginner would.
+                    </p>
+                    
+                    <p>
+                        In Aikido, this mindset is essential. Whether you're taking your first step onto the mat or you've been training for decades, approaching each practice with fresh eyes allows for continuous discovery and growth.
+                    </p>
+                    
+                    <p>
+                        At Genshinkan, we embrace this philosophy wholeheartedly with sincere spirit (真心 - magokoro). Our community welcomes complete beginners and seasoned practitioners alike, fostering senpai-kohai <span class="japanese-text" style="color: var(--warm-brown);">(先輩後輩 - senior-junior)</span> relationships where everyone can learn from each other through mutual respect and dedication to the Way.
+                    </p>
+                    
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <a href="pages/what-is-shoshin.html" class="btn-secondary" style="display: inline-block; font-size: 16px;">Explore Shoshin in Depth</a>
+                    </div>
+                </div>
+                
+                <div class="philosophy-visual">
+                    <div class="circle-design">
+                        <div class="circle-text">
+                            Every moment<br>
+                            cultivates<br>
+                            正心 (shoshin)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Japanese Features Divider -->
+    <div style="display: flex; justify-content: center; margin: 3rem 0;">
+        <svg class="brush-divider" viewBox="0 0 250 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Main flowing stroke -->
+            <path class="brush-stroke-path" d="M10,40 Q60,25 125,45 Q190,20 240,35" stroke-width="2.5"/>
+            <!-- Supporting strokes -->
+            <path class="brush-stroke-secondary" d="M15,35 Q65,20 130,40 Q195,15 235,30" stroke-width="1"/>
+            <!-- Central focal point -->
+            <circle class="brush-accent" cx="125" cy="42" r="3"/>
+            <!-- Zen circle element -->
+            <circle cx="125" cy="42" r="8" fill="none" stroke="var(--ink-blue)" stroke-width="0.5" opacity="0.3"/>
+            <!-- Kumiko pattern accent -->
+            <rect x="100" y="20" width="50" height="40" fill="url(#kumiko)" opacity="0.06"/>
+        </svg>
+    </div>
+
+    <!-- Features Section -->
+    <section class="section section-border">
+        <div class="sqs-layout">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Genshinkan Aikido?</h2>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <span class="japanese-calligraphy" style="color: var(--muted-gold); font-size: 20px;">選択の理由</span>
+                </div>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🥋</div>
+                    <h3 class="feature-title">Traditional Lineage <span class="japanese-text" style="color: var(--muted-gold); font-size: 0.7em; display: block;">伝統的系譜</span></h3>
+                    <p class="feature-description">Direct transmission from F. Toyoda Shihan, officially recognized by Aikikai Hombu Dojo in Japan.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🧘</div>
+                    <h3 class="feature-title">Mindful Practice <span class="japanese-text" style="color: var(--muted-gold); font-size: 0.7em; display: block;">心の修行</span></h3>
+                    <p class="feature-description">Integration of Zen principles and meditation techniques with traditional Aikido training.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Welcoming Community <span class="japanese-text" style="color: var(--muted-gold); font-size: 0.7em; display: block;">温かい共同体</span></h3>
+                    <p class="feature-description">A disciplined environment where beginners and experienced practitioners train together with mutual respect and dedication to the Way.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🏠</div>
+                    <h3 class="feature-title">East Village Location</h3>
+                    <p class="feature-description">Conveniently located in Manhattan's vibrant East Village, easily accessible by subway.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">Proven Excellence</h3>
+                    <p class="feature-description">5.0-star rating from students who praise our instruction quality and community atmosphere.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">⚔️</div>
+                    <h3 class="feature-title">Serious Training Standards</h3>
+                    <p class="feature-description">Traditional discipline (修行 - shugyō) that demands dedication and respect. We guide committed students through rigorous practice that builds genuine skill and character.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Japanese Enhancement Divider -->
+    <div style="display: flex; justify-content: center; margin: 4rem 0 2rem;">
+        <svg class="brush-divider" viewBox="0 0 350 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Primary flowing stroke -->
+            <path class="brush-stroke-path" d="M15,40 Q90,20 175,45 Q260,25 335,35" stroke-width="3"/>
+            <!-- Secondary harmony stroke -->
+            <path class="brush-stroke-secondary" d="M20,45 Q85,25 170,50 Q255,30 330,40" stroke-width="1.5"/>
+            <!-- Accent line -->
+            <path class="brush-stroke-accent" d="M25,35 Q95,15 180,40 Q265,20 325,30" stroke-width="1"/>
+            <!-- Traditional elements -->
+            <circle class="brush-accent" cx="175" cy="42" r="2.5"/>
+            <circle class="brush-accent" cx="90" cy="22" r="1.5"/>
+            <circle class="brush-accent" cx="260" cy="27" r="2"/>
+            <!-- Seigaiha background -->
+            <rect x="0" y="20" width="350" height="40" fill="url(#seigaiha)" opacity="0.08"/>
+        </svg>
+    </div>
+
+    <!-- Philosophy & Community Section - Enhanced for Visibility -->
+    <section class="enhancement-nav philosophy-hub" id="philosophy-community" style="background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%); padding: 4rem 0; border-top: 3px solid var(--warm-brown); border-bottom: 1px solid #e0e0e0;">
+        <div class="sqs-layout">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <div style="display: inline-block; background: var(--warm-brown); color: white; padding: 0.5rem 2rem; border-radius: 25px; margin-bottom: 1rem; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">Philosophy & Community</div>
+                <h2 class="section-title" style="font-size: 2.5rem; margin: 1rem 0;">Explore Our Philosophy & Community</h2>
+                <div style="text-align: center; margin: 1rem 0;">
+                    <span class="japanese-calligraphy" style="color: var(--warm-brown); font-size: 22px; display: block;">哲学と共同体</span>
+                </div>
+                <p class="section-subtitle" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #666;">Deep dive into what makes Genshinkan special - from honor-based values to traditional wisdom</p>
+            </div>
+            
+            <div class="nav-grid">
+                <a href="pages/honor-values.html" class="nav-card">
+                    <h3 class="nav-card-title">Honor-Based Values</h3>
+                    <p class="nav-card-description">Discover the profound difference between training with purpose and simply going through motions. Learn how honor in training becomes honor in life.</p>
+                </a>
+                
+                <a href="pages/adult-beginners-journey.html" class="nav-card">
+                    <h3 class="nav-card-title">Adult Beginner's Journey</h3>
+                    <p class="nav-card-description">Real stories from Manhattan professionals who started as complete beginners. See the transformative power of Aikido in professional and personal life.</p>
+                </a>
+                
+                <a href="pages/traditional-values.html" class="nav-card">
+                    <h3 class="nav-card-title">Traditional Values & Bushido</h3>
+                    <p class="nav-card-description">Master the rigorous protocols and warrior principles rooted in ancient traditions - from bushido virtues to lineage respect that forge true martial character.</p>
+                </a>
+                
+                <a href="pages/the-art-of-peace.html" class="nav-card">
+                    <h3 class="nav-card-title">The Art of Peace</h3>
+                    <p class="nav-card-description">Explore the heart of Aikido philosophy - how the "Art of Peace" transforms conflict into harmony and teaches us to change hearts rather than defeat opponents.</p>
+                </a>
+
+                <a href="pages/health-and-safety.html" class="nav-card">
+                    <h3 class="nav-card-title">Health & Safety</h3>
+                    <p class="nav-card-description">Our comprehensive approach to safe, effective training for adults of all ages and abilities. Discipline of body, mind, and spirit through the Way of Aikido.</p>
+                </a>
+                
+                <a href="pages/what-is-shoshin.html" class="nav-card">
+                    <h3 class="nav-card-title">What is Shoshin?</h3>
+                    <p class="nav-card-description">Deep exploration of the beginner's mind philosophy that forms the foundation of our approach to Aikido and life.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="section gallery-section" id="gallery" style="background: #ffffff;">
+        <div class="sqs-layout">
+            <div class="section-header">
+                <h2 class="section-title">Training at Genshinkan</h2>
+                <p class="section-subtitle">Experience the traditional atmosphere of our Aikido dojo in Manhattan's East Village</p>
+            </div>
+            
+            <!-- Photo Gallery from Original Site -->
+            <div class="gallery" style="min-height: 100px;">
+                <div class="gallery-grid gallery-grid--layout-grid" data-animation="site-default" data-aspect-ratio="four-three" data-columns="3" data-gutter="25" data-lightbox="" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 3rem;" class="gallery-responsive">
+                    <figure class="gallery-grid-item" style="position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer;">
+                        <div class="gallery-grid-item-wrapper" data-animation-role="image">
+                            <img alt="Aikido Training" src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg?format=750w" style="display:block;object-position:50% 50%;object-fit:cover;width:100%;height:100%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+                        </div>
+                    </figure>
+                    <figure class="gallery-grid-item" style="position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer;">
+                        <div class="gallery-grid-item-wrapper" data-animation-role="image">
+                            <img alt="Aikido Practice" src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg?format=750w" style="display:block;object-position:50% 50%;object-fit:cover;width:100%;height:100%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+                        </div>
+                    </figure>
+                    <figure class="gallery-grid-item" style="position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer;">
+                        <div class="gallery-grid-item-wrapper" data-animation-role="image">
+                            <img alt="Aikido Students" src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288047554-19TCTDXAGAUHK61QSTPP/Screen%2BShot%2B2020-11-09%2Bat%2B14.37.28.jpg?format=750w" style="display:block;object-position:50% 50%;object-fit:cover;width:100%;height:100%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+                        </div>
+                    </figure>
+                    <figure class="gallery-grid-item" style="position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer;">
+                        <div class="gallery-grid-item-wrapper" data-animation-role="image">
+                            <img alt="Aikido Techniques" src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/a517b9b9-51ea-40ce-87a8-ffc51fd82497/DSC_7942.jpg?format=750w" style="display:block;object-position:50% 50%;object-fit:cover;width:100%;height:100%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+                        </div>
+                    </figure>
+                    <figure class="gallery-grid-item" style="position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer;">
+                        <div class="gallery-grid-item-wrapper" data-animation-role="image">
+                            <img alt="Aikido Demonstration" src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG?format=750w" style="display:block;object-position:50% 50%;object-fit:cover;width:100%;height:100%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+                        </div>
+                    </figure>
+                    <figure class="gallery-grid-item" style="position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer;">
+                        <div class="gallery-grid-item-wrapper" data-animation-role="image">
+                            <img alt="Aikido Sensei and Students" src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725154103-91GON58Y5D5L0XRD7THC/DSC_0052.JPG?format=750w" style="display:block;object-position:50% 50%;object-fit:cover;width:100%;height:100%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Japanese Gallery Divider -->
+    <div style="display: flex; justify-content: center; margin: 3rem 0;">
+        <svg class="brush-divider" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Gentle flowing stroke -->
+            <path class="brush-stroke-path" d="M10,40 Q50,25 100,45 Q150,30 190,35" stroke-width="2"/>
+            <!-- Harmony line -->
+            <path class="brush-stroke-secondary" d="M15,35 Q55,20 105,40 Q155,25 185,30" stroke-width="1"/>
+            <!-- Zen elements -->
+            <circle class="brush-accent" cx="100" cy="42" r="2"/>
+            <circle cx="100" cy="42" r="6" fill="none" stroke="var(--muted-gold)" stroke-width="0.4" opacity="0.4"/>
+            <!-- Minimalist pattern -->
+            <rect x="75" y="25" width="50" height="30" fill="url(#asanoha)" opacity="0.05"/>
+        </svg>
+    </div>
+
+    <!-- Instructors & Classes Section (from original site) -->
+    <section class="section" id="instructors" style="background: white;">
+        <div class="sqs-layout">
+            <div class="section-header">
+                <h2 class="section-title">Our Instructors</h2>
+                <div style="text-align: center; margin: 1rem 0;">
+                    <span class="japanese-calligraphy" style="color: var(--muted-gold); font-size: 18px;">指導者</span>
+                </div>
+                <p class="section-subtitle">Traditional Aikido passed down through established lineage</p>
+            </div>
+            
+            <div class="instructors-grid">
+                <div class="instructor-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center; border: 1px solid rgba(0, 0, 0, 0.05);">
+                    <img src="images/instructors/gary-wagener.jpg" alt="Gary Wagener Sensei" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 3px solid #8B4513;" />
+                    <h3 style="font-family: 'Manrope', serif; font-size: 20px; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">Gary Wagener Sensei</h3>
+                    <div style="color: #8B4513; font-weight: 500; margin-bottom: 1rem;">Yondan (4th Dan), Chief Instructor/Dojo-Cho</div>
+                    <p style="color: #666; line-height: 1.6; font-size: 15px;">Gary Wagener Sensei is a Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan and trained in the traditional lineage of F. Toyoda Shihan. With over two decades of disciplined practice, Sensei Wagener embodies the rigorous dedication required for true martial arts mastery. His teaching methodology emphasizes the foundational principles that create lasting transformation—requiring students to develop genuine understanding through consistent effort rather than seeking superficial results. Through systematic progression and traditional training methods, he guides students toward the integration of martial discipline with spiritual development that defines true budo. Beyond the dojo, Sensei Wagener has brought traditional Aikido training to underserved communities, demonstrating his commitment to the art's transformative power.</p>
+                </div>
+                
+                <div class="instructor-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center; border: 1px solid rgba(0, 0, 0, 0.05);">
+                    <img src="images/instructors/robert-hoff.jpg" alt="Robert Hoff Sensei" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 3px solid #8B4513;" />
+                    <h3 style="font-family: 'Manrope', serif; font-size: 20px; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">Robert Hoff Sensei</h3>
+                    <div style="color: #8B4513; font-weight: 500; margin-bottom: 1rem;">Yondan (4th Dan), Instructor</div>
+                    <p style="color: #666; line-height: 1.6; font-size: 15px;">Robert Hoff Sensei is a Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan, with extensive training under Joseph Jarman Sensei and continued development within the Genshinkan lineage. His progression through the dan ranks reflects years of disciplined practice combining Zen meditation principles with rigorous martial training. Sensei Hoff's teaching approach demands complete mental presence and physical commitment from students, recognizing that Aikido's transformative power emerges only through sustained effort and genuine commitment. His integration of contemplative practice with traditional martial discipline creates an environment where students develop both technical precision and inner stability. As an experienced educator both within and outside the dojo, he understands that genuine learning requires challenge, repetition, and the willingness to confront one's limitations.</p>
+                </div>
+                
+                <div class="instructor-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center; border: 1px solid rgba(0, 0, 0, 0.05);">
+                    <img src="images/instructors/ariana-koblitz.jpg" alt="Ariana Koblitz Sensei" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 3px solid #8B4513;" />
+                    <h3 style="font-family: 'Manrope', serif; font-size: 20px; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">Ariana Koblitz Sensei</h3>
+                    <div style="color: #8B4513; font-weight: 500; margin-bottom: 1rem;">Nidan (2nd Dan), Instructor</div>
+                    <p style="color: #666; line-height: 1.6; font-size: 15px;">Ariana Koblitz Sensei is a Nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan, having earned her rank through consistent training and demonstrated mastery of traditional techniques. Her progression from beginner to black belt instructor exemplifies the disciplined approach required for genuine martial arts development. Sensei Koblitz's teaching emphasizes that each class demands complete mental engagement—students must be fully present to absorb the technical precision and philosophical depth that Aikido offers. Her instruction methodology focuses on building solid fundamentals through repetitive practice, understanding that lasting skill emerges only through dedicated effort over time. The principles she has internalized through years of traditional training—presence, adaptability, and harmonious response—inform both her martial arts instruction and her professional expertise in design, demonstrating Aikido's practical application beyond the dojo.</p>
+                </div>
+                
+                <div class="instructor-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center; border: 1px solid rgba(0, 0, 0, 0.05);">
+                    <img src="images/instructors/sarah-antal.jpg" alt="Sarah Antal Sensei" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 3px solid #8B4513;" />
+                    <h3 style="font-family: 'Manrope', serif; font-size: 20px; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">Sarah Antal Sensei</h3>
+                    <div style="color: #8B4513; font-weight: 500; margin-bottom: 1rem;">Nidan (2nd Dan), Dojo-Cho White Plains</div>
+                    <p style="color: #666; line-height: 1.6; font-size: 15px;">Sarah Antal Sensei is a Nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan, having progressed through the traditional ranking system under the direct guidance of Gary Wagener Sensei. Her journey from novice to certified instructor demonstrates the transformative power of sustained commitment to traditional martial arts training. Sensei Antal's teaching combines the precision demanded by classical dance with the martial discipline required for serious Aikido practice. She emphasizes that both arts require years of dedicated training to achieve fluency, rejecting shortcuts in favor of thorough technical development. Her instruction methodology ensures students understand that mastery emerges through countless repetitions, attention to detail, and willingness to embrace the discomfort of genuine learning. As both a martial arts instructor and professional dance educator, she embodies the intersection of artistic expression and disciplined training.</p>
+                </div>
+                
+                <div class="instructor-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center; border: 1px solid rgba(0, 0, 0, 0.05);">
+                    <img src="images/instructors/ian-antal.jpg" alt="Ian Antal Sensei" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 3px solid #8B4513;" />
+                    <h3 style="font-family: 'Manrope', serif; font-size: 20px; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">Ian Antal Sensei</h3>
+                    <div style="color: #8B4513; font-weight: 500; margin-bottom: 1rem;">Nidan (2nd Dan), Chief Instructor White Plains</div>
+                    <p style="color: #666; line-height: 1.6; font-size: 15px;">Ian Antal Sensei is a Nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan, having achieved his rank through intensive traditional training as Gary Wagener Sensei's first Soto Deshi (live-in student). This formal apprenticeship relationship represents the deepest level of commitment to traditional martial arts education—requiring complete dedication to the art, the teacher, and the daily discipline of traditional budo training. In 2018, Sensei Antal earned the significant honor of opening Genshinkan's first satellite dojo in White Plains, demonstrating his mastery of both technical skills and teaching methodology. His approach to instruction emphasizes that Aikido's apparent contradictions—warrior training combined with peaceful philosophy—can only be resolved through rigorous practice and deep study. As Chief Instructor, he maintains the traditional standards and teaching methods that produce genuine martial artists rather than casual practitioners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aikido World Alliance Section -->
+    <section class="section" id="aikido-world-alliance" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-top: 2px solid var(--warm-brown);">
+        <div class="sqs-layout">
+            <div class="section-header">
+                <h2 class="section-title">Aikido World Alliance</h2>
+                <div style="text-align: center; margin: 1rem 0;">
+                    <span class="japanese-calligraphy" style="color: var(--warm-brown); font-size: 18px;">合気道世界同盟</span>
+                </div>
+                <p class="section-subtitle">Our formal lineage and connection to traditional Aikido</p>
+            </div>
+            
+            <div style="max-width: 1000px; margin: 0 auto; padding: 2rem;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <p style="font-size: 1.2rem; color: #666; line-height: 1.6;">Genshinkan Aikido, NYC is a member of <strong>Aikido World Alliance (AWA)</strong></p>
+                </div>
+
+                <!-- AWA Images -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                    <div style="text-align: center;">
+                        <img src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/34e29f7a-c5ce-4090-8255-cf129baf8499/DSC_8119.jpg" 
+                             alt="AWA Training Session" 
+                             style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288037700-2VLMPAYDZ9AM6WG5NYEM/IMG_4623-768x1024.jpg" 
+                             alt="Andrew Sato Shihan" 
+                             style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
+                    <h3 style="font-family: 'Manrope', serif; font-size: 1.5rem; color: #2c3e50; margin-bottom: 2rem; text-align: center;">About Andrew Sato Shihan</h3>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--warm-brown); font-weight: 600; margin-bottom: 1rem;">AWA Founder & Chief Instructor</h4>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 1rem;">Andrew Sato Shihan, 7th dan black belt, is the founder and chief instructor of AWA. He founded AWA in 2005, and the organization has grown to over 50 dojo worldwide.</p>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 1rem;">Sato Shihan began his aikido training in 1977 with Fumio Toyoda Shihan in Chicago. He regularly teaches seminars and at Kiku Matsu Dojo in Chicago (now led by Laura DeGraff Sensei).</p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--warm-brown); font-weight: 600; margin-bottom: 1rem;">Our Traditional Lineage</h4>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 2rem;">Understanding and respecting our lineage is fundamental to traditional Aikido practice. We maintain direct connection to our sources through proper protocols.</p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto;">
+                            <div style="text-align: center; padding: 1rem; background: rgba(139, 69, 19, 0.05); border-radius: 8px;">
+                                <div style="font-weight: 600; color: var(--warm-brown);">Founder</div>
+                                <div style="font-size: 1.1rem; color: #2c3e50;">Morihei Ueshiba O-Sensei (1883-1969)</div>
+                                <div style="font-size: 0.9rem; color: #666;">Founder of Aikido, "The Way of Harmony"</div>
+                            </div>
+                            <div style="text-align: center; color: var(--warm-brown); font-size: 1.2rem;">↓</div>
+                            <div style="text-align: center; padding: 1rem; background: rgba(139, 69, 19, 0.05); border-radius: 8px;">
+                                <div style="font-weight: 600; color: var(--warm-brown);">Aikikai Foundation</div>
+                                <div style="font-size: 1.1rem; color: #2c3e50;">Tokyo, Japan - World Headquarters</div>
+                                <div style="font-size: 0.9rem; color: #666;">Official recognition and rank certification</div>
+                            </div>
+                            <div style="text-align: center; color: var(--warm-brown); font-size: 1.2rem;">↓</div>
+                            <div style="text-align: center; padding: 1rem; background: rgba(139, 69, 19, 0.05); border-radius: 8px;">
+                                <div style="font-weight: 600; color: var(--warm-brown);">American Transmission</div>
+                                <div style="font-size: 1.1rem; color: #2c3e50;">Fumio Toyoda Shihan (1947-2001)</div>
+                                <div style="font-size: 0.9rem; color: #666;">Direct transmission to American students</div>
+                            </div>
+                            <div style="text-align: center; color: var(--warm-brown); font-size: 1.2rem;">↓</div>
+                            <div style="text-align: center; padding: 1rem; background: rgba(139, 69, 19, 0.05); border-radius: 8px;">
+                                <div style="font-weight: 600; color: var(--warm-brown);">Current Leadership</div>
+                                <div style="font-size: 1.1rem; color: #2c3e50;">Andrew Sato Shihan, 7th Dan</div>
+                                <div style="font-size: 0.9rem; color: #666;">Aikido World Alliance Director</div>
+                            </div>
+                            <div style="text-align: center; color: var(--warm-brown); font-size: 1.2rem;">↓</div>
+                            <div style="text-align: center; padding: 1rem; background: rgba(139, 69, 19, 0.05); border-radius: 8px;">
+                                <div style="font-weight: 600; color: var(--warm-brown);">Genshinkan Manhattan</div>
+                                <div style="font-size: 1.1rem; color: #2c3e50;">Gary Wagener Sensei, 4th Dan</div>
+                                <div style="font-size: 0.9rem; color: #666;">Dojo-Cho, maintaining traditional values in Manhattan</div>
+                            </div>
+                        </div>
+                        
+                        <p style="color: #666; line-height: 1.7; text-align: center; margin-top: 2rem; font-style: italic;">AWA is directly affiliated with <a href="http://www.aikikai.or.jp/eng/index.htm" target="_blank" style="color: var(--warm-brown); text-decoration: none; font-weight: 500;">Aikikai Foundation</a> in Tokyo, Japan, maintaining our traditional lineage and ensuring proper instruction standards.</p>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="http://www.aikidoworldalliance.com/" target="_blank" 
+                           style="display: inline-block; background: var(--warm-brown); color: white; padding: 12px 24px; 
+                                  border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                            Visit Aikido World Alliance Website
+                        </a>
+                    </div>
+                    
+                    <div style="background: rgba(139, 69, 19, 0.05); padding: 2rem; border-radius: 10px; text-align: center; margin-top: 2rem;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left;">
+                            <div>
+                                <h5 style="color: var(--warm-brown); font-weight: 600; margin-bottom: 0.5rem;">Manhattan Location</h5>
+                                <p style="color: #666; margin: 0; font-size: 0.9rem;">64 E 4th St, 3rd FL, NY, NY</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--warm-brown); font-weight: 600; margin-bottom: 0.5rem;">White Plains Location</h5>
+                                <p style="color: #666; margin: 0; font-size: 0.9rem;">98 Lake St, White Plains, NY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Commitment & Discipline Section -->
+    <section class="section" id="training-commitment" style="background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);">
+        <div class="sqs-layout">
+            <div class="section-header">
+                <h2 class="section-title">The Path Requires Dedication</h2>
+                <div style="text-align: center; margin: 1rem 0;">
+                    <span class="japanese-calligraphy" style="color: var(--warm-brown); font-size: 18px;">武道精神</span>
+                </div>
+                <p class="section-subtitle">Aikido is budo—the martial way that transforms through disciplined practice</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+                <p style="font-size: 18px; color: #555; line-height: 1.8; margin-bottom: 2rem;">
+                    We welcome dedicated students ready for transformation. Aikido demands consistency, 
+                    mental discipline, and fudoshin <span class="japanese-text" style="color: var(--warm-brown);">(不動心 - unshakeable spirit)</span> to confront your limitations. This is not fitness—this is <em>budo</em>.
+                </p>
+                
+                <div style="background: rgba(139, 69, 19, 0.1); padding: 2rem; border-radius: 10px; border-left: 4px solid var(--warm-brown);">
+                    <h3 style="color: var(--warm-brown); margin-bottom: 1rem; font-size: 1.3rem;">What Aikido Demands</h3>
+                    <p style="color: #666; line-height: 1.7; font-style: italic; margin-bottom: 1.5rem;">
+                        "The ultimate aim of Aiki is not in victory or defeat, but in the perfection of the human character."<br>
+                        <span style="font-size: 0.9rem; font-weight: 500;">— Morihei Ueshiba, Founder of Aikido</span>
+                    </p>
+                    <p style="color: #666; line-height: 1.7; font-style: italic;">
+                        "Always practice the Art of Peace in a vibrant and joyful manner."<br>
+                        <span style="font-size: 0.9rem; font-weight: 500;">— Morihei Ueshiba</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-top: 4px solid #8B4513;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; background: var(--warm-brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; margin-right: 1rem;">⏰</div>
+                        <h3 style="color: #2c3e50; font-size: 1.2rem; margin: 0;">Regular Practice Required</h3>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 1rem;">
+                        Aikido develops through repetition and muscle memory. Students who progress train <strong>2-3 times per week minimum</strong>. 
+                        Occasional attendance yields occasional results.
+                    </p>
+                    <div style="background: #f8f8f8; padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #555;">
+                        <strong>Reality:</strong> You'll be physically tired after keiko <span class="japanese-text" style="color: var(--warm-brown);">(稽古 - training)</span>, mentally challenged by complex movements, and humbled by the learning curve.
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-top: 4px solid #8B4513;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; background: var(--warm-brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; margin-right: 1rem;">🧠</div>
+                        <h3 style="color: #2c3e50; font-size: 1.2rem; margin: 0;">Mental Discipline</h3>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 1rem;">
+                        Beyond physical technique, you'll develop zanshin <span class="japanese-text" style="color: var(--warm-brown);">(残心 - continuing awareness)</span>, emotional regulation, and the ability to remain centered under pressure. 
+                        This mental training extends far beyond the dojo.
+                    </p>
+                    <div style="background: #f8f8f8; padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #555;">
+                        <strong>Growth:</strong> Developing mushin <span class="japanese-text" style="color: var(--warm-brown);">(無心 - no-mind)</span> - staying calm when thrown, focused when confused, and humble when frustrated.
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-top: 4px solid #8B4513;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; background: var(--warm-brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; margin-right: 1rem;">🌱</div>
+                        <h3 style="color: #2c3e50; font-size: 1.2rem; margin: 0;">Personal Transformation</h3>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 1rem;">
+                        Aikido will confront your ego, test your patience, and push you beyond your comfort zone. 
+                        This training cultivates kokoro <span class="japanese-text" style="color: var(--warm-brown);">(心 - heart/spirit)</span>—real growth happens through discomfort, not in easy moments.
+                    </p>
+                    <div style="background: #f8f8f8; padding: 1rem; border-radius: 8px; font-size: 0.9rem; color: #555;">
+                        <strong>Truth:</strong> The students who thrive here are those who embrace challenge as the price of meaningful change.
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px; border: 2px solid var(--warm-brown);">
+                <h3 style="color: var(--warm-brown); margin-bottom: 1rem;">Are You Ready for This Level of Commitment?</h3>
+                <p style="color: #666; line-height: 1.7; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    If you're looking for easy, Aikido isn't for you. If you're seeking real transformation through dedicated practice, 
+                    disciplined study, and traditional martial arts training—welcome home.
+                </p>
+                <a href="#signup-form" style="background: var(--warm-brown); color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; transition: all 0.3s ease;">
+                    Begin Your Training Journey
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Thrives at Genshinkan Section -->
+    <section class="section" id="who-thrives" style="background: #ffffff;">
+        <div class="sqs-layout">
+            <div class="section-header">
+                <h2 class="section-title">Who Thrives at Genshinkan</h2>
+                <div style="text-align: center; margin: 1rem 0;">
+                    <span class="japanese-calligraphy" style="color: var(--warm-brown); font-size: 18px;">成功する学生</span>
+                </div>
+                <p class="section-subtitle">Students who embrace challenge and commit to growth find their home here</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto 3rem; text-align: center;">
+                <p style="font-size: 18px; color: #555; line-height: 1.8; margin-bottom: 2rem;">
+                    Our most successful students share certain qualities—not athletic ability or prior experience, 
+                    but the mindset and values that align with serious martial arts training.
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
+                
+                <div style="background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%); padding: 2.5rem; border-radius: 15px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); border: 2px solid #e8e8e8;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="width: 70px; height: 70px; background: var(--warm-brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; margin: 0 auto 1rem;">🎯</div>
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin: 0;">The Dedicated Professional</h3>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 1.5rem;">
+                        High achievers who appreciate structured learning and measurable progress. They understand that mastery 
+                        requires consistent effort over time, not quick fixes or shortcuts.
+                    </p>
+                    <div style="background: rgba(139, 69, 19, 0.1); padding: 1.5rem; border-radius: 10px;">
+                        <h4 style="color: var(--warm-brown); margin-bottom: 1rem; font-size: 1rem;">Thrives because they:</h4>
+                        <ul style="color: #666; margin: 0; padding-left: 1.2rem; line-height: 1.6;">
+                            <li>Value systems that produce real results</li>
+                            <li>Respect traditional teaching methods</li>
+                            <li>Appreciate the connection between discipline and excellence</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%); padding: 2.5rem; border-radius: 15px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); border: 2px solid #e8e8e8;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="width: 70px; height: 70px; background: var(--warm-brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; margin: 0 auto 1rem;">🌱</div>
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin: 0;">The Growth Seeker</h3>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 1.5rem;">
+                        People willing to invest time and energy in long-term personal development. They're drawn to practices that 
+                        develop character, not just physical skills.
+                    </p>
+                    <div style="background: rgba(139, 69, 19, 0.1); padding: 1.5rem; border-radius: 10px;">
+                        <h4 style="color: var(--warm-brown); margin-bottom: 1rem; font-size: 1rem;">Thrives because they:</h4>
+                        <ul style="color: #666; margin: 0; padding-left: 1.2rem; line-height: 1.6;">
+                            <li>See challenges as opportunities for development</li>
+                            <li>Value inner transformation over external achievement</li>
+                            <li>Understand that real growth takes time and patience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%); padding: 2.5rem; border-radius: 15px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); border: 2px solid #e8e8e8;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="width: 70px; height: 70px; background: var(--warm-brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; margin: 0 auto 1rem;">🏛️</div>
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin: 0;">The Serious Student</h3>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 1.5rem;">
+                        Those who prefer depth over quick fixes, tradition over trendy fitness. They're seeking something with 
+                        substance, history, and proven transformative power.
+                    </p>
+                    <div style="background: rgba(139, 69, 19, 0.1); padding: 1.5rem; border-radius: 10px;">
+                        <h4 style="color: var(--warm-brown); margin-bottom: 1rem; font-size: 1rem;">Thrives because they:</h4>
+                        <ul style="color: #666; margin: 0; padding-left: 1.2rem; line-height: 1.6;">
+                            <li>Appreciate proven lineage and traditional methods</li>
+                            <li>Value quality instruction over convenience</li>
+                            <li>Seek practices with philosophical depth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(139, 69, 19, 0.1) 100%); border-radius: 15px; border: 2px solid rgba(139, 69, 19, 0.2);">
+                <h3 style="color: var(--warm-brown); margin-bottom: 1.5rem; font-size: 1.3rem;">Does This Sound Like You?</h3>
+                <p style="color: #666; line-height: 1.7; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    If you're ready to commit to your growth, appreciate traditional teaching, and want to train alongside 
+                    others who take their development seriously, you'll find your community here.
+                </p>
+                <div style="margin-bottom: 2rem; font-style: italic; color: #555; font-size: 1.1rem;">
+                    "We don't promise easy—we deliver transformation."
+                </div>
+                <a href="#signup-form" style="background: var(--warm-brown); color: white; padding: 18px 35px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 17px; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);">
+                    Schedule Your Visit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes & Schedule Section -->
+    <section class="section" id="classes" style="background: #ffffff;">
+        <div class="sqs-layout">
+            <div class="section-header">
+                <h2 class="section-title">Training & Schedule</h2>
+                <div style="text-align: center; margin: 1rem 0;">
+                    <span class="japanese-calligraphy" style="color: var(--warm-brown); font-size: 18px;">稽古時間</span>
+                </div>
+                <p class="section-subtitle">Traditional Aikido training for all levels in Manhattan's East Village</p>
+            </div>
+            
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; background: #8B4513; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; margin-right: 1rem;">📅</div>
+                        <div>
+                            <h3 style="font-family: 'Manrope', serif; font-size: 18px; font-weight: 600; color: #2c3e50; margin-bottom: 0.2rem;">Training Schedule</h3>
+                            <div style="color: #8B4513; font-size: 14px; font-weight: 500;">Monday - Thursday & Sunday</div>
+                        </div>
+                    </div>
+                    <div style="color: #666; line-height: 1.8; font-size: 15px; margin-bottom: 1rem;">
+                        <strong>Monday - Wednesday:</strong><br>
+                        1st Class: 6:15-7:15pm<br>
+                        2nd Class: 7:15-8:15pm<br><br>
+                        <strong>Thursday:</strong> 6:15-7:30pm<br><br>
+                        <strong>Sunday:</strong><br>
+                        1st Class: 9:45-10:30am<br>
+                        2nd Class: 10:30-11:30am
+                    </div>
+                    <p style="color: #666; line-height: 1.6; font-size: 15px;">Traditional Aikido training sessions (稽古 - keiko) focusing on proper technique, respect, and community building.</p>
+                </div>
+                
+                <div class="class-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; background: #8B4513; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; margin-right: 1rem;">🎯</div>
+                        <div>
+                            <h3 style="font-family: 'Manrope', serif; font-size: 18px; font-weight: 600; color: #2c3e50; margin-bottom: 0.2rem;" id="intro-class">Introductory Training</h3>
+                            <div style="color: #8B4513; font-size: 14px; font-weight: 500;">Perfect for Beginners</div>
+                        </div>
+                    </div>
+                    <p style="color: #666; line-height: 1.6; font-size: 15px; margin-bottom: 1rem;">Specialized training (稽古 - keiko) designed for adult beginners to begin their practice with proper foundation and respect.</p>
+                    <p style="color: #8B4513; font-size: 14px; font-weight: 500; margin-bottom: 1.5rem; font-style: italic;">⚠️ Important: Visitors and new students are always welcome, but must make an appointment before visiting.</p>
+                    <a href="#contact" style="background: #8B4513; color: white; padding: 12px 20px; border-radius: 20px; text-decoration: none; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500; display: inline-block; transition: all 0.3s ease;">Try A Free Training Session</a>
+                </div>
+                
+                <div class="class-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; background: #8B4513; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; margin-right: 1rem;">💰</div>
+                        <div>
+                            <h3 style="font-family: 'Manrope', serif; font-size: 18px; font-weight: 600; color: #2c3e50; margin-bottom: 0.2rem;">Training Fees</h3>
+                            <div style="color: #8B4513; font-size: 14px; font-weight: 500;">Unlimited Classes</div>
+                        </div>
+                    </div>
+                    <div style="color: #666; line-height: 1.8; font-size: 15px; margin-bottom: 1rem;">
+                        <strong>New Adult Student Special:</strong><br>
+                        First month $115<br><br>
+                        <strong>Adult Fee:</strong> $145/month<br>
+                        <strong>NYU Student Fee:</strong> $130/month<br><br>
+                        <em style="color: #8B4513;">All students 18+ years • No hidden costs • No contracts • No minimum commitments</em>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; background: #8B4513; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; margin-right: 1rem;">🏠</div>
+                        <div>
+                            <h3 style="font-family: 'Manrope', serif; font-size: 18px; font-weight: 600; color: #2c3e50; margin-bottom: 0.2rem;">Location</h3>
+                            <div style="color: #8B4513; font-size: 14px; font-weight: 500;">East Village NYC</div>
+                        </div>
+                    </div>
+                    <p style="color: #666; line-height: 1.6; font-size: 15px;">62 E 4th St, Fl 3<br>New York, NY 10003<br>Between Bowery & 2nd Ave<br>Easily accessible by subway</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Training Section -->
+    <section class="section" id="kids-training" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 80px 0; border-top: 3px solid var(--warm-brown);">
+        <div class="sqs-layout">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <div style="display: inline-block; background: var(--warm-brown); color: white; padding: 0.5rem 2rem; border-radius: 25px; margin-bottom: 1rem; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">Kids Training</div>
+                <h2 class="section-title" style="font-size: 2.5rem; margin: 1rem 0; color: var(--charcoal-gray);">Aikido for Young Warriors</h2>
+                <div style="text-align: center; margin: 1rem 0;">
+                    <span class="japanese-calligraphy" style="color: var(--warm-brown); font-size: 22px; display: block;">若い武道家</span>
+                </div>
+                <p class="section-subtitle" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #666;">Ages 6-12 • Wednesdays 5:00-5:55 PM • $115/month</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+                <div class="kids-info" style="padding: 2rem;">
+                    <h3 style="color: var(--warm-brown); font-size: 1.5rem; margin-bottom: 1.5rem; font-family: 'Manrope', serif;">Why Aikido for Kids?</h3>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 1.5rem;">Martial arts develop a child's positive sense of self on multiple levels. Aikido's non-combative, non-competitive philosophy means no tournaments - each student progresses at their own pace.</p>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: var(--warm-brown); font-weight: 600; margin-bottom: 0.5rem;">🛡️ Self Defense</h4>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem; font-size: 14px;">Improved balance, energy, and endurance. Learn conflict resolution through harmoniously redirecting energy.</p>
+                        
+                        <h4 style="color: var(--warm-brown); font-weight: 600; margin-bottom: 0.5rem;">🧠 Self Awareness</h4>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem; font-size: 14px;">Develop patience, discipline, and internal/external balance for daily life.</p>
+                        
+                        <h4 style="color: var(--warm-brown); font-weight: 600; margin-bottom: 0.5rem;">💪 Self Empowerment</h4>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem; font-size: 14px;">Discover focus and determined motivation through physical fitness and life skills.</p>
+                    </div>
+                    
+                    <div style="background: rgba(139, 69, 19, 0.05); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--warm-brown); margin: 2rem 0;">
+                        <p style="margin: 0; font-style: italic; color: #8B4513;"><strong>Important:</strong> New students must make an appointment with their parent before visiting the dojo.</p>
+                    </div>
+                    
+                    <a href="#signup-form" style="background: var(--warm-brown); color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease; margin-top: 1rem;">Schedule Visit</a>
+                </div>
+                
+                <div class="kids-schedule" style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid rgba(139, 69, 19, 0.1);">
+                    <h3 style="color: var(--warm-brown); font-size: 1.3rem; margin-bottom: 2rem; text-align: center; font-family: 'Manrope', serif;">Kids Class Schedule</h3>
+                    
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="background: var(--warm-brown); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="font-size: 18px; font-weight: 600;">Every Wednesday</div>
+                            <div style="font-size: 24px; font-weight: 700; margin: 0.5rem 0;">5:00 - 5:55 PM</div>
+                            <div style="font-size: 14px; opacity: 0.9;">Ages 6 through 12</div>
+                        </div>
+                    </div>
+                    
+                    <div style="border-top: 1px solid #eee; padding-top: 2rem;">
+                        <h4 style="color: var(--charcoal-gray); margin-bottom: 1rem; text-align: center;">Monthly Fee</h4>
+                        <div style="text-align: center; font-size: 2rem; font-weight: 700; color: var(--warm-brown); margin-bottom: 0.5rem;">$115</div>
+                        <p style="text-align: center; color: #666; font-size: 14px; margin: 0;">No contract • No minimum commitment</p>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
+                        <p style="margin: 0; color: #666; font-size: 14px; line-height: 1.5;"><strong>Location:</strong><br>62 E 4th St, 3rd Floor<br>New York, NY 10003</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Training Section -->
+    <section class="section" id="kids-training" style="background: #f8f9fa; padding: 80px 0;">
+        <div class="sqs-layout">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 style="color: #2C3E50; font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1rem; font-family: 'Poppins', sans-serif; font-weight: 700;">Kids Aikido Training</h2>
+                    <p style="color: #555; font-size: 1.3rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Ages 6-12 • Traditional martial arts for young minds and bodies</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px;">
+                    <div>
+                        <h3 style="color: #8B4513; font-size: 2rem; margin-bottom: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;">Why Aikido for Kids?</h3>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 1.5rem; font-size: 1.1rem;">Martial arts develops a child's positive sense of self on multiple levels. Aikido's non-combative, non-competitive philosophy makes it especially beneficial—no tournaments or competitions, so each student progresses at their own pace.</p>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="color: #2C3E50; font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 600;">Our Three-Part Focus:</h4>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                                    <strong style="color: #8B4513;">Self Defense:</strong> Balance, energy, endurance, and conflict resolution through harmonious redirection of energy.
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                                    <strong style="color: #8B4513;">Self Awareness:</strong> Patience, discipline, and personal development for daily life balance.
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                                    <strong style="color: #8B4513;">Self Empowerment:</strong> Focus and determined motivation through physical fitness and life skills.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+                            <h4 style="color: #2C3E50; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 600;">Class Information</h4>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; border-bottom: 1px solid #eee;">
+                                    <strong style="color: #555;">Ages:</strong>
+                                    <span style="color: #8B4513; font-weight: 600;">6 through 12</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; border-bottom: 1px solid #eee;">
+                                    <strong style="color: #555;">Schedule:</strong>
+                                    <span style="color: #8B4513; font-weight: 600;">Every Wednesday<br>5:00 PM - 5:55 PM</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; border-bottom: 1px solid #eee;">
+                                    <strong style="color: #555;">Monthly Fee:</strong>
+                                    <span style="color: #8B4513; font-weight: 600;">$115</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0;">
+                                    <strong style="color: #555;">Commitment:</strong>
+                                    <span style="color: #8B4513; font-weight: 600;">No contract</span>
+                                </div>
+                            </div>
+
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                                <p style="color: #666; font-size: 0.95rem; line-height: 1.5; margin: 0;"><strong>Important:</strong> New students must make an appointment with their parent before visiting the dojo.</p>
+                            </div>
+
+                            <a href="#signup-form" style="background: #8B4513; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);">Schedule Appointment</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsive Design -->
+                <style>
+                    @media (max-width: 768px) {
+                        #kids-training .container > div:first-of-type {
+                            grid-template-columns: 1fr !important;
+                            gap: 40px !important;
+                        }
+                        #kids-training .container > div:first-of-type > div:last-child {
+                            order: -1;
+                        }
+                    }
+                </style>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Class Section with Hero Image -->
+    <section class="intro-class-section" id="intro-class" style="position: relative; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg?format=1500w') center/cover; color: white; min-height: 60vh; display: flex; align-items: center;">
+        <div class="sqs-layout">
+            <div class="intro-class-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 class="intro-class-title" style="color: white; font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Begin Your Aikido Path</h2>
+                <p class="intro-class-description" style="color: rgba(255,255,255,0.95); font-size: 1.3rem; margin-bottom: 3rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Experience traditional Aikido training (稽古 - keiko) in the heart of Manhattan. Our introductory sessions are designed specifically for beginners - no experience necessary.</p>
+                
+                <!-- Call to Action Buttons on Hero -->
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem;">
+                    <a href="#signup-form" style="background: #8B4513; color: white; padding: 18px 32px; border-radius: 25px; text-decoration: none; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; display: inline-block; transition: all 0.3s ease; text-shadow: none; box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);">Schedule Your Visit</a>
+                    <a href="tel:212-555-0123" style="background: rgba(255,255,255,0.2); color: white; padding: 18px 32px; border-radius: 25px; text-decoration: none; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; display: inline-block; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">Call (212) 555-0123</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section id="signup-form" style="background: white; padding: 80px 0;">
+        <div class="sqs-layout">
+            <div class="intro-class-content">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
+                    <h3 style="font-family: 'Manrope', serif; font-size: 2rem; color: #2c3e50; margin-bottom: 1rem;">Ready to Begin?</h3>
+                    <p style="color: #666; font-size: 1.1rem;">Fill out the form below and we'll get back to you within 24 hours to schedule your introductory training session. All visitors must make an appointment before visiting the dojo.</p>
+                </div>
+                
+                <div class="intro-class-form">
+                    <h3>Sign Up for Introductory Training</h3>
+                    <form class="contact-form" action="/submit-intro-class" method="POST" id="intro-class-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select name="experience" required>
+                                <option value="">Previous Martial Arts Experience?</option>
+                                <option value="none">No experience</option>
+                                <option value="some">Some experience</option>
+                                <option value="experienced">Experienced</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Any questions or special considerations? (optional)" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">Request Training Session</button>
+                    </form>
+                </div>
+                
+                <!-- Form validation script -->
+                <script src="squarespace-form.js"></script>
+                
+                <div class="intro-class-info">
+                    <div class="info-item">
+                        <h4>What to Expect</h4>
+                        <p>A respectful environment, foundational Aikido principles, and proper introduction to traditional training methods with emphasis on wa (和 - harmony).</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>What to Bring</h4>
+                        <p>Comfortable clothing suitable for movement. No special equipment needed for your first training session.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Location</h4>
+                        <p>Manhattan Dojo<br>62 E 4th St, Floor 3<br>New York, NY 10003</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Training Section -->
+    <section id="kids-training" style="background: rgba(139, 69, 19, 0.05); padding: 80px 0; margin-top: 120px;">
+        <div class="sqs-layout">
+            <div class="container" style="max-width: 800px; text-align: center;">
+                <h2 style="font-family: 'Manrope', serif; font-size: 2.5rem; color: var(--sumi-black); margin-bottom: 2rem;">Kids Training Programs</h2>
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; line-height: 1.6;">
+                    We offer specialized Aikido training for children and youth, focusing on respect, discipline, and peaceful conflict resolution.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);">
+                        <h3 style="color: var(--warm-brown); margin-bottom: 1rem; font-size: 1.3rem;">Ages 6-12</h3>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                            Introduction to Aikido fundamentals through age-appropriate games and exercises.
+                        </p>
+                        <p style="font-weight: 600; color: var(--sumi-black);">Saturdays 10:00 AM - 11:00 AM</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);">
+                        <h3 style="color: var(--warm-brown); margin-bottom: 1rem; font-size: 1.3rem;">Ages 13-17</h3>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                            Teen program with focus on self-discipline, confidence, and practical self-defense.
+                        </p>
+                        <p style="font-weight: 600; color: var(--sumi-black);">Saturdays 11:15 AM - 12:15 PM</p>
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); margin-bottom: 2rem;">
+                    <h3 style="color: var(--warm-brown); margin-bottom: 1rem; font-size: 1.3rem;">Program Highlights</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #666; line-height: 1.8;">
+                        <li>• Character development through martial arts principles</li>
+                        <li>• Safe, supportive learning environment</li>
+                        <li>• Parents welcome to observe classes</li>
+                        <li>• No previous experience required</li>
+                        <li>• Monthly tuition: $85 for kids, $95 for teens</li>
+                    </ul>
+                </div>
+                
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                    For questions about our kids programs or to schedule a trial class, please contact us directly.
+                </p>
+                
+                <a href="#signup-form" 
+                   style="display: inline-block; background: var(--warm-brown); color: var(--washi-white); 
+                          padding: 15px 30px; border-radius: 25px; text-decoration: none; 
+                          font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;"
+                   onmouseover="this.style.background='var(--muted-gold)'; this.style.transform='translateY(-2px)'"
+                   onmouseout="this.style.background='var(--warm-brown)'; this.style.transform='translateY(0)'">
+                    Schedule Kids Program Visit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="sqs-layout">
+            <div class="footer-content">
+                <div class="footer-logo">Genshinkan Aikido</div>
+                <p><strong>Manhattan Dojo</strong></p>
+                <p>62 E 4th St, Fl 3, New York, NY 10003</p>
+                <p>Phone: <a href="tel:212-555-0123">(212) 555-0123</a></p>
+                <p>Website: <a href="https://www.genaikido.com" target="_blank" rel="noopener">www.genaikido.com</a></p>
+                
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/gen.aikido/" target="_blank" rel="noopener">@gen.aikido</a>
+                </div>
+                
+                <p style="margin-top: 2rem; font-size: 12px; color: #888;">
+                    &copy; 2025 Genshinkan Aikido. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fixed smooth scrolling - only for internal anchor links, not external pages
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                // Only handle internal anchor links, not external page links
+                if (href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Desktop dropdown navigation functionality
+        document.querySelectorAll('.header-nav-item').forEach(item => {
+            const dropdown = item.querySelector('.header-nav-dropdown');
+            
+            if (dropdown) {
+                let isOpen = false;
+                
+                // Handle both hover and click for better mobile/touch support
+                item.addEventListener('mouseenter', function() {
+                    if (window.innerWidth > 768) {
+                        dropdown.style.opacity = '1';
+                        dropdown.style.visibility = 'visible';
+                        dropdown.style.transform = 'translateY(0)';
+                        isOpen = true;
+                    }
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    if (window.innerWidth > 768) {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(-10px)';
+                        isOpen = false;
+                    }
+                });
+                
+                // Click/touch support for desktop dropdowns
+                const mainLink = item.querySelector('> a');
+                mainLink.addEventListener('click', function(e) {
+                    // On desktop, toggle dropdown on click for touch devices
+                    if (window.innerWidth > 768) {
+                        // If clicking on Philosophy link and dropdown exists, show dropdown instead of navigating
+                        if (dropdown && (this.getAttribute('href') === '#philosophy-community' || this.getAttribute('href') === '#philosophy')) {
+                            e.preventDefault();
+                            
+                            if (!isOpen) {
+                                dropdown.style.opacity = '1';
+                                dropdown.style.visibility = 'visible';
+                                dropdown.style.transform = 'translateY(0)';
+                                isOpen = true;
+                            } else {
+                                dropdown.style.opacity = '0';
+                                dropdown.style.visibility = 'hidden';
+                                dropdown.style.transform = 'translateY(-10px)';
+                                isOpen = false;
+                            }
+                        }
+                    }
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!item.contains(e.target) && isOpen) {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(-10px)';
+                        isOpen = false;
+                    }
+                });
+            }
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                }
+            });
+        });
+
+        // Observe elements for animation
+        document.querySelectorAll('.value-card, .feature-item, .nav-card').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const body = document.body;
+
+        mobileMenuToggle.addEventListener('click', function() {
+            const isOpen = mobileMenuToggle.classList.contains('open');
+            
+            if (isOpen) {
+                // Close menu
+                mobileMenuToggle.classList.remove('open');
+                mobileNav.classList.remove('open');
+                body.style.overflow = '';
+            } else {
+                // Open menu
+                mobileMenuToggle.classList.add('open');
+                mobileNav.classList.add('open');
+                body.style.overflow = 'hidden';
+            }
+        });
+        
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('open');
+                mobileNav.classList.remove('open');
+                body.style.overflow = '';
+            });
+        });
+        
+        // Fixed mobile dropdown toggles - allow external navigation
+        document.querySelectorAll('.mobile-nav-item').forEach(item => {
+            const link = item.querySelector('> a');
+            const dropdown = item.querySelector('.mobile-nav-dropdown');
+            
+            if (dropdown) {
+                link.addEventListener('click', function(e) {
+                    // Only prevent default for dropdown toggle, not for external links
+                    const href = this.getAttribute('href');
+                    if (href === '#philosophy-community' || href === '#philosophy' || href === '#about' || href === '#classes') {
+                        e.preventDefault();
+                        dropdown.classList.toggle('open');
+                    }
+                    // For external links (like pages/), let them navigate normally
+                });
+            }
+        });
+        
+        // Close mobile menu on window resize if opened
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileMenuToggle.classList.remove('open');
+                mobileNav.classList.remove('open');
+                body.style.overflow = '';
+                
+                // Reset desktop dropdowns
+                document.querySelectorAll('.header-nav-dropdown').forEach(dropdown => {
+                    dropdown.style.opacity = '0';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.transform = 'translateY(-10px)';
+                });
+            }
+        });
+    </script>
     
-    <div class="page-list">
-        <h2>Available Pages:</h2>
-        <a href="pages/home.html" class="page-link">Home</a>
-        <a href="pages/.html" class="page-link"></a>
-        <a href="pages/about.html" class="page-link">About</a>
-        <a href="pages/instructors.html" class="page-link">Instructors</a>
-        <a href="pages/aikido_world_alliance.html" class="page-link">Aikido World Alliance</a>
-        <a href="pages/classes.html" class="page-link">Classes</a>
-        <a href="pages/adult_classes.html" class="page-link">Adult Classes</a>
-        <a href="pages/kids_classes.html" class="page-link">Kids Classes</a>
-        <a href="pages/questions.html" class="page-link">Questions</a>
-        <a href="pages/intro_class.html" class="page-link">Intro Class</a>
-        <a href="pages/folder:about.html" class="page-link">Folder:About</a>
-        <a href="pages/back.html" class="page-link">Back</a>
-        <a href="pages/folder:classes.html" class="page-link">Folder:Classes</a>
-    </div>
+    <!-- Shared Navigation Script -->
+    <script src="js/universal-nav.js"></script>
 </body>
 </html>

@@ -1,0 +1,403 @@
+// Universal Navigation System for Genshinkan Aikido Website
+// Works for ALL pages: index.html and all philosophy pages
+
+class UniversalNavigation {
+    constructor() {
+        this.isHomePage = window.location.pathname === '/' || window.location.pathname.includes('index.html');
+        this.basePath = this.isHomePage ? '' : '../';
+        this.init();
+    }
+
+    getPhilosophySubnav() {
+        const currentPage = window.location.pathname.split('/').pop();
+        
+        const philosophyPages = [
+            { file: 'what-is-shoshin.html', name: 'Shoshin', label: 'Shoshin' },
+            { file: 'adult-beginners-journey.html', name: 'Beginners', label: 'Beginners' },
+            { file: 'honor-values.html', name: 'Values', label: 'Values' },
+            { file: 'traditional-values.html', name: 'Traditions', label: 'Traditions' },
+            { file: 'the-art-of-peace.html', name: 'The Art of Peace', label: 'Art of Peace' },
+            { file: 'health-and-safety.html', name: 'Health & Safety', label: 'Health & Safety' }
+        ];
+
+        const subnavItems = philosophyPages.map(page => {
+            const isActive = currentPage === page.file;
+            const activeStyle = isActive ? 'color: #8B4513; font-weight: 600;' : 'color: #666;';
+            return `<a href="${page.file}" style="margin: 0 1rem; ${activeStyle} text-decoration: none; font-size: 14px;">${page.label}</a>`;
+        }).join('');
+
+        return `
+        <!-- Philosophy Sub-Navigation -->
+        <nav class="philosophy-subnav" style="background-color: #f8f8f8 !important; border-bottom: 1px solid #e0e0e0; padding: 1rem 0; position: relative; z-index: 100;">
+            <div class="container">
+                <div style="text-align: center;">
+                    <span style="color: #8B4513; font-size: 14px; font-weight: 500; margin-right: 2rem;">Philosophy Topics:</span>
+                    ${subnavItems}
+                </div>
+            </div>
+        </nav>
+        `;
+    }
+
+    getNavigationHTML() {
+        const isPhilosophyPage = !this.isHomePage;
+        
+        return `
+        <!-- Universal Navigation Header -->
+        <header class="universal-header">
+            <div class="nav-container">
+                <div class="nav-content">
+                    <a href="${this.basePath}index.html" class="nav-logo">
+                        <img src="${this.basePath}images/tree-logo.jpeg" alt="Genshinkan Aikido" class="logo-image">
+                    </a>
+                    
+                    <nav class="nav-menu">
+                        <div class="nav-item">
+                            <a href="${this.basePath}index.html">Home</a>
+                        </div>
+                        <div class="nav-item nav-dropdown">
+                            <a href="${this.basePath}index.html#about">About</a>
+                            <div class="dropdown-menu">
+                                <a href="${this.basePath}index.html#instructors">Instructors</a>
+                                <a href="${this.basePath}index.html#aikido-world-alliance">Aikido World Alliance</a>
+                            </div>
+                        </div>
+                        <div class="nav-item nav-dropdown">
+                            <a href="${this.basePath}index.html#classes">Training</a>
+                            <div class="dropdown-menu">
+                                <a href="${this.basePath}index.html#classes">Adult Training</a>
+                                <a href="${this.basePath}index.html#kids-training">Kids Training (Ages 6-12)</a>
+                                <a href="${this.basePath}index.html#gallery">Training Gallery</a>
+                            </div>
+                        </div>
+                        <div class="nav-item nav-dropdown">
+                            <a href="${this.basePath}index.html#philosophy-community">Philosophy</a>
+                            <div class="dropdown-menu">
+                                <a href="${this.basePath}pages/what-is-shoshin.html">What is Shoshin</a>
+                                <a href="${this.basePath}pages/the-art-of-peace.html">The Art of Peace</a>
+                                <a href="${this.basePath}pages/honor-values.html">Honor & Values</a>
+                                <a href="${this.basePath}pages/traditional-values.html">Traditions</a>
+                                <a href="${this.basePath}pages/health-and-safety.html">Health & Safety</a>
+                                <a href="${this.basePath}pages/adult-beginners-journey.html">Adult Beginners Journey</a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="${this.basePath}index.html#signup-form">Questions</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
+                        </div>
+                    </nav>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-toggle" aria-label="Toggle mobile menu">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <nav class="mobile-nav">
+                    <div class="mobile-nav-item">
+                        <a href="${this.basePath}index.html">Home</a>
+                    </div>
+                    <div class="mobile-nav-item mobile-dropdown">
+                        <a href="${this.basePath}index.html#about">About</a>
+                        <div class="mobile-dropdown-menu">
+                            <a href="${this.basePath}index.html#instructors">Instructors</a>
+                            <a href="${this.basePath}index.html#aikido-world-alliance">Aikido World Alliance</a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav-item mobile-dropdown">
+                        <a href="${this.basePath}index.html#classes">Training</a>
+                        <div class="mobile-dropdown-menu">
+                            <a href="${this.basePath}index.html#classes">Adult Training</a>
+                            <a href="${this.basePath}index.html#kids-training">Kids Training (Ages 6-12)</a>
+                            <a href="${this.basePath}index.html#gallery">Training Gallery</a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav-item mobile-dropdown">
+                        <a href="${this.basePath}index.html#philosophy-community">Philosophy</a>
+                        <div class="mobile-dropdown-menu">
+                            <a href="${this.basePath}pages/what-is-shoshin.html">What is Shoshin</a>
+                            <a href="${this.basePath}pages/the-art-of-peace.html">The Art of Peace</a>
+                            <a href="${this.basePath}pages/honor-values.html">Honor & Values</a>
+                            <a href="${this.basePath}pages/traditional-values.html">Traditions</a>
+                            <a href="${this.basePath}pages/health-and-safety.html">Health & Safety</a>
+                            <a href="${this.basePath}pages/adult-beginners-journey.html">Adult Beginners Journey</a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="${this.basePath}index.html#signup-form">Questions</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        ${isPhilosophyPage ? this.getPhilosophySubnav() : ''}
+        `;
+    }
+
+    getNavigationCSS() {
+        return `
+        /* Universal Navigation CSS - Works on ALL pages */
+        .universal-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container, .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .nav-item > a:hover {
+            color: #8B4513;
+        }
+
+        /* Dropdown Menus */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1010;
+            padding: 8px 0;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #555;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #8B4513;
+        }
+
+        /* Mobile Navigation */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .burger-line {
+            width: 24px;
+            height: 2px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .mobile-nav {
+            display: none;
+            background: white;
+            border-top: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .mobile-nav.open {
+            display: block;
+        }
+
+        .mobile-nav-item {
+            margin-bottom: 10px;
+        }
+
+        .mobile-nav-item > a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .mobile-dropdown-menu.open {
+            display: block;
+        }
+
+        .mobile-dropdown-menu a {
+            display: block;
+            color: #666;
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        /* Body padding for fixed header */
+        body {
+            padding-top: 80px;
+        }
+        
+        /* Additional padding for philosophy pages with subnav */
+        body.philosophy-page {
+            padding-top: 80px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+        }
+
+        /* Animation for mobile toggle */
+        .mobile-toggle.open .burger-line:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-toggle.open .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.open .burger-line:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        `;
+    }
+
+    init() {
+        // Insert navigation HTML
+        const navContainer = document.getElementById('universal-navigation');
+        if (navContainer) {
+            navContainer.innerHTML = this.getNavigationHTML();
+        } else {
+            // Fallback: insert at beginning of body
+            document.body.insertAdjacentHTML('afterbegin', this.getNavigationHTML());
+        }
+
+        // Inject navigation CSS
+        const style = document.createElement('style');
+        style.textContent = this.getNavigationCSS();
+        document.head.appendChild(style);
+
+        // Initialize functionality
+        this.initMobileMenu();
+        this.initDropdowns();
+    }
+
+    initMobileMenu() {
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        if (mobileToggle && mobileNav) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('open');
+                mobileNav.classList.toggle('open');
+            });
+
+            // Handle mobile dropdowns
+            document.querySelectorAll('.mobile-dropdown > a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const dropdown = link.nextElementSibling;
+                    dropdown.classList.toggle('open');
+                });
+            });
+        }
+    }
+
+    initDropdowns() {
+        // Desktop dropdowns work with CSS hover
+        // No additional JS needed for desktop dropdowns
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-dropdown')) {
+                document.querySelectorAll('.dropdown-menu').forEach(dropdown => {
+                    dropdown.style.opacity = '0';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.transform = 'translateY(-10px)';
+                });
+            }
+        });
+    }
+}
+
+// Initialize universal navigation when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new UniversalNavigation();
+});

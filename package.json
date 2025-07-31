@@ -1,0 +1,33 @@
+{
+  "name": "genshinkan-aikido-form-testing",
+  "version": "1.0.0",
+  "description": "Comprehensive form testing suite for Genshinkan Aikido site comparison",
+  "main": "form-testing-suite.js",
+  "scripts": {
+    "test:forms": "node form-testing-suite.js",
+    "test:forms:headless": "HEADLESS=true node form-testing-suite.js",
+    "test:mobile-nav": "node mobile-navigation-instructor-test-suite.js",
+    "test:mobile-nav:headless": "HEADLESS=true node mobile-navigation-instructor-test-suite.js",
+    "install:deps": "npm install puppeteer axe-core"
+  },
+  "keywords": [
+    "puppeteer",
+    "form-testing",
+    "accessibility",
+    "axe-core",
+    "aikido",
+    "website-testing"
+  ],
+  "author": "Lance James, Unit 221B",
+  "license": "MIT",
+  "dependencies": {
+    "axe-core": "^4.8.3",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.5",
+    "puppeteer": "^21.11.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
