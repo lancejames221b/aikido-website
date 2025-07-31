@@ -463,6 +463,17 @@ class UniversalNavigation {
                     });
                 });
             });
+            
+            // Handle clicks on non-dropdown nav items to close mobile nav
+            document.querySelectorAll('.mobile-nav-item:not(.mobile-dropdown) > a').forEach(link => {
+                link.addEventListener('click', () => {
+                    // Close mobile navigation when clicking on regular nav items
+                    const mobileNav = document.querySelector('.mobile-nav');
+                    const mobileToggle = document.querySelector('.mobile-toggle');
+                    if (mobileNav) mobileNav.classList.remove('open');
+                    if (mobileToggle) mobileToggle.classList.remove('open');
+                });
+            });
         }
     }
 
