@@ -3154,68 +3154,72 @@
         });
         
         // Mobile menu functionality
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileNav = document.querySelector('.mobile-nav');
-        const body = document.body;
+        // COMMENTED OUT - Using universal navigation system instead
+        // const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        // const mobileNav = document.querySelector('.mobile-nav');
+        // const body = document.body;
 
-        mobileMenuToggle.addEventListener('click', function() {
-            const isOpen = mobileMenuToggle.classList.contains('open');
-            
-            if (isOpen) {
-                // Close menu
-                mobileMenuToggle.classList.remove('open');
-                mobileNav.classList.remove('open');
-                body.style.overflow = '';
-            } else {
-                // Open menu
-                mobileMenuToggle.classList.add('open');
-                mobileNav.classList.add('open');
-                body.style.overflow = 'hidden';
-            }
-        });
+        // mobileMenuToggle.addEventListener('click', function() {
+        //     const isOpen = mobileMenuToggle.classList.contains('open');
+        //     
+        //     if (isOpen) {
+        //         // Close menu
+        //         mobileMenuToggle.classList.remove('open');
+        //         mobileNav.classList.remove('open');
+        //         body.style.overflow = '';
+        //     } else {
+        //         // Open menu
+        //         mobileMenuToggle.classList.add('open');
+        //         mobileNav.classList.add('open');
+        //         body.style.overflow = 'hidden';
+        //     }
+        // });
         
         // Close mobile menu when clicking on nav links
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenuToggle.classList.remove('open');
-                mobileNav.classList.remove('open');
-                body.style.overflow = '';
-            });
-        });
+        // COMMENTED OUT - Using universal navigation system instead
+        // document.querySelectorAll('.mobile-nav a').forEach(link => {
+        //     link.addEventListener('click', function() {
+        //         mobileMenuToggle.classList.remove('open');
+        //         mobileNav.classList.remove('open');
+        //         body.style.overflow = '';
+        //     });
+        // });
         
         // Fixed mobile dropdown toggles - allow external navigation
-        document.querySelectorAll('.mobile-nav-item').forEach(item => {
-            const link = item.querySelector('> a');
-            const dropdown = item.querySelector('.mobile-nav-dropdown');
-            
-            if (dropdown) {
-                link.addEventListener('click', function(e) {
-                    // Only prevent default for dropdown toggle, not for external links
-                    const href = this.getAttribute('href');
-                    if (href === '#philosophy-community' || href === '#philosophy' || href === '#about' || href === '#classes') {
-                        e.preventDefault();
-                        dropdown.classList.toggle('open');
-                    }
-                    // For external links (like pages/), let them navigate normally
-                });
-            }
-        });
+        // COMMENTED OUT - Using universal navigation system instead
+        // document.querySelectorAll('.mobile-nav-item').forEach(item => {
+        //     const link = item.querySelector('> a');
+        //     const dropdown = item.querySelector('.mobile-nav-dropdown');
+        //     
+        //     if (dropdown) {
+        //         link.addEventListener('click', function(e) {
+        //             // Only prevent default for dropdown toggle, not for external links
+        //             const href = this.getAttribute('href');
+        //             if (href === '#philosophy-community' || href === '#philosophy' || href === '#about' || href === '#classes') {
+        //                 e.preventDefault();
+        //                 dropdown.classList.toggle('open');
+        //             }
+        //             // For external links (like pages/), let them navigate normally
+        //         });
+        //     }
+        // });
         
         // Close mobile menu on window resize if opened
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                mobileMenuToggle.classList.remove('open');
-                mobileNav.classList.remove('open');
-                body.style.overflow = '';
-                
-                // Reset desktop dropdowns
-                document.querySelectorAll('.header-nav-dropdown').forEach(dropdown => {
-                    dropdown.style.opacity = '0';
-                    dropdown.style.visibility = 'hidden';
-                    dropdown.style.transform = 'translateY(-10px)';
-                });
-            }
-        });
+        // COMMENTED OUT - Using universal navigation system instead
+        // window.addEventListener('resize', function() {
+        //     if (window.innerWidth > 768) {
+        //         mobileMenuToggle.classList.remove('open');
+        //         mobileNav.classList.remove('open');
+        //         body.style.overflow = '';
+        //         
+        //         // Reset desktop dropdowns
+        //         document.querySelectorAll('.header-nav-dropdown').forEach(dropdown => {
+        //             dropdown.style.opacity = '0';
+        //             dropdown.style.visibility = 'hidden';
+        //             dropdown.style.transform = 'translateY(-10px)';
+        //         });
+        //     }
+        // });
     </script>
     
     <!-- Shared Navigation Script -->

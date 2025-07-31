@@ -476,6 +476,7 @@ class UniversalNavigation {
 
 // Initialize universal navigation when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('Universal Navigation: DOM loaded, initializing...');
     const nav = new UniversalNavigation();
     
     // Reset dropdowns on window resize to prevent stuck states
