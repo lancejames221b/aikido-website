@@ -378,9 +378,21 @@ class UniversalNavigation {
             // Handle mobile dropdowns
             document.querySelectorAll('.mobile-dropdown > a').forEach(link => {
                 link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const dropdown = link.nextElementSibling;
-                    dropdown.classList.toggle('open');
+                    const href = link.getAttribute('href');
+                    // Only prevent default if it's a dropdown toggle (href is # or doesn't exist)
+                    if (!href || href === '#') {
+                        e.preventDefault();
+                        const dropdown = link.nextElementSibling;
+                        if (dropdown) {
+                            dropdown.classList.toggle('open');
+                        }
+                    } else {
+                        // For links with actual targets, close mobile menu after click
+                        setTimeout(() => {
+                            mobileNav.classList.remove('open');
+                            mobileToggle.classList.remove('open');
+                        }, 300);
+                    }
                 });
             });
         }
@@ -388,22 +400,52 @@ class UniversalNavigation {
 
     initDropdowns() {
         // Desktop dropdowns work with CSS hover
-        // No additional JS needed for desktop dropdowns
+        // Remove any inline styles that might have been set
+        document.querySelectorAll('.dropdown-menu').forEach(dropdown => {
+            dropdown.style.removeProperty('opacity');
+            dropdown.style.removeProperty('visibility');
+            dropdown.style.removeProperty('transform');
+        });
         
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-dropdown')) {
-                document.querySelectorAll('.dropdown-menu').forEach(dropdown => {
-                    dropdown.style.opacity = '0';
-                    dropdown.style.visibility = 'hidden';
-                    dropdown.style.transform = 'translateY(-10px)';
-                });
-            }
+        // Fix for dropdown links - allow navigation while keeping dropdown functional
+        document.querySelectorAll('.nav-dropdown > a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // If the link has an href (not just #), allow navigation
+                const href = link.getAttribute('href');
+                if (href && href !== '#') {
+                    // Let the link work normally
+                    return true;
+                }
+                // Otherwise prevent default for dropdown-only items
+                e.preventDefault();
+            });
         });
     }
 }
 
 // Initialize universal navigation when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new UniversalNavigation();
+    const nav = new UniversalNavigation();
+    
+    // Reset dropdowns on window resize to prevent stuck states
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // Remove any inline styles from dropdowns
+            document.querySelectorAll('.dropdown-menu').forEach(dropdown => {
+                dropdown.style.removeProperty('opacity');
+                dropdown.style.removeProperty('visibility');
+                dropdown.style.removeProperty('transform');
+            });
+            
+            // Close mobile menu if window is resized to desktop
+            if (window.innerWidth > 768) {
+                const mobileNav = document.querySelector('.mobile-nav');
+                const mobileToggle = document.querySelector('.mobile-toggle');
+                if (mobileNav) mobileNav.classList.remove('open');
+                if (mobileToggle) mobileToggle.classList.remove('open');
+            }
+        }, 250);
+    });
 });
