@@ -414,6 +414,20 @@ class UniversalNavigation {
             mobileToggle.addEventListener('click', () => {
                 mobileToggle.classList.toggle('open');
                 mobileNav.classList.toggle('open');
+                
+                // Handle philosophy sub-nav on philosophy pages
+                const philosophySubnav = document.querySelector('.philosophy-subnav');
+                if (philosophySubnav) {
+                    if (mobileNav.classList.contains('open')) {
+                        philosophySubnav.style.zIndex = '50';
+                        philosophySubnav.style.opacity = '0.3';
+                        philosophySubnav.style.pointerEvents = 'none';
+                    } else {
+                        philosophySubnav.style.zIndex = '90';
+                        philosophySubnav.style.opacity = '1';
+                        philosophySubnav.style.pointerEvents = 'auto';
+                    }
+                }
             });
 
             // Handle mobile dropdowns
@@ -461,6 +475,14 @@ class UniversalNavigation {
                         dropdown.classList.remove('open');
                         dropdown.previousElementSibling.classList.remove('active');
                     });
+                    
+                    // Restore philosophy sub-nav
+                    const philosophySubnav = document.querySelector('.philosophy-subnav');
+                    if (philosophySubnav) {
+                        philosophySubnav.style.zIndex = '90';
+                        philosophySubnav.style.opacity = '1';
+                        philosophySubnav.style.pointerEvents = 'auto';
+                    }
                 });
             });
             
@@ -479,6 +501,14 @@ class UniversalNavigation {
                         if (mobileNav) mobileNav.classList.remove('open');
                         if (mobileToggle) mobileToggle.classList.remove('open');
                         
+                        // Restore philosophy sub-nav
+                        const philosophySubnav = document.querySelector('.philosophy-subnav');
+                        if (philosophySubnav) {
+                            philosophySubnav.style.zIndex = '90';
+                            philosophySubnav.style.opacity = '1';
+                            philosophySubnav.style.pointerEvents = 'auto';
+                        }
+                        
                         // Delay navigation to allow menu to close smoothly
                         setTimeout(() => {
                             window.location.href = href;
@@ -489,6 +519,14 @@ class UniversalNavigation {
                         const mobileToggle = document.querySelector('.mobile-toggle');
                         if (mobileNav) mobileNav.classList.remove('open');
                         if (mobileToggle) mobileToggle.classList.remove('open');
+                        
+                        // Restore philosophy sub-nav
+                        const philosophySubnav = document.querySelector('.philosophy-subnav');
+                        if (philosophySubnav) {
+                            philosophySubnav.style.zIndex = '90';
+                            philosophySubnav.style.opacity = '1';
+                            philosophySubnav.style.pointerEvents = 'auto';
+                        }
                     }
                 });
             });

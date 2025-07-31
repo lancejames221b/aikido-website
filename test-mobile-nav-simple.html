@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Navigation Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-frame {
+            width: 375px;
+            height: 812px;
+            border: 10px solid #333;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 20px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #8B4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #654321;
+        }
+        .status {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .test-result {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>Mobile Navigation Interactive Test</h1>
+    
+    <div class="controls">
+        <button onclick="testMobileMenu()">1. Open Mobile Menu</button>
+        <button onclick="testAboutDropdown()">2. Test About Dropdown</button>
+        <button onclick="testTrainingDropdown()">3. Test Training Dropdown</button>
+        <button onclick="testPhilosophyDropdown()">4. Test Philosophy Dropdown</button>
+        <button onclick="resetTest()">Reset</button>
+    </div>
+
+    <div class="status" id="status">
+        <h3>Test Status:</h3>
+        <div id="test-results"></div>
+    </div>
+
+    <div class="test-frame">
+        <iframe id="test-iframe" src="http://localhost:3000"></iframe>
+    </div>
+
+    <script>
+        const iframe = document.getElementById('test-iframe');
+        const results = document.getElementById('test-results');
+
+        function addResult(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = `test-result ${type}`;
+            div.innerHTML = `${new Date().toLocaleTimeString()}: ${message}`;
+            results.appendChild(div);
+            results.scrollTop = results.scrollHeight;
+        }
+
+        function resetTest() {
+            iframe.src = iframe.src;
+            results.innerHTML = '';
+            addResult('Test reset - page reloaded', 'info');
+        }
+
+        async function testMobileMenu() {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const toggle = doc.querySelector('.mobile-toggle');
+                
+                if (!toggle) {
+                    addResult('❌ Mobile toggle button not found!', 'error');
+                    return;
+                }
+
+                toggle.click();
+                
+                setTimeout(() => {
+                    const nav = doc.querySelector('.mobile-nav');
+                    if (nav && nav.classList.contains('open')) {
+                        addResult('✅ Mobile menu opened successfully', 'success');
+                    } else {
+                        addResult('❌ Mobile menu did not open', 'error');
+                    }
+                }, 500);
+            } catch (error) {
+                addResult(`❌ Error: ${error.message}`, 'error');
+            }
+        }
+
+        async function testAboutDropdown() {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const aboutLink = Array.from(doc.querySelectorAll('.mobile-dropdown > a'))
+                    .find(a => a.textContent.includes('About'));
+                
+                if (!aboutLink) {
+                    addResult('❌ About dropdown link not found!', 'error');
+                    return;
+                }
+
+                aboutLink.click();
+                
+                setTimeout(() => {
+                    const dropdown = aboutLink.nextElementSibling;
+                    if (dropdown && dropdown.classList.contains('open')) {
+                        addResult('✅ About dropdown opened', 'success');
+                        const items = dropdown.querySelectorAll('a');
+                        addResult(`Found ${items.length} items: ${Array.from(items).map(a => a.textContent.trim()).join(', ')}`, 'info');
+                    } else {
+                        addResult('❌ About dropdown did not open', 'error');
+                    }
+                }, 500);
+            } catch (error) {
+                addResult(`❌ Error: ${error.message}`, 'error');
+            }
+        }
+
+        async function testTrainingDropdown() {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const trainingLink = Array.from(doc.querySelectorAll('.mobile-dropdown > a'))
+                    .find(a => a.textContent.includes('Training'));
+                
+                if (!trainingLink) {
+                    addResult('❌ Training dropdown link not found!', 'error');
+                    return;
+                }
+
+                trainingLink.click();
+                
+                setTimeout(() => {
+                    const dropdown = trainingLink.nextElementSibling;
+                    if (dropdown && dropdown.classList.contains('open')) {
+                        addResult('✅ Training dropdown opened', 'success');
+                        const items = dropdown.querySelectorAll('a');
+                        addResult(`Found ${items.length} items: ${Array.from(items).map(a => a.textContent.trim()).join(', ')}`, 'info');
+                    } else {
+                        addResult('❌ Training dropdown did not open', 'error');
+                    }
+                }, 500);
+            } catch (error) {
+                addResult(`❌ Error: ${error.message}`, 'error');
+            }
+        }
+
+        async function testPhilosophyDropdown() {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const philosophyLink = Array.from(doc.querySelectorAll('.mobile-dropdown > a'))
+                    .find(a => a.textContent.includes('Philosophy'));
+                
+                if (!philosophyLink) {
+                    addResult('❌ Philosophy dropdown link not found!', 'error');
+                    return;
+                }
+
+                philosophyLink.click();
+                
+                setTimeout(() => {
+                    const dropdown = philosophyLink.nextElementSibling;
+                    if (dropdown && dropdown.classList.contains('open')) {
+                        addResult('✅ Philosophy dropdown opened', 'success');
+                        const items = dropdown.querySelectorAll('a');
+                        addResult(`Found ${items.length} items: ${Array.from(items).map(a => a.textContent.trim()).join(', ')}`, 'info');
+                    } else {
+                        addResult('❌ Philosophy dropdown did not open', 'error');
+                    }
+                }, 500);
+            } catch (error) {
+                addResult(`❌ Error: ${error.message}`, 'error');
+            }
+        }
+
+        // Wait for iframe to load
+        iframe.onload = () => {
+            addResult('Page loaded - ready for testing', 'info');
+        };
+    </script>
+</body>
+</html>

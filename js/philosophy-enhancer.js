@@ -88,7 +88,7 @@ class PhilosophyEnhancer {
                 margin-bottom: 40px !important;
                 position: sticky !important;
                 top: 80px !important;
-                z-index: 100 !important;
+                z-index: 90 !important; /* Lower than mobile nav which is 999 */
                 box-shadow: 0 2px 8px rgba(139, 69, 19, 0.05);
             }
 
@@ -246,6 +246,13 @@ class PhilosophyEnhancer {
                     padding: 0.8rem 0 !important;
                     position: sticky !important;
                     top: 70px !important;
+                    z-index: 90 !important; /* Keep it below mobile nav */
+                }
+                
+                /* Hide philosophy subnav when mobile menu is open */
+                body:has(.mobile-nav.open) .philosophy-subnav {
+                    opacity: 0.3;
+                    pointer-events: none;
                 }
 
                 .philosophy-subnav > div {
