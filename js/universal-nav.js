@@ -3,7 +3,10 @@
 
 class UniversalNavigation {
     constructor() {
-        this.isHomePage = window.location.pathname === '/' || window.location.pathname.includes('index.html');
+        // Handle both local development and GitHub Pages deployment
+        const path = window.location.pathname;
+        this.isGitHubPages = window.location.hostname.includes('github.io');
+        this.isHomePage = path === '/' || path.endsWith('/') || path.includes('index.html') || path === '/aikido-website/' || path === '/aikido-website/index.html';
         this.basePath = this.isHomePage ? '' : '../';
         this.init();
     }
