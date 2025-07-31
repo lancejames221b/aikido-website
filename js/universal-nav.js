@@ -60,7 +60,8 @@ class UniversalNavigation {
                         <div class="nav-item nav-dropdown">
                             <a href="${this.basePath}index.html#about">About</a>
                             <div class="dropdown-menu">
-                                <a href="${this.basePath}index.html#instructors">Instructors</a>
+                                <a href="${this.basePath}index.html#instructors">Our Instructors</a>
+                                <a href="${this.basePath}index.html#testimonials">Testimonials</a>
                                 <a href="${this.basePath}index.html#aikido-world-alliance">Aikido World Alliance</a>
                                 <a href="${this.basePath}index.html#training-commitment">The Path</a>
                                 <a href="${this.basePath}index.html#who-thrives">Who Thrives Here</a>
@@ -82,8 +83,11 @@ class UniversalNavigation {
                                 <a href="${this.basePath}pages/honor-values.html">Honor & Values</a>
                                 <a href="${this.basePath}pages/traditional-values.html">Traditions</a>
                                 <a href="${this.basePath}pages/health-and-safety.html">Health & Safety</a>
-                                <a href="${this.basePath}pages/adult-beginners-journey.html">Adult Beginners Journey</a>
+                                <a href="${this.basePath}pages/adult-beginners-journey.html">Student Stories</a>
                             </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="${this.basePath}index.html#new-student">New Student</a>
                         </div>
                         <div class="nav-item">
                             <a href="${this.basePath}index.html#questions">Questions</a>
@@ -109,7 +113,8 @@ class UniversalNavigation {
                     <div class="mobile-nav-item mobile-dropdown">
                         <a href="${this.basePath}index.html#about">About</a>
                         <div class="mobile-dropdown-menu">
-                            <a href="${this.basePath}index.html#instructors">Instructors</a>
+                            <a href="${this.basePath}index.html#instructors">Our Instructors</a>
+                            <a href="${this.basePath}index.html#testimonials">Testimonials</a>
                             <a href="${this.basePath}index.html#aikido-world-alliance">Aikido World Alliance</a>
                             <a href="${this.basePath}index.html#training-commitment">The Path</a>
                             <a href="${this.basePath}index.html#who-thrives">Who Thrives Here</a>
@@ -131,8 +136,11 @@ class UniversalNavigation {
                             <a href="${this.basePath}pages/honor-values.html">Honor & Values</a>
                             <a href="${this.basePath}pages/traditional-values.html">Traditions</a>
                             <a href="${this.basePath}pages/health-and-safety.html">Health & Safety</a>
-                            <a href="${this.basePath}pages/adult-beginners-journey.html">Adult Beginners Journey</a>
+                            <a href="${this.basePath}pages/adult-beginners-journey.html">Student Stories</a>
                         </div>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="${this.basePath}index.html#new-student">New Student</a>
                     </div>
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html#questions">Questions</a>

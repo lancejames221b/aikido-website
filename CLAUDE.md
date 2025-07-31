@@ -85,3 +85,7 @@ npm run test:mobile-nav     # Test mobile navigation
 ## Server Configuration
 - Port 3000 is the local HTTP server for this project
 - ngrok URL: https://6856264314dc.ngrok.app/ also works for external access
+
+## Task Management
+- Update vibe kanban tickets before starting a task, and after ending a task
+- Do tasks in parallel when applicable for tickets
