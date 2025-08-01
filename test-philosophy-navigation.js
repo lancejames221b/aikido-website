@@ -29,11 +29,11 @@ const philosophyPages = [
 
 // Helper functions
 const log = {
-    info: (msg) => console.log(`${colors.blue}ℹ${colors.reset} ${msg}`),
-    success: (msg) => console.log(`${colors.green}✓${colors.reset} ${msg}`),
-    error: (msg) => console.log(`${colors.red}✗${colors.reset} ${msg}`),
-    warning: (msg) => console.log(`${colors.yellow}⚠${colors.reset} ${msg}`),
-    section: (msg) => console.log(`\n${colors.cyan}${colors.bright}📱 ${msg}${colors.reset}\n`)
+    info: (msg) => console.log(`${colors.blue}情${colors.reset} ${msg}`),
+    success: (msg) => console.log(`${colors.green}成${colors.reset} ${msg}`),
+    error: (msg) => console.log(`${colors.red}失${colors.reset} ${msg}`),
+    warning: (msg) => console.log(`${colors.yellow}警${colors.reset} ${msg}`),
+    section: (msg) => console.log(`\n${colors.cyan}${colors.bright}道 ${msg}${colors.reset}\n`)
 };
 
 async function delay(ms) {
@@ -232,9 +232,9 @@ async function testPhilosophyNavigation() {
         
         const successRate = ((testsPassed / totalTests) * 100).toFixed(1);
         if (testsFailed === 0) {
-            log.success(`✨ All tests passed! Success rate: ${successRate}%`);
+            log.success(`光 All tests passed! Success rate: ${successRate}%`);
         } else {
-            log.warning(`⚠️  Some tests failed. Success rate: ${successRate}%`);
+            log.warning(`警 Some tests failed. Success rate: ${successRate}%`);
         }
 
     } catch (error) {
