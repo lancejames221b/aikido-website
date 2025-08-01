@@ -60,39 +60,36 @@ class UniversalNavigation {
                             <a href="${this.basePath}index.html">Home</a>
                         </div>
                         <div class="nav-item nav-dropdown">
-                            <a href="${this.basePath}index.html#about">About</a>
-                            <div class="dropdown-menu">
-                                <a href="${this.basePath}index.html#instructors">Our Instructors</a>
-                                <a href="${this.basePath}index.html#testimonials">Testimonials</a>
-                                <a href="${this.basePath}index.html#aikido-world-alliance">Aikido World Alliance</a>
-                                <a href="${this.basePath}index.html#training-commitment">The Path</a>
-                                <a href="${this.basePath}index.html#who-thrives">Who Thrives Here</a>
+                            <a href="${this.basePath}index.html#about" aria-haspopup="true" aria-expanded="false" aria-controls="about-dropdown">About</a>
+                            <div class="dropdown-menu" id="about-dropdown" role="menu" aria-label="About submenu">
+                                <a href="${this.basePath}index.html#instructors" role="menuitem">Our Instructors</a>
+                                <a href="${this.basePath}index.html#testimonials" role="menuitem">Testimonials</a>
+                                <a href="${this.basePath}index.html#aikido-world-alliance" role="menuitem">Aikido World Alliance</a>
+                                <a href="${this.basePath}index.html#training-commitment" role="menuitem">The Path</a>
+                                <a href="${this.basePath}index.html#who-thrives" role="menuitem">Who Thrives Here</a>
                             </div>
                         </div>
                         <div class="nav-item nav-dropdown">
-                            <a href="${this.basePath}index.html#classes">Training</a>
-                            <div class="dropdown-menu">
-                                <a href="${this.basePath}index.html#classes">Adult Training</a>
-                                <a href="${this.basePath}index.html#kids-training">Kids Training (Ages 6-12)</a>
-                                <a href="${this.basePath}index.html#gallery">Training Gallery</a>
+                            <a href="${this.basePath}index.html#classes" aria-haspopup="true" aria-expanded="false" aria-controls="training-dropdown">Training</a>
+                            <div class="dropdown-menu" id="training-dropdown" role="menu" aria-label="Training submenu">
+                                <a href="${this.basePath}index.html#classes" role="menuitem">Adult Training</a>
+                                <a href="${this.basePath}index.html#kids-training" role="menuitem">Kids Training (Ages 6-12)</a>
+                                <a href="${this.basePath}index.html#gallery" role="menuitem">Training Gallery</a>
                             </div>
                         </div>
                         <div class="nav-item nav-dropdown">
-                            <a href="${this.basePath}index.html#philosophy-community">Philosophy</a>
-                            <div class="dropdown-menu">
-                                <a href="${this.basePath}pages/what-is-shoshin.html">What is Shoshin</a>
-                                <a href="${this.basePath}pages/the-art-of-peace.html">The Art of Peace</a>
-                                <a href="${this.basePath}pages/honor-values.html">Honor & Values</a>
-                                <a href="${this.basePath}pages/traditional-values.html">Traditions</a>
-                                <a href="${this.basePath}pages/health-and-safety.html">Health & Safety</a>
-                                <a href="${this.basePath}pages/adult-beginners-journey.html">Student Stories</a>
+                            <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy</a>
+                            <div class="dropdown-menu" id="philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
+                                <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
+                                <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
+                                <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
+                                <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
+                                <a href="${this.basePath}pages/health-and-safety.html" role="menuitem">Health & Safety</a>
+                                <a href="${this.basePath}pages/adult-beginners-journey.html" role="menuitem">Student Stories</a>
                             </div>
                         </div>
                         <div class="nav-item">
                             <a href="${this.basePath}index.html#new-student">New Student</a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="${this.basePath}index.html#questions">Questions</a>
                         </div>
                         <div class="nav-item">
                             <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
@@ -100,7 +97,7 @@ class UniversalNavigation {
                     </nav>
 
                     <!-- Mobile Menu Toggle -->
-                    <button class="mobile-toggle" aria-label="Toggle mobile menu">
+                    <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-navigation">
                         <span class="burger-line"></span>
                         <span class="burger-line"></span>
                         <span class="burger-line"></span>
@@ -108,44 +105,41 @@ class UniversalNavigation {
                 </div>
 
                 <!-- Mobile Navigation -->
-                <nav class="mobile-nav">
+                <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation menu">
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html">Home</a>
                     </div>
                     <div class="mobile-nav-item mobile-dropdown">
-                        <a href="${this.basePath}index.html#about">About</a>
-                        <div class="mobile-dropdown-menu">
-                            <a href="${this.basePath}index.html#instructors">Our Instructors</a>
-                            <a href="${this.basePath}index.html#testimonials">Testimonials</a>
-                            <a href="${this.basePath}index.html#aikido-world-alliance">Aikido World Alliance</a>
-                            <a href="${this.basePath}index.html#training-commitment">The Path</a>
-                            <a href="${this.basePath}index.html#who-thrives">Who Thrives Here</a>
+                        <a href="${this.basePath}index.html#about" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-about-dropdown">About</a>
+                        <div class="mobile-dropdown-menu" id="mobile-about-dropdown" role="menu" aria-label="About submenu">
+                            <a href="${this.basePath}index.html#instructors" role="menuitem">Our Instructors</a>
+                            <a href="${this.basePath}index.html#testimonials" role="menuitem">Testimonials</a>
+                            <a href="${this.basePath}index.html#aikido-world-alliance" role="menuitem">Aikido World Alliance</a>
+                            <a href="${this.basePath}index.html#training-commitment" role="menuitem">The Path</a>
+                            <a href="${this.basePath}index.html#who-thrives" role="menuitem">Who Thrives Here</a>
                         </div>
                     </div>
                     <div class="mobile-nav-item mobile-dropdown">
-                        <a href="${this.basePath}index.html#classes">Training</a>
-                        <div class="mobile-dropdown-menu">
-                            <a href="${this.basePath}index.html#classes">Adult Training</a>
-                            <a href="${this.basePath}index.html#kids-training">Kids Training (Ages 6-12)</a>
-                            <a href="${this.basePath}index.html#gallery">Training Gallery</a>
+                        <a href="${this.basePath}index.html#classes" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-training-dropdown">Training</a>
+                        <div class="mobile-dropdown-menu" id="mobile-training-dropdown" role="menu" aria-label="Training submenu">
+                            <a href="${this.basePath}index.html#classes" role="menuitem">Adult Training</a>
+                            <a href="${this.basePath}index.html#kids-training" role="menuitem">Kids Training (Ages 6-12)</a>
+                            <a href="${this.basePath}index.html#gallery" role="menuitem">Training Gallery</a>
                         </div>
                     </div>
                     <div class="mobile-nav-item mobile-dropdown">
-                        <a href="${this.basePath}index.html#philosophy-community">Philosophy</a>
-                        <div class="mobile-dropdown-menu">
-                            <a href="${this.basePath}pages/what-is-shoshin.html">What is Shoshin</a>
-                            <a href="${this.basePath}pages/the-art-of-peace.html">The Art of Peace</a>
-                            <a href="${this.basePath}pages/honor-values.html">Honor & Values</a>
-                            <a href="${this.basePath}pages/traditional-values.html">Traditions</a>
-                            <a href="${this.basePath}pages/health-and-safety.html">Health & Safety</a>
-                            <a href="${this.basePath}pages/adult-beginners-journey.html">Student Stories</a>
+                        <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-philosophy-dropdown">Philosophy</a>
+                        <div class="mobile-dropdown-menu" id="mobile-philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
+                            <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
+                            <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
+                            <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
+                            <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
+                            <a href="${this.basePath}pages/health-and-safety.html" role="menuitem">Health & Safety</a>
+                            <a href="${this.basePath}pages/adult-beginners-journey.html" role="menuitem">Student Stories</a>
                         </div>
                     </div>
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html#new-student">New Student</a>
-                    </div>
-                    <div class="mobile-nav-item">
-                        <a href="${this.basePath}index.html#questions">Questions</a>
                     </div>
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
@@ -422,8 +416,12 @@ class UniversalNavigation {
 
         if (mobileToggle && mobileNav) {
             mobileToggle.addEventListener('click', () => {
+                const isOpen = mobileToggle.classList.contains('open');
                 mobileToggle.classList.toggle('open');
                 mobileNav.classList.toggle('open');
+                
+                // Update ARIA attributes
+                mobileToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
                 
                 // Handle philosophy sub-nav on philosophy pages
                 const philosophySubnav = document.querySelector('.philosophy-subnav');
@@ -456,8 +454,12 @@ class UniversalNavigation {
                                 openDropdown.previousElementSibling.classList.remove('active');
                             }
                         });
+                        const isOpen = dropdown.classList.contains('open');
                         dropdown.classList.toggle('open');
                         link.classList.toggle('active');
+                        
+                        // Update ARIA expanded state
+                        link.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
                     }
                     
                     // If link has an actual target and dropdown is already open, navigate
@@ -478,7 +480,10 @@ class UniversalNavigation {
                     const mobileNav = document.querySelector('.mobile-nav');
                     const mobileToggle = document.querySelector('.mobile-toggle');
                     if (mobileNav) mobileNav.classList.remove('open');
-                    if (mobileToggle) mobileToggle.classList.remove('open');
+                    if (mobileToggle) {
+                        mobileToggle.classList.remove('open');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                    }
                     
                     // Also close all dropdowns
                     document.querySelectorAll('.mobile-dropdown-menu.open').forEach(dropdown => {
@@ -509,7 +514,10 @@ class UniversalNavigation {
                         const mobileNav = document.querySelector('.mobile-nav');
                         const mobileToggle = document.querySelector('.mobile-toggle');
                         if (mobileNav) mobileNav.classList.remove('open');
-                        if (mobileToggle) mobileToggle.classList.remove('open');
+                        if (mobileToggle) {
+                            mobileToggle.classList.remove('open');
+                            mobileToggle.setAttribute('aria-expanded', 'false');
+                        }
                         
                         // Restore philosophy sub-nav
                         const philosophySubnav = document.querySelector('.philosophy-subnav');
@@ -528,7 +536,10 @@ class UniversalNavigation {
                         const mobileNav = document.querySelector('.mobile-nav');
                         const mobileToggle = document.querySelector('.mobile-toggle');
                         if (mobileNav) mobileNav.classList.remove('open');
-                        if (mobileToggle) mobileToggle.classList.remove('open');
+                        if (mobileToggle) {
+                            mobileToggle.classList.remove('open');
+                            mobileToggle.setAttribute('aria-expanded', 'false');
+                        }
                         
                         // Restore philosophy sub-nav
                         const philosophySubnav = document.querySelector('.philosophy-subnav');
@@ -590,7 +601,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const mobileNav = document.querySelector('.mobile-nav');
                 const mobileToggle = document.querySelector('.mobile-toggle');
                 if (mobileNav) mobileNav.classList.remove('open');
-                if (mobileToggle) mobileToggle.classList.remove('open');
+                if (mobileToggle) {
+                    mobileToggle.classList.remove('open');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                }
             }
         }, 250);
     });
