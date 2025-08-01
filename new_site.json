@@ -1,0 +1,253 @@
+{
+  "hero_section": {
+    "title": "Embrace Shoshin - The Beginner's Mind",
+    "subtitle": "Traditional Aikido in the East Village",
+    "quote": "In the beginner's mind there are many possibilities, but in the expert's mind there are few.",
+    "quote_author": "Shunryu Suzuki Roshi",
+    "description": "Traditional Aikido (合気道) practice for Manhattan's diverse professional community - from tech workers to filmmakers, engineers to artists.",
+    "japanese_characters": "初心"
+  },
+  "locations": {
+    "manhattan": {
+      "name": "Manhattan Dojo",
+      "address": "64 E 4th St, 3rd FL, NY, NY",
+      "description": "East Village location serving Manhattan professionals"
+    },
+    "white_plains": {
+      "name": "White Plains",
+      "address": "98 Lake St, White Plains, NY",
+      "description": "Westchester County satellite location"
+    }
+  },
+  "classes_schedule": {
+    "adult_schedule": {
+      "monday": "19:00-20:30",
+      "wednesday": "19:00-20:30", 
+      "friday": "19:00-20:30",
+      "saturday": "10:30-12:00"
+    },
+    "new_student_special": "Three classes for $50",
+    "monthly_fees": "Regular training fees available upon inquiry",
+    "kids_classes": "Ages 6-12 available"
+  },
+  "new_student_info": {
+    "getting_started": {
+      "schedule_visit": "Contact us to schedule your first class",
+      "arrive_early": "Arrive 15 minutes early for introduction and orientation",
+      "begin_training": "Start with basics and traditional dojo etiquette"
+    },
+    "what_to_expect": "Introduction to basic techniques, dojo etiquette, and traditional protocols",
+    "what_to_wear": "Comfortable workout clothes, no shoes on mat",
+    "frequently_asked_questions": "Common questions about Aikido practice and training approach"
+  },
+  "philosophy_values": {
+    "sensei_approach": {
+      "traditional_relationship": "Out of responsibility and love, we maintain traditional honor standards. How we train defines who we become.",
+      "honor_in_training": "Honor in training, honor in life - traditional values applied to modern practice",
+      "recognize_progress": "We recognize and celebrate student growth and development"
+    },
+    "core_principles": {
+      "shoshin": "Beginner's Mind - maintaining openness and eagerness regardless of experience level",
+      "honor_values": "Traditional honor standards and ethical foundations",
+      "art_of_peace": "Harmony and non-violent resolution of conflict"
+    }
+  },
+  "features_benefits": {
+    "stress_relief": {
+      "title": "Stress Relief & Balance",
+      "description": "Find calm in Manhattan's chaos through mindful movement and breathing. Especially valuable for creative professionals, corporate workers, and freelancers managing project deadlines.",
+      "testimonial": "Training during a difficult loss brought unexpected healing. Sensei's teaching created a sanctuary where grief became strength. — Technology Professional"
+    },
+    "safe_approach": {
+      "title": "Safe Martial Arts Approach", 
+      "description": "Non-competitive martial arts that builds confidence without aggression. Well-suited for artists, performers, and creative professionals seeking physical confidence.",
+      "testimonial": "I expected intense physical training, but found something deeper. The gentle approach builds strength and confidence. — Creative Professional"
+    },
+    "traditional_art": {
+      "title": "Traditional Art Form",
+      "description": "Authentic Japanese martial art with deep philosophical foundations and centuries of refinement.",
+      "focus": "Traditional techniques and protocols passed down through established lineage"
+    },
+    "welcoming_community": {
+      "title": "Welcoming Transfer Community",
+      "description": "Drama-free environment where experienced practitioners thrive alongside beginners. Diverse community includes film students, engineers, artists, and professionals from all fields.",
+      "testimonial": "After training at multiple dojos, Genshinkan feels like home. Everyone is friendly, welcoming, and unpretentious. — Healthcare Professional"
+    }
+  },
+  "instructors": {
+    "gary_wagener": {
+      "name": "Gary Wagener Sensei",
+      "rank": "Yondan (4th Dan), Chief Instructor (Dojo-Cho)",
+      "experience": "Trained directly under Fumio Toyoda Shihan for over two decades",
+      "description": "Maintains traditional Aikido instruction while adapting to modern Manhattan professionals. Member of Aikido World Alliance."
+    },
+    "ariana_koblitz": {
+      "name": "Ariana Koblitz Sensei", 
+      "rank": "Nidan (2nd Dan), Instructor",
+      "description": "Recognized by Hombu dojo in Japan. Her progression from beginner to black belt instructor exemplifies disciplined approach. Emphasizes complete mental engagement and traditional training methodology."
+    },
+    "sarah_antal": {
+      "name": "Sarah Antal Sensei",
+      "rank": "Nidan (2nd Dan), Instructor", 
+      "description": "Progressed through traditional ranking system under Gary Wagener Sensei. Combines precision from classical dance background with martial discipline. Professional dance educator."
+    }
+  },
+  "lineage": {
+    "founder": "Fumio Toyoda Shihan - Late founder who brought Aikido to America",
+    "organization": "Aikido World Alliance",
+    "headquarters": "Aikikai Foundation, Tokyo, Japan",
+    "tradition": "Traditional instruction as passed down by F. Toyoda Shihan"
+  },
+  "testimonials": [
+    {
+      "text": "After 5+ years of training at Genshinkan, I can confidently say this is excellent Aikido instruction in NYC. Gary Wagener Sensei maintains the lineage while creating a welcoming environment for professionals like myself.",
+      "author": "Manhattan Professional",
+      "experience": "5+ years"
+    },
+    {
+      "text": "The dojo has a diverse group including film students, engineers, and professionals from various fields. Everyone is friendly, welcoming, and unpretentious. Great for Manhattan professionals seeking martial arts training.",
+      "author": "Creative Professional", 
+      "focus": "Community diversity"
+    },
+    {
+      "text": "Training during a difficult loss brought unexpected healing. Sensei's teaching created a sanctuary where grief became strength.",
+      "author": "Technology Professional",
+      "focus": "Stress relief and healing"
+    },
+    {
+      "text": "I expected intense physical training, but found something deeper. The gentle approach builds strength and confidence.",
+      "author": "Creative Professional",
+      "focus": "Safe approach"
+    },
+    {
+      "text": "After training at multiple dojos, Genshinkan feels like home. Everyone is friendly, welcoming, and unpretentious.",
+      "author": "Healthcare Professional",
+      "focus": "Community and transfer students"
+    }
+  ],
+  "cta_sections": {
+    "primary": "Begin your Aikido journey with us",
+    "intro_class": "Schedule Your Free Introductory Class",
+    "contact_email": "genaikidonyc@gmail.com",
+    "signup_form": "Contact form available for new student inquiries"
+  },
+  "philosophy_pages": {
+    "what-is-shoshin": {
+      "title": "What is Shoshin? The Transformative Power of Beginner's Mind",
+      "japanese_characters": "初心",
+      "main_quote": "In the beginner's mind there are many possibilities, but in the expert's mind there are few. — Shunryu Suzuki Roshi",
+      "definition": "Shoshin (初心), literally meaning 'beginner's mind' in Japanese, is a profound concept from Zen Buddhism that refers to an attitude of openness, eagerness, and freedom from preconceptions when approaching any subject—exactly as a beginner would.",
+      "core_principles": {
+        "openness": "Approaching each practice session with curiosity rather than assumptions. Being willing to see familiar techniques with fresh eyes.",
+        "eagerness": "Maintaining enthusiasm for learning, whether attempting first technique or refining one practiced thousands of times.",
+        "freedom_from_preconceptions": "Releasing rigid ideas about how things 'should' be and allowing each moment to unfold naturally.",
+        "humility": "Recognizing there is always more to learn, and wisdom can come from any source."
+      },
+      "aikido_application": {
+        "enhanced_learning": "Without burden of thinking we 'know' a technique, we remain open to subtle corrections and improvements.",
+        "reduced_ego": "When we embrace not-knowing, we become less attached to being 'right' and more focused on genuine understanding.",
+        "present_moment_awareness": "Beginner's mind naturally brings us into the present, where true learning can emerge spontaneously.",
+        "adaptability": "Without rigid expectations, we can respond more fluidly to partner's energy and unique requirements."
+      },
+      "discipline_aspect": {
+        "daily_practice": "Shoshin must be cultivated through consistent, dedicated practice requiring mental effort and physical commitment.",
+        "embracing_failure": "Beginner's mind flourishes when we stop fearing mistakes and start seeing them as teachers.",
+        "mental_rigor": "Maintaining openness while developing skill requires intense mental discipline.",
+        "patient_repetition": "Shoshin reveals depths through thousands of repetitions, approaching same technique as if for first time."
+      },
+      "beyond_dojo": "The beauty of Shoshin lies in its universal applicability. Whether in relationships, career, or personal challenges, approaching situations with openness rather than rigid assumptions opens new possibilities."
+    },
+    "adult-beginners-journey": {
+      "title": "Student Stories",
+      "focus": "Stories from Manhattan professionals who started as beginners and how Aikido impacts professional and personal life"
+    },
+    "honor-values": {
+      "title": "Honor & Traditional Values",
+      "focus": "Ethical and cultural foundations of traditional Aikido practice"
+    },
+    "traditional-values": {
+      "title": "Traditions", 
+      "focus": "Master the protocols and warrior principles rooted in traditional practice - from bushido virtues to lineage respect that forge martial character"
+    },
+    "the-art-of-peace": {
+      "title": "The Art of Peace",
+      "focus": "Deeper philosophical guidance on harmony and peaceful resolution of conflict"
+    },
+    "health-and-safety": {
+      "title": "Health and Safety",
+      "focus": "Practical guidance for safe training and physical well-being in martial arts practice"
+    }
+  },
+  "content_analysis": {
+    "martial_vs_marketing_balance": {
+      "assessment": "HEAVILY MARKETING-FOCUSED",
+      "martial_content_percentage": "25%",
+      "marketing_content_percentage": "75%",
+      "observations": [
+        "Extensive use of marketing language targeting 'Manhattan professionals'",
+        "Repeated emphasis on demographic targeting (tech workers, filmmakers, engineers, artists)",
+        "Multiple testimonials designed for conversion rather than martial instruction",
+        "Philosophy sections are authentic but often wrapped in marketing messaging",
+        "Traditional Japanese elements present but secondary to professional appeal"
+      ]
+    },
+    "adjective_superlative_overuse": {
+      "severity": "HIGH",
+      "examples": [
+        "diverse professional community", 
+        "transformative power",
+        "profound concept",
+        "excellent Aikido instruction", 
+        "welcoming environment",
+        "drama-free environment",
+        "friendly, welcoming, and unpretentious",
+        "comprehensive content",
+        "traditional atmosphere"
+      ],
+      "impact": "Language lacks the directness and simplicity typically associated with traditional martial arts instruction"
+    },
+    "traditional_martial_arts_consistency": {
+      "assessment": "MIXED - AUTHENTIC CORE WITH MARKETING OVERLAY",
+      "strengths": [
+        "Proper Japanese terminology usage (合気道, 初心, 稽古, etc.)",
+        "Legitimate lineage references (Fumio Toyoda Shihan, Aikikai)",
+        "Traditional ranking system (Dan grades) properly referenced",
+        "Shoshin philosophy authentically presented with Suzuki Roshi quotes",
+        "Instructor credentials appropriately stated"
+      ],
+      "weaknesses": [
+        "Traditional concepts often diluted with modern lifestyle marketing",
+        "Excessive focus on professional demographics rather than martial character",
+        "Philosophy pages genuine but main content prioritizes conversion over instruction",
+        "Missing emphasis on discipline, hardship, and commitment typical of serious budo"
+      ]
+    },
+    "less_is_more_opportunities": {
+      "primary_issues": [
+        "Homepage content extremely dense - could be 60% shorter while maintaining impact",
+        "Repetitive testimonials saying essentially the same thing",
+        "Multiple sections covering similar 'professional benefits' themes", 
+        "Philosophy content authentic but could be more concise and powerful",
+        "Excessive explanation where simple statements would be more effective"
+      ],
+      "recommendations": [
+        "Reduce homepage to core elements: what it is, who teaches, how to start",
+        "Consolidate testimonials into 2-3 most compelling stories",
+        "Move detailed philosophy content to dedicated pages (already done but reduce main page repetition)",
+        "Replace multiple 'professional benefits' sections with single, powerful statement",
+        "Apply 'beginner's mind' principle to content - what would a beginner actually need to know?"
+      ]
+    },
+    "authenticity_vs_accessibility": {
+      "current_balance": "70% accessibility / 30% authenticity",
+      "recommendation": "Shift toward 50/50 balance",
+      "suggestions": [
+        "Lead with authentic martial principles, then explain practical applications",
+        "Reduce demographic targeting language in favor of universal martial values",
+        "Emphasize discipline and commitment alongside accessibility",
+        "Let traditional concepts speak for themselves without excessive interpretation",
+        "Focus on what Aikido demands of students, not just what it offers them"
+      ]
+    }
+  }
+}

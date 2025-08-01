@@ -1,5 +1,6 @@
 {
-  "scraped_date": "2025-01-31",
+  "scraped_date": "2025-08-01",
+  "comprehensive_scrape": true,
   "source_url": "https://www.genaikido.com",
   "site_metadata": {
     "title": "Genshinkan Aikido",
@@ -7,6 +8,206 @@
     "canonical_url": "https://www.genaikido.com",
     "language": "en-US",
     "timezone": "America/New_York"
+  },
+  "homepage_content": {
+    "page_title": "Genshinkan Aikido",
+    "announcement_bar": "Intro Class Sign-Up",
+    "main_philosophy": "Genshinkan is devoted to transmitting and preserving the martial art of Aikido.",
+    "location_info": "Manhattan: 64 E 4th St, 3rd FL, NY, NY\nWhite Plains: 98 Lake St, White Plains, NY",
+    "visual_focus": "Gallery of training photos showing techniques, community, and dojo atmosphere"
+  },
+  "instructors_page": {
+    "page_title": "Instructors — Genshinkan Aikido",
+    "url": "https://www.genaikido.com/new-about-instructors",
+    "instructors": [
+      {
+        "name": "Gary Wagener",
+        "title": "Chief Instructor/Dojo-Cho",
+        "rank": "Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan",
+        "philosophy": "The centering and harmonious aspect of daily practice is what originally and continually draws Mr. Wagener to aikido. \"After training for some time students begin to notice their everyday movements change, their breathing changes, and their daily communication changes. This injection of focused harmony and budo spirit begin to manifest itself through the understanding of aikido.\" Mr. Wagener's goal as a practitioner and instructor is to help students understand the foundations and find joy in their training.",
+        "background": "In addition to his training and instructing at Genshinkan Aikido Dojo, Mr. Wagener has taught aikido programs to underprivileged children in New York Public Schools."
+      },
+      {
+        "name": "Robert Hoff",
+        "title": "Instructor",
+        "rank": "Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan",
+        "philosophy": "\"I began training shortly after my introduction to Zen. I found in aikido a more physical and ultimately fulfilling means to similar ends – thinking and acting with compassion, existing more in the moment, being less attached to the ultimately transient nature of being. Aikido necessitates that the practitioner be supremely present, and it's that reward that sustains my practice.\"",
+        "background": "Mr. Hoff began his aikido training in Brooklyn, New York, under the instruction of Joseph Jarman Sensei. It was following an intensive period in the practice of Zen Buddhism that he became initially attracted to the art. In addition to his experience teaching aikido to both young people and adults, Mr. Hoff is a history teacher at a K-12 public school in Manhattan."
+      },
+      {
+        "name": "Ariana Koblitz",
+        "title": "Instructor",
+        "rank": "Nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan",
+        "philosophy": "Each class presents a lesson she had not realized she needed that day: a nuance in body movement, posture, a clarity of mind. Ariana celebrates the principles she discovers on the mat. Be present and focus on your partner, move in harmony with them because you are both aiming for a shared outcome of peace, react only to what is presented to you with the techniques you are slowly adding to your toolbox.",
+        "background": "Mrs. Koblitz joined the dojo when she first moved to New York. Training the heart, mind, and body at Genshinkan quickly became a strong base to build up from amidst the constant shifts and pivots necessary living in NYC. These provide endless inspiration for her work in experience design."
+      },
+      {
+        "name": "Sarah Antal",
+        "title": "Instructor, Dojo-Cho, Genshinkan White Plains",
+        "rank": "nidan, (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan",
+        "philosophy": "\"I first started Aikido because I missed being a student. I was never into martial arts, but the movement in Aikido reminded me so much of dance that I was immediately drawn to it. Just like in my classical dance training, the emphasis Aikido lays on very specific footwork is key. It's an Art that keeps unfolding and revealing itself, so one is a student forever!\"",
+        "background": "She began her Aikido training at Genshinkan Aikido of Manhattan, where she continues to practice under the tutelage of Gary Wagener Sensei. In addition to instructing Aikido, Mrs. Antal also operates a successful dance studio where she teaches ballet classes."
+      },
+      {
+        "name": "Ian Antal",
+        "title": "Instructor, Chief Instructor, Genshinkan White Plains",
+        "rank": "nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan",
+        "philosophy": "\"Aikido is known as the 'Art of Peace' and propagates that 'competition is self-defeating'. The paradox behind a martial art combined with a philosophy of harmony will never cease to be a source of puzzlement and fascination.\"",
+        "background": "MrHis training began and continues at Genshinkan Aikido of Manhattan, where he served as Gary Wagener Sensei's first Soto Deshi. In 2018, Mr. Antal was bestowed the honor of opening the first satellite Genshinkan dojo in White Plains, NY where he holds the position of Chief Instructor. Outside the dojo, Mr. Antal is the Executive Director of City Center Dance in White Plains, NY."
+      }
+    ]
+  },
+  "adult_classes_page": {
+    "page_title": "Adult Classes — Genshinkan Aikido",
+    "url": "https://www.genaikido.com/schedule-and-fees-adults",
+    "key_info": "Visitors/new students are always welcome, but must make an appointment before visiting.",
+    "new_student_special": "First month $115",
+    "schedule": {
+      "Monday": ["1st Class: 18:15-19:15", "2nd Class: 19:15-20:15"],
+      "Tuesday": ["1st Class: 18:15-19:15", "2nd Class: 19:15-20:15"],
+      "Wednesday": ["1st Class: 18:15-19:15", "2nd Class: 19:15-20:15"],
+      "Thursday": ["18:15-19:30"],
+      "Sunday": ["1st Class: 9:45-10:30", "2nd Class: 10:30 - 11:30"]
+    },
+    "pricing": {
+      "adult_fee": "$145 per month, unlimited classes",
+      "nyu_student_fee": "$130 per month, unlimited classes",
+      "terms": "Fee includes all classes during the month. There are no hidden costs, no contracts, and no minimum commitments. All students in our adult program must be 18 yrs of age or older."
+    },
+    "philosophy": "All students will discover genuine support and encouragement during all classes.",
+    "address": "62 e. 4th St., Penthouse (Btwn Bowery & 2nd Ave), NYC, NY"
+  },
+  "kids_classes_page": {
+    "page_title": "Kids Classes — Genshinkan Aikido",
+    "url": "https://www.genaikido.com/kids",
+    "key_info": "New students for the children's program are always welcome, but must make an appointment with their parent before visiting the dojo. Our classes are for ages 6 through 12.",
+    "schedule": "Every Wednesday: 17:00 - 17:55",
+    "pricing": "$115 per month (no contract/no minimum commitment)",
+    "philosophy": {
+      "overview": "Martial arts is an activity which can develop a child's positive sense of self on a multitude of levels. This is especially true of aikido because of the non-combative/non-competitive philosophy. There are no tournaments/competitions, so each students progress at a pace best suited for them",
+      "focus": "Self Defense, Self Awareness, and Self Empowerment",
+      "self_defense": "Increased balance, energy levels, endurance and more, are just a few of the physical benefits kids are exposed to during classes. Students will learn conflict resolution through harmoniously redirecting an attacker's energy. The physical applications will be studied on a weekly basis in the dojo, but lessons will be taught on how to apply and relate concepts in a non-physical manner.",
+      "self_awareness": "The basis for our program is clearly self defense. However, the benefits of aikido training go much deeper. Students will learn invaluable life skills including patience, discipline, and the over all development of who they are in their daily lives. This is a class designed to bring an internal and external balance to a students every day life.",
+      "self_empowerment": "Through physical fitness and aikido life skill lessons, students will discover move focus and determined motivation throughout their lives."
+    }
+  },
+  "questions_page": {
+    "page_title": "Questions — Genshinkan Aikido",
+    "url": "https://www.genaikido.com/questions",
+    "main_statement": "Genshinkan Aikido is devoted to the transmission and preservation of the traditional martial art of Aikido.",
+    "faqs": [
+      {
+        "question": "What is Aikido?",
+        "answer": "Aikido is a martial art and spiritual discipline where conflict is resolved harmoniously through the redirection of the attacker's energy."
+      },
+      {
+        "question": "Are There Tournaments?",
+        "answer": "Aikido is non-competitive; there are no tournaments or trophies. The goal is \"victory over one's self\"."
+      },
+      {
+        "question": "What are the benefits?",
+        "answer": "The benefits go well beyond physical fitness and learning a self-defense. The long-term benefits transcend the physical and extend into all aspects of life. Aikido training takes place in the dojo, but as students train they begin to realize the daily applications of the art."
+      },
+      {
+        "question": "How do I start?",
+        "answer": "Sign-up for a Trial Class, or email us at GenAikidoNYC@gmail.com."
+      }
+    ]
+  },
+  "intro_class_page": {
+    "page_title": "Intro Class — Genshinkan Aikido",
+    "url": "https://www.genaikido.com/try-aikido",
+    "header": "TRY A CLASS",
+    "instructions": "For an Intro Class, please submit the below form. We'll confirm your appointment by email.",
+    "pricing": {
+      "single_intro": "$20. If you join, the fee will be applied to your first month's dues",
+      "three_class_package": "$55",
+      "new_student_special": "First month $115"
+    },
+    "policies": [
+      "We don't permit observation for adult classes, only participation (parents/guardians are welcome to observe classes for their children).",
+      "NOTE: CHECK YOUR SPAM FOLDER for our reply. Many of our replies to Gmail end up in recipients SPAM."
+    ],
+    "class_times": [
+      "Adult Sunday - 09:45",
+      "Adult Sunday - 10:30",
+      "Adult Tues - 18:15",
+      "Adult Tues - 19:15",
+      "Kids Wed - 17:00",
+      "Adult Wed - 18:15",
+      "Adult Wed - 19:15",
+      "Adult Thurs - 18:15"
+    ]
+  },
+  "aikido_world_alliance_page": {
+    "page_title": "Aikido World Alliance — Genshinkan Aikido",
+    "url": "https://www.genaikido.com/aikido-world-alliance",
+    "content": {
+      "affiliation": "Genshinkan Aikido, NYC is a member of the international organization, Aikido World Alliance, which is headed by Andrew Sato Shihan, and is directly affiliated with Aikikai Foundation, Aikido World Headquarters in Tokyo, Japan.",
+      "about_sato_shihan": "Andrew Sato Shihan, 7th dan, is the founder and chief instructor of the AWA. Sato Shihan and several dedicated dojo and students started the organization in 2005. Under his leadership, the AWA has grown to more than 50 dojo worldwide, and is one of only a few US-based aikido associations directly affiliated with the Aikikai Foundation, Aikido World Headquarters, in Tokyo, Japan.",
+      "current_activities": "As head instructor of the AWA, Sato Shihan travels the world regularly giving seminars. He also regularly teaches at Kiku Matsu Dojo, Chicago, which he started in 2005. It is now under the direction of Laura DeGraff Sensei, 6th dan.",
+      "lineage": "Sato Shihan began his study of aikido with the late Fumio Toyoda Shihan (1947-2001) in his home city of Chicago in 1977."
+    }
+  },
+  "student_resources_page": {
+    "page_title": "Genshinkan Aikido — Secure",
+    "url": "https://www.genaikido.com/student-section",
+    "status": "Password protected - content not accessible"
+  },
+  "contact_information": {
+    "email": "GenAikidoNYC@gmail.com",
+    "locations": [
+      {
+        "name": "Manhattan",
+        "address": "64 E 4th St, 3rd FL, NY, NY"
+      },
+      {
+        "name": "White Plains",
+        "address": "98 Lake St, White Plains, NY"
+      }
+    ],
+    "social_media": {
+      "instagram": "https://www.instagram.com/gen.aikido/"
+    }
+  },
+  "writing_style_analysis": {
+    "tone": "Traditional, respectful, and unpretentious",
+    "approach": "Direct and informative without excessive marketing language",
+    "philosophy_integration": "Seamlessly weaves philosophical concepts into practical information",
+    "key_phrases": [
+      "devoted to transmitting and preserving",
+      "traditional martial art of Aikido",
+      "harmoniously redirecting",
+      "victory over one's self",
+      "genuine support and encouragement",
+      "non-combative/non-competitive philosophy"
+    ],
+    "communication_style": "Straightforward, educational, emphasizing the traditional aspects and practical benefits without hype",
+    "instructor_presentation": "Personal, philosophical quotes that show individual perspectives while maintaining unified approach",
+    "pricing_presentation": "Clear, upfront, no hidden costs emphasized"
+  },
+  "japanese_terminology": {
+    "used_terms": [
+      "Aikido",
+      "Aikikai",
+      "Hombu dojo",
+      "Sensei",
+      "Shihan",
+      "Yondan",
+      "Nidan",
+      "Dojo-Cho",
+      "Soto Deshi",
+      "budo"
+    ],
+    "usage_style": "Integrated naturally with explanations, respects traditional terminology without over-emphasis"
+  },
+  "key_differentiators": {
+    "lineage_emphasis": "Direct connection to F. Toyoda Shihan and Aikikai Foundation",
+    "non_competitive": "Strong emphasis on non-competitive, non-combative philosophy",
+    "personal_growth": "Focus on internal development and daily life applications",
+    "community_support": "Emphasis on supportive, encouraging environment",
+    "traditional_preservation": "Mission of transmitting and preserving traditional aikido",
+    "accessibility": "Welcoming to beginners while maintaining traditional standards"
   },
   "original_site_images": {
     "main_logo": {

@@ -8,8 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Run form testing suite: `npm run test:forms`
 - Run mobile navigation tests: `npm run test:mobile-nav`
 - Run tests in headless mode: `npm run test:forms:headless` or `npm run test:mobile-nav:headless`
+- Run Phase 2 UX tests: `npm run test:phase2` or `npm run test:phase2:headless`
 - Start local development server: `node server.js` (runs on port 3000)
-- **New**: For web server local view, open Chrome with http server on port 3000
+- View site locally: Open Chrome and navigate to http://localhost:3000
 
 ## Project Architecture
 
@@ -81,6 +82,8 @@ npm run test:forms          # Test form functionality and accessibility
 npm run test:mobile-nav     # Test mobile navigation across device viewports and instructor section
 npm run test:forms:headless # Headless form testing for CI/CD
 npm run test:mobile-nav:headless # Headless mobile testing for CI/CD
+npm run test:phase2         # Comprehensive UX analysis across devices
+npm run test:phase2:headless # Headless UX analysis for CI/CD
 ```
 
 ### Mobile-Specific Testing
@@ -133,22 +136,39 @@ The homepage contains comprehensive content that may benefit from strategic cond
 - **Progressive Disclosure**: Consider hub-and-spoke approach with summary content linking to detailed philosophy pages
 - **Call-to-Action Focus**: Primary goal of intro class signup can get diluted by extensive content sections
 
-## Workflow Notes
-- Put tickets in review after you finish so we can review. If changes are needed, ticket goes back to progress, then review again, and finally to done when complete.
+## Current Optimization Initiative (Phase 2+)
+Based on content analysis showing 75% marketing / 25% martial content balance:
+- **Goal**: Shift toward 50/50 balance between accessibility and authenticity
+- **Approach**: "Less is more" budo approach - removing promotional language while maintaining effectiveness
+- **Focus**: Individual journey discovery rather than demographic targeting
+- **Reference**: genaikido.com for minimal, authentic communication style
 
-## Testing Infrastructure Notes
-- **Puppeteer Testing**: Added infrastructure for checking web application functionality and user interactions
-  - Puppeteer testing for checking different aspects of website behavior and responsiveness
+## Important Files & Resources
 
-## Web Infrastructure
+### Key Data Files
+- `original_site_data.json`: Comprehensive scrape of genaikido.com showing minimal approach
+- `new_site.json`: Current site content extraction with balance analysis
+- `scraped_data.json`: Additional reference data from original site
 
-### Website Domains
-- genaikido.com is the original website 
+### Testing Reports
+- `testing/phase2-comprehensive-ux-report.md`: Latest UX analysis across all devices
+- `testing/comprehensive-website-testing-suite.js`: Main testing framework
+- `testing/phase2-ux-analysis-suite.js`: Phase 2 UX testing implementation
 
-### Contact Emails
-- genaikidonyc@gmail.com is sensei's primary email
-- genaikido@gmail.com is another sensei email
-- aikidoalliance@yahoo.com is Sato Sensei's email for the Aikido Alliance
+### Communication Analysis
+- `communication-analysis-sensei-2023-2025.md`: Analysis of authentic communication style from Slack/email
 
-### External Resources
-- https://www.aikidoworldalliance.com/ is the aikidoworld alliance website study that as well
+## External References
+
+### Website Domains & Contacts
+- genaikido.com: Original website reference for minimal approach
+- genaikidonyc@gmail.com: Sensei's primary email
+- genaikido@gmail.com: Alternative sensei email
+- aikidoalliance@yahoo.com: Sato Sensei's email for Aikido Alliance
+- https://www.aikidoworldalliance.com/: Aikido World Alliance website
+
+### Content Guidelines
+- Leave instructor bios verbatim from `original_site_data.json`
+- When needing detailed information, reference genaikido.com content
+- Maintain traditional martial arts terminology without excessive explanation
+- Focus on "what Aikido demands of students, not just what it offers them"
