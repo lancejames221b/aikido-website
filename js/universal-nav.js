@@ -20,7 +20,7 @@ class UniversalNavigation {
             { file: 'honor-values.html', name: 'Honor & Values', label: 'Honor & Values' },
             { file: 'traditional-values.html', name: 'Traditions', label: 'Traditions' },
             { file: 'health-and-safety.html', name: 'Health & Safety', label: 'Health & Safety' },
-            { file: 'adult-beginners-journey.html', name: 'Student Stories', label: 'Student Stories' }
+            { file: 'adult-beginners-journey.html', name: 'Training Examples', label: 'Training Examples' }
         ];
 
         const subnavItems = philosophyPages.map(page => {
@@ -78,14 +78,14 @@ class UniversalNavigation {
                             </div>
                         </div>
                         <div class="nav-item nav-dropdown">
-                            <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy</a>
+                            <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy & Practice</a>
                             <div class="dropdown-menu" id="philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
                                 <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
                                 <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
                                 <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
                                 <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
                                 <a href="${this.basePath}pages/health-and-safety.html" role="menuitem">Health & Safety</a>
-                                <a href="${this.basePath}pages/adult-beginners-journey.html" role="menuitem">Student Stories</a>
+                                <a href="${this.basePath}pages/adult-beginners-journey.html" role="menuitem">Training Examples</a>
                             </div>
                         </div>
                         <div class="nav-item">
