@@ -4269,31 +4269,28 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Add expand/collapse functionality for mobile content
-            if (window.innerWidth <= 768) {
-                const expandableElements = document.querySelectorAll('.mobile-expandable');
-                
-                expandableElements.forEach(element => {
-                    const expandButton = element.nextElementSibling;
-                    if (expandButton && expandButton.classList.contains('mobile-expand-button')) {
-                        const button = expandButton.querySelector('button');
-                        
+            const expandableElements = document.querySelectorAll('.mobile-expandable');
+            
+            expandableElements.forEach(element => {
+                const expandButton = element.nextElementSibling;
+                if (expandButton && expandButton.classList.contains('mobile-expand-button')) {
+                    const button = expandButton.querySelector('button');
+                    
+                    if (button) {
                         button.addEventListener('click', function() {
                             const isExpanded = element.classList.contains('expanded');
                             
                             if (isExpanded) {
                                 element.classList.remove('expanded');
-                                button.textContent = 'Read More';
-                                expandButton.style.display = 'block';
+                                button.textContent = 'Learn More';
                             } else {
                                 element.classList.add('expanded');
                                 button.textContent = 'Read Less';
-                                expandButton.style.background = 'none';
-                                expandButton.style.paddingTop = '10px';
                             }
                         });
                     }
-                });
-            }
+                }
+            });
             
             // Handle window resize for responsive behavior
             window.addEventListener('resize', function() {
@@ -4329,6 +4326,24 @@
                 });
             }
         });
+
+        // Toggle expand function for journey benefit cards
+        function toggleExpand(button) {
+            const card = button.closest('.journey-benefit-card');
+            const expandableContent = card.querySelector('.mobile-expandable');
+            
+            if (expandableContent) {
+                const isExpanded = expandableContent.style.display === 'block' || expandableContent.style.display === '';
+                
+                if (isExpanded) {
+                    expandableContent.style.display = 'none';
+                    button.textContent = 'Learn More';
+                } else {
+                    expandableContent.style.display = 'block';
+                    button.textContent = 'Read Less';
+                }
+            }
+        }
     </script>
 </body>
 </html>
