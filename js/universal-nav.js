@@ -78,7 +78,7 @@ class UniversalNavigation {
                             </div>
                         </div>
                         <div class="nav-item nav-dropdown">
-                            <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy & Practice</a>
+                            <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy and Practice</a>
                             <div class="dropdown-menu" id="philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
                                 <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
                                 <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
@@ -128,7 +128,7 @@ class UniversalNavigation {
                         </div>
                     </div>
                     <div class="mobile-nav-item mobile-dropdown">
-                        <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-philosophy-dropdown">Philosophy</a>
+                        <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-philosophy-dropdown">Philosophy and Practice</a>
                         <div class="mobile-dropdown-menu" id="mobile-philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
                             <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
                             <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
