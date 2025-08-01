@@ -261,7 +261,11 @@ class UniversalNavigation {
             background: none;
             border: none;
             cursor: pointer;
-            padding: 8px;
+            padding: 12px; /* Larger touch target */
+            min-width: 44px; /* WCAG touch target minimum */
+            min-height: 44px;
+            align-items: center;
+            justify-content: center;
         }
 
         .burger-line {
@@ -291,13 +295,21 @@ class UniversalNavigation {
         }
 
         .mobile-nav-item > a {
-            display: block;
+            display: flex;
+            align-items: center;
             color: #333;
             text-decoration: none;
             font-weight: 500;
-            padding: 12px 20px;
+            padding: 15px 20px; /* Larger touch target */
+            min-height: 44px; /* WCAG touch target minimum */
             border-bottom: 1px solid #f5f5f5;
             position: relative;
+            transition: background-color 0.2s ease;
+        }
+        
+        .mobile-nav-item > a:hover,
+        .mobile-nav-item > a:focus {
+            background-color: #f8f8f8;
         }
         
         .mobile-dropdown > a::after {
@@ -329,15 +341,18 @@ class UniversalNavigation {
         }
 
         .mobile-dropdown-menu a {
-            display: block;
+            display: flex;
+            align-items: center;
             color: #666;
             text-decoration: none;
-            padding: 10px 20px 10px 40px;
+            padding: 12px 20px 12px 40px; /* Larger touch targets */
+            min-height: 44px; /* WCAG touch target minimum */
             font-size: 14px;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
         
-        .mobile-dropdown-menu a:hover {
+        .mobile-dropdown-menu a:hover,
+        .mobile-dropdown-menu a:focus {
             background: #efefef;
             color: #8B4513;
             padding-left: 45px;
@@ -438,8 +453,19 @@ class UniversalNavigation {
                 }
             });
 
-            // Handle mobile dropdowns
+            // Handle mobile dropdowns with touch improvements
             document.querySelectorAll('.mobile-dropdown > a').forEach(link => {
+                // Add touch feedback
+                link.addEventListener('touchstart', () => {
+                    link.style.backgroundColor = '#f0f0f0';
+                }, { passive: true });
+                
+                link.addEventListener('touchend', () => {
+                    setTimeout(() => {
+                        link.style.backgroundColor = '';
+                    }, 150);
+                }, { passive: true });
+                
                 link.addEventListener('click', (e) => {
                     const href = link.getAttribute('href');
                     const dropdown = link.nextElementSibling;

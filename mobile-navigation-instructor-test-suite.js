@@ -34,7 +34,7 @@ class MobileNavigationInstructorTestSuite {
             { name: 'iPad Pro', width: 1024, height: 1366, deviceScaleFactor: 2, isMobile: false }
         ];
         
-        this.websiteUrl = 'file:///Users/lj/Dev/Aikido/index.html';
+        this.websiteUrl = 'http://localhost:3000';
     }
 
     async initialize() {

@@ -8,6 +8,8 @@
     "test:forms:headless": "HEADLESS=true node form-testing-suite.js",
     "test:mobile-nav": "node mobile-navigation-instructor-test-suite.js",
     "test:mobile-nav:headless": "HEADLESS=true node mobile-navigation-instructor-test-suite.js",
+    "test:phase2": "cd testing && node phase2-ux-analysis-suite.js",
+    "test:phase2:headless": "cd testing && HEADLESS=true node phase2-ux-analysis-suite.js",
     "install:deps": "npm install puppeteer axe-core"
   },
   "keywords": [
@@ -29,5 +31,8 @@
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.10.2"
   }
 }

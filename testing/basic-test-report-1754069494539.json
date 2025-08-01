@@ -1,0 +1,81 @@
+{
+  "timestamp": "2025-08-01T17:31:34.539Z",
+  "summary": {
+    "totalTests": 4,
+    "passedTests": 3,
+    "failedTests": 1,
+    "warningTests": 0,
+    "successRate": "75.0"
+  },
+  "results": [
+    {
+      "testName": "Homepage Load Test",
+      "status": "PASS",
+      "findings": "HTTP Status: 200 OK, Content Length: 174466 bytes, Valid HTML document detected, Page title: \"Genshinkan Aikido - East Village NYC | Traditional Aikido Training\", Meta description found: \"A school committed to the art of Aikido, through instruction as passed on by the late F. Toyoda Shihan located in the East Village, NYC. Honor in training, honor in life.\", 1 CSS files, 3 JS files, 14 images found, Favicon link found",
+      "errors": [],
+      "metrics": {
+        "loadTime": 8,
+        "statusCode": 200,
+        "contentLength": 174466,
+        "title": "Genshinkan Aikido - East Village NYC | Traditional Aikido Training",
+        "hasMetaDescription": true,
+        "cssCount": 1,
+        "jsCount": 3,
+        "imgCount": 14,
+        "hasFavicon": true
+      },
+      "timestamp": "2025-08-01T17:31:34.535Z"
+    },
+    {
+      "testName": "Navigation Testing",
+      "status": "PASS",
+      "findings": "20 navigation links found, 0 internal links, 5 external links, Mobile menu elements detected",
+      "errors": [],
+      "metrics": {
+        "totalLinks": 20,
+        "internalLinks": 0,
+        "externalLinks": 5,
+        "brokenLinks": 0,
+        "hasMobileMenu": true,
+        "brokenLinksDetail": []
+      },
+      "timestamp": "2025-08-01T17:31:34.537Z"
+    },
+    {
+      "testName": "Contact Form Testing",
+      "status": "PASS",
+      "findings": "1 forms found, Name field found, Email field found, Message field found, Submit button found, Form validation attributes found",
+      "errors": [],
+      "metrics": {
+        "totalForms": 1,
+        "contactForms": 1
+      },
+      "timestamp": "2025-08-01T17:31:34.537Z"
+    },
+    {
+      "testName": "Basic Accessibility Check",
+      "status": "FAIL",
+      "findings": "14 images total, 13 with alt text, 0 decorative (empty alt), 81 heading elements, Proper H1 structure (1 H1), 8 form inputs found, 1 labels, 0 aria-labels",
+      "errors": [
+        "1 images missing alt text",
+        "Some inputs may be missing labels"
+      ],
+      "metrics": {
+        "totalImages": 14,
+        "imagesWithAlt": 13,
+        "imagesWithoutAlt": 1,
+        "decorativeImages": 0,
+        "h1Count": 1,
+        "totalHeadings": 81,
+        "totalInputs": 8,
+        "labels": 1,
+        "ariaLabels": 0,
+        "hasSkipLinks": false
+      },
+      "timestamp": "2025-08-01T17:31:34.539Z"
+    }
+  ],
+  "criticalIssues": [
+    "Basic Accessibility Check: 1 images missing alt text, Some inputs may be missing labels"
+  ]
+}
