@@ -4269,27 +4269,26 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Add expand/collapse functionality for mobile content
-            const expandableElements = document.querySelectorAll('.mobile-expandable');
+            const expandButtons = document.querySelectorAll('.mobile-expand-button button');
             
-            expandableElements.forEach(element => {
-                const expandButton = element.nextElementSibling;
-                if (expandButton && expandButton.classList.contains('mobile-expand-button')) {
-                    const button = expandButton.querySelector('button');
+            expandButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Find the expandable content in the same card
+                    const card = button.closest('.value-card');
+                    const expandableElement = card ? card.querySelector('.mobile-expandable') : null;
                     
-                    if (button) {
-                        button.addEventListener('click', function() {
-                            const isExpanded = element.classList.contains('expanded');
-                            
-                            if (isExpanded) {
-                                element.classList.remove('expanded');
-                                button.textContent = 'Learn More';
-                            } else {
-                                element.classList.add('expanded');
-                                button.textContent = 'Read Less';
-                            }
-                        });
+                    if (expandableElement) {
+                        const isExpanded = expandableElement.classList.contains('expanded');
+                        
+                        if (isExpanded) {
+                            expandableElement.classList.remove('expanded');
+                            button.textContent = 'Learn More';
+                        } else {
+                            expandableElement.classList.add('expanded');
+                            button.textContent = 'Read Less';
+                        }
                     }
-                }
+                });
             });
             
             // Handle window resize for responsive behavior
