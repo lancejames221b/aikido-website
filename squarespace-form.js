@@ -1,10 +1,58 @@
-// Squarespace-compatible form handling for Genshinkan Aikido
-// This script adds client-side validation and AJAX submission to work with Squarespace
+// Enhanced form handling for Genshinkan Aikido with Claude Sonnet 4 API Integration
+// Author: Lance James @ Unit 221B
+// This script adds intelligent form processing using Claude AI
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('intro-class-form');
     
     if (!form) return;
+
+    // Initialize Claude API integration
+    let claudeAPI = null;
+    
+    // Check for API key in environment or prompt user
+    const initializeClaudeAPI = async () => {
+        // First try to get API key from secure storage or environment
+        let apiKey = await getStoredAPIKey();
+        
+        if (!apiKey) {
+            // If no stored key, check if we're in a development environment
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                apiKey = prompt('Please enter your Claude API key for testing (starts with sk-ant-):');
+                if (apiKey && apiKey.startsWith('sk-ant-')) {
+                    await storeAPIKey(apiKey); // Store securely for this session
+                }
+            }
+        }
+        
+        if (apiKey) {
+            try {
+                claudeAPI = new ClaudeAPIIntegration(apiKey, {
+                    debug: window.location.hostname === 'localhost',
+                    maxTokens: 2048,
+                    temperature: 0.6
+                });
+                
+                // Validate API key
+                const isValid = await claudeAPI.validateAPIKey();
+                if (!isValid) {
+                    console.error('Invalid Claude API key');
+                    claudeAPI = null;
+                    showNotification('Claude AI integration unavailable - using standard form processing', 'warning');
+                } else {
+                    console.log('Claude API integration initialized successfully');
+                    showNotification('Claude AI integration active - enhanced form processing enabled', 'success');
+                }
+            } catch (error) {
+                console.error('Failed to initialize Claude API:', error);
+                claudeAPI = null;
+                showNotification('Claude AI unavailable - form will use standard processing', 'info');
+            }
+        }
+    };
+
+    // Initialize API integration
+    initializeClaudeAPI();
 
     // Form validation functions
     function validateEmail(email) {
@@ -117,29 +165,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Form submission
-    form.addEventListener('submit', function(e) {
+    // Enhanced form submission with Claude AI integration
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
         // Clear previous errors
         const errorMessages = form.querySelectorAll('.error-message, .form-error');
         errorMessages.forEach(error => error.remove());
 
-        // Get form data
+        // Get form data - updated to match actual form fields
         const formData = new FormData(form);
         const data = {
-            name: formData.get('name')?.trim(),
+            fname: formData.get('fname')?.trim(),
+            lname: formData.get('lname')?.trim(),
             email: formData.get('email')?.trim(),
             phone: formData.get('phone')?.trim(),
-            experience: formData.get('experience'),
-            message: formData.get('message')?.trim()
+            experience: formData.get('experience')?.trim(),
+            why: formData.get('why')?.trim(),
+            classDate: formData.get('classDate'),
+            classTime: formData.get('classTime'),
+            howHeard: formData.get('howHeard'),
+            additionalInfo: formData.get('additionalInfo')?.trim()
         };
 
-        // Validation
+        // Enhanced validation with Claude AI insights
         let hasErrors = false;
 
-        if (!data.name) {
-            showError(form.querySelector('[name="name"]'), 'Name is required');
+        // Basic required field validation
+        if (!data.fname) {
+            showError(form.querySelector('[name="fname"]'), 'First name is required');
+            hasErrors = true;
+        }
+
+        if (!data.lname) {
+            showError(form.querySelector('[name="lname"]'), 'Last name is required');
             hasErrors = true;
         }
 
@@ -151,13 +210,31 @@ document.addEventListener('DOMContentLoaded', function() {
             hasErrors = true;
         }
 
-        if (!data.experience) {
-            showError(form.querySelector('[name="experience"]'), 'Please select your experience level');
+        if (!data.phone) {
+            showError(form.querySelector('[name="phone"]'), 'Phone number is required');
+            hasErrors = true;
+        } else if (!validatePhone(data.phone)) {
+            showError(form.querySelector('[name="phone"]'), 'Please enter a valid phone number');
             hasErrors = true;
         }
 
-        if (data.phone && !validatePhone(data.phone)) {
-            showError(form.querySelector('[name="phone"]'), 'Please enter a valid phone number');
+        if (!data.experience) {
+            showError(form.querySelector('[name="experience"]'), 'Please describe your martial arts experience');
+            hasErrors = true;
+        }
+
+        if (!data.why) {
+            showError(form.querySelector('[name="why"]'), 'Please tell us what draws you to Aikido');
+            hasErrors = true;
+        }
+
+        if (!data.classDate) {
+            showError(form.querySelector('[name="classDate"]'), 'Please select a preferred date');
+            hasErrors = true;
+        }
+
+        if (!data.classTime) {
+            showError(form.querySelector('[name="classTime"]'), 'Please select a class time');
             hasErrors = true;
         }
 
@@ -165,91 +242,104 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Show loading state
+        // Show loading state with Claude AI processing indicator
         const submitButton = form.querySelector('.form-submit-btn');
         const originalText = submitButton.textContent;
-        submitButton.textContent = 'Sending...';
+        submitButton.textContent = claudeAPI ? 'Processing with AI...' : 'Sending...';
         submitButton.disabled = true;
         submitButton.style.opacity = '0.7';
 
-        // For Squarespace compatibility, we'll use a simple form submission
-        // with fallback to external service if needed
-        
-        // Try native form submission first (for Squarespace forms)
-        if (window.location.hostname.includes('squarespace')) {
-            // Squarespace form handling
-            form.action = '/contact'; // Default Squarespace contact form
-            form.submit();
-            return;
-        }
+        // Enhanced processing with Claude AI
+        let aiAnalysis = null;
+        let welcomeMessage = null;
 
-        // For custom deployment, use fetch API
-        fetch('/submit-intro-class', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.success) {
-                showSuccess(result.message);
+        try {
+            if (claudeAPI) {
+                showNotification('Claude AI is analyzing your request...', 'info');
                 
-                // Track conversion with Google Analytics 4
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'form_submit', {
-                        'event_category': 'engagement',
-                        'event_label': 'intro_class_signup',
-                        'value': 1,
-                        'custom_parameter_1': 'aikido_school',
-                        'custom_parameter_2': 'form_interaction'
-                    });
-                    
-                    // Enhanced ecommerce event for lead generation
-                    gtag('event', 'generate_lead', {
-                        'currency': 'USD',
-                        'value': 150, // Estimated value of intro class lead
-                        'items': [{
-                            'item_id': 'intro_class',
-                            'item_name': 'Aikido Intro Class Registration',
-                            'item_category': 'martial_arts',
-                            'item_category2': 'aikido',
-                            'quantity': 1,
-                            'price': 150
-                        }]
-                    });
-                }
+                // Process form with Claude AI in parallel
+                const [analysisResult, welcomeResult] = await Promise.all([
+                    claudeAPI.processFormSubmission(data).catch(err => {
+                        console.error('AI analysis failed:', err);
+                        return claudeAPI.createFallbackResponse(data);
+                    }),
+                    claudeAPI.generateWelcomeMessage(data).catch(err => {
+                        console.error('Welcome message generation failed:', err);
+                        return claudeAPI.createGenericWelcomeMessage(data);
+                    })
+                ]);
+
+                aiAnalysis = analysisResult;
+                welcomeMessage = welcomeResult;
                 
-                // Track with Facebook Pixel
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Lead', {
-                        content_name: 'Aikido Intro Class',
-                        content_category: 'martial_arts',
-                        value: 150,
-                        currency: 'USD'
-                    });
-                    
-                    fbq('trackCustom', 'IntroClassSignup', {
-                        school_type: 'aikido',
-                        location: 'east_village_nyc',
-                        experience_level: data.experience
-                    });
-                }
-            } else {
-                showFormError(result.message);
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-                submitButton.style.opacity = '1';
+                console.log('Claude AI Analysis:', aiAnalysis);
+                console.log('Claude AI Welcome:', welcomeMessage);
             }
-        })
-        .catch(error => {
-            console.error('Form submission error:', error);
-            showFormError('Sorry, there was an error submitting your request. Please try again or call us directly at (212) 555-0123.');
+
+            // Update button text for submission
+            submitButton.textContent = 'Submitting...';
+
+            // For Squarespace compatibility, prepare enhanced data
+            const enhancedData = {
+                ...data,
+                ai_analysis: aiAnalysis,
+                ai_welcome: welcomeMessage,
+                processed_with_ai: !!claudeAPI,
+                submission_timestamp: new Date().toISOString()
+            };
+
+            // Try native form submission first (for Squarespace forms)
+            if (window.location.hostname.includes('squarespace')) {
+                // For Squarespace, we'll need to adapt the form or use webhooks
+                // Store AI analysis in sessionStorage for potential retrieval
+                if (aiAnalysis) {
+                    sessionStorage.setItem('aikido_ai_analysis', JSON.stringify({
+                        student: `${data.fname} ${data.lname}`,
+                        analysis: aiAnalysis,
+                        timestamp: new Date().toISOString()
+                    }));
+                }
+                
+                form.action = '/contact';
+                form.submit();
+                return;
+            }
+
+            // For custom deployment, use enhanced fetch API
+            const response = await fetch('/submit-intro-class', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(enhancedData)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                // Show enhanced success message with AI insights
+                const successMessage = welcomeMessage && welcomeMessage.success 
+                    ? welcomeMessage.message 
+                    : result.message;
+                
+                showEnhancedSuccess(successMessage, aiAnalysis);
+                
+                // Track enhanced conversion with AI insights
+                trackEnhancedConversion(data, aiAnalysis);
+                
+            } else {
+                throw new Error(result.message || 'Form submission failed');
+            }
+
+        } catch (error) {
+            console.error('Enhanced form submission error:', error);
+            showFormError(`Sorry, there was an error submitting your request. ${claudeAPI ? 'Our AI analysis was completed, but ' : ''}Please try again or call us directly at (212) 555-0123.`);
+            
+            // Reset button state
             submitButton.textContent = originalText;
             submitButton.disabled = false;
             submitButton.style.opacity = '1';
-        });
+        }
     });
 
     // Add smooth scrolling for form anchor link
@@ -263,22 +353,243 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Supporting functions for Claude API integration
+
+    /**
+     * Secure API key storage for development/testing
+     */
+    async function getStoredAPIKey() {
+        try {
+            // In production, this should use secure backend storage
+            return sessionStorage.getItem('claude_api_key') || localStorage.getItem('claude_api_key_dev');
+        } catch (error) {
+            console.error('Error retrieving API key:', error);
+            return null;
+        }
+    }
+
+    async function storeAPIKey(apiKey) {
+        try {
+            // Only store in session for security - never in localStorage for production
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                sessionStorage.setItem('claude_api_key', apiKey);
+                // For development convenience only
+                localStorage.setItem('claude_api_key_dev', apiKey);
+            }
+        } catch (error) {
+            console.error('Error storing API key:', error);
+        }
+    }
+
+    /**
+     * Enhanced notification system
+     */
+    function showNotification(message, type = 'info', duration = 5000) {
+        // Remove existing notifications
+        const existingNotifications = document.querySelectorAll('.claude-notification');
+        existingNotifications.forEach(notif => notif.remove());
+
+        const notification = document.createElement('div');
+        notification.className = `claude-notification claude-notification-${type}`;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${getNotificationColor(type)};
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 10000;
+            font-size: 14px;
+            max-width: 350px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+        `;
+
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        // Animate in
+        setTimeout(() => {
+            notification.style.opacity = '1';
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+
+        // Auto remove
+        if (duration > 0) {
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, duration);
+        }
+
+        return notification;
+    }
+
+    function getNotificationColor(type) {
+        const colors = {
+            success: '#27ae60',
+            error: '#e74c3c',
+            warning: '#f39c12',
+            info: '#3498db'
+        };
+        return colors[type] || colors.info;
+    }
+
+    /**
+     * Enhanced success display with AI insights
+     */
+    function showEnhancedSuccess(message, aiAnalysis) {
+        const successDiv = document.createElement('div');
+        successDiv.className = 'enhanced-success-message';
+        successDiv.style.cssText = `
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+            text-align: center;
+            font-weight: 500;
+        `;
+
+        let content = `
+            <div style="font-size: 1.2rem; margin-bottom: 1rem;">
+                ✓ ${message}
+            </div>
+        `;
+
+        // Add AI insights if available
+        if (aiAnalysis && aiAnalysis.success && aiAnalysis.analysis) {
+            const recommendations = aiAnalysis.analysis.recommendations;
+            if (recommendations && recommendations.length > 0) {
+                content += `
+                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                        <div style="font-size: 0.9rem; opacity: 0.9;">
+                            🤖 Our AI has prepared some insights for your instructor to enhance your first class experience.
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        content += `
+            <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">
+                We'll contact you within 24 hours with class details and dojo location information.
+            </div>
+        `;
+
+        successDiv.innerHTML = content;
+        form.parentNode.insertBefore(successDiv, form);
+        form.style.display = 'none';
+
+        // Scroll to success message
+        successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    /**
+     * Enhanced conversion tracking with AI insights
+     */
+    function trackEnhancedConversion(formData, aiAnalysis) {
+        // Track conversion with Google Analytics 4
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submit', {
+                'event_category': 'engagement',
+                'event_label': 'intro_class_signup_ai_enhanced',
+                'value': 1,
+                'custom_parameter_1': 'aikido_school',
+                'custom_parameter_2': 'claude_ai_integration',
+                'ai_processed': !!aiAnalysis,
+                'experience_level': aiAnalysis?.analysis?.student_profile?.experience_level || 'unknown'
+            });
+
+            // Enhanced ecommerce event for lead generation
+            gtag('event', 'generate_lead', {
+                'currency': 'USD',
+                'value': 150,
+                'items': [{
+                    'item_id': 'intro_class_ai',
+                    'item_name': 'AI-Enhanced Aikido Intro Class Registration',
+                    'item_category': 'martial_arts',
+                    'item_category2': 'aikido_ai',
+                    'quantity': 1,
+                    'price': 150
+                }]
+            });
+        }
+
+        // Track with Facebook Pixel
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_name: 'AI-Enhanced Aikido Intro Class',
+                content_category: 'martial_arts',
+                value: 150,
+                currency: 'USD'
+            });
+
+            fbq('trackCustom', 'IntroClassSignupAI', {
+                school_type: 'aikido',
+                location: 'east_village_nyc',
+                experience_level: aiAnalysis?.analysis?.student_profile?.experience_level || formData.experience,
+                ai_processed: !!aiAnalysis,
+                ai_recommendations_count: aiAnalysis?.analysis?.recommendations?.length || 0
+            });
+        }
+
+        // Track AI usage statistics
+        if (claudeAPI) {
+            console.log('Claude API Usage Stats:', claudeAPI.getUsageStats());
+        }
+    }
+
+    /**
+     * Toggle optional fields functionality  
+     */
+    const toggleOptionalButton = document.getElementById('toggle-optional');
+    const optionalFields = document.getElementById('optional-fields');
+    
+    if (toggleOptionalButton && optionalFields) {
+        toggleOptionalButton.addEventListener('click', function() {
+            const isHidden = optionalFields.style.display === 'none';
+            optionalFields.style.display = isHidden ? 'block' : 'none';
+            toggleOptionalButton.textContent = isHidden 
+                ? '➖ Optional: How did you find us?' 
+                : '➕ Optional: How did you find us?';
+        });
+    }
 });
 
-// Alternative: Squarespace form block configuration
-// If using Squarespace's built-in form blocks, configure as follows:
+// Production deployment notes for Claude API integration:
 /*
-Form Settings in Squarespace:
-1. Add Form Block
-2. Configure fields:
-   - Name (Text, Required)
-   - Email (Email, Required) 
-   - Phone (Phone, Optional)
-   - Experience (Dropdown, Required)
-     Options: "No experience", "Some experience", "Experienced"
-   - Message (Textarea, Optional)
-3. Form Actions:
-   - Send email to: lancejames@unit221b.com
-   - Auto-reply: Enable with welcome message
-   - Redirect: Optional thank you page
+SECURITY CONSIDERATIONS:
+1. API keys should NEVER be stored in client-side code in production
+2. Implement server-side proxy for Claude API calls
+3. Use environment variables for API key storage
+4. Implement rate limiting and usage monitoring
+5. Add request validation and sanitization
+
+DEPLOYMENT STEPS:
+1. Set up secure backend endpoint for Claude API integration
+2. Configure environment variables for API key
+3. Implement webhook endpoint for Squarespace form processing
+4. Add monitoring and logging for AI processing
+5. Test thoroughly with various form inputs
+
+SQUARESPACE INTEGRATION:
+1. Use Squarespace Developer Platform for custom form handling
+2. Set up webhook endpoint to receive form submissions
+3. Process submissions through Claude API on backend
+4. Send enhanced data back to Squarespace or email system
+5. Configure form redirect to custom thank you page
+
+RECOMMENDED BACKEND ARCHITECTURE:
+- Node.js/Express server with Claude API integration
+- Secure API key management using environment variables
+- Rate limiting and error handling
+- Email service integration (SendGrid, Mailgun, etc.)
+- Analytics and monitoring (DataDog, New Relic, etc.)
 */
