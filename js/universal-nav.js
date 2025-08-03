@@ -59,37 +59,25 @@ class UniversalNavigation {
                         <div class="nav-item">
                             <a href="${this.basePath}index.html">Home</a>
                         </div>
-                        <div class="nav-item nav-dropdown">
-                            <a href="${this.basePath}index.html#about" aria-haspopup="true" aria-expanded="false" aria-controls="about-dropdown">About</a>
-                            <div class="dropdown-menu" id="about-dropdown" role="menu" aria-label="About submenu">
-                                <a href="${this.basePath}index.html#instructors" role="menuitem">Our Instructors</a>
-                                <a href="${this.basePath}index.html#testimonials" role="menuitem">Testimonials</a>
-                                <a href="${this.basePath}index.html#aikido-world-alliance" role="menuitem">Aikido World Alliance</a>
-                                <a href="${this.basePath}index.html#training-commitment" role="menuitem">The Path</a>
-                                <a href="${this.basePath}index.html#who-thrives" role="menuitem">Who Thrives Here</a>
-                            </div>
+                        <div class="nav-item">
+                            <a href="${this.basePath}index.html#instructors">Our Instructors</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="${this.basePath}index.html#training">Training</a>
                         </div>
                         <div class="nav-item nav-dropdown">
-                            <a href="${this.basePath}index.html#classes" aria-haspopup="true" aria-expanded="false" aria-controls="training-dropdown">Training</a>
-                            <div class="dropdown-menu" id="training-dropdown" role="menu" aria-label="Training submenu">
-                                <a href="${this.basePath}index.html#classes" role="menuitem">Adult Training</a>
-                                <a href="${this.basePath}index.html#kids-training" role="menuitem">Kids Training (Ages 6-12)</a>
-                                <a href="${this.basePath}index.html#gallery" role="menuitem">Training Gallery</a>
-                            </div>
-                        </div>
-                        <div class="nav-item nav-dropdown">
-                            <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy and Practice</a>
+                            <a href="${this.basePath}pages/what-is-shoshin.html" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy</a>
                             <div class="dropdown-menu" id="philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
                                 <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
                                 <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
                                 <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
                                 <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
                                 <a href="${this.basePath}pages/health-and-safety.html" role="menuitem">Health & Safety</a>
-                                <a href="${this.basePath}pages/adult-beginners-journey.html" role="menuitem">Training Examples</a>
+                                <a href="${this.basePath}pages/adult-beginners-journey.html" role="menuitem">Student Stories</a>
                             </div>
                         </div>
                         <div class="nav-item">
-                            <a href="${this.basePath}index.html#new-student">New Student</a>
+                            <a href="${this.basePath}index.html#testimonials">Student Experiences</a>
                         </div>
                         <div class="nav-item">
                             <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
@@ -109,26 +97,14 @@ class UniversalNavigation {
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html">Home</a>
                     </div>
-                    <div class="mobile-nav-item mobile-dropdown">
-                        <a href="${this.basePath}index.html#about" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-about-dropdown">About</a>
-                        <div class="mobile-dropdown-menu" id="mobile-about-dropdown" role="menu" aria-label="About submenu">
-                            <a href="${this.basePath}index.html#instructors" role="menuitem">Our Instructors</a>
-                            <a href="${this.basePath}index.html#testimonials" role="menuitem">Testimonials</a>
-                            <a href="${this.basePath}index.html#aikido-world-alliance" role="menuitem">Aikido World Alliance</a>
-                            <a href="${this.basePath}index.html#training-commitment" role="menuitem">The Path</a>
-                            <a href="${this.basePath}index.html#who-thrives" role="menuitem">Who Thrives Here</a>
-                        </div>
+                    <div class="mobile-nav-item">
+                        <a href="${this.basePath}index.html#instructors">Our Instructors</a>
+                    </div>
+                    <div class="mobile-nav-item">
+                        <a href="${this.basePath}index.html#training">Training</a>
                     </div>
                     <div class="mobile-nav-item mobile-dropdown">
-                        <a href="${this.basePath}index.html#classes" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-training-dropdown">Training</a>
-                        <div class="mobile-dropdown-menu" id="mobile-training-dropdown" role="menu" aria-label="Training submenu">
-                            <a href="${this.basePath}index.html#classes" role="menuitem">Adult Training</a>
-                            <a href="${this.basePath}index.html#kids-training" role="menuitem">Kids Training (Ages 6-12)</a>
-                            <a href="${this.basePath}index.html#gallery" role="menuitem">Training Gallery</a>
-                        </div>
-                    </div>
-                    <div class="mobile-nav-item mobile-dropdown">
-                        <a href="${this.basePath}index.html#philosophy-community" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-philosophy-dropdown">Philosophy and Practice</a>
+                        <a href="${this.basePath}pages/what-is-shoshin.html" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-philosophy-dropdown">Philosophy</a>
                         <div class="mobile-dropdown-menu" id="mobile-philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
                             <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
                             <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
@@ -139,7 +115,7 @@ class UniversalNavigation {
                         </div>
                     </div>
                     <div class="mobile-nav-item">
-                        <a href="${this.basePath}index.html#new-student">New Student</a>
+                        <a href="${this.basePath}index.html#testimonials">Student Experiences</a>
                     </div>
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
