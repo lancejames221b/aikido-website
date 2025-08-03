@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instructor Profiles - Genshinkan Aikido</title>
+    <meta name="description" content="Meet our Aikido instructors trained under the late Fumio Toyoda Shihan. Traditional instruction in the East Village, NYC.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288051124-0NMH8I2T53NJCLERQVJR/favicon.ico?format=100w" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Include Universal Navigation -->
+    <script src="../js/universal-nav.js"></script>
+    
+    <style>
+        /* Traditional Japanese color palette */
+        :root {
+            --sumi-black: #2C2C2C;
+            --charcoal-gray: #2c2c2c;
+            --warm-brown: #654321;
+            --muted-gold: #B8860B;
+            --washi-white: #ffffff;
+            --tatami-beige: #e6ddd4;
+            --bamboo-green: #4a5d23;
+            --zen-gray: #8a8a8a;
+            --ink-blue: #1B365D;
+        }
+
+        body {
+            font-family: 'Lato', 'Noto Sans JP', sans-serif;
+            color: var(--charcoal-gray);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: var(--washi-white);
+            padding-top: 120px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .page-title {
+            font-family: 'Manrope', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--sumi-black);
+            margin-bottom: 1rem;
+        }
+
+        .japanese-subtitle {
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', serif;
+            font-size: 1.5rem;
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+        }
+
+        .instructor-section {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--warm-brown);
+        }
+
+        .instructor-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .instructor-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .instructor-info h3 {
+            color: var(--warm-brown);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .instructor-title {
+            color: var(--sumi-black);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .instructor-rank {
+            color: var(--warm-brown);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .instructor-philosophy {
+            margin: 2rem 0;
+        }
+
+        .instructor-philosophy h4 {
+            color: var(--sumi-black);
+            margin-bottom: 1rem;
+        }
+
+        .instructor-philosophy blockquote {
+            font-style: italic;
+            color: #555;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-left: 4px solid var(--muted-gold);
+            margin: 1rem 0;
+        }
+
+        .instructor-background {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .lineage-note {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 12px;
+            font-style: italic;
+            color: var(--warm-brown);
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .back-link a {
+            color: var(--warm-brown);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 24px;
+            border: 2px solid var(--warm-brown);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background: var(--warm-brown);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .instructor-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .instructor-photo {
+                margin: 0 auto;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .instructor-section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Universal Navigation -->
+    <div id="universal-navigation"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Instructors</h1>
+            <div class="japanese-subtitle">指導者</div>
+            <p>Meet our dedicated instructors, all trained under the late Fumio Toyoda Shihan</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Gary Wagener -->
+        <section class="instructor-section">
+            <div class="instructor-header">
+                <img src="../images/instructors/gary-wagener.jpg" alt="Gary Wagener Sensei" class="instructor-photo">
+                <div class="instructor-info">
+                    <h3>Gary Wagener</h3>
+                    <div class="instructor-title">Chief Instructor/Dojo-Cho</div>
+                    <div class="instructor-rank">Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan</div>
+                </div>
+            </div>
+            
+            <div class="instructor-philosophy">
+                <h4>Philosophy</h4>
+                <blockquote>
+                    "The centering and harmonious aspect of daily practice is what originally and continually draws Mr. Wagener to aikido. After training for some time students begin to notice their everyday movements change, their breathing changes, and their daily communication changes. This injection of focused harmony and budo spirit begin to manifest itself through the understanding of aikido. Mr. Wagener's goal as a practitioner and instructor is to help students understand the foundations and find joy in their training."
+                </blockquote>
+            </div>
+            
+            <div class="instructor-background">
+                <h4>Background</h4>
+                <p>In addition to his training and instructing at Genshinkan Aikido Dojo, Mr. Wagener has taught aikido programs to underprivileged children in New York Public Schools.</p>
+            </div>
+        </section>
+
+        <!-- Robert Hoff -->
+        <section class="instructor-section">
+            <div class="instructor-header">
+                <img src="../images/instructors/robert-hoff.jpg" alt="Robert Hoff Sensei" class="instructor-photo">
+                <div class="instructor-info">
+                    <h3>Robert Hoff</h3>
+                    <div class="instructor-title">Instructor</div>
+                    <div class="instructor-rank">Yondan (4th degree black belt) Aikikai, recognized by Hombu dojo in Japan</div>
+                </div>
+            </div>
+            
+            <div class="instructor-philosophy">
+                <h4>Philosophy</h4>
+                <blockquote>
+                    "I began training shortly after my introduction to Zen. I found in aikido a more physical and ultimately fulfilling means to similar ends – thinking and acting with compassion, existing more in the moment, being less attached to the ultimately transient nature of being. Aikido necessitates that the practitioner be supremely present, and it's that reward that sustains my practice."
+                </blockquote>
+            </div>
+            
+            <div class="instructor-background">
+                <h4>Background</h4>
+                <p>Mr. Hoff began his aikido training in Brooklyn, New York, under the instruction of Joseph Jarman Sensei. It was following an intensive period in the practice of Zen Buddhism that he became initially attracted to the art. In addition to his experience teaching aikido to both young people and adults, Mr. Hoff is a history teacher at a K-12 public school in Manhattan.</p>
+            </div>
+        </section>
+
+        <!-- Ariana Koblitz -->
+        <section class="instructor-section">
+            <div class="instructor-header">
+                <img src="../images/instructors/ariana-koblitz.jpg" alt="Ariana Koblitz Sensei" class="instructor-photo">
+                <div class="instructor-info">
+                    <h3>Ariana Koblitz</h3>
+                    <div class="instructor-title">Instructor</div>
+                    <div class="instructor-rank">Nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan</div>
+                </div>
+            </div>
+            
+            <div class="instructor-philosophy">
+                <h4>Philosophy</h4>
+                <blockquote>
+                    "Each class presents a lesson she had not realized she needed that day: a nuance in body movement, posture, a clarity of mind. Ariana celebrates the principles she discovers on the mat. Be present and focus on your partner, move in harmony with them because you are both aiming for a shared outcome of peace, react only to what is presented to you with the techniques you are slowly adding to your toolbox."
+                </blockquote>
+            </div>
+            
+            <div class="instructor-background">
+                <h4>Background</h4>
+                <p>Mrs. Koblitz joined the dojo when she first moved to New York. Training the heart, mind, and body at Genshinkan quickly became a strong base to build up from amidst the constant shifts and pivots necessary living in NYC. These provide endless inspiration for her work in experience design.</p>
+            </div>
+        </section>
+
+        <!-- Sarah Antal -->
+        <section class="instructor-section">
+            <div class="instructor-header">
+                <img src="../images/instructors/sarah-antal.jpg" alt="Sarah Antal Sensei" class="instructor-photo">
+                <div class="instructor-info">
+                    <h3>Sarah Antal</h3>
+                    <div class="instructor-title">Instructor, Dojo-Cho, Genshinkan White Plains</div>
+                    <div class="instructor-rank">Nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan</div>
+                </div>
+            </div>
+            
+            <div class="instructor-philosophy">
+                <h4>Philosophy</h4>
+                <blockquote>
+                    "I first started Aikido because I missed being a student. I was never into martial arts, but the movement in Aikido reminded me so much of dance that I was immediately drawn to it. Just like in my classical dance training, the emphasis Aikido lays on very specific footwork is key. It's an Art that keeps unfolding and revealing itself, so one is a student forever!"
+                </blockquote>
+            </div>
+            
+            <div class="instructor-background">
+                <h4>Background</h4>
+                <p>She began her Aikido training at Genshinkan Aikido of Manhattan, where she continues to practice under the tutelage of Gary Wagener Sensei. In addition to instructing Aikido, Mrs. Antal also operates a successful dance studio where she teaches ballet classes.</p>
+            </div>
+        </section>
+
+        <!-- Ian Antal -->
+        <section class="instructor-section">
+            <div class="instructor-header">
+                <img src="../images/instructors/ian-antal.jpg" alt="Ian Antal Sensei" class="instructor-photo">
+                <div class="instructor-info">
+                    <h3>Ian Antal</h3>
+                    <div class="instructor-title">Instructor, Chief Instructor, Genshinkan White Plains</div>
+                    <div class="instructor-rank">Nidan (second-degree black belt) Aikikai, recognized by Hombu dojo in Japan</div>
+                </div>
+            </div>
+            
+            <div class="instructor-philosophy">
+                <h4>Philosophy</h4>
+                <blockquote>
+                    "Aikido is known as the 'Art of Peace' and propagates that 'competition is self-defeating'. The paradox behind a martial art combined with a philosophy of harmony will never cease to be a source of puzzlement and fascination."
+                </blockquote>
+            </div>
+            
+            <div class="instructor-background">
+                <h4>Background</h4>
+                <p>His training began and continues at Genshinkan Aikido of Manhattan, where he served as Gary Wagener Sensei's first Soto Deshi. In 2018, Mr. Antal was bestowed the honor of opening the first satellite Genshinkan dojo in White Plains, NY where he holds the position of Chief Instructor. Outside the dojo, Mr. Antal is the Executive Director of City Center Dance in White Plains, NY.</p>
+            </div>
+        </section>
+
+        <!-- Lineage Note -->
+        <div class="lineage-note">
+            <p><strong>All instructors trained under the late Fumio Toyoda Shihan</strong></p>
+            <p>Connected to Aikikai Foundation, Aikido World Headquarters in Tokyo, Japan</p>
+        </div>
+
+        <!-- Back Link -->
+        <div class="back-link">
+            <a href="../index.html">← Back to Home</a>
+        </div>
+    </main>
+</body>
+</html>

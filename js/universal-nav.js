@@ -20,7 +20,7 @@ class UniversalNavigation {
             { file: 'honor-values.html', name: 'Honor & Values', label: 'Honor & Values' },
             { file: 'traditional-values.html', name: 'Traditions', label: 'Traditions' },
             { file: 'health-and-safety.html', name: 'Health & Safety', label: 'Health & Safety' },
-            { file: 'adult-beginners-journey.html', name: 'Training Examples', label: 'Training Examples' }
+            { file: 'student-stories.html', name: 'Student Stories', label: 'Student Stories' }
         ];
 
         const subnavItems = philosophyPages.map(page => {
@@ -73,7 +73,7 @@ class UniversalNavigation {
                                 <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
                                 <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
                                 <a href="${this.basePath}pages/health-and-safety.html" role="menuitem">Health & Safety</a>
-                                <a href="${this.basePath}pages/adult-beginners-journey.html" role="menuitem">Student Stories</a>
+                                <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
                             </div>
                         </div>
                         <div class="nav-item">
@@ -111,7 +111,7 @@ class UniversalNavigation {
                             <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
                             <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
                             <a href="${this.basePath}pages/health-and-safety.html" role="menuitem">Health & Safety</a>
-                            <a href="${this.basePath}pages/adult-beginners-journey.html" role="menuitem">Student Stories</a>
+                            <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
                         </div>
                     </div>
                     <div class="mobile-nav-item">
