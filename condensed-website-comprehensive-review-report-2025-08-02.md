@@ -20,11 +20,11 @@ This report documents the comprehensive content condensation of the Genshinkan A
 - **Traditional Japanese terminology with kanji**
 
 ### ✅ PRESERVED - Instructor Information (Exact Details)
-1. **Gary Wagener** - Yondan (4th Dan) - Dojo-Cho
-2. **Ian Antal** - Nidan (2nd Dan)
-3. **Sarah Antal** - Nidan (2nd Dan)
-4. **Rebecca Masur** - Nidan (2nd Dan)
-5. **Kevin Hart** - Nidan (2nd Dan)
+1. **Gary Wagener** - Yondan (4th Dan) - Chief Instructor/Dojo-Cho
+2. **Robert Hoff** - Yondan (4th Dan) - Instructor
+3. **Ariana Koblitz** - Nidan (2nd Dan) - Instructor
+4. **Sarah Antal** - Nidan (2nd Dan) - White Plains Dojo-Cho
+5. **Ian Antal** - Nidan (2nd Dan) - White Plains Chief Instructor
 
 *Note: All instructors trained under the late Fumio Toyoda Shihan*
 
