@@ -140,6 +140,27 @@
             position: relative;
         }
 
+        /* Dynamic Hero Animations */
+        .dynamic-hero .hero-main-text,
+        .dynamic-hero .hero-subtitle-text,
+        .dynamic-hero #hero-japanese {
+            transition: opacity 1s ease-in-out, transform 0.8s ease-in-out;
+        }
+
+        .dynamic-hero.fade-out .hero-main-text,
+        .dynamic-hero.fade-out .hero-subtitle-text,
+        .dynamic-hero.fade-out #hero-japanese {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .dynamic-hero.fade-in .hero-main-text,
+        .dynamic-hero.fade-in .hero-subtitle-text,
+        .dynamic-hero.fade-in #hero-japanese {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .hero-content {
             text-align: center;
             z-index: 2;
@@ -430,9 +451,10 @@
         <div class="sqs-layout">
             <div class="hero-content">
                 <div class="hero-subtitle">Traditional Aikido in the East Village</div>
-                <h1 class="hero-title">Embrace Shoshin<br>
-                    <span class="japanese-calligraphy" style="color: var(--muted-gold); font-size: 1.2em; display: block; margin: 0.3em 0;">初心</span>
-                    <span style="font-size: 0.6em; font-weight: 400; letter-spacing: 0.1em;">The Beginner's Mind</span>
+                <h1 class="hero-title dynamic-hero" id="dynamic-hero">
+                    <span class="hero-main-text" id="hero-main-text">Embrace Shoshin</span><br>
+                    <span class="japanese-calligraphy" id="hero-japanese" style="color: var(--muted-gold); font-size: 1.2em; display: block; margin: 0.3em 0;">初心</span>
+                    <span class="hero-subtitle-text" id="hero-subtitle-text" style="font-size: 0.6em; font-weight: 400; letter-spacing: 0.1em;">The Beginner's Mind</span>
                 </h1>
                 
                 <blockquote class="hero-quote">
@@ -815,5 +837,75 @@
             <a href="#signup-form" class="sticky-footer-btn">Schedule Free Session</a>
         </div>
     </div>
+    
+    <script>
+        // Dynamic Hero Philosophy Rotation
+        document.addEventListener('DOMContentLoaded', function() {
+            const philosophyMessages = [
+                {
+                    main: "Embrace Shoshin",
+                    japanese: "初心", 
+                    subtitle: "The Beginner's Mind"
+                },
+                {
+                    main: "Learn the Art of Peace",
+                    japanese: "平和の武道",
+                    subtitle: "Harmony Through Strength"
+                },
+                {
+                    main: "Train with Honor",
+                    japanese: "礼",
+                    subtitle: "Integrity in Every Action"
+                },
+                {
+                    main: "Follow Traditional Values",
+                    japanese: "伝統",
+                    subtitle: "Wisdom of the Ancestors"
+                },
+                {
+                    main: "Practice Health & Safety",
+                    japanese: "安全",
+                    subtitle: "Body, Mind, and Spirit"
+                },
+                {
+                    main: "Share Student Stories", 
+                    japanese: "生徒の声",
+                    subtitle: "Community of Growth"
+                }
+            ];
+
+            let currentIndex = 0;
+            const heroMainText = document.getElementById('hero-main-text');
+            const heroJapanese = document.getElementById('hero-japanese');
+            const heroSubtitleText = document.getElementById('hero-subtitle-text');
+            const dynamicHero = document.getElementById('dynamic-hero');
+
+            function rotateMessage() {
+                // Start fade out
+                dynamicHero.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    // Change content
+                    currentIndex = (currentIndex + 1) % philosophyMessages.length;
+                    const message = philosophyMessages[currentIndex];
+                    
+                    heroMainText.textContent = message.main;
+                    heroJapanese.textContent = message.japanese;
+                    heroSubtitleText.textContent = message.subtitle;
+                    
+                    // Start fade in
+                    dynamicHero.classList.remove('fade-out');
+                    dynamicHero.classList.add('fade-in');
+                    
+                    setTimeout(() => {
+                        dynamicHero.classList.remove('fade-in');
+                    }, 1000);
+                }, 800);
+            }
+
+            // Start rotation after initial display
+            setInterval(rotateMessage, 4000); // Change every 4 seconds
+        });
+    </script>
 </body>
 </html>
