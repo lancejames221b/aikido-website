@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Gallery - Genshinkan Aikido</title>
+    <meta name="description" content="View photos from our training sessions at Genshinkan Aikido. Experience the atmosphere of traditional Aikido practice in Manhattan.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 60px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .japanese-characters {
+            font-size: 3.5rem;
+            color: #8B4513;
+            margin: 1.5rem 0;
+            font-weight: 300;
+        }
+
+        .hero-title {
+            font-family: 'Manrope', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: #f5f5f5;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .gallery-caption h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .gallery-caption p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Featured Gallery - Larger images */
+        .featured-gallery {
+            margin-bottom: 60px;
+        }
+
+        .featured-title {
+            font-family: 'Manrope', serif;
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .featured-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 16/10;
+        }
+
+        .featured-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Training Info Section */
+        .training-info {
+            background: #f8f9fa;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+
+        .info-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .info-title {
+            font-family: 'Manrope', serif;
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-text {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Manrope', serif;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background: #8B4513;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #8B4513;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #A0522D;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            cursor: pointer;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .japanese-characters {
+                font-size: 2.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-item {
+                aspect-ratio: 4/3;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                aspect-ratio: 1/1;
+            }
+        }
+    </style>
+</head>
+<body class="gallery-page">
+    <!-- Universal Navigation -->
+    <div id="universal-navigation"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="japanese-characters">稽古風景</div>
+                    <h1 class="hero-title">Training Gallery</h1>
+                    <p class="hero-description">
+                        Experience the atmosphere of traditional Aikido training at Genshinkan Dojo through our collection of practice photos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="container">
+                <!-- Featured Gallery -->
+                <div class="featured-gallery">
+                    <h2 class="featured-title">Featured Training Moments</h2>
+                    <div class="featured-grid">
+                        <div class="featured-item" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg')">
+                            <img src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg?format=1500w" 
+                                 alt="Aikido training session at Genshinkan Dojo" 
+                                 loading="lazy">
+                        </div>
+                        <div class="featured-item" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG')">
+                            <img src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG?format=1500w" 
+                                 alt="Aikido technique demonstration" 
+                                 loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regular Gallery Grid -->
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg')">
+                        <img src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288038537-CHIYZEI09PE5JE4J2VT9/257625142_1930849947119190_1500253789348191168_n.jpg?format=750w" 
+                             alt="Dojo community gathering" 
+                             loading="lazy">
+                        <div class="gallery-caption">
+                            <h3>Dojo Community</h3>
+                            <p>Our supportive training environment</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg')">
+                        <img src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725203643-X4W0U67W9VMHBZ49CPHS/DSC_7584.jpg?format=750w" 
+                             alt="Sensei demonstrating technique" 
+                             loading="lazy">
+                        <div class="gallery-caption">
+                            <h3>Technical Instruction</h3>
+                            <p>Precise technique demonstration</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG')">
+                        <img src="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG?format=750w" 
+                             alt="Students practicing Aikido techniques" 
+                             loading="lazy">
+                        <div class="gallery-caption">
+                            <h3>Partner Practice</h3>
+                            <p>Harmonious technique application</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Info Section -->
+        <section class="training-info">
+            <div class="container">
+                <div class="info-content">
+                    <h2 class="info-title">Traditional Training Atmosphere</h2>
+                    <p class="info-text">
+                        These images capture the essence of our training at Genshinkan Aikido. 
+                        Our practice emphasizes proper technique, mutual respect, and the development 
+                        of both physical and mental discipline through traditional Aikido methods.
+                    </p>
+                    <p class="info-text">
+                        Every class offers an opportunity to deepen your understanding of Aikido principles 
+                        while training in a supportive community environment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Experience It Yourself</h2>
+                    <p class="cta-text">
+                        Join us on the mat and become part of our training community.
+                    </p>
+                    <a href="../index.html#signup-form" class="btn-primary">Schedule Your First Class</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Full size training photo">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Genshinkan Aikido Manhattan</strong></p>
+                <p>62 E 4th St, Fl 3, New York, NY 10003</p>
+                <p>Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
+                <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
+                <p style="margin-top: 2rem; font-style: italic; color: #8B4513; font-size: 1.1rem;">
+                    In Aiki
+                </p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
+                    &copy; 2025 Genshinkan Aikido. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lightbox functionality
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Prevent image click from closing lightbox
+        document.querySelector('.lightbox-content').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    </script>
+
+    <script src="../js/universal-nav.js"></script>
+</body>
+</html>

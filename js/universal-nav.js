@@ -65,6 +65,7 @@ class UniversalNavigation {
                                 <a href="${this.basePath}index.html#instructors" role="menuitem">Our Instructors</a>
                                 <a href="${this.basePath}pages/instructor-profiles.html" role="menuitem">Instructor Profiles</a>
                                 <a href="${this.basePath}pages/aikido-world-alliance.html" role="menuitem">Aikido World Alliance</a>
+                                <a href="${this.basePath}pages/training-gallery.html" role="menuitem">Training Gallery</a>
                                 <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
                             </div>
                         </div>
@@ -105,6 +106,7 @@ class UniversalNavigation {
                             <a href="${this.basePath}index.html#instructors" role="menuitem">Our Instructors</a>
                             <a href="${this.basePath}pages/instructor-profiles.html" role="menuitem">Instructor Profiles</a>
                             <a href="${this.basePath}pages/aikido-world-alliance.html" role="menuitem">Aikido World Alliance</a>
+                            <a href="${this.basePath}pages/training-gallery.html" role="menuitem">Training Gallery</a>
                             <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
                         </div>
                     </div>
