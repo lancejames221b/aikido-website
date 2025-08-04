@@ -428,6 +428,18 @@
             font-weight: 600;
         }
 
+        /* Hero Background for Philosophy Pages */
+        .philosophy-hero {
+            background: 
+                linear-gradient(135deg, rgba(107,68,35,0.75) 0%, rgba(184,134,11,0.65) 100%),
+                url('https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741725368243-J3DJZN3C4WHLJTO1VV6B/DSC_2437-Edit.JPG?format=2500w') center/cover no-repeat;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
         /* Main Content */
         .main-content {
             padding: 3rem 0;
@@ -572,18 +584,23 @@
 
 
 
-    <!-- Main Content -->
-    <main class="main-content">
+    <!-- Hero Background Section -->
+    <section class="philosophy-hero">
         <div class="container">
-            <!-- Page Header -->
-            <div class="page-header">
-                <h1 class="page-title">The Art of Peace</h1>
-                <div class="japanese-subtitle">平和の武道</div>
-                <p class="page-intro">
+            <div class="page-header" style="text-align: center; color: white; margin-bottom: 0;">
+                <h1 class="page-title" style="color: white; font-size: 3rem; margin-bottom: 1rem;">The Art of Peace</h1>
+                <div class="japanese-subtitle" style="color: rgba(255,255,255,0.9); font-size: 2rem; margin: 1rem 0;">平和の武道</div>
+                <p class="page-intro" style="color: rgba(255,255,255,0.9); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
                     Aikido, literally meaning "the way of unifying life energy," is known as the Art of Peace. 
                     O-Sensei taught that true victory is not defeating others, but conquering the discord within oneself.
                 </p>
             </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
 
             <!-- What is the Art of Peace -->
             <section class="content-section">
