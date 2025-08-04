@@ -3,14 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shugyo: Austere Training and Traditional Values | Genshinkan Aikido</title>
-    <meta name="description" content="Discover Shugyo (修行) - the intense physical and spiritual training that defines traditional Aikido. Learn how austere practice cultivates character and develops true martial wisdom.">
+    <title>Rooted in Ancient Traditions | Genshinkan Aikido</title>
+    <meta name="description" content="Master the rigorous protocols and martial discipline upheld at Genshinkan Aikido. Learn the demanding etiquette, lineage respect, and warrior codes that forge true martial character.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            /* Primary Brand Colors */
+            --warm-brown: #8B4513;
+            --muted-gold: #B8860B;
+            --charcoal-gray: #2c3e50;
+            --zen-gray: #666;
+            --washi-white: #ffffff;
+            --tatami-beige: #f8f9fa;
+            
+            /* Background System */
+            --subtle-gradient: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            --border-accent: rgba(139, 69, 19, 0.2);
+            
+            /* Shadow System */
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --shadow-heavy: rgba(0, 0, 0, 0.25);
+            
+            /* Typography Scale */
+            --font-size-hero: clamp(2.5rem, 5vw, 3.5rem);
+            --font-size-section: 2.2rem;
+            --font-size-card: 1.3rem;
+            --font-size-body: 1.1rem;
+            
+            /* Spacing System */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -82,7 +114,7 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: white;
+            background: var(--washi-white);
             min-width: 180px;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -111,8 +143,8 @@
         }
 
         .cta-button {
-            background: #8B4513;
-            color: white;
+            background: var(--warm-brown);
+            color: var(--washi-white);
             padding: 0.7rem 1.5rem;
             border-radius: 25px;
             text-decoration: none;
@@ -133,8 +165,8 @@
         /* Japanese Characters */
         .japanese-characters {
             font-size: 4rem;
-            color: #8B4513;
-            margin: 2rem 0;
+            color: var(--warm-brown);
+            margin: var(--spacing-md) 0;
             font-weight: 300;
             text-align: center;
         }
@@ -167,9 +199,9 @@
 
         .hero-title {
             font-family: 'Manrope', serif;
-            font-size: 3rem;
+            font-size: var(--font-size-hero);
             font-weight: 600;
-            color: white;
+            color: var(--washi-white);
             margin-bottom: 1.5rem;
             line-height: 1.2;
         }
@@ -184,15 +216,17 @@
         /* Traditional Protocol Section */
         .protocol-section {
             padding: 80px 0;
-            background: white;
+            background: var(--washi-white);
         }
 
         .section-title {
             font-family: 'Manrope', serif;
-            font-size: 2.5rem;
+            font-size: var(--font-size-section);
+            font-weight: 600;
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 3rem;
+            color: var(--charcoal-gray);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.2;
         }
 
         .protocol-content {
@@ -205,7 +239,7 @@
 
         .protocol-text {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--zen-gray);
             line-height: 1.7;
         }
 
@@ -214,54 +248,55 @@
             padding: 3rem;
             border-radius: 15px;
             text-align: center;
-            border-left: 4px solid #8B4513;
+            border-left: 4px solid var(--warm-brown);
         }
 
         .quote-text {
             font-family: 'Manrope', serif;
             font-size: 1.6rem;
             font-style: italic;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1rem;
             line-height: 1.3;
         }
 
         .quote-context {
             font-size: 1rem;
-            color: #8B4513;
+            color: var(--warm-brown);
             font-weight: 500;
         }
 
         /* Etiquette Guidelines Section */
         .etiquette-section {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: var(--tatami-beige);
         }
 
         .etiquette-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
         }
 
         .etiquette-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            background: var(--washi-white);
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border-left: 4px solid var(--warm-brown);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .etiquette-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-medium);
         }
 
         .etiquette-icon {
             width: 60px;
             height: 60px;
-            background: #8B4513;
+            background: var(--warm-brown);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -274,13 +309,13 @@
         .etiquette-title {
             font-family: 'Manrope', serif;
             font-size: 1.4rem;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1rem;
             text-align: center;
         }
 
         .etiquette-description {
-            color: #666;
+            color: var(--zen-gray);
             line-height: 1.6;
             text-align: center;
         }
@@ -288,7 +323,7 @@
         /* Lineage Section */
         .lineage-section {
             padding: 80px 0;
-            background: white;
+            background: var(--washi-white);
         }
 
         .lineage-content {
@@ -316,31 +351,31 @@
         }
 
         .lineage-level:hover {
-            border-color: #8B4513;
+            border-color: var(--warm-brown);
             transform: translateY(-2px);
         }
 
         .lineage-title {
             font-family: 'Manrope', serif;
             font-size: 1.3rem;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 0.5rem;
         }
 
         .lineage-name {
             font-size: 1.1rem;
-            color: #8B4513;
+            color: var(--warm-brown);
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .lineage-description {
-            color: #666;
+            color: var(--zen-gray);
             font-size: 0.95rem;
         }
 
         .lineage-arrow {
-            color: #8B4513;
+            color: var(--warm-brown);
             font-size: 1.5rem;
         }
 
@@ -358,27 +393,27 @@
 
         .japanese-term {
             font-size: 2rem;
-            color: #8B4513;
+            color: var(--warm-brown);
             font-weight: 600;
             margin-bottom: 1rem;
         }
 
         .term-translation {
             font-size: 1.2rem;
-            color: #666;
+            color: var(--zen-gray);
             font-style: italic;
             margin-bottom: 2rem;
         }
 
         .philosophy-explanation {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--zen-gray);
             line-height: 1.7;
             margin-bottom: 2rem;
         }
 
         .daily-application {
-            background: white;
+            background: var(--washi-white);
             padding: 2rem;
             border-radius: 15px;
             margin-top: 2rem;
@@ -387,28 +422,29 @@
         .application-title {
             font-family: 'Manrope', serif;
             font-size: 1.5rem;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1rem;
         }
 
         .application-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
             text-align: left;
         }
 
         .application-item {
             padding: 1rem;
-            background: #f8f9fa;
+            background: var(--tatami-beige);
             border-radius: 8px;
-            border-left: 3px solid #8B4513;
+            border-left: 3px solid var(--warm-brown);
         }
 
         /* CTA Section */
         .cta-section {
             padding: 80px 0;
-            background: white;
+            background: var(--washi-white);
             text-align: center;
         }
 
@@ -420,19 +456,19 @@
         .cta-title {
             font-family: 'Manrope', serif;
             font-size: 2.2rem;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1.5rem;
         }
 
         .cta-text {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--zen-gray);
             margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .btn-primary {
-            background: #8B4513;
+            background: var(--warm-brown);
             color: white;
             padding: 1rem 2rem;
             border-radius: 30px;
@@ -440,7 +476,7 @@
             font-weight: 500;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            border: 2px solid #8B4513;
+            border: 2px solid var(--warm-brown);
             display: inline-block;
         }
 
@@ -452,7 +488,7 @@
 
         /* Footer */
         .footer {
-            background: #2c3e50;
+            background: var(--charcoal-gray);
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -468,7 +504,7 @@
         }
 
         .footer a {
-            color: #8B4513;
+            color: var(--warm-brown);
             text-decoration: none;
         }
 
@@ -493,7 +529,7 @@
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: var(--font-size-section);
             }
 
             .lineage-hierarchy {
@@ -518,62 +554,17 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="japanese-characters">修行</div>
-                    <div class="hero-subtitle">Austere Training</div>
-                    <h1 class="hero-title">Shugyo: The Way of Austere Training</h1>
+                    <div class="japanese-characters">伝統</div>
+                    <div class="hero-subtitle">Traditional Experience</div>
+                    <h1 class="hero-title">Rooted in Ancient Traditions</h1>
                     <p class="hero-description">
-                        Shugyo (修行) is the intense physical and spiritual training that defines traditional Aikido. Through sustained discipline, rigorous practice, and commitment to character development, students forge the inner strength required for true martial mastery.
+                        Master the rigorous protocols and martial discipline upheld at Genshinkan Aikido. We enforce the demanding etiquette, precise hierarchy, and warrior codes that forge character through traditional budo training.
                     </p>
                 </div>
             </div>
         </section>
 
 
-
-        <!-- Shugyo: The Foundation Section -->
-        <section class="shugyo-foundation" style="padding: 80px 0; background: #f8f9fa;">
-            <div class="container">
-                <h2 class="section-title">Shugyo: The Foundation of Traditional Training</h2>
-                <div style="text-align: center; margin: 1rem 0;">
-                    <span class="japanese-calligraphy" style="color: var(--warm-brown); font-size: 18px;">修行</span>
-                </div>
-                
-                <div class="shugyo-explanation" style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 3rem;">
-                    <p style="font-size: 1.2rem; color: #555; line-height: 1.7; margin-bottom: 2rem;">
-                        Shugyo is more than training—it is the deliberate cultivation of character through sustained hardship and dedication. 
-                        This austere practice develops the inner strength necessary to maintain Shoshin (beginner's mind) even as skill develops.
-                    </p>
-                    
-                    <div class="quote-block" style="background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%); padding: 2rem; border-radius: 15px; border-left: 4px solid #8B4513; font-style: italic; margin: 2rem 0;">
-                        "Aikido is shugyo: an intense physical and spiritual training to perfect human character and develop true wisdom. More than any technique, it is this spirit of shugyo which defines true Aikido training."
-                        <div style="margin-top: 1rem; font-weight: 600; color: #8B4513;">— Aikido World Alliance Student Guide</div>
-                    </div>
-                </div>
-                
-                <div class="shugyo-principles" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
-                    <div class="shugyo-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
-                        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Physical Discipline</h3>
-                        <p style="color: #666; line-height: 1.6;">
-                            Regular attendance and commitment to rigorous physical practice. The body becomes the forge where character is shaped through sustained effort and endurance.
-                        </p>
-                    </div>
-                    
-                    <div class="shugyo-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
-                        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Mental Fortitude</h3>
-                        <p style="color: #666; line-height: 1.6;">
-                            Developing the strength to maintain openness and humility despite accumulating experience. Shugyo trains the mind to embrace difficulty as growth.
-                        </p>
-                    </div>
-                    
-                    <div class="shugyo-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
-                        <h3 style="color: #2c3e50; margin-bottom: 1rem;">Character Refinement</h3>
-                        <p style="color: #666; line-height: 1.6;">
-                            Through sustained practice, impurities of ego and impatience are gradually refined away, revealing the natural wisdom and compassion beneath.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Core Bushido Values Section -->
         <section class="bushido-section">
@@ -584,98 +575,98 @@
                         <span class="japanese-calligraphy" style="color: var(--warm-brown); font-size: 18px;">武士道</span>
                     </div>
                     <p class="philosophy-explanation">
-                        Shugyo training develops character through essential bushido principles that emerge through austere practice and dedicated study.
+                        Traditional Aikido training develops character through four essential bushido principles that shape both technique and daily life.
                     </p>
                     
-                    <div class="virtues-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                    <div class="virtues-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-md); margin: var(--spacing-md) 0;">
                         
-                        <div class="virtue-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
+                        <div class="virtue-card" style="background: var(--washi-white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
                             <div class="virtue-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
                                 <div class="virtue-kanji" style="font-size: 2rem; color: var(--warm-brown); margin-right: 1rem;">義</div>
                                 <div>
-                                    <h3 class="virtue-title" style="color: #2c3e50; margin: 0;">Gi - Rectitude</h3>
-                                    <div class="virtue-translation" style="font-size: 0.9rem; color: #666;">Moral Courage</div>
+                                    <h3 class="virtue-title" style="color: var(--charcoal-gray); margin: 0;">Gi - Rectitude</h3>
+                                    <div class="virtue-translation" style="font-size: 0.9rem; color: var(--zen-gray);">Moral Courage</div>
                                 </div>
                             </div>
-                            <p class="virtue-description" style="color: #666; line-height: 1.7;">
+                            <p class="virtue-description" style="color: var(--zen-gray); line-height: 1.7;">
                                 The ability to make ethical decisions under pressure. In training, this means choosing the harder path of growth over the easier path of comfort.
                             </p>
                         </div>
 
-                        <div class="virtue-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
+                        <div class="virtue-card" style="background: var(--washi-white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
                             <div class="virtue-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
                                 <div class="virtue-kanji" style="font-size: 2rem; color: var(--warm-brown); margin-right: 1rem;">勇</div>
                                 <div>
-                                    <h3 class="virtue-title" style="color: #2c3e50; margin: 0;">Yu - Courage</h3>
-                                    <div class="virtue-translation" style="font-size: 0.9rem; color: #666;">Heroic Bravery</div>
+                                    <h3 class="virtue-title" style="color: var(--charcoal-gray); margin: 0;">Yu - Courage</h3>
+                                    <div class="virtue-translation" style="font-size: 0.9rem; color: var(--zen-gray);">Heroic Bravery</div>
                                 </div>
                             </div>
-                            <p class="virtue-description" style="color: #666; line-height: 1.7;">
+                            <p class="virtue-description" style="color: var(--zen-gray); line-height: 1.7;">
                                 Physical and moral bravery. Training demands the courage to be thrown, to fail publicly, and to persist through discouragement.
                             </p>
                         </div>
 
-                        <div class="virtue-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
+                        <div class="virtue-card" style="background: var(--washi-white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
                             <div class="virtue-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
                                 <div class="virtue-kanji" style="font-size: 2rem; color: var(--warm-brown); margin-right: 1rem;">仁</div>
                                 <div>
-                                    <h3 class="virtue-title" style="color: #2c3e50; margin: 0;">Jin - Benevolence</h3>
-                                    <div class="virtue-translation" style="font-size: 0.9rem; color: #666;">Compassion</div>
+                                    <h3 class="virtue-title" style="color: var(--charcoal-gray); margin: 0;">Jin - Benevolence</h3>
+                                    <div class="virtue-translation" style="font-size: 0.9rem; color: var(--zen-gray);">Compassion</div>
                                 </div>
                             </div>
-                            <p class="virtue-description" style="color: #666; line-height: 1.7;">
+                            <p class="virtue-description" style="color: var(--zen-gray); line-height: 1.7;">
                                 Kindness balanced with strength. We train hard while maintaining responsibility for our partners' development and safety through disciplined practice.
                             </p>
                         </div>
 
-                        <div class="virtue-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
+                        <div class="virtue-card" style="background: var(--washi-white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
                             <div class="virtue-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
                                 <div class="virtue-kanji" style="font-size: 2rem; color: var(--warm-brown); margin-right: 1rem;">礼</div>
                                 <div>
-                                    <h3 class="virtue-title" style="color: #2c3e50; margin: 0;">Rei - Respect</h3>
-                                    <div class="virtue-translation" style="font-size: 0.9rem; color: #666;">Courtesy & Manners</div>
+                                    <h3 class="virtue-title" style="color: var(--charcoal-gray); margin: 0;">Rei - Respect</h3>
+                                    <div class="virtue-translation" style="font-size: 0.9rem; color: var(--zen-gray);">Courtesy & Manners</div>
                                 </div>
                             </div>
-                            <p class="virtue-description" style="color: #666; line-height: 1.7;">
+                            <p class="virtue-description" style="color: var(--zen-gray); line-height: 1.7;">
                                 Proper behavior and acknowledgment of others. Every bow, every protocol serves to cultivate humility and awareness.
                             </p>
                         </div>
 
-                        <div class="virtue-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
+                        <div class="virtue-card" style="background: var(--washi-white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
                             <div class="virtue-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
                                 <div class="virtue-kanji" style="font-size: 2rem; color: var(--warm-brown); margin-right: 1rem;">誠</div>
                                 <div>
-                                    <h3 class="virtue-title" style="color: #2c3e50; margin: 0;">Makoto - Honesty</h3>
-                                    <div class="virtue-translation" style="font-size: 0.9rem; color: #666;">Sincerity</div>
+                                    <h3 class="virtue-title" style="color: var(--charcoal-gray); margin: 0;">Makoto - Honesty</h3>
+                                    <div class="virtue-translation" style="font-size: 0.9rem; color: var(--zen-gray);">Sincerity</div>
                                 </div>
                             </div>
-                            <p class="virtue-description" style="color: #666; line-height: 1.7;">
+                            <p class="virtue-description" style="color: var(--zen-gray); line-height: 1.7;">
                                 Truthfulness in word and action. Training with complete effort, accepting feedback without defensiveness.
                             </p>
                         </div>
 
-                        <div class="virtue-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
+                        <div class="virtue-card" style="background: var(--washi-white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
                             <div class="virtue-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
                                 <div class="virtue-kanji" style="font-size: 2rem; color: var(--warm-brown); margin-right: 1rem;">名</div>
                                 <div>
-                                    <h3 class="virtue-title" style="color: #2c3e50; margin: 0;">Meiyo - Honor</h3>
-                                    <div class="virtue-translation" style="font-size: 0.9rem; color: #666;">Personal Dignity</div>
+                                    <h3 class="virtue-title" style="color: var(--charcoal-gray); margin: 0;">Meiyo - Honor</h3>
+                                    <div class="virtue-translation" style="font-size: 0.9rem; color: var(--zen-gray);">Personal Dignity</div>
                                 </div>
                             </div>
-                            <p class="virtue-description" style="color: #666; line-height: 1.7;">
+                            <p class="virtue-description" style="color: var(--zen-gray); line-height: 1.7;">
                                 Living according to principles even when no one is watching. Training with integrity in every technique.
                             </p>
                         </div>
 
-                        <div class="virtue-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B4513;">
+                        <div class="virtue-card" style="background: var(--washi-white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
                             <div class="virtue-header" style="display: flex; align-items: center; margin-bottom: 1rem;">
                                 <div class="virtue-kanji" style="font-size: 2rem; color: var(--warm-brown); margin-right: 1rem;">忠</div>
                                 <div>
-                                    <h3 class="virtue-title" style="color: #2c3e50; margin: 0;">Chugi - Loyalty</h3>
-                                    <div class="virtue-translation" style="font-size: 0.9rem; color: #666;">Devotion to Duty</div>
+                                    <h3 class="virtue-title" style="color: var(--charcoal-gray); margin: 0;">Chugi - Loyalty</h3>
+                                    <div class="virtue-translation" style="font-size: 0.9rem; color: var(--zen-gray);">Devotion to Duty</div>
                                 </div>
                             </div>
-                            <p class="virtue-description" style="color: #666; line-height: 1.7;">
+                            <p class="virtue-description" style="color: var(--zen-gray); line-height: 1.7;">
                                 Commitment to your training, your teachers, and your fellow students. Faithfulness to the art and its principles.
                             </p>
                         </div>
@@ -683,7 +674,7 @@
                     
                     <div style="background: rgba(139, 69, 19, 0.1); padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
                         <h3 style="color: var(--warm-brown); margin-bottom: 1rem;">Bushido in Daily Training</h3>
-                        <p style="color: #666; line-height: 1.7; max-width: 600px; margin: 0 auto;">
+                        <p style="color: var(--zen-gray); line-height: 1.7; max-width: 600px; margin: 0 auto;">
                             These virtues aren't abstract concepts—they're practical guidelines that shape every moment of training. 
                             Each class is an opportunity to develop these qualities through disciplined practice, honest effort, 
                             and respect for the art's transformative power.
@@ -722,7 +713,7 @@
                 <p>62 E 4th St, Fl 3, New York, NY 10003</p>
                 <p>Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
                 <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
-                <p style="margin-top: 2rem; font-style: italic; color: #8B4513; font-size: 1.1rem;">
+                <p style="margin-top: 2rem; font-style: italic; color: var(--warm-brown); font-size: 1.1rem;">
                     In Aiki
                 </p>
                 <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">

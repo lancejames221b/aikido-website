@@ -16,11 +16,11 @@ class UniversalNavigation {
         
         const philosophyPages = [
             { file: 'what-is-shoshin.html', name: 'What is Shoshin', label: 'What is Shoshin' },
+            { file: 'what-is-shugyo.html', name: 'What is Shugyo', label: 'What is Shugyo' },
             { file: 'the-art-of-peace.html', name: 'The Art of Peace', label: 'The Art of Peace' },
             { file: 'honor-values.html', name: 'Honor & Values', label: 'Honor & Values' },
             { file: 'traditional-values.html', name: 'Traditions', label: 'Traditions' },
-            { file: 'health-and-safety.html', name: 'Health & Safety', label: 'Health & Safety' },
-            { file: 'student-stories.html', name: 'Student Stories', label: 'Student Stories' }
+            { file: 'health-and-safety.html', name: 'Health & Safety', label: 'Health & Safety' }
         ];
 
         const subnavItems = philosophyPages.map(page => {
@@ -81,6 +81,7 @@ class UniversalNavigation {
                             <a href="${this.basePath}pages/what-is-shoshin.html" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy</a>
                             <div class="dropdown-menu" id="philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
                                 <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
+                                <a href="${this.basePath}pages/what-is-shugyo.html" role="menuitem">What is Shugyo</a>
                                 <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
                                 <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
                                 <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
@@ -127,6 +128,7 @@ class UniversalNavigation {
                         <a href="${this.basePath}pages/what-is-shoshin.html" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-philosophy-dropdown">Philosophy</a>
                         <div class="mobile-dropdown-menu" id="mobile-philosophy-dropdown" role="menu" aria-label="Philosophy submenu">
                             <a href="${this.basePath}pages/what-is-shoshin.html" role="menuitem">What is Shoshin</a>
+                            <a href="${this.basePath}pages/what-is-shugyo.html" role="menuitem">What is Shugyo</a>
                             <a href="${this.basePath}pages/the-art-of-peace.html" role="menuitem">The Art of Peace</a>
                             <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
                             <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>

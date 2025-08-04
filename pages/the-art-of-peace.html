@@ -7,15 +7,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --sumi-black: #2C2C2C;
-            --charcoal-gray: #2c2c2c;
+            /* Primary Brand Colors */
             --warm-brown: #8B4513;
             --muted-gold: #B8860B;
+            --charcoal-gray: #2c3e50;
+            --zen-gray: #666;
             --washi-white: #ffffff;
-            --tatami-beige: #e6ddd4;
+            --tatami-beige: #f8f9fa;
+            --sumi-black: #2C2C2C;
             --bamboo-green: #4a5d23;
-            --zen-gray: #8a8a8a;
             --ink-blue: #1B365D;
+            
+            /* Background System */
+            --subtle-gradient: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            --border-accent: rgba(139, 69, 19, 0.2);
+            
+            /* Shadow System */
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --shadow-heavy: rgba(0, 0, 0, 0.25);
+            
+            /* Typography Scale */
+            --font-size-hero: clamp(2.5rem, 5vw, 3.5rem);
+            --font-size-section: 2.2rem;
+            --font-size-card: 1.3rem;
+            --font-size-body: 1.1rem;
+            
+            /* Spacing System */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
         }
 
         * {
@@ -456,10 +479,10 @@
 
         .hero-title {
             font-family: 'Manrope', serif;
-            font-size: 3rem;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 1.5rem;
+            font-size: var(--font-size-hero);
+            font-weight: 700;
+            color: var(--washi-white);
+            margin-bottom: var(--spacing-sm);
             line-height: 1.2;
         }
 
@@ -526,11 +549,12 @@
 
         .section-title {
             font-family: 'Manrope', serif;
-            font-size: 2rem;
+            font-size: var(--font-size-section);
             font-weight: 600;
-            color: var(--warm-brown);
-            margin-bottom: 2rem;
+            color: var(--charcoal-gray);
+            margin-bottom: var(--spacing-lg);
             text-align: center;
+            line-height: 1.2;
         }
 
         .section-content {
@@ -540,42 +564,53 @@
         }
 
         .quote-block {
-            background: rgba(184, 134, 11, 0.08);
-            border-left: 4px solid var(--muted-gold);
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
+            background: var(--subtle-gradient);
+            border-left: 4px solid var(--warm-brown);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 15px;
             font-style: italic;
-            font-size: 1.1rem;
+            font-size: var(--font-size-body);
             color: var(--warm-brown);
+            line-height: 1.6;
+        }
+        
+        .quote-author {
+            text-align: right;
+            margin-top: var(--spacing-sm);
+            font-weight: 500;
+            color: var(--warm-brown);
+            font-style: normal;
         }
 
         .principle-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
         }
 
         .principle-card {
             background: var(--washi-white);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid rgba(139, 69, 19, 0.1);
-            transition: all 0.3s ease;
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border-left: 4px solid var(--warm-brown);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .principle-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-medium);
         }
 
         .principle-title {
             font-family: 'Manrope', serif;
-            font-size: 1.3rem;
+            font-size: var(--font-size-card);
             font-weight: 600;
-            color: var(--warm-brown);
-            margin-bottom: 1rem;
+            color: var(--charcoal-gray);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.3;
         }
 
         .principle-description {
@@ -656,7 +691,7 @@
 
                     <div class="quote-block">
                         "The real way of the warrior is to prevent slaughter — it is the art of peace, the power of love."
-                        <br><br>— Morihei Ueshiba, The Art of Peace
+                        <div class="quote-author">— Morihei Ueshiba, The Art of Peace</div>
                     </div>
 
                     <p>To understand this teaching, the student must first understand that peace is not passive. It is active, 
@@ -725,7 +760,7 @@
                     <div class="quote-block">
                         "To injure an opponent is to injure yourself. To control aggression without inflicting injury 
                         is the Art of Peace. The best way to overcome an enemy is to change his heart."
-                        <br><br>— Morihei Ueshiba, The Art of Peace
+                        <div class="quote-author">— Morihei Ueshiba, The Art of Peace</div>
                     </div>
                 </div>
             </section>
@@ -760,7 +795,7 @@
                         of the universe; breathe out and bring the cosmos back inside. Next, breathe up all 
                         fecundity and vibrancy of the earth. Finally, blend the breath of heaven and the breath 
                         of earth with your own, becoming the Breath of Life itself."
-                        <br><br>— Morihei Ueshiba, The Art of Peace
+                        <div class="quote-author">— Morihei Ueshiba, The Art of Peace</div>
                     </div>
                 </div>
             </section>
@@ -809,7 +844,7 @@
                         "The Art of Peace is based on four Great Elements. Depending on the situation, you should use one of the four: 
                         Go no sen (hard technique), sen no sen (soft technique), sen sen no sen (the highest technique), and 
                         banbutsu no sen (universal technique)."
-                        <br><br>— Morihei Ueshiba, explaining the tactical and spiritual levels of practice
+                        <div class="quote-author">— Morihei Ueshiba, explaining the tactical and spiritual levels of practice</div>
                     </div>
 
                     <p>These four levels cannot be achieved through intellectual understanding alone. Each requires years 
@@ -840,7 +875,7 @@
                     
                     <div style="background: rgba(139, 69, 19, 0.05); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
                         <h3 style="color: var(--warm-brown); margin-bottom: 1.5rem; text-align: center;">Requirements for "In Aiki"</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-md);">
                             <div style="padding: 1rem; background: white; border-radius: 8px;">
                                 <strong style="color: var(--warm-brown);">Selflessness:</strong> Complete abandonment of personal gain or recognition
                             </div>

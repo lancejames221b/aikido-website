@@ -11,6 +11,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            /* Primary Brand Colors */
+            --warm-brown: #8B4513;
+            --muted-gold: #B8860B;
+            --charcoal-gray: #2c3e50;
+            --zen-gray: #666;
+            --washi-white: #ffffff;
+            --tatami-beige: #f8f9fa;
+            
+            /* Background System */
+            --subtle-gradient: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            --border-accent: rgba(139, 69, 19, 0.2);
+            
+            /* Shadow System */
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --shadow-heavy: rgba(0, 0, 0, 0.25);
+            
+            /* Typography Scale */
+            --font-size-hero: clamp(2.5rem, 5vw, 3.5rem);
+            --font-size-section: 2.2rem;
+            --font-size-card: 1.3rem;
+            --font-size-body: 1.1rem;
+            
+            /* Spacing System */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -111,7 +143,7 @@
         }
 
         .cta-button {
-            background: #8B4513;
+            background: var(--warm-brown);
             color: white;
             padding: 0.7rem 1.5rem;
             border-radius: 25px;
@@ -189,10 +221,12 @@
 
         .section-title {
             font-family: 'Manrope', serif;
-            font-size: 2.5rem;
+            font-size: var(--font-size-section);
+            font-weight: 600;
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 3rem;
+            color: var(--charcoal-gray);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.2;
         }
 
         .philosophy-content {
@@ -205,7 +239,7 @@
 
         .philosophy-text {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--zen-gray);
             line-height: 1.7;
         }
 
@@ -214,54 +248,55 @@
             padding: 3rem;
             border-radius: 15px;
             text-align: center;
-            border-left: 4px solid #8B4513;
+            border-left: 4px solid var(--warm-brown);
         }
 
         .quote-text {
             font-family: 'Manrope', serif;
             font-size: 1.8rem;
             font-style: italic;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1rem;
             line-height: 1.3;
         }
 
         .quote-author {
             font-size: 1rem;
-            color: #8B4513;
+            color: var(--warm-brown);
             font-weight: 500;
         }
 
         /* Care Examples Section */
         .care-examples {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: var(--tatami-beige);
         }
 
         .examples-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
         }
 
         .example-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            background: var(--washi-white);
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border-left: 4px solid var(--warm-brown);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .example-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-medium);
         }
 
         .example-icon {
             width: 60px;
             height: 60px;
-            background: #8B4513;
+            background: var(--warm-brown);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -274,13 +309,13 @@
         .example-title {
             font-family: 'Manrope', serif;
             font-size: 1.4rem;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1rem;
             text-align: center;
         }
 
         .example-description {
-            color: #666;
+            color: var(--zen-gray);
             line-height: 1.6;
             text-align: center;
         }
@@ -299,7 +334,7 @@
 
         .community-highlight {
             font-size: 1.3rem;
-            color: #8B4513;
+            color: var(--warm-brown);
             font-weight: 500;
             margin-bottom: 2rem;
             font-style: italic;
@@ -307,16 +342,16 @@
 
         .community-description {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--zen-gray);
             line-height: 1.7;
             margin-bottom: 2rem;
         }
 
         .values-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
         }
 
         .value-item {
@@ -328,12 +363,12 @@
 
         .value-title {
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 0.5rem;
         }
 
         .value-text {
-            color: #666;
+            color: var(--zen-gray);
             font-size: 0.95rem;
         }
 
@@ -352,19 +387,19 @@
         .cta-title {
             font-family: 'Manrope', serif;
             font-size: 2.2rem;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1.5rem;
         }
 
         .cta-text {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--zen-gray);
             margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .btn-primary {
-            background: #8B4513;
+            background: var(--warm-brown);
             color: white;
             padding: 1rem 2rem;
             border-radius: 30px;
@@ -372,7 +407,7 @@
             font-weight: 500;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            border: 2px solid #8B4513;
+            border: 2px solid var(--warm-brown);
             display: inline-block;
         }
 
@@ -384,7 +419,7 @@
 
         /* Footer */
         .footer {
-            background: #2c3e50;
+            background: var(--charcoal-gray);
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -400,7 +435,7 @@
         }
 
         .footer a {
-            color: #8B4513;
+            color: var(--warm-brown);
             text-decoration: none;
         }
 
@@ -425,7 +460,7 @@
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: var(--font-size-section);
             }
         }
     </style>
@@ -456,7 +491,7 @@
         <section class="care-examples">
             <div class="container">
                 <h2 class="section-title">What Training Demands of Students</h2>
-                <p class="section-intro" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem; color: #666;">
+                <p class="section-intro" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem; color: var(--zen-gray);">
                     Traditional budo requires dedication to proper form, mental focus, and responsibility for yourself and your training partners. These demands create the conditions necessary for genuine martial development.
                 </p>
                 
@@ -519,57 +554,57 @@
         <!-- Training Obligations Section -->
         <section style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0; margin: 4rem 0;">
             <div class="container">
-                <h2 class="section-title" style="color: #8B4513; margin-bottom: 2rem;">Student Obligations</h2>
+                <h2 class="section-title" style="color: var(--warm-brown); margin-bottom: 2rem;">Student Obligations</h2>
                 <p class="section-intro" style="text-align: center; max-width: 900px; margin: 0 auto 3rem auto; font-size: 1.2rem; color: #555;">
                     Traditional training requires specific commitments from each student. These obligations ensure everyone can train safely and effectively.
                 </p>
                 
-                <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-md); margin: var(--spacing-md) 0;">
                     <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid rgba(139, 69, 19, 0.1);">
-                        <h3 style="color: #8B4513; font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Physical Preparation</h3>
-                        <p style="color: #666; line-height: 1.7;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Physical Preparation</h3>
+                        <p style="color: var(--zen-gray); line-height: 1.7;">
                             Arrive physically prepared for training. This means adequate rest, proper nutrition, and sufficient flexibility to perform techniques safely. Your preparation affects your partner's safety.
                         </p>
                     </div>
                     
                     <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid rgba(139, 69, 19, 0.1);">
-                        <h3 style="color: #8B4513; font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Mental Focus</h3>
-                        <p style="color: #666; line-height: 1.7;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Mental Focus</h3>
+                        <p style="color: var(--zen-gray); line-height: 1.7;">
                             Leave outside concerns at the door. Training requires complete mental presence. Distracted minds create injuries. Develop the discipline to focus entirely on the practice at hand.
                         </p>
                     </div>
                     
                     <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid rgba(139, 69, 19, 0.1);">
-                        <h3 style="color: #8B4513; font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Technique Precision</h3>
-                        <p style="color: #666; line-height: 1.7;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Technique Precision</h3>
+                        <p style="color: var(--zen-gray); line-height: 1.7;">
                             Execute techniques exactly as taught. Improvisation before mastery creates danger. Follow instruction precisely until the movements become natural and safe through repetition.
                         </p>
                     </div>
                     
                     <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid rgba(139, 69, 19, 0.1);">
-                        <h3 style="color: #8B4513; font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Communication Discipline</h3>
-                        <p style="color: #666; line-height: 1.7;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Communication Discipline</h3>
+                        <p style="color: var(--zen-gray); line-height: 1.7;">
                             Communicate clearly with training partners about your limitations and theirs. Ask questions when uncertain. Speak up immediately if something feels unsafe. Silence can create injury.
                         </p>
                     </div>
                     
                     <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid rgba(139, 69, 19, 0.1);">
-                        <h3 style="color: #8B4513; font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Consistent Practice</h3>
-                        <p style="color: #666; line-height: 1.7;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Consistent Practice</h3>
+                        <p style="color: var(--zen-gray); line-height: 1.7;">
                             Attend regularly to maintain conditioning and technique familiarity. Sporadic attendance creates gaps in skill that endanger both you and your training partners. Consistency builds safety.
                         </p>
                     </div>
                     
                     <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid rgba(139, 69, 19, 0.1);">
-                        <h3 style="color: #8B4513; font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Dojo Maintenance</h3>
-                        <p style="color: #666; line-height: 1.7;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Dojo Maintenance</h3>
+                        <p style="color: var(--zen-gray); line-height: 1.7;">
                             Help maintain the training space. Clean equipment, arrange mats properly, and keep the dojo in condition suitable for serious practice. The training environment reflects your commitment to the art.
                         </p>
                     </div>
                 </div>
                 
                 <div style="background: rgba(139, 69, 19, 0.05); padding: 2.5rem; border-radius: 15px; margin: 3rem 0; border: 1px solid rgba(139, 69, 19, 0.1);">
-                    <h3 style="color: #8B4513; text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem;">Training Reality</h3>
+                    <h3 style="color: var(--warm-brown); text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem;">Training Reality</h3>
                     <p style="color: #555; line-height: 1.8; text-align: center; max-width: 800px; margin: 0 auto;">
                         Traditional martial arts training involves controlled risk. Techniques work because they can cause harm when improperly applied. Your discipline, attention, and technical precision are the only things standing between effective training and injury.
                     </p>
@@ -580,15 +615,15 @@
         <!-- Training Standards Section -->
         <section style="padding: 80px 0;">
             <div class="container">
-                <h2 class="section-title" style="color: #8B4513; margin-bottom: 2rem;">Non-Negotiable Standards</h2>
-                <p class="section-intro" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem; color: #666;">
+                <h2 class="section-title" style="color: var(--warm-brown); margin-bottom: 2rem;">Non-Negotiable Standards</h2>
+                <p class="section-intro" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem; color: var(--zen-gray);">
                     These requirements apply to every student, regardless of experience level or personal circumstances. They cannot be modified or compromised.
                 </p>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin: 3rem 0;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-md); margin: var(--spacing-md) 0;">
                     <div>
-                        <h3 style="color: #8B4513; font-size: 1.3rem; margin-bottom: 1rem;">Physical Standards</h3>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.3rem; margin-bottom: 1rem;">Physical Standards</h3>
+                        <ul style="color: var(--zen-gray); line-height: 1.8; padding-left: 1.5rem;">
                             <li>Clean gi and proper uniform at all times</li>
                             <li>Basic physical conditioning for safe technique execution</li>
                             <li>Sufficient flexibility to perform basic movements</li>
@@ -597,8 +632,8 @@
                     </div>
                     
                     <div>
-                        <h3 style="color: #8B4513; font-size: 1.3rem; margin-bottom: 1rem;">Mental Standards</h3>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.3rem; margin-bottom: 1rem;">Mental Standards</h3>
+                        <ul style="color: var(--zen-gray); line-height: 1.8; padding-left: 1.5rem;">
                             <li>Complete attention during instruction and practice</li>
                             <li>Immediate response to instructor commands</li>
                             <li>Mental presence throughout entire class</li>
@@ -607,8 +642,8 @@
                     </div>
                     
                     <div>
-                        <h3 style="color: #8B4513; font-size: 1.3rem; margin-bottom: 1rem;">Technical Standards</h3>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.3rem; margin-bottom: 1rem;">Technical Standards</h3>
+                        <ul style="color: var(--zen-gray); line-height: 1.8; padding-left: 1.5rem;">
                             <li>Precise execution of techniques as demonstrated</li>
                             <li>Controlled application appropriate to partner's skill level</li>
                             <li>Immediate cessation when partner signals discomfort</li>
@@ -617,8 +652,8 @@
                     </div>
                     
                     <div>
-                        <h3 style="color: #8B4513; font-size: 1.3rem; margin-bottom: 1rem;">Behavioral Standards</h3>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
+                        <h3 style="color: var(--warm-brown); font-size: 1.3rem; margin-bottom: 1rem;">Behavioral Standards</h3>
+                        <ul style="color: var(--zen-gray); line-height: 1.8; padding-left: 1.5rem;">
                             <li>Proper bowing and dojo etiquette without exception</li>
                             <li>Respectful treatment of all students and equipment</li>
                             <li>Punctual arrival and full participation until dismissed</li>
@@ -651,7 +686,7 @@
                 <p>62 E 4th St, Fl 3, New York, NY 10003</p>
                 <p>Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
                 <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
-                <p style="margin-top: 2rem; font-style: italic; color: #8B4513; font-size: 1.1rem;">
+                <p style="margin-top: 2rem; font-style: italic; color: var(--warm-brown); font-size: 1.1rem;">
                     In Aiki
                 </p>
                 <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">

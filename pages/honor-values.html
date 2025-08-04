@@ -11,6 +11,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            /* Primary Brand Colors */
+            --warm-brown: #8B4513;
+            --muted-gold: #B8860B;
+            --charcoal-gray: #2c3e50;
+            --zen-gray: #666;
+            --washi-white: #ffffff;
+            --tatami-beige: #f8f9fa;
+            
+            /* Background System */
+            --subtle-gradient: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            --border-accent: rgba(139, 69, 19, 0.2);
+            
+            /* Shadow System */
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --shadow-heavy: rgba(0, 0, 0, 0.25);
+            
+            /* Typography Scale */
+            --font-size-hero: clamp(2.5rem, 5vw, 3.5rem);
+            --font-size-section: 2.2rem;
+            --font-size-card: 1.3rem;
+            --font-size-body: 1.1rem;
+            
+            /* Spacing System */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -111,7 +143,7 @@
         }
 
         .cta-button {
-            background: #8B4513;
+            background: var(--warm-brown);
             color: white;
             padding: 0.7rem 1.5rem;
             border-radius: 25px;
@@ -236,7 +268,7 @@
         /* Japanese Characters */
         .japanese-characters {
             font-size: 4rem;
-            color: #8B4513;
+            color: var(--warm-brown);
             margin: 2rem 0;
             font-weight: 300;
             text-align: center;
@@ -292,12 +324,12 @@
 
         .section-title {
             font-family: 'Manrope', serif;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 3rem;
+            font-size: var(--font-size-section);
             font-weight: 600;
-            letter-spacing: -0.5px;
+            text-align: center;
+            color: var(--charcoal-gray);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.2;
         }
 
         .philosophy-content {
@@ -310,7 +342,7 @@
 
         .philosophy-text {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--zen-gray);
             line-height: 1.7;
         }
 
@@ -319,14 +351,14 @@
             padding: 3rem;
             border-radius: 15px;
             text-align: center;
-            border-left: 4px solid #8B4513;
+            border-left: 4px solid var(--warm-brown);
         }
 
         .quote-text {
             font-family: 'Lato', serif;
             font-size: 1.6rem;
             font-style: italic;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1rem;
             line-height: 1.3;
             font-weight: 300;
@@ -334,34 +366,35 @@
 
         .quote-context {
             font-size: 1rem;
-            color: #8B4513;
+            color: var(--warm-brown);
             font-weight: 500;
         }
 
         /* Honor Principles Section */
         .honor-principles {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: var(--tatami-beige);
         }
 
         .principles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
         }
 
         .principle-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            background: var(--washi-white);
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border-left: 4px solid var(--warm-brown);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .principle-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-medium);
         }
 
         .principle-icon {
@@ -380,7 +413,7 @@
         .principle-title {
             font-family: 'Manrope', serif;
             font-size: 1.4rem;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1rem;
             text-align: center;
             font-weight: 600;
@@ -388,21 +421,21 @@
         }
 
         .principle-description {
-            color: #666;
+            color: var(--zen-gray);
             line-height: 1.6;
             text-align: center;
             margin-bottom: 1.5rem;
         }
 
         .principle-application {
-            background: #f8f9fa;
+            background: var(--tatami-beige);
             padding: 1rem;
             border-radius: 8px;
-            border-left: 3px solid #8B4513;
+            border-left: 3px solid var(--warm-brown);
         }
 
         .application-title {
-            color: #8B4513;
+            color: var(--warm-brown);
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
@@ -411,7 +444,7 @@
         }
 
         .application-text {
-            color: #666;
+            color: var(--zen-gray);
             font-size: 0.95rem;
             line-height: 1.5;
         }
@@ -444,7 +477,7 @@
         .cta-title {
             font-family: 'Manrope', serif;
             font-size: 2.2rem;
-            color: #2c3e50;
+            color: var(--charcoal-gray);
             margin-bottom: 1.5rem;
             font-weight: 600;
             letter-spacing: -0.5px;
@@ -452,13 +485,13 @@
 
         .cta-text {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--zen-gray);
             margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .btn-primary {
-            background: #8B4513;
+            background: var(--warm-brown);
             color: white;
             padding: 1rem 2rem;
             border-radius: 30px;
@@ -466,7 +499,7 @@
             font-weight: 500;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            border: 2px solid #8B4513;
+            border: 2px solid var(--warm-brown);
             display: inline-block;
         }
 
@@ -478,7 +511,7 @@
 
         /* Footer */
         .footer {
-            background: #2c3e50;
+            background: var(--charcoal-gray);
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -494,7 +527,7 @@
         }
 
         .footer a {
-            color: #8B4513;
+            color: var(--warm-brown);
             text-decoration: none;
         }
 
@@ -530,7 +563,7 @@
 
 
             .section-title {
-                font-size: 2rem;
+                font-size: var(--font-size-section);
             }
         }
     </style>
@@ -701,7 +734,7 @@
                 <p>62 E 4th St, Fl 3, New York, NY 10003</p>
                 <p>Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
                 <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
-                <p style="margin-top: 2rem; font-style: italic; color: #8B4513; font-size: 1.1rem;">
+                <p style="margin-top: 2rem; font-style: italic; color: var(--warm-brown); font-size: 1.1rem;">
                     In Aiki
                 </p>
                 <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">

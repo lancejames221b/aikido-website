@@ -146,6 +146,9 @@
         .dynamic-hero #hero-japanese {
             transition: opacity 1s ease-in-out, transform 0.8s ease-in-out;
         }
+        .hero-quote, .hero-quote-author {
+            transition: opacity 0.8s ease-in-out;
+        }
 
         .dynamic-hero.fade-out .hero-main-text,
         .dynamic-hero.fade-out .hero-subtitle-text,
@@ -484,16 +487,15 @@
             <div class="hero-content">
                 <div class="hero-subtitle">Traditional Aikido in the East Village</div>
                 <h1 class="hero-title dynamic-hero" id="dynamic-hero">
-                    <span class="hero-main-text" id="hero-main-text">Embrace Shoshin</span><br>
-                    <span class="japanese-calligraphy" id="hero-japanese" style="color: var(--muted-gold); font-size: 1.2em; display: block; margin: 0.3em 0;">初心</span>
-                    <span class="hero-subtitle-text" id="hero-subtitle-text" style="font-size: 0.6em; font-weight: 400; letter-spacing: 0.1em;">The Beginner's Mind</span>
+                    <span class="hero-main-text" id="hero-main-text">Learn the Art of Peace</span><br>
+                    <span class="japanese-calligraphy" id="hero-japanese" style="color: var(--muted-gold); font-size: 1.2em; display: block; margin: 0.3em 0;">平和の武道</span>
+                    <span class="hero-subtitle-text" id="hero-subtitle-text" style="font-size: 0.6em; font-weight: 400; letter-spacing: 0.1em;">Harmony Through Strength</span>
                 </h1>
                 
                 <blockquote class="hero-quote">
-                    "In the beginner's mind there are many possibilities,<br>
-                    but in the expert's mind there are few."
+                    "True victory does not come from defeating an enemy, true victory comes from giving love and changing an enemy's heart."
                 </blockquote>
-                <div class="hero-quote-author">— Shunryu Suzuki Roshi</div>
+                <div class="hero-quote-author">— O Sensei Ueshiba Morihei</div>
                 
                 <div class="hero-buttons" style="margin-top: 2rem;">
                     <a href="#signup-form" class="btn-primary" aria-label="Schedule your first Aikido training session">Schedule First Session</a>
@@ -878,39 +880,46 @@
             console.log('Dynamic hero script loaded');
             const philosophyMessages = [
                 {
+                    main: "Learn the Art of Peace",
+                    japanese: "平和の武道",
+                    subtitle: "Harmony Through Strength",
+                    quote: "True victory does not come from defeating an enemy, true victory comes from giving love and changing an enemy's heart.",
+                    author: "O Sensei Ueshiba Morihei"
+                },
+                {
                     main: "Embrace Shoshin",
                     japanese: "初心", 
-                    subtitle: "The Beginner's Mind"
+                    subtitle: "The Beginner's Mind",
+                    quote: "In the beginner's mind there are many possibilities, but in the expert's mind there are few.",
+                    author: "Shunryu Suzuki"
                 },
                 {
                     main: "Commit to Shugyo",
                     japanese: "修行",
-                    subtitle: "Austere Training of Character"
-                },
-                {
-                    main: "Learn the Art of Peace",
-                    japanese: "平和の武道",
-                    subtitle: "Harmony Through Strength"
+                    subtitle: "Austere Training of Character",
+                    quote: "Progress comes to those who train and train; reliance on secret techniques will get you nowhere.",
+                    author: "O Sensei Ueshiba Morihei"
                 },
                 {
                     main: "Train with Honor",
                     japanese: "礼",
-                    subtitle: "Integrity in Every Action"
+                    subtitle: "Integrity in Every Action",
+                    quote: "The way of the warrior is to stop trouble before it starts.",
+                    author: "O Sensei Ueshiba Morihei"
                 },
                 {
-                    main: "Follow Traditional Values",
+                    main: "Honor Traditional Values",
                     japanese: "伝統",
-                    subtitle: "Wisdom of the Ancestors"
+                    subtitle: "Wisdom of the Ancestors",
+                    quote: "Study the teachings of the pine tree, the bamboo, and the plum blossom. The pine teaches you faithfulness, the bamboo teaches you how to bend, and the plum blossom teaches you courage and heart.",
+                    author: "O Sensei Ueshiba Morihei"
                 },
                 {
                     main: "Practice Health & Safety",
                     japanese: "安全",
-                    subtitle: "Body, Mind, and Spirit"
-                },
-                {
-                    main: "Share Student Stories", 
-                    japanese: "生徒の声",
-                    subtitle: "Community of Growth"
+                    subtitle: "Body, Mind, and Spirit",
+                    quote: "The purpose of training is to tighten up the slack, toughen the body, and polish the spirit.",
+                    author: "O Sensei Ueshiba Morihei"
                 }
             ];
 
@@ -918,12 +927,16 @@
             const heroMainText = document.getElementById('hero-main-text');
             const heroJapanese = document.getElementById('hero-japanese');
             const heroSubtitleText = document.getElementById('hero-subtitle-text');
+            const heroQuote = document.querySelector('.hero-quote');
+            const heroQuoteAuthor = document.querySelector('.hero-quote-author');
             const dynamicHero = document.getElementById('dynamic-hero');
             
             console.log('Elements found:', {
                 heroMainText: !!heroMainText,
                 heroJapanese: !!heroJapanese, 
                 heroSubtitleText: !!heroSubtitleText,
+                heroQuote: !!heroQuote,
+                heroQuoteAuthor: !!heroQuoteAuthor,
                 dynamicHero: !!dynamicHero
             });
 
@@ -931,6 +944,8 @@
                 console.log('Rotating to index:', currentIndex);
                 // Start fade out
                 dynamicHero.classList.add('fade-out');
+                if (heroQuote) heroQuote.style.opacity = '0';
+                if (heroQuoteAuthor) heroQuoteAuthor.style.opacity = '0';
                 
                 setTimeout(() => {
                     // Change content
@@ -941,9 +956,19 @@
                     heroJapanese.textContent = message.japanese;
                     heroSubtitleText.textContent = message.subtitle;
                     
+                    // Update quote content
+                    if (heroQuote) {
+                        heroQuote.textContent = `"${message.quote}"`;
+                    }
+                    if (heroQuoteAuthor) {
+                        heroQuoteAuthor.textContent = `— ${message.author}`;
+                    }
+                    
                     // Start fade in
                     dynamicHero.classList.remove('fade-out');
                     dynamicHero.classList.add('fade-in');
+                    if (heroQuote) heroQuote.style.opacity = '1';
+                    if (heroQuoteAuthor) heroQuoteAuthor.style.opacity = '1';
                     
                     setTimeout(() => {
                         dynamicHero.classList.remove('fade-in');
