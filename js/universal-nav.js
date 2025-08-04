@@ -28,7 +28,7 @@ class UniversalNavigation {
             const activeStyle = isActive ? 
                 'color: white; font-weight: 700; background: #8B4513; padding: 8px 16px; border-radius: 20px; border: 2px solid #8B4513; box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);' : 
                 'color: #333; padding: 8px 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.8); border: 2px solid transparent;';
-            return `<a href="${page.file}" style="margin: 0 1rem; ${activeStyle} text-decoration: none; font-size: 14px; transition: all 0.3s ease;">${page.label}</a>`;
+            return `<a href="${page.file}" style="margin: 0 1rem; ${activeStyle} text-decoration: none; font-family: 'Lato', 'Noto Sans JP', sans-serif; font-size: 14px; transition: all 0.3s ease;">${page.label}</a>`;
         }).join('');
 
         return `
@@ -189,6 +189,7 @@ class UniversalNavigation {
         .nav-item > a {
             color: #333;
             text-decoration: none;
+            font-family: 'Lato', 'Noto Sans JP', sans-serif;
             font-weight: 500;
             font-size: 14px;
             transition: color 0.3s ease;
@@ -227,6 +228,7 @@ class UniversalNavigation {
             padding: 12px 16px;
             color: #555;
             text-decoration: none;
+            font-family: 'Lato', 'Noto Sans JP', sans-serif;
             font-size: 13px;
             transition: all 0.3s ease;
         }
@@ -281,6 +283,7 @@ class UniversalNavigation {
             align-items: center;
             color: #333;
             text-decoration: none;
+            font-family: 'Lato', 'Noto Sans JP', sans-serif;
             font-weight: 500;
             padding: 15px 20px; /* Larger touch target */
             min-height: 44px; /* WCAG touch target minimum */
