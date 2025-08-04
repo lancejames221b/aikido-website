@@ -54,8 +54,8 @@
             padding: 100px 0 60px;
         }
         
-        /* Hero Background for Philosophy Pages */
-        .philosophy-hero {
+        /* Hero Section */
+        .hero {
             background: 
                 linear-gradient(135deg, rgba(107,68,35,0.75) 0%, rgba(184,134,11,0.65) 100%),
                 url('../assets/images/DSC_7942.jpg') center/cover no-repeat;
@@ -64,6 +64,36 @@
             display: flex;
             align-items: center;
             position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Manrope', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
         }
 
         .page-header {
@@ -326,13 +356,16 @@
 
 
 
-    <!-- Hero Background Section -->
-    <section class="philosophy-hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="page-header" style="text-align: center; color: white;">
-                <div class="japanese-characters" style="color: white; font-size: 4rem; margin: 2rem 0;">初心</div>
-                <h1 class="page-title" style="color: white; font-size: 3rem; margin-bottom: 1rem;">What is Shoshin?</h1>
-                <p class="page-subtitle" style="color: rgba(255,255,255,0.9); font-size: 1.3rem;">The Demanding Path of Beginner's Mind</p>
+            <div class="hero-content">
+                <div class="japanese-characters" style="color: white;">初心</div>
+                <div class="hero-subtitle">The Demanding Path</div>
+                <h1 class="hero-title">What is Shoshin?</h1>
+                <p class="hero-description">
+                    Shoshin (初心), the rigorous discipline of "beginner's mind," demands complete surrender of preconceptions. In Aikido, it is not merely an attitude but a way of training that requires the student to abandon what they think they know with each practice.
+                </p>
             </div>
         </div>
     </section>

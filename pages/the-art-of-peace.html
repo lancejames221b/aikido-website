@@ -428,8 +428,8 @@
             font-weight: 600;
         }
 
-        /* Hero Background for Philosophy Pages */
-        .philosophy-hero {
+        /* Hero Section */
+        .hero {
             background: 
                 linear-gradient(135deg, rgba(107,68,35,0.75) 0%, rgba(184,134,11,0.65) 100%),
                 url('../assets/images/DSC_2437-Edit.JPG') center/cover no-repeat;
@@ -438,6 +438,36 @@
             display: flex;
             align-items: center;
             position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Manrope', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
         }
 
         /* Main Content */
@@ -584,15 +614,15 @@
 
 
 
-    <!-- Hero Background Section -->
-    <section class="philosophy-hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="page-header" style="text-align: center; color: white; margin-bottom: 0;">
-                <h1 class="page-title" style="color: white; font-size: 3rem; margin-bottom: 1rem;">The Art of Peace</h1>
-                <div class="japanese-subtitle" style="color: rgba(255,255,255,0.9); font-size: 2rem; margin: 1rem 0;">平和の武道</div>
-                <p class="page-intro" style="color: rgba(255,255,255,0.9); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-                    Aikido, literally meaning "the way of unifying life energy," is known as the Art of Peace. 
-                    O-Sensei taught that true victory is not defeating others, but conquering the discord within oneself.
+            <div class="hero-content">
+                <div class="japanese-characters" style="color: white;">平和の武道</div>
+                <div class="hero-subtitle">O-Sensei's Teaching</div>
+                <h1 class="hero-title">The Art of Peace</h1>
+                <p class="hero-description">
+                    Aikido, literally meaning "the way of unifying life energy," is known as the Art of Peace. O-Sensei taught that true victory is not defeating others, but conquering the discord within oneself through harmonious action.
                 </p>
             </div>
         </div>
