@@ -875,6 +875,7 @@
     <script>
         // Dynamic Hero Philosophy Rotation
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('Dynamic hero script loaded');
             const philosophyMessages = [
                 {
                     main: "Embrace Shoshin",
@@ -918,8 +919,16 @@
             const heroJapanese = document.getElementById('hero-japanese');
             const heroSubtitleText = document.getElementById('hero-subtitle-text');
             const dynamicHero = document.getElementById('dynamic-hero');
+            
+            console.log('Elements found:', {
+                heroMainText: !!heroMainText,
+                heroJapanese: !!heroJapanese, 
+                heroSubtitleText: !!heroSubtitleText,
+                dynamicHero: !!dynamicHero
+            });
 
             function rotateMessage() {
+                console.log('Rotating to index:', currentIndex);
                 // Start fade out
                 dynamicHero.classList.add('fade-out');
                 
@@ -942,8 +951,8 @@
                 }, 800);
             }
 
-            // Start rotation after initial display
-            setInterval(rotateMessage, 4000); // Change every 4 seconds
+            // Start rotation after initial display - faster for testing
+            setInterval(rotateMessage, 2000); // Change every 2 seconds for testing
         });
     </script>
 </body>
