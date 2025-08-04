@@ -69,8 +69,12 @@ class UniversalNavigation {
                                 <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
                             </div>
                         </div>
-                        <div class="nav-item">
-                            <a href="${this.basePath}index.html#training">Training</a>
+                        <div class="nav-item nav-dropdown">
+                            <a href="${this.basePath}index.html#training" aria-haspopup="true" aria-expanded="false" aria-controls="training-dropdown">Training</a>
+                            <div class="dropdown-menu" id="training-dropdown" role="menu" aria-label="Training submenu">
+                                <a href="${this.basePath}index.html#training" role="menuitem">Adult Classes</a>
+                                <a href="${this.basePath}index.html#kids-program" role="menuitem">Kids Program</a>
+                            </div>
                         </div>
                         <div class="nav-item nav-dropdown">
                             <a href="${this.basePath}pages/what-is-shoshin.html" aria-haspopup="true" aria-expanded="false" aria-controls="philosophy-dropdown">Philosophy</a>
@@ -110,8 +114,12 @@ class UniversalNavigation {
                             <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
                         </div>
                     </div>
-                    <div class="mobile-nav-item">
-                        <a href="${this.basePath}index.html#training">Training</a>
+                    <div class="mobile-nav-item mobile-dropdown">
+                        <a href="${this.basePath}index.html#training" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-training-dropdown">Training</a>
+                        <div class="mobile-dropdown-menu" id="mobile-training-dropdown" role="menu" aria-label="Training submenu">
+                            <a href="${this.basePath}index.html#training" role="menuitem">Adult Classes</a>
+                            <a href="${this.basePath}index.html#kids-program" role="menuitem">Kids Program</a>
+                        </div>
                     </div>
                     <div class="mobile-nav-item mobile-dropdown">
                         <a href="${this.basePath}pages/what-is-shoshin.html" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-philosophy-dropdown">Philosophy</a>
