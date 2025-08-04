@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Check - Genshinkan Aikido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #8B4513;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .test-link:hover {
+            background: #A0522D;
+        }
+        .status {
+            font-weight: bold;
+            color: #28a745;
+        }
+        .issue {
+            font-weight: bold;
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Compatibility Check</h1>
+    
+    <div class="test-section">
+        <h2>Recent Changes to Test:</h2>
+        <ul>
+            <li class="status">✅ Dynamic Hero Rotation (6 philosophy concepts)</li>
+            <li class="status">✅ Updated Pricing ($115 first month, $145 regular)</li>
+            <li class="status">✅ Corrected Schedule (Mon/Tue/Wed: 6:15-7:15, 7:15-8:15)</li>
+            <li class="status">✅ "Is Aikido Right for You?" Section</li>
+            <li class="status">✅ "What We Don't Offer" Section</li>
+            <li class="status">✅ Mobile Navigation Links</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Links:</h2>
+        <a href="http://localhost:3000" class="test-link">Test Homepage (Dynamic Hero)</a>
+        <a href="http://localhost:3000#what-we-dont-offer" class="test-link">Test "What We Don't Offer"</a>
+        <a href="http://localhost:3000#aikido-fit" class="test-link">Test "Is Aikido Right for You?"</a>
+        <a href="http://localhost:3000#training" class="test-link">Test Updated Pricing & Schedule</a>
+    </div>
+
+    <div class="test-section">
+        <h2>Mobile-Specific Checks:</h2>
+        <ul>
+            <li>Dynamic hero text changes every 4 seconds</li>
+            <li>Japanese characters update with each rotation</li>
+            <li>Navigation hamburger menu works</li>
+            <li>All dropdowns function properly</li>
+            <li>Pricing displays correctly in mobile layout</li>
+            <li>New sections are responsive</li>
+        </ul>
+    </div>
+
+    <script>
+        // Simple test to verify JavaScript is working
+        console.log('Mobile check page loaded successfully');
+        
+        // Check if we're actually on mobile
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+            document.body.insertAdjacentHTML('afterbegin', 
+                '<div style="background: #28a745; color: white; padding: 10px; text-align: center; margin-bottom: 20px;">✅ Mobile viewport detected (' + window.innerWidth + 'px)</div>'
+            );
+        } else {
+            document.body.insertAdjacentHTML('afterbegin', 
+                '<div style="background: #ffc107; color: black; padding: 10px; text-align: center; margin-bottom: 20px;">⚠️ Desktop viewport (' + window.innerWidth + 'px) - resize to test mobile</div>'
+            );
+        }
+    </script>
+</body>
+</html>
