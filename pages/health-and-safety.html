@@ -274,9 +274,40 @@
 
         .examples-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-md);
             margin: var(--spacing-md) 0;
+        }
+
+        @media (max-width: 1024px) {
+            .examples-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        @media (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .example-card {
@@ -559,7 +590,7 @@
                     Traditional training requires specific commitments from each student. These obligations ensure everyone can train safely and effectively.
                 </p>
                 
-                <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--spacing-md); margin: var(--spacing-md) 0;">
+                <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-md); margin: var(--spacing-md) 0;">
                     <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid rgba(139, 69, 19, 0.1);">
                         <h3 style="color: var(--warm-brown); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 600;">Physical Preparation</h3>
                         <p style="color: var(--zen-gray); line-height: 1.7;">

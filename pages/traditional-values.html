@@ -518,6 +518,25 @@
             text-decoration: underline;
         }
 
+        .virtues-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        @media (max-width: 1024px) {
+            .virtues-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .virtues-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
 
@@ -582,7 +601,7 @@
                         Traditional Aikido training develops character through four essential bushido principles that shape both technique and daily life.
                     </p>
                     
-                    <div class="virtues-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--spacing-md); margin: var(--spacing-md) 0;">
+                    <div class="virtues-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-md); margin: var(--spacing-md) 0;">
                         
                         <div class="virtue-card" style="background: var(--washi-white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid var(--warm-brown);">
                             <div class="virtue-header" style="display: flex; align-items: center; margin-bottom: 1rem;">

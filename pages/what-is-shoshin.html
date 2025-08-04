@@ -198,9 +198,15 @@
 
         .principles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: var(--spacing-md);
             margin: var(--spacing-md) 0;
+        }
+
+        @media (max-width: 640px) {
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .principle-card {
@@ -251,9 +257,15 @@
 
         .practical-examples {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: var(--spacing-md);
             margin: var(--spacing-md) 0;
+        }
+
+        @media (max-width: 640px) {
+            .practical-examples {
+                grid-template-columns: 1fr;
+            }
         }
 
         .example-item {
