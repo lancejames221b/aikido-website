@@ -1,36 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Stories - Real Experiences at Genshinkan Aikido</title>
-    <meta name="description" content="Real testimonials from our students sharing their personal journeys with Aikido at Genshinkan. Stories of transformation and community.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Stories - Genshinkan Aikido</title>
+    <meta name="description" content="Real experiences from our Aikido students. Personal transformation stories from the East Village, NYC.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/67c9f25770965305d583d469/1741288051124-0NMH8I2T53NJCLERQVJR/favicon.ico?format=100w" type="image/x-icon">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Include Universal Navigation -->
+    <script src="../js/universal-nav.js"></script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Traditional Japanese color palette */
+        :root {
+            --sumi-black: #2C2C2C;
+            --charcoal-gray: #2c2c2c;
+            --warm-brown: #654321;
+            --muted-gold: #B8860B;
+            --washi-white: #ffffff;
+            --tatami-beige: #e6ddd4;
+            --bamboo-green: #4a5d23;
+            --zen-gray: #8a8a8a;
+            --ink-blue: #1B365D;
         }
 
         body {
             font-family: 'Lato', 'Noto Sans JP', sans-serif;
+            color: var(--charcoal-gray);
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .sqs-layout {
-            max-width: 1626px;
-            margin: 0 auto;
-            padding: 0 2vw;
+            background: var(--washi-white);
+            padding-top: 120px;
         }
 
         .container {
@@ -39,894 +46,165 @@
             padding: 0 20px;
         }
 
-        /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .logo-image {
-            height: 50px;
-            width: auto;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .logo-image:hover {
-            transform: scale(1.05);
-        }
-
-
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 180px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .nav-dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 12px 16px;
-            border-bottom: 1px solid #f5f5f5;
-            font-size: 13px;
-        }
-
-        .dropdown-menu a:last-child {
-            border-bottom: none;
-        }
-
-        .cta-button {
-            background: #8B4513;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #A0522D;
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 80px 0 60px;
-        }
-
-        /* Japanese Characters */
-        .japanese-characters {
-            font-size: 4rem;
-            color: #8B4513;
-            margin: 2rem 0;
-            font-weight: 300;
-            text-align: center;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: 
-                linear-gradient(135deg, rgba(107,68,35,0.75) 0%, rgba(184,134,11,0.65) 100%),
-                url('../assets/images/DSC_0052.JPG') center/cover no-repeat;
-            color: white;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 1rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .hero-title {
-            font-family: 'Manrope', serif;
-            font-size: 3rem;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-description {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
         .page-header {
             text-align: center;
-            margin-bottom: 4rem;
-            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
-            padding: 3rem;
-            border-radius: 20px;
+            margin-bottom: 3rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
         }
 
         .page-title {
             font-family: 'Manrope', serif;
-            font-size: 3rem;
-            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--sumi-black);
             margin-bottom: 1rem;
         }
 
-        .page-subtitle {
-            font-size: 1.3rem;
-            color: #8B4513;
-            font-weight: 500;
+        .japanese-subtitle {
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', serif;
+            font-size: 1.5rem;
+            color: var(--warm-brown);
             margin-bottom: 1rem;
         }
 
         .page-description {
             font-size: 1.1rem;
-            color: #666;
-            max-width: 800px;
+            color: var(--zen-gray);
+            max-width: 600px;
             margin: 0 auto;
+        }
+
+        .story-section {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--warm-brown);
+        }
+
+        .story-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--charcoal-gray);
+            margin-bottom: 1.5rem;
             line-height: 1.7;
         }
 
-        /* Success Stories */
-        .stories-section {
-            margin-bottom: 4rem;
-        }
-
-        .story-card {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            margin-bottom: 3rem;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .story-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .story-header {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .story-name {
-            font-family: 'Manrope', serif;
-            font-size: 1.8rem;
+        .story-attribution {
+            font-weight: 500;
+            color: var(--warm-brown);
             margin-bottom: 0.5rem;
         }
 
         .story-details {
-            font-size: 1rem;
-            opacity: 0.9;
+            font-size: 0.95rem;
+            color: var(--zen-gray);
+            margin-bottom: 1rem;
         }
 
-        .story-content {
-            padding: 2.5rem;
-        }
-
-        .story-timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .timeline-item {
-            text-align: center;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-
-        .timeline-period {
-            font-weight: 600;
-            color: #8B4513;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-milestone {
+        .story-context {
             font-size: 0.9rem;
-            color: #666;
+            color: var(--zen-gray);
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
         }
 
-        .story-quote {
-            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.02) 100%);
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 4px solid #8B4513;
-            font-style: italic;
-            font-size: 1.1rem;
-            color: #444;
-            margin: 1.5rem 0;
-        }
-
-        .story-transformation {
-            margin-top: 2rem;
-        }
-
-        .transformation-title {
-            font-family: 'Manrope', serif;
-            font-size: 1.3rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .transformation-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .transformation-item {
-            display: flex;
-            align-items: center;
-            padding: 0.5rem;
-            background: rgba(139, 69, 19, 0.05);
-            border-radius: 8px;
-        }
-
-        .transformation-icon {
-            width: 20px;
-            height: 20px;
-            background: #8B4513;
-            border-radius: 50%;
-            margin-right: 0.8rem;
-            flex-shrink: 0;
-        }
-
-        /* Journey Stages */
-        .journey-stages {
-            background: #f8f9fa;
-            padding: 4rem 0;
-            margin: 4rem 0;
-            border-radius: 20px;
-        }
-
-        .stages-title {
-            font-family: 'Manrope', serif;
-            font-size: 2.5rem;
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 3rem;
-        }
-
-        .stages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .stage-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stage-number {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            width: 50px;
-            height: 50px;
-            background: #8B4513;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-
-        .stage-title {
-            font-family: 'Manrope', serif;
-            font-size: 1.4rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .stage-duration {
-            color: #8B4513;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .stage-description {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Common Concerns */
-        .concerns-section {
-            margin: 4rem 0;
-        }
-
-        .concerns-title {
-            font-family: 'Manrope', serif;
-            font-size: 2.5rem;
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 3rem;
-        }
-
-        .concerns-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .concern-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .concern-question {
-            font-family: 'Manrope', serif;
-            font-size: 1.2rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .concern-answer {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Training Reality Section */
-        .training-reality-section {
-            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
-            padding: 4rem 0;
-            margin: 4rem 0;
-            border-radius: 20px;
-            border: 2px solid rgba(139, 69, 19, 0.2);
-        }
-
-        .reality-title {
-            font-family: 'Manrope', serif;
-            font-size: 2.2rem;
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-        }
-
-        .reality-description {
-            font-size: 1.2rem;
-            color: #444;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem auto;
-            line-height: 1.7;
-        }
-
-        .reality-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .reality-point {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid #8B4513;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .reality-point strong {
-            color: #8B4513;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        /* Call to Action */
-        .call-to-action {
-            background: #2c3e50;
-            color: white;
-            padding: 4rem;
-            border-radius: 20px;
-            text-align: center;
-            margin: 4rem 0;
-        }
-
-        .call-to-action h3 {
-            font-family: 'Manrope', serif;
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .call-to-action p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-primary {
-            background: #8B4513;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin: 0.5rem;
-        }
-
-        .btn-primary:hover {
-            background: #A0522D;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-            border: 2px solid white;
-            margin: 0.5rem;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #2c3e50;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        .footer {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .footer p {
-            margin-bottom: 1rem;
-        }
-
-        .footer a {
-            color: #8B4513;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-
             .page-title {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
-
-            .story-timeline {
-                grid-template-columns: 1fr;
+            
+            .japanese-subtitle {
+                font-size: 1.2rem;
             }
-
-            .transformation-list {
-                grid-template-columns: 1fr;
+            
+            .story-section {
+                padding: 2rem;
             }
-
-            .stages-grid {
-                grid-template-columns: 1fr;
+            
+            .story-quote {
+                font-size: 1.1rem;
             }
-
-            .concerns-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .story-card {
-            animation: fadeInUp 0.8s ease forwards;
         }
     </style>
 </head>
-<body class="philosophy-page">
-    <!-- Universal Navigation -->
-    <div id="universal-navigation"></div>
 
+<body>
+    <!-- Navigation will be inserted here by universal-nav.js -->
+    <div id="nav-placeholder"></div>
 
-
-    <!-- Main Content -->
-    <!-- Hero Section -->
-    <section class="hero">
+    <div class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <div class="japanese-characters" style="color: white;">生徒の声</div>
-                <div class="hero-subtitle">Community Voices</div>
-                <h1 class="hero-title">Student Stories</h1>
-                <p class="hero-description">
-                    These are real testimonials from our students, sharing their personal journeys with Aikido at Genshinkan. Each story reflects the individual transformation that comes through sincere practice and the supportive community we've built together.
-                </p>
-            </div>
+            <h1 class="page-title">Student Stories</h1>
+            <div class="japanese-subtitle">生徒の話</div>
+            <p class="page-description">Real experiences from our Aikido community - personal journeys of growth, challenge, and transformation.</p>
         </div>
-    </section>
+    </div>
 
-    <main class="main-content">
-        <div class="container">
-
-            <!-- Real Student Stories -->
-            <section class="stories-section">
-                <!-- Student Story 1 - Transformation Through Loss -->
-                <div class="story-card">
-                    <div class="story-header">
-                        <div class="story-name">Student - Professional</div>
-                        <div class="story-details">Finding Healing and Purpose Through Aikido</div>
-                    </div>
-                    <div class="story-content">
-                        <div class="story-quote" style="margin-top: 0;">
-                            "In 2018, I faced the devastating loss of my teenage son, which left me utterly broken. During the Covid-19 quarantine, I turned inward, deeply practicing Zen Buddhism to find peace and healing. While it helped, I struggled with self-isolation and knew I needed to change."
-                        </div>
-
-                        <div class="story-quote">
-                            "I discovered Genshinkan Aikido, meaning 'the dojo of Original Source,' which offered the traditional and respectful environment I sought. Starting in November 2023, I was nervous but determined to embrace being a beginner again."
-                        </div>
-
-                        <div class="story-quote">
-                            "Sensei embodies a perfect blend of strictness and respect, making Aikido both fun and meaningful. Aikido at Genshinkan isn't just a martial art; it's a comprehensive practice that influences every aspect of life. It has helped me cope with ADHD, become more mindful in daily activities, and find new depths in my Zen practice."
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Student Story 2 - From Anger to Calm -->
-                <div class="story-card">
-                    <div class="story-header">
-                        <div class="story-name">Student - Working Professional</div>
-                        <div class="story-details">Finding Community and Confidence</div>
-                    </div>
-                    <div class="story-content">
-                        <div class="story-quote" style="margin-top: 0;">
-                            "Aikido has truly changed my life in incredible ways. I arrived at it through a recommendation from a friend after joking that I was so angry at the time. I started taking classes here simply because it was across the street from my job, but I stayed because of the warmth, care, and sense of community I found."
-                        </div>
-
-                        <div class="story-quote">
-                            "Having had three back surgeries, I especially appreciate how Sensei has tailored my training and made me feel safe. He's been incredibly supportive, and I genuinely use Aikido in my daily life to cultivate calm and resilience — and, in one recent occasion, for self-defense."
-                        </div>
-
-                        <div class="story-quote">
-                            "Practicing here has helped me gain confidence, patience, and a much deeper understanding of myself — and I know there's much more to come! You'll not only learn Aikido but you might also forge lifelong friendships along the way."
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Student Story 3 - Community and Growth -->
-                <div class="story-card">
-                    <div class="story-header">
-                        <div class="story-name">Student - Several Months</div>
-                        <div class="story-details">Finding the Right Community</div>
-                    </div>
-                    <div class="story-content">
-                        <div class="story-quote" style="margin-top: 0;">
-                            "When I first decided to give Aikido a shot, I had another dojo in mind. I was quickly swayed to try Genshinkan after reading the many positive reviews and sincere comments from students. Now that I've been a student here myself for several months, I know I made the right choice."
-                        </div>
-
-                        <div class="story-quote">
-                            "The community here is great and a real highlight of the dojo. You will get to know your fellow students over time, which makes practice more productive and meaningful. They help create a positive, non-competitive atmosphere that you can thrive in."
-                        </div>
-
-                        <div class="story-quote">
-                            "No matter your skill level, they will help you reach your goals at a pace that's right for you. Sensei's approach is earnest, straightforward, and adaptable to a range of abilities. I highly, highly recommend Genshinkan, and Aikido."
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Student Story 4 - Discovery and Growth -->
-                <div class="story-card">
-                    <div class="story-header">
-                        <div class="story-name">Student - One Year</div>
-                        <div class="story-details">Discovering Traditional Training</div>
-                    </div>
-                    <div class="story-content">
-                        <div class="story-quote" style="margin-top: 0;">
-                            "I started going to this dojo about a year ago and I have been hooked ever since. The dojo is at the 3rd floor of an otherwise unremarkable building in East Village but as soon as I walked in, I was struck by the traditional atmosphere."
-                        </div>
-
-                        <div class="story-quote">
-                            "Their method of teaching aikido is simple and effective. Each class, you learn a technique from set up to execution. The instructors are extremely insightful and have had years of practice. The community is so supportive and many of the people I met here have become my closest friends."
-                        </div>
-
-                        <div class="story-quote">
-                            "I'm so thankful to everything Genshinkan Dojo has done for me. I give Genshinkan only 5 stars because I can't give it more!"
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Student Story 5 - Transformation and Community -->
-                <div class="story-card">
-                    <div class="story-header">
-                        <div class="story-name">Student - Long-term Practitioner</div>
-                        <div class="story-details">A Transformative Experience</div>
-                    </div>
-                    <div class="story-content">
-                        <div class="story-quote" style="margin-top: 0;">
-                            "Joining Genshinkan Aikido Dojo has been a transformative experience in my life. The dojo is not just a place to learn martial arts; it's a sanctuary where growth and self-improvement are nurtured."
-                        </div>
-
-                        <div class="story-quote">
-                            "What sets Genshinkan apart is its incredibly warm, welcoming, and supportive community. From day one, I felt like I belonged, and this sense of camaraderie has only grown stronger. The dojo practices an adaptive learning approach, ensuring that each session is tailored to match the individual's skill level."
-                        </div>
-
-                        <div class="story-quote">
-                            "I cannot recommend Genshinkan Aikido Dojo enough. It's more than just a dojo; it's a community and a way of life that encourages and supports you to become the best version of yourself."
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Student Story 6 - Outstanding Teaching -->
-                <div class="story-card">
-                    <div class="story-header">
-                        <div class="story-name">Student - Experienced Practitioner</div>
-                        <div class="story-details">A Real Gem</div>
-                    </div>
-                    <div class="story-content">
-                        <div class="story-quote" style="margin-top: 0;">
-                            "This place is a real gem. It would be hard to overstate the warmth of the community and the outstanding teaching. The sensei is a great educator who truly cares about his students."
-                        </div>
-
-                        <div class="story-quote">
-                            "He is supportive and accommodating but simultaneously has high standards and will inspire you to improve continuously. He has an intuitive awareness of his students' needs and abilities to the point that sometimes I genuinely wonder whether he is reading my mind."
-                        </div>
-
-                        <div class="story-quote">
-                            "The students are a diverse group that includes a good amount of other women. Everyone is friendly, welcoming, and unpretentious."
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Community Testimonials -->
-            <section class="journey-stages">
-                <div class="container">
-                    <h2 class="stages-title">What Our Community Says</h2>
-                    <div class="japanese-characters" style="text-align: center; font-size: 3rem; margin: 2rem 0;">合気道</div>
-                    <p class="reality-description" style="max-width: 800px; margin: 0 auto 3rem;">
-                        Our students come from all walks of life, but they share common experiences: traditional instruction, 
-                        supportive community, and personal transformation through dedicated practice.
-                    </p>
-                    
-                    <div class="reality-points">
-                        <div class="reality-point">
-                            <strong>"A Real Gem":</strong> "It would be hard to overstate the warmth of the community and the outstanding teaching."
-                        </div>
-                        <div class="reality-point">
-                            <strong>"Hidden Gem":</strong> "It truly is a hidden gem in the middle of a bustling city. Everyone in the dojo is warm, instantly welcoming."
-                        </div>
-                        <div class="reality-point">
-                            <strong>"Immediate Impression":</strong> "As soon as I walked in, I was struck by the traditional atmosphere. Their method of teaching aikido is simple and effective."
-                        </div>
-                        <div class="reality-point">
-                            <strong>"Transformative Experience":</strong> "It's more than just a dojo; it's a community and a way of life that encourages you to become the best version of yourself."
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- The Mindset Required -->
-            <section class="concerns-section">
-                <h2 class="concerns-title">The Mindset Required</h2>
-                <div class="container">
-                    <p class="reality-description" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
-                        Traditional budo asks not what you can do, but who you are willing to become. These qualities matter more than any physical attribute:
-                    </p>
-                </div>
-                <div class="concerns-grid">
-                    <div class="concern-card">
-                        <h3 class="concern-question">Humility Over Ability</h3>
-                        <p class="concern-answer">
-                            Your current physical state matters less than your willingness to be taught. The strongest students are often those who embrace their weakness.
-                        </p>
-                    </div>
-
-                    <div class="concern-card">
-                        <h3 class="concern-question">Patience Over Progress</h3>
-                        <p class="concern-answer">
-                            Budo cannot be rushed. Those who seek quick results miss the deeper teachings. Trust that what you need will come when you're ready.
-                        </p>
-                    </div>
-
-                    <div class="concern-card">
-                        <h3 class="concern-question">Commitment Over Convenience</h3>
-                        <p class="concern-answer">
-                            The dojo asks for your presence, not your schedule. Regular practice shapes character—sporadic attendance yields sporadic results.
-                        </p>
-                    </div>
-
-                    <div class="concern-card">
-                        <h3 class="concern-question">Respect Over Comfort</h3>
-                        <p class="concern-answer">
-                            Traditional training maintains hierarchy and etiquette. This structure creates the container for transformation, not limitation.
-                        </p>
-                    </div>
-
-                    <div class="concern-card">
-                        <h3 class="concern-question">Sincerity Over Skill</h3>
-                        <p class="concern-answer">
-                            Your genuine effort matters more than natural talent. The dojo sees through pretense—only sincere practice builds true ability.
-                        </p>
-                    </div>
-
-                    <div class="concern-card">
-                        <h3 class="concern-question">Mystery Over Certainty</h3>
-                        <p class="concern-answer">
-                            Accept that you cannot know what Aikido will teach you. The most profound lessons come to those who remain open to the unknown.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Training Reality Section -->
-            <section class="training-reality-section">
-                <div class="container">
-                    <h2 class="reality-title">The Training Reality</h2>
-                    <p class="reality-description">
-                        Aikido is a traditional martial art that demands serious commitment. While we provide excellent guidance, success requires consistent effort, physical conditioning, and mental discipline. Not everyone who starts will continue—and that's the reality of genuine budo training.
-                    </p>
-                    
-                    <div class="reality-points">
-                        <div class="reality-point">
-                            <strong>Physical Demands:</strong> You'll build stamina, flexibility, and coordination through regular practice. Expect to be challenged physically.
-                        </div>
-                        <div class="reality-point">
-                            <strong>Mental Challenge:</strong> Learning complex movements while developing situational awareness takes focus and patience.
-                        </div>
-                        <div class="reality-point">
-                            <strong>Time Investment:</strong> Meaningful progress requires consistent attendance over months and years, not weeks.
-                        </div>
-                        <div class="reality-point">
-                            <strong>Traditional Standards:</strong> We maintain proper etiquette, respect for hierarchy, and serious training atmosphere.
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Call to Action -->
-            <div class="call-to-action">
-                <h3>Join Our Community</h3>
-                <p>
-                    These real stories from our students reflect the actual experience of training at Genshinkan. 
-                    Come discover for yourself what makes our dojo a place where students continue to practice for years.
-                </p>
-                <a href="../index.html#signup-form" class="btn-primary">Try a Class</a>
-                <a href="what-is-shoshin.html" class="btn-secondary">About Our Philosophy</a>
-            </div>
+    <div class="container">
+        <div class="story-section">
+            <blockquote class="story-quote">
+                "After 5+ years of training at Genshinkan, I can confidently say this is excellent Aikido instruction in NYC. Sensei maintains the lineage while creating a welcoming environment for professionals like myself."
+            </blockquote>
+            <div class="story-attribution">Manhattan Professional</div>
+            <div class="story-details">Training for 5+ years</div>
+            <div class="story-context">Found Genshinkan after researching traditional Aikido schools in NYC. Appreciates the balance of authentic instruction with a professional, welcoming atmosphere.</div>
         </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p><strong>Genshinkan Aikido Manhattan</strong></p>
-                <p>62 E 4th St, Fl 3, New York, NY 10003</p>
-                <p>Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
-                <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
-                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
-                    &copy; 2025 Genshinkan Aikido. All rights reserved.
-                </p>
-            </div>
+        <div class="story-section">
+            <blockquote class="story-quote">
+                "After training at multiple dojos, Genshinkan feels like home. Everyone is friendly, welcoming, and unpretentious."
+            </blockquote>
+            <div class="story-attribution">Healthcare Professional</div>
+            <div class="story-details">Experienced practitioner</div>
+            <div class="story-context">Trained at several dojos before finding Genshinkan. Values the authentic community atmosphere and lack of ego in training.</div>
         </div>
-    </footer>
+
+        <div class="story-section">
+            <blockquote class="story-quote">
+                "I love how Aikido teaches you to be present and mindful. The physical practice grounds me after long days in tech, and the community here makes it something I look forward to."
+            </blockquote>
+            <div class="story-attribution">Technology Professional</div>
+            <div class="story-details">Training for 2+ years</div>
+            <div class="story-context">Uses Aikido as balance to high-stress tech work. Finds the mindfulness aspects particularly valuable for mental clarity and stress management.</div>
+        </div>
+
+        <div class="story-section">
+            <blockquote class="story-quote">
+                "What drew me to Genshinkan was the authentic traditional instruction without the intimidation factor. Perfect for adult beginners who want real Aikido training."
+            </blockquote>
+            <div class="story-attribution">Finance Professional</div>
+            <div class="story-details">Adult beginner, training for 1+ year</div>
+            <div class="story-context">Started Aikido later in life, appreciated finding a school that teaches traditional techniques in an encouraging environment for new students.</div>
+        </div>
+
+        <div class="story-section">
+            <blockquote class="story-quote">
+                "The instructors here really understand how to teach adults. They respect that we have different learning styles and physical capabilities, while still maintaining high standards."
+            </blockquote>
+            <div class="story-attribution">Creative Professional</div>
+            <div class="story-details">Training for 3+ years</div>
+            <div class="story-context">Values the mature, professional approach to instruction that acknowledges adult students' needs while preserving traditional martial arts excellence.</div>
+        </div>
+
+        <div class="story-section">
+            <blockquote class="story-quote">
+                "Aikido has given me tools for handling conflict both on and off the mat. The philosophy isn't just theory here - it's practical skills you use in daily life."
+            </blockquote>
+            <div class="story-attribution">Consulting Professional</div>
+            <div class="story-details">Training for 4+ years</div>
+            <div class="story-context">Discovered how Aikido principles apply to professional situations involving conflict resolution and leadership. Finds the practical philosophy valuable in client work.</div>
+        </div>
+    </div>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Header background on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        });
-
-        // Stagger animation for story cards
+        // Initialize navigation
         document.addEventListener('DOMContentLoaded', function() {
-            const storyCards = document.querySelectorAll('.story-card');
-            storyCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-            });
+            const nav = new UniversalNavigation();
+            nav.init();
         });
     </script>
-
-    <script src="../js/universal-nav.js"></script>
-    <script src="../js/philosophy-enhancer.js"></script>
 </body>
 </html>

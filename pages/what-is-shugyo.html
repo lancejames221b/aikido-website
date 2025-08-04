@@ -200,9 +200,20 @@
 
         .principles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--spacing-md);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
             margin: var(--spacing-md) 0;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 1024px) {
+            .principles-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+                max-width: 500px;
+            }
         }
 
         .principle-card {
@@ -421,7 +432,7 @@
             <section class="content-section">
                 <div class="quote-block">
                     "Progress comes to those who train and train; reliance on secret techniques will get you nowhere."
-                    <div class="quote-author">— O Sensei Ueshiba Morihei</div>
+                    <div class="quote-author">— O-Sensei Ueshiba Morihei</div>
                 </div>
 
                 <p class="content-text">
@@ -429,7 +440,7 @@
                 </p>
 
                 <p class="content-text">
-                    O Sensei created Aikido as a form of shugyo—a practice that goes beyond technique to reshape the practitioner's entire being. This demanding training burns away impurities of character, much like refining ore into the finest steel.
+                    O-Sensei created Aikido as a form of shugyo—a practice that goes beyond technique to reshape the practitioner's entire being. This demanding training burns away impurities of character, much like refining ore into the finest steel.
                 </p>
             </section>
 
@@ -467,7 +478,7 @@
                 
                 <div class="quote-block">
                     "The purpose of training is to tighten up the slack, toughen the body, and polish the spirit."
-                    <div class="quote-author">— O Sensei Ueshiba Morihei</div>
+                    <div class="quote-author">— O-Sensei Ueshiba Morihei</div>
                 </div>
                 
                 <p class="content-text">
@@ -494,7 +505,7 @@
 
                 <div class="quote-block">
                     "Study the teachings of the pine tree, the bamboo, and the plum blossom. The pine teaches you faithfulness, the bamboo teaches you how to bend, and the plum blossom teaches you courage and heart."
-                    <div class="quote-author">— O Sensei Ueshiba Morihei</div>
+                    <div class="quote-author">— O-Sensei Ueshiba Morihei</div>
                 </div>
 
                 <p class="content-text">
