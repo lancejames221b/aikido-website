@@ -59,8 +59,14 @@ class UniversalNavigation {
                         <div class="nav-item">
                             <a href="${this.basePath}index.html">Home</a>
                         </div>
-                        <div class="nav-item">
-                            <a href="${this.basePath}index.html#instructors">Our Instructors</a>
+                        <div class="nav-item nav-dropdown">
+                            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="about-dropdown">About</a>
+                            <div class="dropdown-menu" id="about-dropdown" role="menu" aria-label="About submenu">
+                                <a href="${this.basePath}index.html#instructors" role="menuitem">Our Instructors</a>
+                                <a href="${this.basePath}pages/instructor-profiles.html" role="menuitem">Instructor Profiles</a>
+                                <a href="${this.basePath}pages/aikido-world-alliance.html" role="menuitem">Aikido World Alliance</a>
+                                <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
+                            </div>
                         </div>
                         <div class="nav-item">
                             <a href="${this.basePath}index.html#training">Training</a>
@@ -73,11 +79,7 @@ class UniversalNavigation {
                                 <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
                                 <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
                                 <a href="${this.basePath}pages/health-and-safety.html" role="menuitem">Health & Safety</a>
-                                <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
                             </div>
-                        </div>
-                        <div class="nav-item">
-                            <a href="${this.basePath}index.html#testimonials">Student Experiences</a>
                         </div>
                         <div class="nav-item">
                             <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>
@@ -97,8 +99,14 @@ class UniversalNavigation {
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html">Home</a>
                     </div>
-                    <div class="mobile-nav-item">
-                        <a href="${this.basePath}index.html#instructors">Our Instructors</a>
+                    <div class="mobile-nav-item mobile-dropdown">
+                        <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-about-dropdown">About</a>
+                        <div class="mobile-dropdown-menu" id="mobile-about-dropdown" role="menu" aria-label="About submenu">
+                            <a href="${this.basePath}index.html#instructors" role="menuitem">Our Instructors</a>
+                            <a href="${this.basePath}pages/instructor-profiles.html" role="menuitem">Instructor Profiles</a>
+                            <a href="${this.basePath}pages/aikido-world-alliance.html" role="menuitem">Aikido World Alliance</a>
+                            <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
+                        </div>
                     </div>
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html#training">Training</a>
@@ -111,11 +119,7 @@ class UniversalNavigation {
                             <a href="${this.basePath}pages/honor-values.html" role="menuitem">Honor & Values</a>
                             <a href="${this.basePath}pages/traditional-values.html" role="menuitem">Traditions</a>
                             <a href="${this.basePath}pages/health-and-safety.html" role="menuitem">Health & Safety</a>
-                            <a href="${this.basePath}pages/student-stories.html" role="menuitem">Student Stories</a>
                         </div>
-                    </div>
-                    <div class="mobile-nav-item">
-                        <a href="${this.basePath}index.html#testimonials">Student Experiences</a>
                     </div>
                     <div class="mobile-nav-item">
                         <a href="${this.basePath}index.html#signup-form">Training Sign-Up</a>

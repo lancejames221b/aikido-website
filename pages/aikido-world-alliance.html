@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aikido World Alliance - Genshinkan Aikido</title>
+    <meta name="description" content="Genshinkan Aikido NYC is a member of the international organization, Aikido World Alliance, headed by Andrew Sato Shihan.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&family=Manrope:ital,wght@0,400;0,500;0,600;0,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .sqs-layout {
+            max-width: 1626px;
+            margin: 0 auto;
+            padding: 0 2vw;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 16px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 13px;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .cta-button {
+            background: #8B4513;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #A0522D;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 60px;
+        }
+
+        /* Japanese Characters */
+        .japanese-characters {
+            font-size: 4rem;
+            color: #8B4513;
+            margin: 2rem 0;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Manrope', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-family: 'Manrope', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .section-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* AWA Logo Section */
+        .awa-logo-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+        }
+
+        .awa-logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #8B4513;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-card h3 {
+            font-family: 'Manrope', serif;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Lineage Section */
+        .lineage-section {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.02) 100%);
+            padding: 4rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
+
+        .lineage-title {
+            font-family: 'Manrope', serif;
+            font-size: 2rem;
+            color: #8B4513;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .lineage-content {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Photo Gallery Placeholder */
+        .photo-placeholder {
+            background: #f0f0f0;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            border: 2px dashed #ccc;
+        }
+
+        .photo-placeholder p {
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.05) 100%);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Manrope', serif;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background: #8B4513;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #8B4513;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #A0522D;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        /* External Link */
+        .external-link {
+            color: #8B4513;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .external-link:hover {
+            color: #A0522D;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="philosophy-page">
+    <!-- Universal Navigation -->
+    <div id="universal-navigation"></div>
+
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="japanese-characters">合気道世界連盟</div>
+                    <div class="hero-subtitle">International Organization</div>
+                    <h1 class="hero-title">Aikido World Alliance</h1>
+                    <p class="hero-description">
+                        Genshinkan Aikido, NYC is a member of the international organization, Aikido World Alliance, which is headed by Andrew Sato Shihan, and is directly affiliated with Aikikai Foundation, Aikido World Headquarters in Tokyo, Japan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWA Logo Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="awa-logo-section">
+                    <div class="photo-placeholder">
+                        <p>Aikido World Alliance Logo</p>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">
+                            [Original AWA logo image would be displayed here]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Sato Shihan Section -->
+        <section class="content-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">About Andrew Sato Shihan</h2>
+                <div class="section-content">
+                    <div class="photo-placeholder" style="max-width: 400px; margin: 0 auto 2rem;">
+                        <p>Andrew Sato Shihan, 7th Dan</p>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">
+                            [Original photo of Sato Shihan would be displayed here]
+                        </p>
+                    </div>
+                    
+                    <p>
+                        Andrew Sato Shihan, 7<sup>th</sup> dan, is the founder and chief instructor of the AWA. Sato Shihan and several dedicated dojo and students started the organization in 2005. Under his leadership, the AWA has grown to more than 50 dojo worldwide, and is one of only a few US-based aikido associations directly affiliated with the Aikikai Foundation, Aikido World Headquarters, in Tokyo, Japan.
+                    </p>
+                    
+                    <p>
+                        As head instructor of the AWA, Sato Shihan travels the world regularly giving seminars. He also regularly teaches at Kiku Matsu Dojo, Chicago, which he started in 2005. It is now under the direction of Laura DeGraff Sensei, 6th dan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lineage Section -->
+        <section class="content-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">Lineage</h2>
+                <div class="lineage-section">
+                    <div class="lineage-content">
+                        <p>
+                            <strong>Sato Shihan began his study of aikido with the late Fumio Toyoda Shihan (1947-2001) in his home city of Chicago in 1977.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWA Information Cards -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">About the Organization</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3>International Reach</h3>
+                        <p>
+                            The Aikido World Alliance connects dojos across multiple continents, maintaining the highest standards of traditional Aikido instruction through regular seminars and consistent technical development.
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Direct Connection to Aikikai</h3>
+                        <p>
+                            Through Sato Shihan's regular training at Hombu Dojo in Tokyo and direct instruction from Doshu Moriteru Ueshiba, AWA maintains a strong connection to the source of Aikido.
+                        </p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Traditional Training</h3>
+                        <p>
+                            The AWA maintains traditional Aikido training methods with regular seminars and consistent technical development across all member dojos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- External Link Section -->
+        <section class="content-section" style="background: #f8f9fa;">
+            <div class="container">
+                <div style="text-align: center; padding: 2rem;">
+                    <h3 style="font-family: 'Manrope', serif; font-size: 1.8rem; color: #2c3e50; margin-bottom: 1rem;">
+                        Learn More About AWA
+                    </h3>
+                    <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                        For more information about the Aikido World Alliance and its global activities:
+                    </p>
+                    <a href="https://www.aikidoworldalliance.com/" target="_blank" class="external-link" style="font-size: 1.2rem;">
+                        Visit the Official AWA Website →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Train in the AWA Tradition</h2>
+                    <p class="cta-text">
+                        Experience traditional Aikido instruction at Genshinkan, proud member of the Aikido World Alliance.
+                    </p>
+                    <a href="../index.html#signup-form" class="btn-primary">Begin Your Training</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Genshinkan Aikido Manhattan</strong></p>
+                <p>62 E 4th St, Fl 3, New York, NY 10003</p>
+                <p>Email: <a href="mailto:info@genaikido.com">info@genaikido.com</a></p>
+                <p><a href="https://www.instagram.com/gen.aikido/" target="_blank">Follow us on Instagram</a></p>
+                <p style="margin-top: 2rem; font-style: italic; color: #8B4513; font-size: 1.1rem;">
+                    In Aiki
+                </p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
+                    
+                    &copy; 2025 Genshinkan Aikido. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+
+    <script src="../js/universal-nav.js"></script>
+    <script src="../js/philosophy-enhancer.js"></script>
+</body>
+</html>
